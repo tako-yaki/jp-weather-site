@@ -1,0 +1,196 @@
+---
+interface Props {
+	title: string;
+	// 背景演出用: 現在の天気カテゴリと、今日の日の出・日の入り時刻(ISO)
+	weatherCategory?: 'sun' | 'cloud' | 'rain' | 'snow' | 'fog';
+	sunrise?: string;
+	sunset?: string;
+}
+const { title, weatherCategory, sunrise, sunset } = Astro.props;
+---
+
+<html lang="ja" data-weather={weatherCategory} data-sunrise={sunrise} data-sunset={sunset}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script is:inline>
+			// 日の出/日の入り時刻(ビューア端末のその時点の時刻)から昼/夜を判定する。
+			// ビルド時刻ではなく閲覧時刻で決まるよう、あえてクライアント側で実行する。
+			(function () {
+				var root = document.documentElement;
+				var sunrise = root.dataset.sunrise;
+				var sunset = root.dataset.sunset;
+				if (!sunrise || !sunset) return;
+				var now = new Date();
+				var isNight = now < new Date(sunrise) || now >= new Date(sunset);
+				root.dataset.daypart = isNight ? 'night' : 'day';
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="page">
+			<header class="site-header">
+				<div class="container">
+					<span class="brand">天気予報サイト（開発中）</span>
+				</div>
+			</header>
+			<main class="container">
+				<slot />
+			</main>
+			<footer class="site-footer">
+				<div class="container">
+					<p>データ出典: 気象庁</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: light;
+		--surface-1: #fcfcfb;
+		--page-plane: #f9f9f7;
+		--text-primary: #0b0b0b;
+		--text-secondary: #52514e;
+		--text-muted: #898781;
+		--gridline: #e1e0d9;
+		--baseline: #c3c2b7;
+		--border: rgba(11, 11, 11, 0.1);
+
+		--seq-100: #cde2fb;
+		--seq-150: #b7d3f6;
+		--seq-400: #3987e5;
+		--seq-450: #2a78d6;
+		--seq-600: #184f95;
+
+		--status-good: #0ca30c;
+		--status-warning: #fab219;
+		--status-serious: #ec835a;
+		--status-critical: #d03b3b;
+
+		--sat-color: #2a78d6;
+		--sun-color: #d03b3b;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root:where(:not([data-theme='light'])) {
+			color-scheme: dark;
+			--surface-1: #1a1a19;
+			--page-plane: #0d0d0d;
+			--text-primary: #ffffff;
+			--text-secondary: #c3c2b7;
+			--text-muted: #898781;
+			--gridline: #2c2c2a;
+			--baseline: #383835;
+			--border: rgba(255, 255, 255, 0.1);
+
+			--seq-100: #184f95;
+			--seq-150: #1c5cab;
+			--seq-400: #3987e5;
+			--seq-450: #3987e5;
+			--seq-600: #6da7ec;
+		}
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background: var(--page-plane);
+		color: var(--text-primary);
+		font-family: system-ui, -apple-system, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+		line-height: 1.6;
+		-webkit-font-smoothing: antialiased;
+		transition: background 0.6s ease;
+	}
+
+	/* 天候×昼夜の背景グラデーション（カード外の余白にのみ見える演出用。文字はheader/footer/section側の背景で保護） */
+	html[data-weather='sun'][data-daypart='day'] body {
+		background: linear-gradient(160deg, #eaf4ff 0%, #d8ecff 45%, #fdf3d9 100%);
+	}
+	html[data-weather='sun'][data-daypart='night'] body {
+		background: linear-gradient(160deg, #0b1a33 0%, #142a4d 50%, #1c2f52 100%);
+	}
+	html[data-weather='cloud'][data-daypart='day'] body {
+		background: linear-gradient(160deg, #eef0f2 0%, #e3e6e9 100%);
+	}
+	html[data-weather='cloud'][data-daypart='night'] body {
+		background: linear-gradient(160deg, #14161a 0%, #1f2226 100%);
+	}
+	html[data-weather='rain'][data-daypart='day'] body {
+		background: linear-gradient(160deg, #dde6ee 0%, #c9d6e2 100%);
+	}
+	html[data-weather='rain'][data-daypart='night'] body {
+		background: linear-gradient(160deg, #10161d 0%, #1a232d 100%);
+	}
+	html[data-weather='snow'][data-daypart='day'] body {
+		background: linear-gradient(160deg, #f5f9fc 0%, #e6eef5 100%);
+	}
+	html[data-weather='snow'][data-daypart='night'] body {
+		background: linear-gradient(160deg, #17202b 0%, #24303d 100%);
+	}
+	html[data-weather='fog'][data-daypart='day'] body {
+		background: linear-gradient(160deg, #ececea 0%, #dedcd8 100%);
+	}
+	html[data-weather='fog'][data-daypart='night'] body {
+		background: linear-gradient(160deg, #161615 0%, #211f1d 100%);
+	}
+
+	.container {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 0 16px;
+	}
+
+	.site-header {
+		background: var(--surface-1);
+		border-bottom: 1px solid var(--border);
+		padding: 14px 0;
+	}
+
+	.brand {
+		font-size: 15px;
+		font-weight: 600;
+		color: var(--text-primary);
+	}
+
+	main.container {
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.site-footer {
+		background: var(--surface-1);
+		padding: 20px 0 40px;
+		color: var(--text-muted);
+		font-size: 12.5px;
+	}
+
+	section {
+		background: var(--surface-1);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 16px;
+	}
+
+	h2 {
+		font-size: 13px;
+		font-weight: 600;
+		color: var(--text-secondary);
+		letter-spacing: 0.04em;
+		margin: 0 0 12px;
+	}
+</style>

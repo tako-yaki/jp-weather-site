@@ -1,0 +1,506 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HourlyChart from '../components/HourlyChart.astro';
+import { describeWeatherCode } from '../lib/weatherCodes';
+import { describeWmoCode } from '../lib/wmoWeatherCodes';
+import { describeWarningCode, isActiveStatus } from '../lib/warningCodes';
+import { getMoonPhase } from '../lib/moonPhase';
+
+const forecastPath = path.join(process.cwd(), 'public/data/forecast/130000.json');
+const warningPath = path.join(process.cwd(), 'public/data/warning/130000.json');
+const openMeteoPath = path.join(process.cwd(), 'public/data/openmeteo/130000.json');
+const openMeteoDailyPath = path.join(process.cwd(), 'public/data/openmeteo/daily-130000.json');
+const forecast: any = JSON.parse(fs.readFileSync(forecastPath, 'utf-8'));
+const warning: any = JSON.parse(fs.readFileSync(warningPath, 'utf-8'));
+const openMeteo: any = JSON.parse(fs.readFileSync(openMeteoPath, 'utf-8'));
+const openMeteoDaily: any = JSON.parse(fs.readFileSync(openMeteoDailyPath, 'utf-8'));
+
+const shortTerm = forecast[0];
+const weekly = forecast[1];
+
+// ビルドを実行するマシンのタイムゾーンに関わらず日本時間で表示するため、
+// 日付・曜日系のフォーマットは必ず timeZone: 'Asia/Tokyo' を明示する。
+const dateLabel = (iso: string) =>
+	new Intl.DateTimeFormat('ja-JP', {
+		month: 'numeric',
+		day: 'numeric',
+		weekday: 'short',
+		timeZone: 'Asia/Tokyo',
+	}).format(new Date(iso));
+
+const WEEKDAY_EN_TO_INDEX: Record<string, number> = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+const jstWeekdayIndex = (iso: string) => {
+	const wd = new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: 'Asia/Tokyo' }).format(new Date(iso));
+	return WEEKDAY_EN_TO_INDEX[wd];
+};
+const jstHour = (iso: string) => Number(iso.slice(11, 13));
+
+// ISO文字列に "+09:00" を明示しておくことで、閲覧者のブラウザのタイムゾーンに関わらず
+// クライアント側スクリプトが日本時間として正しく解釈できるようにする。
+const withJstOffset = (iso: string) => `${iso}:00+09:00`;
+
+// --- 警報注意報（東京地方 130010）---
+const primaryAreaWarnings = warning.areaTypes[0].areas.find((a: any) => a.code === '130010');
+const activeWarnings = (primaryAreaWarnings?.warnings ?? []).filter(
+	(w: any) => w.code && isActiveStatus(w.status),
+);
+
+// --- 現在の天気 + 明日の天気（東京地方 130010）---
+// 気温は気象庁の短期予報だと意味が曖昧な2値しかないため、Open-Meteoの日別最高/最低を使う
+const wwSeries = shortTerm.timeSeries[0];
+const wwArea = wwSeries.areas.find((a: any) => a.area.code === '130010');
+
+const heroWeather = describeWeatherCode(wwArea.weatherCodes[0]);
+const heroMin = openMeteo.daily.temperature_2m_min[0];
+const heroMax = openMeteo.daily.temperature_2m_max[0];
+const heroPop = openMeteoDaily.daily.precipitation_probability_max[0];
+
+const tomorrowWeather = describeWeatherCode(wwArea.weatherCodes[1]);
+const tomorrowMin = openMeteo.daily.temperature_2m_min[1];
+const tomorrowMax = openMeteo.daily.temperature_2m_max[1];
+const tomorrowPop = openMeteoDaily.daily.precipitation_probability_max[1];
+
+// --- 日の出・日の入り・月齢（Open-Meteo daily、東京の緯度経度）---
+const todaySunrise = withJstOffset(openMeteo.daily.sunrise[0]);
+const todaySunset = withJstOffset(openMeteo.daily.sunset[0]);
+const moon = getMoonPhase(new Date());
+
+// --- 時系列予報（Open-Meteo、1時間刻みの元データ。表示間隔はクライアント側で切替）---
+const nowMs = Date.now();
+
+function isNightAt(iso: string): boolean {
+	const dateStr = iso.slice(0, 10);
+	const idx = openMeteo.daily.time.indexOf(dateStr);
+	if (idx === -1) return false;
+	const t = new Date(withJstOffset(iso)).getTime();
+	const sr = new Date(withJstOffset(openMeteo.daily.sunrise[idx])).getTime();
+	const ss = new Date(withJstOffset(openMeteo.daily.sunset[idx])).getTime();
+	return t < sr || t >= ss;
+}
+
+// --- 現在の状況（Open-Meteoのリアルタイム観測）---
+const current = openMeteo.current;
+const currentWeather = describeWmoCode(current.weathercode, isNightAt(current.time));
+const currentUpdatedLabel = new Intl.DateTimeFormat('ja-JP', {
+	hour: '2-digit',
+	minute: '2-digit',
+	timeZone: 'Asia/Tokyo',
+}).format(new Date(withJstOffset(current.time)));
+
+const hourlyPoints = openMeteo.hourly.time
+	.map((t: string, i: number) => ({ time: t, temp: openMeteo.hourly.temperature_2m[i], precip: openMeteo.hourly.precipitation[i], code: openMeteo.hourly.weathercode[i] }))
+	.filter((h: any) => new Date(withJstOffset(h.time)).getTime() >= nowMs - 3600_000)
+	.map((h: any) => {
+		const weather = describeWmoCode(h.code, isNightAt(h.time));
+		return {
+			iso: h.time,
+			hour: jstHour(h.time),
+			dateLabel: dateLabel(withJstOffset(h.time)),
+			temp: h.temp,
+			precip: h.precip,
+			icon: weather.icon,
+			weatherLabel: weather.label,
+		};
+	});
+
+// --- 10日間予報 ---
+// 明後日〜7日後: 気象庁の週間予報（確度A/B/C付き）
+// 8〜10日後: Open-Meteo（気象庁は7日先までしか出さないための補完。確度の概念がないため「参考値」として区別する）
+const weeklyWeatherSeries = weekly.timeSeries[0];
+const weeklyWeatherArea = weeklyWeatherSeries.areas.find((a: any) => a.area.code === '130010');
+const weeklyTempSeries = weekly.timeSeries[1];
+const weeklyTempArea = weeklyTempSeries.areas.find((a: any) => a.area.code === '44132');
+
+const jmaDaysRaw = weeklyWeatherSeries.timeDefines
+	.map((date: string, i: number) => {
+		const hasTemp = weeklyTempArea.tempsMin[i] !== '' && weeklyTempArea.tempsMax[i] !== '';
+		const min = hasTemp ? Number(weeklyTempArea.tempsMin[i]) : NaN;
+		const max = hasTemp ? Number(weeklyTempArea.tempsMax[i]) : NaN;
+		return {
+			label: dateLabel(date),
+			weekdayIndex: jstWeekdayIndex(date),
+			weather: describeWeatherCode(weeklyWeatherArea.weatherCodes[i]),
+			pop: weeklyWeatherArea.pops[i] as string,
+			reliability: weeklyWeatherArea.reliabilities[i] as string,
+			isReference: false,
+			hasTemp,
+			min,
+			max,
+		};
+	})
+	// 明日(先頭)は気象庁データが欠けることがあるため、週間予報は明後日から表示する
+	.slice(1);
+
+// Open-Meteo daily は index0 = 今日 なので、8〜10日後は index8〜11
+const EXTRA_DAY_INDICES = [8, 9, 10, 11];
+const extraDaysRaw = EXTRA_DAY_INDICES.map((idx) => {
+	const dateStr = openMeteoDaily.daily.time[idx];
+	const weather = describeWmoCode(openMeteoDaily.daily.weathercode[idx]);
+	return {
+		label: dateLabel(dateStr),
+		weekdayIndex: jstWeekdayIndex(dateStr),
+		weather: { icon: weather.icon, label: weather.label },
+		pop: String(openMeteoDaily.daily.precipitation_probability_max[idx]),
+		reliability: '',
+		isReference: true,
+		hasTemp: true,
+		min: openMeteoDaily.daily.temperature_2m_min[idx],
+		max: openMeteoDaily.daily.temperature_2m_max[idx],
+	};
+});
+
+const tenDaysRaw = [...jmaDaysRaw, ...extraDaysRaw];
+
+const validTemps = tenDaysRaw.filter((d: any) => d.hasTemp);
+const weekMin = Math.min(...validTemps.map((d: any) => d.min));
+const weekMax = Math.max(...validTemps.map((d: any) => d.max));
+const weekRange = weekMax - weekMin || 1;
+
+const tenDays = tenDaysRaw.map((d: any) => ({
+	...d,
+	barLeft: d.hasTemp ? ((d.min - weekMin) / weekRange) * 100 : 0,
+	barWidth: d.hasTemp ? ((d.max - d.min) / weekRange) * 100 : 0,
+}));
+---
+
+<BaseLayout
+	title="天気予報サイト（開発中）"
+	weatherCategory={heroWeather.category === 'unknown' ? undefined : heroWeather.category}
+	sunrise={todaySunrise}
+	sunset={todaySunset}
+>
+	{
+		activeWarnings.length > 0 ? (
+			<section class="alert-banner" data-severity="warning">
+				<h2>⚠️ 警報注意報</h2>
+				<ul>
+					{activeWarnings.map((w: any) => (
+						<li>
+							{describeWarningCode(w.code)}（{w.status}）
+						</li>
+					))}
+				</ul>
+			</section>
+		) : (
+			<section class="alert-banner" data-severity="none">
+				<h2>警報注意報</h2>
+				<p>現在、発表されている警報・注意報はありません</p>
+			</section>
+		)
+	}
+
+	<section class="hero">
+		<h2>東京地方</h2>
+		<div class="hero-row">
+			<div class="hero-today">
+				<div class="hero-main">
+					<span class="hero-icon">{heroWeather.icon}</span>
+					<span class="hero-label">{heroWeather.label}</span>
+				</div>
+				<p class="hero-temp">
+					最低 {Math.round(heroMin)}℃ ／ 最高 {Math.round(heroMax)}℃ ／ ☔ {heroPop}%
+				</p>
+			</div>
+			<div class="hero-tomorrow">
+				<p class="ht-caption">明日</p>
+				<div class="ht-main">
+					<span class="ht-icon">{tomorrowWeather.icon}</span>
+					<div class="ht-info">
+						<p class="ht-label">{tomorrowWeather.label}</p>
+						<p class="ht-temp">
+							{Math.round(tomorrowMin)}° / {Math.round(tomorrowMax)}°
+						</p>
+						<p class="ht-pop">☔ {tomorrowPop}%</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hero-sub">
+			<span>🌅 日の出 {new Intl.DateTimeFormat('ja-JP', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Tokyo' }).format(new Date(todaySunrise))}</span>
+			<span>🌇 日の入り {new Intl.DateTimeFormat('ja-JP', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Tokyo' }).format(new Date(todaySunset))}</span>
+			<span>{moon.icon} {moon.label}（月齢 {moon.age.toFixed(1)}）</span>
+		</div>
+	</section>
+
+	<section class="current">
+		<div class="current-head">
+			<h2>現在の状況</h2>
+			<span class="current-updated">{currentUpdatedLabel} 更新</span>
+		</div>
+		<div class="current-grid">
+			<div class="stat-tile">
+				<span class="stat-label">天候</span>
+				<span class="stat-icon">{currentWeather.icon}</span>
+				<span class="stat-value">{currentWeather.label}</span>
+			</div>
+			<div class="stat-tile">
+				<span class="stat-label">気温</span>
+				<span class="stat-value">{Math.round(current.temperature_2m)}℃</span>
+			</div>
+			<div class="stat-tile">
+				<span class="stat-label">降水量</span>
+				<span class="stat-value">{current.precipitation.toFixed(1)}mm</span>
+			</div>
+			<div class="stat-tile">
+				<span class="stat-label">湿度</span>
+				<span class="stat-value">{current.relative_humidity_2m}%</span>
+			</div>
+		</div>
+	</section>
+
+	<HourlyChart points={hourlyPoints} />
+
+	<section class="weekly">
+		<h2>10日間予報（明後日〜）</h2>
+		<div class="weekly-scroll">
+			{tenDays.map((d: any) => (
+				<div class="weekly-card" data-source={d.isReference ? 'reference' : 'jma'}>
+					<p class={`wc-date ${d.weekdayIndex === 0 ? 'sun' : d.weekdayIndex === 6 ? 'sat' : ''}`}>{d.label}</p>
+					<p class="wc-icon">{d.weather.icon}</p>
+					<p class="wc-label">{d.weather.label}</p>
+					<p class="wc-pop">{d.pop ? `☔ ${d.pop}%` : '—'}</p>
+					{d.hasTemp ? (
+						<>
+							<div class="wc-range-track">
+								<div class="wc-range-fill" style={`left:${d.barLeft}%;width:${d.barWidth}%`} />
+							</div>
+							<p class="wc-range-values">
+								{d.min}° / {d.max}°
+							</p>
+						</>
+					) : (
+						<p class="wc-range-values">—</p>
+					)}
+					<p class="wc-reliability" title={d.isReference ? '気象庁の週間予報の範囲外のため参考値（確度の情報なし）' : '予報の確度（A: 高い 〜 C: 低い）'}>
+						{d.isReference ? '参考値' : `確度 ${d.reliability || '—'}`}
+					</p>
+				</div>
+			))}
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.alert-banner {
+		border-left: 4px solid var(--border);
+	}
+	.alert-banner[data-severity='warning'] {
+		border-left-color: var(--status-warning);
+		background: color-mix(in srgb, var(--status-warning) 10%, var(--surface-1));
+	}
+	.alert-banner h2 {
+		margin-bottom: 6px;
+	}
+	.alert-banner ul {
+		margin: 0;
+		padding-left: 20px;
+	}
+	.alert-banner p {
+		margin: 0;
+		color: var(--text-secondary);
+		font-size: 14px;
+	}
+
+	.hero-row {
+		display: flex;
+		align-items: stretch;
+		gap: 14px;
+	}
+	.hero-today {
+		flex: 63 1 0%;
+		min-width: 0;
+	}
+	.hero-main {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	.hero-icon {
+		font-size: 40px;
+		line-height: 1;
+	}
+	.hero-label {
+		font-size: 22px;
+		font-weight: 600;
+	}
+	.hero-temp {
+		margin: 10px 0 0;
+		color: var(--text-secondary);
+		font-size: 15px;
+	}
+
+	.hero-tomorrow {
+		flex: 37 1 0%;
+		min-width: 0;
+		border-left: 1px solid var(--gridline);
+		padding-left: 16px;
+	}
+	.hero-tomorrow p {
+		margin: 0;
+	}
+	.ht-caption {
+		font-size: 12px;
+		color: var(--text-muted);
+	}
+	.ht-main {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-top: 8px;
+	}
+	.ht-icon {
+		font-size: 36px;
+		line-height: 1;
+		flex: 0 0 auto;
+	}
+	.ht-info {
+		min-width: 0;
+	}
+	.ht-label {
+		font-size: 13.5px;
+		color: var(--text-secondary);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.ht-temp {
+		font-size: 15px;
+		font-weight: 600;
+		color: var(--text-primary);
+		font-variant-numeric: tabular-nums;
+		margin-top: 3px;
+	}
+	.ht-pop {
+		font-size: 12.5px;
+		color: var(--seq-450);
+		margin-top: 3px;
+	}
+
+	.hero-sub {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px 16px;
+		margin-top: 12px;
+		padding-top: 12px;
+		border-top: 1px solid var(--gridline);
+		font-size: 12.5px;
+		color: var(--text-muted);
+	}
+
+	.current-head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+	}
+	.current-head h2 {
+		margin: 0;
+	}
+	.current-updated {
+		font-size: 11px;
+		color: var(--text-muted);
+	}
+	.current-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 8px;
+		margin-top: 12px;
+	}
+	.stat-tile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 3px;
+		border: 1px solid var(--border);
+		border-radius: 8px;
+		padding: 10px 4px;
+		text-align: center;
+	}
+	.stat-label {
+		font-size: 11px;
+		color: var(--text-muted);
+	}
+	.stat-icon {
+		font-size: 20px;
+		line-height: 1;
+	}
+	.stat-value {
+		font-size: 15px;
+		font-weight: 600;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.weekly-scroll {
+		display: flex;
+		gap: 8px;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		margin: 0 -16px;
+		padding: 0 16px 4px;
+	}
+	.weekly-card {
+		scroll-snap-align: start;
+		flex: 0 0 108px;
+		border: 1px solid var(--border);
+		border-radius: 8px;
+		padding: 10px 8px;
+		text-align: center;
+		font-variant-numeric: tabular-nums;
+	}
+	.weekly-card p {
+		margin: 4px 0;
+	}
+	.wc-date {
+		font-size: 12.5px;
+		color: var(--text-secondary);
+	}
+	.wc-date.sat {
+		color: var(--sat-color);
+	}
+	.wc-date.sun {
+		color: var(--sun-color);
+	}
+	.wc-icon {
+		font-size: 24px;
+	}
+	.wc-label {
+		font-size: 11px;
+		color: var(--text-secondary);
+		min-height: 2.4em;
+	}
+	.wc-pop {
+		font-size: 12px;
+		color: var(--seq-450);
+	}
+	.wc-range-track {
+		position: relative;
+		height: 6px;
+		border-radius: 3px;
+		background: var(--seq-100);
+	}
+	.wc-range-fill {
+		position: absolute;
+		top: 0;
+		height: 6px;
+		border-radius: 3px;
+		background: var(--seq-450);
+	}
+	.wc-range-values {
+		font-size: 12px;
+		color: var(--text-secondary);
+	}
+	.wc-reliability {
+		font-size: 10.5px;
+		color: var(--text-muted);
+		border-top: 1px solid var(--gridline);
+		padding-top: 5px;
+	}
+	.weekly-card[data-source='reference'] {
+		border-style: dashed;
+		opacity: 0.82;
+	}
+	.weekly-card[data-source='reference'] .wc-reliability {
+		font-style: italic;
+	}
+</style>

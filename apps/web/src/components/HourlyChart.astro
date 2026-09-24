@@ -1,0 +1,382 @@
+---
+interface HourlyPoint {
+	iso: string; // "YYYY-MM-DDTHH:MM" (JST wall時刻、オフセットなし)
+	hour: number;
+	dateLabel: string;
+	temp: number;
+	precip: number;
+	icon: string;
+	weatherLabel: string;
+}
+interface Props {
+	points: HourlyPoint[];
+}
+const { points } = Astro.props;
+---
+
+<section class="hourly-chart">
+	<div class="hc-header">
+		<h2>時系列予報</h2>
+		<div class="hc-step-toggle" role="group" aria-label="表示間隔">
+			<button type="button" data-step="1">1時間</button>
+			<button type="button" data-step="3" aria-pressed="true">3時間</button>
+		</div>
+	</div>
+
+	<div class="hc-scroll">
+		<div class="hc-crosshair" hidden></div>
+		<div class="hc-axis"></div>
+		<div class="hc-hours" data-layer="icon"></div>
+		<div class="hc-icons" data-layer="icon"></div>
+		<svg class="hc-temp-svg" data-layer="temp"></svg>
+		<div class="hc-temp-values" data-layer="temp"></div>
+		<svg class="hc-precip-svg" data-layer="precip"></svg>
+		<div class="hc-precip-values" data-layer="precip"></div>
+	</div>
+
+	<div class="hc-legend">
+		<button type="button" class="hc-legend-btn" data-layer-toggle="temp" aria-pressed="true">
+			<span class="swatch temp"></span>気温
+		</button>
+		<button type="button" class="hc-legend-btn" data-layer-toggle="precip" aria-pressed="true">
+			<span class="swatch precip"></span>降水量
+		</button>
+		<button type="button" class="hc-legend-btn" data-layer-toggle="icon" aria-pressed="true">
+			<span class="swatch icon"></span>天気マーク
+		</button>
+	</div>
+
+	<script type="application/json" class="hc-data" set:html={JSON.stringify(points)} />
+</section>
+
+<script>
+	function initHourlyChart(root: Element) {
+		const dataEl = root.querySelector('.hc-data');
+		if (!dataEl) return;
+		const allPoints: Array<{
+			iso: string;
+			hour: number;
+			dateLabel: string;
+			temp: number;
+			precip: number;
+			icon: string;
+			weatherLabel: string;
+		}> = JSON.parse(dataEl.textContent ?? '[]');
+		if (allPoints.length === 0) return;
+
+		const scrollEl = root.querySelector<HTMLElement>('.hc-scroll')!;
+		const tempSvg = root.querySelector<SVGSVGElement>('.hc-temp-svg')!;
+		const precipSvg = root.querySelector<SVGSVGElement>('.hc-precip-svg')!;
+		const hoursEl = root.querySelector<HTMLElement>('.hc-hours')!;
+		const iconsEl = root.querySelector<HTMLElement>('.hc-icons')!;
+		const tempValuesEl = root.querySelector<HTMLElement>('.hc-temp-values')!;
+		const precipValuesEl = root.querySelector<HTMLElement>('.hc-precip-values')!;
+		const axisEl = root.querySelector<HTMLElement>('.hc-axis')!;
+		const crosshairEl = root.querySelector<HTMLElement>('.hc-crosshair')!;
+		const stepButtons = root.querySelectorAll<HTMLButtonElement>('[data-step]');
+		const legendButtons = root.querySelectorAll<HTMLButtonElement>('[data-layer-toggle]');
+
+		const SVGNS = 'http://www.w3.org/2000/svg';
+		const SPACING = 44;
+		const TEMP_H = 56;
+		const PRECIP_H = 40;
+		const PAD = 8;
+
+		const tMin = Math.min(...allPoints.map((p) => p.temp)) - 2;
+		const tMax = Math.max(...allPoints.map((p) => p.temp)) + 2;
+		const pMax = Math.max(2, Math.ceil(Math.max(...allPoints.map((p) => p.precip))));
+
+		let currentPoints: typeof allPoints = [];
+
+		const xAt = (i: number) => i * SPACING + SPACING / 2;
+		const yTemp = (t: number) => PAD + (1 - (t - tMin) / (tMax - tMin)) * (TEMP_H - PAD * 2);
+		const yPrecipTop = (p: number) => PRECIP_H - (p / pMax) * (PRECIP_H - 4);
+
+		function makeCell(container: HTMLElement, i: number, className: string, text: string) {
+			const cell = document.createElement('div');
+			cell.className = className;
+			cell.style.left = `${xAt(i) - SPACING / 2}px`;
+			cell.style.width = `${SPACING}px`;
+			cell.textContent = text;
+			container.appendChild(cell);
+		}
+
+		function render(step: number) {
+			currentPoints = allPoints.filter((p) => p.hour % step === 0);
+			const width = currentPoints.length * SPACING;
+
+			tempSvg.setAttribute('width', String(width));
+			tempSvg.setAttribute('height', String(TEMP_H));
+			tempSvg.setAttribute('viewBox', `0 0 ${width} ${TEMP_H}`);
+			precipSvg.setAttribute('width', String(width));
+			precipSvg.setAttribute('height', String(PRECIP_H));
+			precipSvg.setAttribute('viewBox', `0 0 ${width} ${PRECIP_H}`);
+
+			tempSvg.textContent = '';
+			precipSvg.textContent = '';
+			hoursEl.textContent = '';
+			iconsEl.textContent = '';
+			tempValuesEl.textContent = '';
+			precipValuesEl.textContent = '';
+			axisEl.textContent = '';
+			[hoursEl, iconsEl, tempValuesEl, precipValuesEl, axisEl].forEach((el) => {
+				el.style.width = `${width}px`;
+			});
+
+			const linePath = document.createElementNS(SVGNS, 'path');
+			const d = currentPoints.map((p, i) => `${i === 0 ? 'M' : 'L'}${xAt(i)},${yTemp(p.temp)}`).join(' ');
+			linePath.setAttribute('d', d);
+			linePath.setAttribute('class', 'hc-line');
+			tempSvg.appendChild(linePath);
+
+			let lastDateKey = '';
+			currentPoints.forEach((p, i) => {
+				const dateKey = p.iso.slice(0, 10);
+				if (dateKey !== lastDateKey) {
+					lastDateKey = dateKey;
+					const divider = document.createElementNS(SVGNS, 'line');
+					const dx = xAt(i) - SPACING / 2;
+					divider.setAttribute('x1', String(dx));
+					divider.setAttribute('x2', String(dx));
+					divider.setAttribute('y1', '0');
+					divider.setAttribute('y2', String(TEMP_H));
+					divider.setAttribute('class', 'hc-daydivider');
+					tempSvg.appendChild(divider);
+
+					const label = document.createElement('span');
+					label.className = 'hc-datelabel';
+					label.style.left = `${dx + 4}px`;
+					label.textContent = p.dateLabel;
+					axisEl.appendChild(label);
+				}
+
+				const dot = document.createElementNS(SVGNS, 'circle');
+				dot.setAttribute('cx', String(xAt(i)));
+				dot.setAttribute('cy', String(yTemp(p.temp)));
+				dot.setAttribute('r', '3');
+				dot.setAttribute('class', 'hc-dot');
+				tempSvg.appendChild(dot);
+
+				if (p.precip > 0) {
+					const barW = 16;
+					const barY = yPrecipTop(p.precip);
+					const bar = document.createElementNS(SVGNS, 'rect');
+					bar.setAttribute('x', String(xAt(i) - barW / 2));
+					bar.setAttribute('y', String(barY));
+					bar.setAttribute('width', String(barW));
+					bar.setAttribute('height', String(PRECIP_H - barY));
+					bar.setAttribute('rx', '3');
+					bar.setAttribute('class', 'hc-bar');
+					precipSvg.appendChild(bar);
+				}
+
+				makeCell(hoursEl, i, 'hc-hourlabel-cell', `${p.hour}時`);
+
+				const iconCell = document.createElement('div');
+				iconCell.className = 'hc-icon-cell';
+				iconCell.style.left = `${xAt(i) - SPACING / 2}px`;
+				iconCell.style.width = `${SPACING}px`;
+				iconCell.textContent = p.icon;
+				iconsEl.appendChild(iconCell);
+
+				makeCell(tempValuesEl, i, 'hc-temp-value-cell', `${Math.round(p.temp)}°`);
+				makeCell(precipValuesEl, i, 'hc-precip-value-cell', p.precip > 0 ? `${p.precip.toFixed(1)}` : '-');
+			});
+		}
+
+		function onMove(evt: PointerEvent) {
+			const rect = scrollEl.getBoundingClientRect();
+			const x = evt.clientX - rect.left + scrollEl.scrollLeft;
+			let idx = Math.round((x - SPACING / 2) / SPACING);
+			idx = Math.max(0, Math.min(currentPoints.length - 1, idx));
+			crosshairEl.hidden = false;
+			crosshairEl.style.left = `${xAt(idx)}px`;
+		}
+
+		scrollEl.addEventListener('pointermove', onMove);
+		scrollEl.addEventListener('pointerleave', () => {
+			crosshairEl.hidden = true;
+		});
+
+		stepButtons.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				stepButtons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+				render(Number(btn.dataset.step));
+			});
+		});
+
+		legendButtons.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const layer = btn.dataset.layerToggle;
+				const pressed = btn.getAttribute('aria-pressed') === 'true';
+				btn.setAttribute('aria-pressed', String(!pressed));
+				root.querySelectorAll<HTMLElement>(`[data-layer="${layer}"]`).forEach((el) => {
+					el.style.display = pressed ? 'none' : '';
+				});
+			});
+		});
+
+		render(3);
+	}
+
+	document.querySelectorAll('.hourly-chart').forEach(initHourlyChart);
+</script>
+
+<style is:global>
+	/* JSでグラフの中身(SVG要素・セル)を動的生成しているため、
+	   Astroの自動スコープ(data-astro-cid-*属性)が付かない要素がある。
+	   クラス名は hc- 接頭辞で十分ユニークなので is:global にして確実に適用する。 */
+	.hc-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 12px;
+	}
+	.hc-header h2 {
+		margin: 0;
+	}
+	.hc-step-toggle {
+		display: flex;
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		overflow: hidden;
+	}
+	.hc-step-toggle button {
+		border: none;
+		background: var(--surface-1);
+		color: var(--text-secondary);
+		font-size: 12px;
+		padding: 5px 10px;
+		cursor: pointer;
+	}
+	.hc-step-toggle button[aria-pressed='true'] {
+		background: var(--seq-450);
+		color: white;
+	}
+
+	.hc-scroll {
+		position: relative;
+		overflow-x: auto;
+		margin: 0 -16px;
+		padding: 0 16px 8px;
+	}
+	.hc-crosshair {
+		position: absolute;
+		top: 16px;
+		bottom: 8px;
+		width: 1px;
+		background: var(--baseline);
+		pointer-events: none;
+	}
+	.hc-axis {
+		position: relative;
+		height: 16px;
+	}
+	.hc-datelabel {
+		position: absolute;
+		top: 0;
+		font-size: 10px;
+		color: var(--text-muted);
+		white-space: nowrap;
+	}
+
+	.hc-hours,
+	.hc-icons,
+	.hc-temp-values,
+	.hc-precip-values {
+		position: relative;
+		height: 20px;
+	}
+	.hc-icons {
+		height: 26px;
+	}
+	.hc-hourlabel-cell,
+	.hc-temp-value-cell,
+	.hc-precip-value-cell {
+		position: absolute;
+		top: 0;
+		text-align: center;
+		font-size: 11px;
+		font-variant-numeric: tabular-nums;
+		color: var(--text-secondary);
+	}
+	.hc-hourlabel-cell {
+		color: var(--text-muted);
+		font-size: 10px;
+	}
+	.hc-precip-value-cell {
+		color: var(--seq-600);
+	}
+	.hc-icon-cell {
+		position: absolute;
+		top: 0;
+		text-align: center;
+		font-size: 18px;
+	}
+
+	.hc-temp-svg,
+	.hc-precip-svg {
+		display: block;
+	}
+	.hc-line {
+		fill: none;
+		stroke: var(--seq-450);
+		stroke-width: 2;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+	}
+	.hc-dot {
+		fill: var(--seq-450);
+		stroke: var(--surface-1);
+		stroke-width: 2;
+	}
+	.hc-daydivider {
+		stroke: var(--gridline);
+		stroke-width: 1;
+	}
+	.hc-bar {
+		fill: var(--seq-600);
+	}
+
+	.hc-legend {
+		display: flex;
+		gap: 14px;
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top: 1px solid var(--gridline);
+	}
+	.hc-legend-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		border: none;
+		background: none;
+		font-size: 12px;
+		color: var(--text-secondary);
+		cursor: pointer;
+		padding: 0;
+	}
+	.hc-legend-btn[aria-pressed='false'] {
+		color: var(--text-muted);
+		text-decoration: line-through;
+	}
+	.swatch {
+		display: inline-block;
+		width: 14px;
+		height: 10px;
+	}
+	.swatch.temp {
+		border-bottom: 2px solid var(--seq-450);
+	}
+	.swatch.precip {
+		background: var(--seq-600);
+		border-radius: 2px;
+		height: 10px;
+	}
+	.swatch.icon {
+		font-size: 10px;
+	}
+	.swatch.icon::before {
+		content: '☀️';
+	}
+</style>

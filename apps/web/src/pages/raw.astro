@@ -1,0 +1,136 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+// データ確認用ページ: 生の気象庁JSONの主要な項目を一通り生のまま表示する
+const jsonPath = path.join(process.cwd(), 'public/data/forecast/130000.json');
+const raw: any = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+
+const shortTerm = raw[0];
+const weekly = raw[1];
+
+// 短期: 天気・風・波（東京地方 130010）
+const wwSeries = shortTerm.timeSeries[0];
+const wwArea = wwSeries.areas.find((a: any) => a.area.code === '130010');
+const wwDays = wwSeries.timeDefines.map((date: string, i: number) => ({
+	date,
+	weatherCode: wwArea.weatherCodes[i],
+	weather: wwArea.weathers[i],
+	wind: wwArea.winds[i],
+	wave: wwArea.waves[i],
+}));
+
+// 短期: 降水確率（東京地方 130010）
+const popSeries = shortTerm.timeSeries[1];
+const popArea = popSeries.areas.find((a: any) => a.area.code === '130010');
+const popEntries = popSeries.timeDefines.map((date: string, i: number) => ({
+	date,
+	pop: popArea.pops[i],
+}));
+
+// 短期: 気温（代表地点: 東京 44132）
+const tempSeries = shortTerm.timeSeries[2];
+const tempArea = tempSeries.areas.find((a: any) => a.area.code === '44132');
+const tempEntries = tempSeries.timeDefines.map((date: string, i: number) => ({
+	date,
+	temp: tempArea.temps[i],
+}));
+
+// 週間: 天気・降水確率・信頼度（東京地方 130010）
+const weeklyWeatherSeries = weekly.timeSeries[0];
+const weeklyWeatherArea = weeklyWeatherSeries.areas.find((a: any) => a.area.code === '130010');
+const weeklyDays = weeklyWeatherSeries.timeDefines.map((date: string, i: number) => ({
+	date,
+	weatherCode: weeklyWeatherArea.weatherCodes[i],
+	pop: weeklyWeatherArea.pops[i],
+	reliability: weeklyWeatherArea.reliabilities[i],
+}));
+
+// 週間: 気温 最低・最高（幅つき、代表地点: 東京 44132）
+const weeklyTempSeries = weekly.timeSeries[1];
+const weeklyTempArea = weeklyTempSeries.areas.find((a: any) => a.area.code === '44132');
+const weeklyTempEntries = weeklyTempSeries.timeDefines.map((date: string, i: number) => ({
+	date,
+	min: weeklyTempArea.tempsMin[i],
+	minRange: `${weeklyTempArea.tempsMinLower[i]}〜${weeklyTempArea.tempsMinUpper[i]}`,
+	max: weeklyTempArea.tempsMax[i],
+	maxRange: `${weeklyTempArea.tempsMaxLower[i]}〜${weeklyTempArea.tempsMaxUpper[i]}`,
+}));
+
+// 平年値（代表地点: 東京 44132）
+const tempAverage = weekly.tempAverage.areas.find((a: any) => a.area.code === '44132');
+const precipAverage = weekly.precipAverage.areas.find((a: any) => a.area.code === '44132');
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>データ確認用ページ</title>
+	</head>
+	<body>
+		<h1>東京地方 — データ確認用ページ</h1>
+		<p>短期予報発表: {shortTerm.reportDatetime} / 週間予報発表: {weekly.reportDatetime}</p>
+
+		<h2>短期: 天気・風・波（3区分）</h2>
+		<table border="1" cellpadding="6">
+			<tr><th>日時</th><th>天気コード</th><th>天気</th><th>風</th><th>波</th></tr>
+			{wwDays.map((d: any) => (
+				<tr>
+					<td>{d.date}</td>
+					<td>{d.weatherCode}</td>
+					<td>{d.weather}</td>
+					<td>{d.wind}</td>
+					<td>{d.wave}</td>
+				</tr>
+			))}
+		</table>
+
+		<h2>短期: 降水確率（5区分）</h2>
+		<table border="1" cellpadding="6">
+			<tr><th>日時</th><th>降水確率(%)</th></tr>
+			{popEntries.map((p: any) => (
+				<tr><td>{p.date}</td><td>{p.pop}</td></tr>
+			))}
+		</table>
+
+		<h2>短期: 気温（東京、2区分）</h2>
+		<table border="1" cellpadding="6">
+			<tr><th>日時</th><th>気温(℃)</th></tr>
+			{tempEntries.map((t: any) => (
+				<tr><td>{t.date}</td><td>{t.temp}</td></tr>
+			))}
+		</table>
+
+		<h2>週間予報: 天気・降水確率・信頼度（7日分）</h2>
+		<table border="1" cellpadding="6">
+			<tr><th>日付</th><th>天気コード</th><th>降水確率(%)</th><th>信頼度</th></tr>
+			{weeklyDays.map((d: any) => (
+				<tr>
+					<td>{d.date}</td>
+					<td>{d.weatherCode}</td>
+					<td>{d.pop}</td>
+					<td>{d.reliability}</td>
+				</tr>
+			))}
+		</table>
+
+		<h2>週間予報: 気温レンジ（東京、7日分）</h2>
+		<table border="1" cellpadding="6">
+			<tr><th>日付</th><th>最低(幅)</th><th>最高(幅)</th></tr>
+			{weeklyTempEntries.map((t: any) => (
+				<tr>
+					<td>{t.date}</td>
+					<td>{t.min}℃（{t.minRange}）</td>
+					<td>{t.max}℃（{t.maxRange}）</td>
+				</tr>
+			))}
+		</table>
+
+		<h2>平年値（東京）</h2>
+		<p>気温: {tempAverage.min}℃ 〜 {tempAverage.max}℃</p>
+		<p>降水量: {precipAverage.min}mm 〜 {precipAverage.max}mm</p>
+	</body>
+</html>
