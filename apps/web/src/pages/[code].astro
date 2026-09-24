@@ -7,11 +7,21 @@ import { describeWeatherCode } from '../lib/weatherCodes';
 import { describeWmoCode } from '../lib/wmoWeatherCodes';
 import { describeWarningCode, isActiveStatus } from '../lib/warningCodes';
 import { getMoonPhase } from '../lib/moonPhase';
+import { PREFECTURES } from '../data/prefectures';
 
-const forecastPath = path.join(process.cwd(), 'public/data/forecast/130000.json');
-const warningPath = path.join(process.cwd(), 'public/data/warning/130000.json');
-const openMeteoPath = path.join(process.cwd(), 'public/data/openmeteo/130000.json');
-const openMeteoDailyPath = path.join(process.cwd(), 'public/data/openmeteo/daily-130000.json');
+export function getStaticPaths() {
+	return PREFECTURES.map((prefecture) => ({
+		params: { code: prefecture.code },
+		props: { prefecture },
+	}));
+}
+
+const { prefecture } = Astro.props;
+
+const forecastPath = path.join(process.cwd(), `public/data/forecast/${prefecture.code}.json`);
+const warningPath = path.join(process.cwd(), `public/data/warning/${prefecture.code}.json`);
+const openMeteoPath = path.join(process.cwd(), `public/data/openmeteo/${prefecture.code}.json`);
+const openMeteoDailyPath = path.join(process.cwd(), `public/data/openmeteo/daily-${prefecture.code}.json`);
 const forecast: any = JSON.parse(fs.readFileSync(forecastPath, 'utf-8'));
 const warning: any = JSON.parse(fs.readFileSync(warningPath, 'utf-8'));
 const openMeteo: any = JSON.parse(fs.readFileSync(openMeteoPath, 'utf-8'));
@@ -41,16 +51,19 @@ const jstHour = (iso: string) => Number(iso.slice(11, 13));
 // クライアント側スクリプトが日本時間として正しく解釈できるようにする。
 const withJstOffset = (iso: string) => `${iso}:00+09:00`;
 
-// --- 警報注意報（東京地方 130010）---
-const primaryAreaWarnings = warning.areaTypes[0].areas.find((a: any) => a.code === '130010');
+// --- 警報注意報 ---
+// areaTypes[0].areas[0] が、その都道府県の主たる（本土側の）区域。
+// 気象庁のJSONは areas 配列の先頭が常にその都道府県の代表区域になる構造を利用している。
+const primaryAreaWarnings = warning.areaTypes[0].areas[0];
 const activeWarnings = (primaryAreaWarnings?.warnings ?? []).filter(
 	(w: any) => w.code && isActiveStatus(w.status),
 );
 
-// --- 現在の天気 + 明日の天気（東京地方 130010）---
+// --- 現在の天気 + 明日の天気 ---
 // 気温は気象庁の短期予報だと意味が曖昧な2値しかないため、Open-Meteoの日別最高/最低を使う
 const wwSeries = shortTerm.timeSeries[0];
-const wwArea = wwSeries.areas.find((a: any) => a.area.code === '130010');
+const wwArea = wwSeries.areas[0];
+const areaName = wwArea.area.name;
 
 const heroWeather = describeWeatherCode(wwArea.weatherCodes[0]);
 const heroMin = openMeteo.daily.temperature_2m_min[0];
@@ -62,7 +75,7 @@ const tomorrowMin = openMeteo.daily.temperature_2m_min[1];
 const tomorrowMax = openMeteo.daily.temperature_2m_max[1];
 const tomorrowPop = openMeteoDaily.daily.precipitation_probability_max[1];
 
-// --- 日の出・日の入り・月齢（Open-Meteo daily、東京の緯度経度）---
+// --- 日の出・日の入り・月齢（Open-Meteo daily）---
 const todaySunrise = withJstOffset(openMeteo.daily.sunrise[0]);
 const todaySunset = withJstOffset(openMeteo.daily.sunset[0]);
 const moon = getMoonPhase(new Date());
@@ -109,9 +122,9 @@ const hourlyPoints = openMeteo.hourly.time
 // 明後日〜7日後: 気象庁の週間予報（確度A/B/C付き）
 // 8〜10日後: Open-Meteo（気象庁は7日先までしか出さないための補完。確度の概念がないため「参考値」として区別する）
 const weeklyWeatherSeries = weekly.timeSeries[0];
-const weeklyWeatherArea = weeklyWeatherSeries.areas.find((a: any) => a.area.code === '130010');
+const weeklyWeatherArea = weeklyWeatherSeries.areas[0];
 const weeklyTempSeries = weekly.timeSeries[1];
-const weeklyTempArea = weeklyTempSeries.areas.find((a: any) => a.area.code === '44132');
+const weeklyTempArea = weeklyTempSeries.areas[0];
 
 const jmaDaysRaw = weeklyWeatherSeries.timeDefines
 	.map((date: string, i: number) => {
@@ -166,7 +179,8 @@ const tenDays = tenDaysRaw.map((d: any) => ({
 ---
 
 <BaseLayout
-	title="天気予報サイト（開発中）"
+	title={`${areaName}の天気予報（開発中）`}
+	currentCode={prefecture.code}
 	weatherCategory={heroWeather.category === 'unknown' ? undefined : heroWeather.category}
 	sunrise={todaySunrise}
 	sunset={todaySunset}
@@ -192,7 +206,7 @@ const tenDays = tenDaysRaw.map((d: any) => ({
 	}
 
 	<section class="hero">
-		<h2>東京地方</h2>
+		<h2>{areaName}</h2>
 		<div class="hero-row">
 			<div class="hero-today">
 				<div class="hero-main">
