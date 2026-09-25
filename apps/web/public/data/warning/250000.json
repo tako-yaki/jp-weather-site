@@ -1,6 +1,5 @@
 {
-  "reportDatetime": "2026-05-23T18:04:00+09:00",
-  "publishingOffice": "彦根地方気象台",
+  "reportDatetime": "2026-09-22T20:03:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -8,6 +7,18 @@
         {
           "code": "250010",
           "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"
@@ -30,6 +41,14 @@
         {
           "code": "2520101",
           "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"
@@ -67,6 +86,10 @@
           "code": "2520400",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "解除"
             }
@@ -75,6 +98,14 @@
         {
           "code": "2520600",
           "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"
@@ -85,6 +116,10 @@
           "code": "2520700",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "解除"
             }
@@ -93,6 +128,18 @@
         {
           "code": "2520800",
           "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"
@@ -103,6 +150,14 @@
           "code": "2520900",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "解除"
             }
@@ -112,6 +167,18 @@
           "code": "2521000",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "解除"
             }
@@ -120,6 +187,18 @@
         {
           "code": "2521100",
           "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"
@@ -139,6 +218,14 @@
           "code": "2521300",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "解除"
             }
@@ -157,6 +244,10 @@
           "code": "2538300",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "解除"
             }
@@ -165,6 +256,18 @@
         {
           "code": "2538400",
           "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"

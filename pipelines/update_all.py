@@ -1,13 +1,16 @@
-"""47都道府県ぶんの全データソースをまとめて取得し、apps/web/public/data に書き込む。"""
-import json
+"""ローカルでの手動一括更新用: update_fast.py + update_slow.py を続けて実行する。
+
+Open-Meteoは呼ばない(時系列グラフ・10日間予報の参考日・市区町村の気温はいずれも
+ブラウザ側が直接取得するため、pipeline側でのOpen-Meteo取得は不要になった)。
+本番のGitHub Actionsでは、更新頻度が異なるこの2つを別々のスケジュールで実行する
+(update_fast.py: 警報注意報+アメダス実況、5分おき / update_slow.py: 予報テキスト+地域の
+代表地点算出、2時間おき)。
+"""
 import subprocess
 import sys
-import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-WEB_DATA = ROOT.parent / "apps/web/public/data"
-PREFECTURES = json.loads((ROOT / "common/prefectures.json").read_text(encoding="utf-8"))
 
 
 def run(args: list[str]) -> None:
@@ -16,18 +19,8 @@ def run(args: list[str]) -> None:
 
 
 def main() -> None:
-    for pref in PREFECTURES:
-        code, lat, lon = pref["code"], str(pref["lat"]), str(pref["lon"])
-        print(f"--- {pref['name']} ({code}) ---", file=sys.stderr)
-        run([sys.executable, str(ROOT / "forecast/fetch_forecast.py"), code,
-             "--out", str(WEB_DATA / f"forecast/{code}.json")])
-        run([sys.executable, str(ROOT / "warning/fetch_warning.py"), code,
-             "--out", str(WEB_DATA / f"warning/{code}.json")])
-        run([sys.executable, str(ROOT / "openmeteo/fetch_openmeteo.py"), lat, lon,
-             "--out", str(WEB_DATA / f"openmeteo/{code}.json")])
-        run([sys.executable, str(ROOT / "openmeteo/fetch_openmeteo_extended.py"), lat, lon,
-             "--out", str(WEB_DATA / f"openmeteo/daily-{code}.json")])
-        time.sleep(0.2)
+    run([sys.executable, str(ROOT / "update_slow.py")])
+    run([sys.executable, str(ROOT / "update_fast.py")])
     print("done", file=sys.stderr)
 
 

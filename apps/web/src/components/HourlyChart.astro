@@ -1,19 +1,3 @@
----
-interface HourlyPoint {
-	iso: string; // "YYYY-MM-DDTHH:MM" (JST wall時刻、オフセットなし)
-	hour: number;
-	dateLabel: string;
-	temp: number;
-	precip: number;
-	icon: string;
-	weatherLabel: string;
-}
-interface Props {
-	points: HourlyPoint[];
-}
-const { points } = Astro.props;
----
-
 <section class="hourly-chart">
 	<div class="hc-header">
 		<h2>時系列予報</h2>
@@ -23,7 +7,9 @@ const { points } = Astro.props;
 		</div>
 	</div>
 
-	<div class="hc-scroll">
+	<p class="hc-loading">読み込み中...</p>
+
+	<div class="hc-scroll" hidden>
 		<div class="hc-crosshair" hidden></div>
 		<div class="hc-axis"></div>
 		<div class="hc-hours" data-layer="icon"></div>
@@ -34,7 +20,7 @@ const { points } = Astro.props;
 		<div class="hc-precip-values" data-layer="precip"></div>
 	</div>
 
-	<div class="hc-legend">
+	<div class="hc-legend" hidden>
 		<button type="button" class="hc-legend-btn" data-layer-toggle="temp" aria-pressed="true">
 			<span class="swatch temp"></span>気温
 		</button>
@@ -45,26 +31,27 @@ const { points } = Astro.props;
 			<span class="swatch icon"></span>天気マーク
 		</button>
 	</div>
-
-	<script type="application/json" class="hc-data" set:html={JSON.stringify(points)} />
 </section>
 
 <script>
-	function initHourlyChart(root: Element) {
-		const dataEl = root.querySelector('.hc-data');
-		if (!dataEl) return;
-		const allPoints: Array<{
-			iso: string;
-			hour: number;
-			dateLabel: string;
-			temp: number;
-			precip: number;
-			icon: string;
-			weatherLabel: string;
-		}> = JSON.parse(dataEl.textContent ?? '[]');
-		if (allPoints.length === 0) return;
+	type HourlyPoint = {
+		iso: string;
+		hour: number;
+		dateLabel: string;
+		temp: number;
+		precip: number;
+		icon: string;
+		weatherLabel: string;
+	};
 
+	// データはビルド時に埋め込まず、呼び出し側(親ページ)が地域の緯度経度でOpen-Meteoを取得した後に
+	// setPoints()を呼んで渡す(リビルドなしで常に最新のデータを表示するため)。
+	function initHourlyChart(root: Element): (points: HourlyPoint[]) => void {
+		let allPoints: HourlyPoint[] = [];
+
+		const loadingEl = root.querySelector<HTMLElement>('.hc-loading')!;
 		const scrollEl = root.querySelector<HTMLElement>('.hc-scroll')!;
+		const legendEl = root.querySelector<HTMLElement>('.hc-legend')!;
 		const tempSvg = root.querySelector<SVGSVGElement>('.hc-temp-svg')!;
 		const precipSvg = root.querySelector<SVGSVGElement>('.hc-precip-svg')!;
 		const hoursEl = root.querySelector<HTMLElement>('.hc-hours')!;
@@ -82,11 +69,12 @@ const { points } = Astro.props;
 		const PRECIP_H = 40;
 		const PAD = 8;
 
-		const tMin = Math.min(...allPoints.map((p) => p.temp)) - 2;
-		const tMax = Math.max(...allPoints.map((p) => p.temp)) + 2;
-		const pMax = Math.max(2, Math.ceil(Math.max(...allPoints.map((p) => p.precip))));
-
-		let currentPoints: typeof allPoints = [];
+		// 気温/降水量のスケールはsetPoints()でデータが来てから決まる
+		let tMin = 0;
+		let tMax = 1;
+		let pMax = 2;
+		let currentStep = 3;
+		let currentPoints: HourlyPoint[] = [];
 
 		const xAt = (i: number) => i * SPACING + SPACING / 2;
 		const yTemp = (t: number) => PAD + (1 - (t - tMin) / (tMax - tMin)) * (TEMP_H - PAD * 2);
@@ -102,6 +90,7 @@ const { points } = Astro.props;
 		}
 
 		function render(step: number) {
+			currentStep = step;
 			currentPoints = allPoints.filter((p) => p.hour % step === 0);
 			const width = currentPoints.length * SPACING;
 
@@ -216,10 +205,24 @@ const { points } = Astro.props;
 			});
 		});
 
-		render(3);
+		return (points: HourlyPoint[]) => {
+			allPoints = points;
+			if (allPoints.length === 0) return;
+			tMin = Math.min(...allPoints.map((p) => p.temp)) - 2;
+			tMax = Math.max(...allPoints.map((p) => p.temp)) + 2;
+			pMax = Math.max(2, Math.ceil(Math.max(...allPoints.map((p) => p.precip))));
+			loadingEl.hidden = true;
+			scrollEl.hidden = false;
+			legendEl.hidden = false;
+			render(currentStep);
+		};
 	}
 
-	document.querySelectorAll('.hourly-chart').forEach(initHourlyChart);
+	// 各インスタンスのsetPointsを、対応する .region-hourly[data-region] 要素に紐づけて
+	// 親ページ(the [code].astro の client script)から呼べるようにする。
+	document.querySelectorAll<HTMLElement>('.hourly-chart').forEach((root) => {
+		(root as any).setHourlyPoints = initHourlyChart(root);
+	});
 </script>
 
 <style is:global>
@@ -231,6 +234,11 @@ const { points } = Astro.props;
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 12px;
+	}
+	.hc-loading {
+		margin: 0;
+		color: var(--text-muted);
+		font-size: 13px;
 	}
 	.hc-header h2 {
 		margin: 0;

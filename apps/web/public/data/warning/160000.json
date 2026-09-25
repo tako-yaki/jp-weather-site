@@ -1,6 +1,5 @@
 {
-  "reportDatetime": "2026-05-26T10:17:00+09:00",
-  "publishingOffice": "富山地方気象台",
+  "reportDatetime": "2026-09-24T10:19:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -9,7 +8,20 @@
           "code": "160010",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -17,7 +29,19 @@
           "code": "160020",
           "warnings": [
             {
-              "code": "20",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
               "status": "解除"
             }
           ]
@@ -27,10 +51,45 @@
     {
       "areas": [
         {
-          "code": "1620100",
+          "code": "1620111",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "1620112",
+          "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "1620113",
+          "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -38,7 +97,15 @@
           "code": "1620200",
           "warnings": [
             {
-              "code": "20",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
               "status": "解除"
             }
           ]
@@ -47,7 +114,20 @@
           "code": "1620400",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -55,7 +135,19 @@
           "code": "1620500",
           "warnings": [
             {
-              "code": "20",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
               "status": "解除"
             }
           ]
@@ -64,7 +156,20 @@
           "code": "1620600",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -72,7 +177,20 @@
           "code": "1620700",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -80,7 +198,11 @@
           "code": "1620800",
           "warnings": [
             {
-              "code": "20",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
               "status": "解除"
             }
           ]
@@ -89,7 +211,11 @@
           "code": "1620900",
           "warnings": [
             {
-              "code": "20",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
               "status": "解除"
             }
           ]
@@ -98,7 +224,11 @@
           "code": "1621000",
           "warnings": [
             {
-              "code": "20",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
               "status": "解除"
             }
           ]
@@ -107,7 +237,15 @@
           "code": "1621100",
           "warnings": [
             {
-              "code": "20",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
               "status": "解除"
             }
           ]
@@ -116,7 +254,12 @@
           "code": "1632100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -124,7 +267,12 @@
           "code": "1632200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -132,7 +280,12 @@
           "code": "1632300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -140,7 +293,20 @@
           "code": "1634200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -148,7 +314,20 @@
           "code": "1634300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         }

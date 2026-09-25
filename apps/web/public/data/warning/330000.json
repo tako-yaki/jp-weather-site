@@ -1,6 +1,5 @@
 {
-  "reportDatetime": "2026-05-24T20:11:00+09:00",
-  "publishingOffice": "岡山地方気象台",
+  "reportDatetime": "2026-09-21T15:57:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -9,7 +8,23 @@
           "code": "330010",
           "warnings": [
             {
-              "code": "14",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -18,7 +33,11 @@
           "code": "330020",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -31,7 +50,23 @@
           "code": "3310000",
           "warnings": [
             {
-              "code": "14",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -40,7 +75,15 @@
           "code": "3320200",
           "warnings": [
             {
-              "code": "14",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -49,7 +92,11 @@
           "code": "3320300",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -58,7 +105,11 @@
           "code": "3320400",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -67,7 +118,11 @@
           "code": "3320500",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -76,7 +131,15 @@
           "code": "3320700",
           "warnings": [
             {
-              "code": "14",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -85,7 +148,15 @@
           "code": "3320800",
           "warnings": [
             {
-              "code": "14",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -94,7 +165,11 @@
           "code": "3320900",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -103,7 +178,11 @@
           "code": "3321000",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -112,7 +191,11 @@
           "code": "3321100",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -121,7 +204,11 @@
           "code": "3321200",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -130,7 +217,15 @@
           "code": "3321300",
           "warnings": [
             {
-              "code": "14",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -139,7 +234,11 @@
           "code": "3321400",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -148,7 +247,11 @@
           "code": "3321500",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -157,7 +260,15 @@
           "code": "3321600",
           "warnings": [
             {
-              "code": "14",
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -166,7 +277,11 @@
           "code": "3334600",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -175,7 +290,7 @@
           "code": "3342300",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -184,7 +299,7 @@
           "code": "3344500",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -193,7 +308,7 @@
           "code": "3346100",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -202,7 +317,7 @@
           "code": "3358600",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -211,7 +326,11 @@
           "code": "3360600",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -220,7 +339,11 @@
           "code": "3362200",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -229,7 +352,11 @@
           "code": "3362300",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -238,7 +365,7 @@
           "code": "3364300",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -247,7 +374,11 @@
           "code": "3366300",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -256,7 +387,11 @@
           "code": "3366600",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -265,7 +400,11 @@
           "code": "3368100",
           "warnings": [
             {
-              "code": "14",
+              "code": "20",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]

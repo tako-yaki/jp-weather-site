@@ -1,6 +1,5 @@
 {
-  "reportDatetime": "2026-05-22T04:41:00+09:00",
-  "publishingOffice": "岐阜地方気象台",
+  "reportDatetime": "2026-09-22T04:15:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -9,7 +8,15 @@
           "code": "210010",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -18,7 +25,19 @@
           "code": "210020",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -49,7 +68,15 @@
           "code": "2120300",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -77,6 +104,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -113,6 +144,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -195,6 +230,10 @@
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -203,6 +242,14 @@
           "warnings": [
             {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -373,7 +420,15 @@
           "code": "2150600",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -383,6 +438,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]

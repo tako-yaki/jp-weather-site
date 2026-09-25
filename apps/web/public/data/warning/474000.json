@@ -1,0 +1,131 @@
+{
+  "reportDatetime": "2026-09-25T10:05:00+09:00",
+  "headlineText": "注意報を解除します。",
+  "areaTypes": [
+    {
+      "areas": [
+        {
+          "code": "474010",
+          "warnings": [
+            {
+              "code": "48",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "474020",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "areas": [
+        {
+          "code": "4720700",
+          "warnings": [
+            {
+              "code": "48",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "4738100",
+          "warnings": [
+            {
+              "code": "48",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "4738200",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

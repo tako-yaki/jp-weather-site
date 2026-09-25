@@ -1,0 +1,40 @@
+name: update-fast
+
+# 警報注意報 + アメダス実況を5分おきに更新する(GitHub Actions cronの技術的な最短間隔)。
+# 気象庁のAPIだけを叩くのでOpen-Meteoの無料枠には影響しない。
+# ここで変わるファイルはCloudflare Pages側の Build watch paths で除外し、
+# リビルドを起こさない(ブラウザがraw.githubusercontent.com経由で直接取得するため)。
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-fast
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python3 pipelines/update_fast.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add apps/web/public/data/warning apps/web/public/data/amedas-current.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update warnings + amedas current"
+          # update-slow側と同時に走ってpushが競合した場合に備えて軽くリトライする
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && break
+            sleep 5
+          done

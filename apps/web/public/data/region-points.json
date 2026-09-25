@@ -1,0 +1,1298 @@
+[
+  {
+    "code": "011000",
+    "name": "宗谷地方",
+    "officeCode": "011000",
+    "amedasCode": "11016",
+    "amedasName": "稚内",
+    "lat": 45.415,
+    "lon": 141.67833333333334
+  },
+  {
+    "code": "012010",
+    "name": "上川地方",
+    "officeCode": "012000",
+    "amedasCode": "12442",
+    "amedasName": "旭川",
+    "lat": 43.75666666666667,
+    "lon": 142.37166666666667
+  },
+  {
+    "code": "012020",
+    "name": "留萌地方",
+    "officeCode": "012000",
+    "amedasCode": "12442",
+    "amedasName": "旭川",
+    "lat": 43.75666666666667,
+    "lon": 142.37166666666667
+  },
+  {
+    "code": "013010",
+    "name": "網走地方",
+    "officeCode": "013000",
+    "amedasCode": "17341",
+    "amedasName": "網走",
+    "lat": 44.016666666666666,
+    "lon": 144.27833333333334
+  },
+  {
+    "code": "013020",
+    "name": "北見地方",
+    "officeCode": "013000",
+    "amedasCode": "17341",
+    "amedasName": "網走",
+    "lat": 44.016666666666666,
+    "lon": 144.27833333333334
+  },
+  {
+    "code": "013030",
+    "name": "紋別地方",
+    "officeCode": "013000",
+    "amedasCode": "17341",
+    "amedasName": "網走",
+    "lat": 44.016666666666666,
+    "lon": 144.27833333333334
+  },
+  {
+    "code": "014030",
+    "name": "十勝地方",
+    "officeCode": "014030",
+    "amedasCode": "20432",
+    "amedasName": "帯広",
+    "lat": 42.92166666666667,
+    "lon": 143.21166666666667
+  },
+  {
+    "code": "014020",
+    "name": "釧路地方",
+    "officeCode": "014100",
+    "amedasCode": "19432",
+    "amedasName": "釧路",
+    "lat": 42.985,
+    "lon": 144.37666666666667
+  },
+  {
+    "code": "014010",
+    "name": "根室地方",
+    "officeCode": "014100",
+    "amedasCode": "19432",
+    "amedasName": "釧路",
+    "lat": 42.985,
+    "lon": 144.37666666666667
+  },
+  {
+    "code": "014030",
+    "name": "十勝地方",
+    "officeCode": "014100",
+    "amedasCode": "20432",
+    "amedasName": "帯広",
+    "lat": 42.92166666666667,
+    "lon": 143.21166666666667
+  },
+  {
+    "code": "015010",
+    "name": "胆振地方",
+    "officeCode": "015000",
+    "amedasCode": "21323",
+    "amedasName": "室蘭",
+    "lat": 42.31166666666667,
+    "lon": 140.975
+  },
+  {
+    "code": "015020",
+    "name": "日高地方",
+    "officeCode": "015000",
+    "amedasCode": "21323",
+    "amedasName": "室蘭",
+    "lat": 42.31166666666667,
+    "lon": 140.975
+  },
+  {
+    "code": "016010",
+    "name": "石狩地方",
+    "officeCode": "016000",
+    "amedasCode": "14163",
+    "amedasName": "札幌",
+    "lat": 43.06,
+    "lon": 141.32833333333335
+  },
+  {
+    "code": "016020",
+    "name": "空知地方",
+    "officeCode": "016000",
+    "amedasCode": "14163",
+    "amedasName": "札幌",
+    "lat": 43.06,
+    "lon": 141.32833333333335
+  },
+  {
+    "code": "016030",
+    "name": "後志地方",
+    "officeCode": "016000",
+    "amedasCode": "14163",
+    "amedasName": "札幌",
+    "lat": 43.06,
+    "lon": 141.32833333333335
+  },
+  {
+    "code": "017010",
+    "name": "渡島地方",
+    "officeCode": "017000",
+    "amedasCode": "23232",
+    "amedasName": "函館",
+    "lat": 41.81666666666667,
+    "lon": 140.75333333333333
+  },
+  {
+    "code": "017020",
+    "name": "檜山地方",
+    "officeCode": "017000",
+    "amedasCode": "23232",
+    "amedasName": "函館",
+    "lat": 41.81666666666667,
+    "lon": 140.75333333333333
+  },
+  {
+    "code": "020010",
+    "name": "津軽",
+    "officeCode": "020000",
+    "amedasCode": "31312",
+    "amedasName": "青森",
+    "lat": 40.821666666666665,
+    "lon": 140.76833333333335
+  },
+  {
+    "code": "020020",
+    "name": "下北",
+    "officeCode": "020000",
+    "amedasCode": "31312",
+    "amedasName": "青森",
+    "lat": 40.821666666666665,
+    "lon": 140.76833333333335
+  },
+  {
+    "code": "020030",
+    "name": "三八上北",
+    "officeCode": "020000",
+    "amedasCode": "31312",
+    "amedasName": "青森",
+    "lat": 40.821666666666665,
+    "lon": 140.76833333333335
+  },
+  {
+    "code": "030010",
+    "name": "内陸",
+    "officeCode": "030000",
+    "amedasCode": "33431",
+    "amedasName": "盛岡",
+    "lat": 39.69833333333333,
+    "lon": 141.165
+  },
+  {
+    "code": "030020",
+    "name": "沿岸北部",
+    "officeCode": "030000",
+    "amedasCode": "33472",
+    "amedasName": "宮古",
+    "lat": 39.64666666666667,
+    "lon": 141.965
+  },
+  {
+    "code": "030030",
+    "name": "沿岸南部",
+    "officeCode": "030000",
+    "amedasCode": "33472",
+    "amedasName": "宮古",
+    "lat": 39.64666666666667,
+    "lon": 141.965
+  },
+  {
+    "code": "040010",
+    "name": "東部",
+    "officeCode": "040000",
+    "amedasCode": "34392",
+    "amedasName": "仙台",
+    "lat": 38.26166666666666,
+    "lon": 140.89666666666668
+  },
+  {
+    "code": "040020",
+    "name": "西部",
+    "officeCode": "040000",
+    "amedasCode": "34461",
+    "amedasName": "白石",
+    "lat": 38.015,
+    "lon": 140.61166666666668
+  },
+  {
+    "code": "050010",
+    "name": "沿岸",
+    "officeCode": "050000",
+    "amedasCode": "32402",
+    "amedasName": "秋田",
+    "lat": 39.71666666666667,
+    "lon": 140.09833333333333
+  },
+  {
+    "code": "050020",
+    "name": "内陸",
+    "officeCode": "050000",
+    "amedasCode": "32402",
+    "amedasName": "秋田",
+    "lat": 39.71666666666667,
+    "lon": 140.09833333333333
+  },
+  {
+    "code": "060010",
+    "name": "村山",
+    "officeCode": "060000",
+    "amedasCode": "35426",
+    "amedasName": "山形",
+    "lat": 38.255,
+    "lon": 140.345
+  },
+  {
+    "code": "060020",
+    "name": "置賜",
+    "officeCode": "060000",
+    "amedasCode": "35426",
+    "amedasName": "山形",
+    "lat": 38.255,
+    "lon": 140.345
+  },
+  {
+    "code": "060030",
+    "name": "庄内",
+    "officeCode": "060000",
+    "amedasCode": "35426",
+    "amedasName": "山形",
+    "lat": 38.255,
+    "lon": 140.345
+  },
+  {
+    "code": "060040",
+    "name": "最上",
+    "officeCode": "060000",
+    "amedasCode": "35426",
+    "amedasName": "山形",
+    "lat": 38.255,
+    "lon": 140.345
+  },
+  {
+    "code": "070010",
+    "name": "中通り",
+    "officeCode": "070000",
+    "amedasCode": "36127",
+    "amedasName": "福島",
+    "lat": 37.75833333333333,
+    "lon": 140.47
+  },
+  {
+    "code": "070020",
+    "name": "浜通り",
+    "officeCode": "070000",
+    "amedasCode": "36127",
+    "amedasName": "福島",
+    "lat": 37.75833333333333,
+    "lon": 140.47
+  },
+  {
+    "code": "070030",
+    "name": "会津",
+    "officeCode": "070000",
+    "amedasCode": "36361",
+    "amedasName": "若松",
+    "lat": 37.48833333333334,
+    "lon": 139.91
+  },
+  {
+    "code": "080010",
+    "name": "北部",
+    "officeCode": "080000",
+    "amedasCode": "40201",
+    "amedasName": "水戸",
+    "lat": 36.38,
+    "lon": 140.46666666666667
+  },
+  {
+    "code": "080020",
+    "name": "南部",
+    "officeCode": "080000",
+    "amedasCode": "40201",
+    "amedasName": "水戸",
+    "lat": 36.38,
+    "lon": 140.46666666666667
+  },
+  {
+    "code": "090010",
+    "name": "南部",
+    "officeCode": "090000",
+    "amedasCode": "41277",
+    "amedasName": "宇都宮",
+    "lat": 36.54833333333333,
+    "lon": 139.86833333333334
+  },
+  {
+    "code": "090020",
+    "name": "北部",
+    "officeCode": "090000",
+    "amedasCode": "41277",
+    "amedasName": "宇都宮",
+    "lat": 36.54833333333333,
+    "lon": 139.86833333333334
+  },
+  {
+    "code": "100010",
+    "name": "南部",
+    "officeCode": "100000",
+    "amedasCode": "42251",
+    "amedasName": "前橋",
+    "lat": 36.405,
+    "lon": 139.06
+  },
+  {
+    "code": "100020",
+    "name": "北部",
+    "officeCode": "100000",
+    "amedasCode": "42251",
+    "amedasName": "前橋",
+    "lat": 36.405,
+    "lon": 139.06
+  },
+  {
+    "code": "110020",
+    "name": "北部",
+    "officeCode": "110000",
+    "amedasCode": "43056",
+    "amedasName": "熊谷",
+    "lat": 36.15,
+    "lon": 139.38
+  },
+  {
+    "code": "110010",
+    "name": "南部",
+    "officeCode": "110000",
+    "amedasCode": "43056",
+    "amedasName": "熊谷",
+    "lat": 36.15,
+    "lon": 139.38
+  },
+  {
+    "code": "110030",
+    "name": "秩父地方",
+    "officeCode": "110000",
+    "amedasCode": "43056",
+    "amedasName": "熊谷",
+    "lat": 36.15,
+    "lon": 139.38
+  },
+  {
+    "code": "120010",
+    "name": "北西部",
+    "officeCode": "120000",
+    "amedasCode": "45148",
+    "amedasName": "銚子",
+    "lat": 35.73833333333333,
+    "lon": 140.85666666666665
+  },
+  {
+    "code": "120020",
+    "name": "北東部",
+    "officeCode": "120000",
+    "amedasCode": "45148",
+    "amedasName": "銚子",
+    "lat": 35.73833333333333,
+    "lon": 140.85666666666665
+  },
+  {
+    "code": "120030",
+    "name": "南部",
+    "officeCode": "120000",
+    "amedasCode": "45148",
+    "amedasName": "銚子",
+    "lat": 35.73833333333333,
+    "lon": 140.85666666666665
+  },
+  {
+    "code": "130010",
+    "name": "東京地方",
+    "officeCode": "130000",
+    "amedasCode": "44132",
+    "amedasName": "東京",
+    "lat": 35.69166666666667,
+    "lon": 139.75
+  },
+  {
+    "code": "130020",
+    "name": "伊豆諸島北部",
+    "officeCode": "130000",
+    "amedasCode": "44263",
+    "amedasName": "八丈島",
+    "lat": 33.12166666666667,
+    "lon": 139.77833333333334
+  },
+  {
+    "code": "130030",
+    "name": "伊豆諸島南部",
+    "officeCode": "130000",
+    "amedasCode": "44263",
+    "amedasName": "八丈島",
+    "lat": 33.12166666666667,
+    "lon": 139.77833333333334
+  },
+  {
+    "code": "130040",
+    "name": "小笠原諸島",
+    "officeCode": "130000",
+    "amedasCode": "44301",
+    "amedasName": "父島",
+    "lat": 27.091666666666665,
+    "lon": 142.19
+  },
+  {
+    "code": "140010",
+    "name": "東部",
+    "officeCode": "140000",
+    "amedasCode": "46106",
+    "amedasName": "横浜",
+    "lat": 35.43833333333333,
+    "lon": 139.65166666666667
+  },
+  {
+    "code": "140020",
+    "name": "西部",
+    "officeCode": "140000",
+    "amedasCode": "46106",
+    "amedasName": "横浜",
+    "lat": 35.43833333333333,
+    "lon": 139.65166666666667
+  },
+  {
+    "code": "150010",
+    "name": "下越",
+    "officeCode": "150000",
+    "amedasCode": "54232",
+    "amedasName": "新潟",
+    "lat": 37.89333333333333,
+    "lon": 139.01833333333335
+  },
+  {
+    "code": "150020",
+    "name": "中越",
+    "officeCode": "150000",
+    "amedasCode": "54232",
+    "amedasName": "新潟",
+    "lat": 37.89333333333333,
+    "lon": 139.01833333333335
+  },
+  {
+    "code": "150030",
+    "name": "上越",
+    "officeCode": "150000",
+    "amedasCode": "54232",
+    "amedasName": "新潟",
+    "lat": 37.89333333333333,
+    "lon": 139.01833333333335
+  },
+  {
+    "code": "150040",
+    "name": "佐渡",
+    "officeCode": "150000",
+    "amedasCode": "54232",
+    "amedasName": "新潟",
+    "lat": 37.89333333333333,
+    "lon": 139.01833333333335
+  },
+  {
+    "code": "160010",
+    "name": "東部",
+    "officeCode": "160000",
+    "amedasCode": "55102",
+    "amedasName": "富山",
+    "lat": 36.708333333333336,
+    "lon": 137.20166666666665
+  },
+  {
+    "code": "160020",
+    "name": "西部",
+    "officeCode": "160000",
+    "amedasCode": "55102",
+    "amedasName": "富山",
+    "lat": 36.708333333333336,
+    "lon": 137.20166666666665
+  },
+  {
+    "code": "170010",
+    "name": "加賀",
+    "officeCode": "170000",
+    "amedasCode": "56227",
+    "amedasName": "金沢",
+    "lat": 36.58833333333333,
+    "lon": 136.63333333333333
+  },
+  {
+    "code": "170020",
+    "name": "能登",
+    "officeCode": "170000",
+    "amedasCode": "56227",
+    "amedasName": "金沢",
+    "lat": 36.58833333333333,
+    "lon": 136.63333333333333
+  },
+  {
+    "code": "180010",
+    "name": "嶺北",
+    "officeCode": "180000",
+    "amedasCode": "57066",
+    "amedasName": "福井",
+    "lat": 36.055,
+    "lon": 136.22166666666666
+  },
+  {
+    "code": "180020",
+    "name": "嶺南",
+    "officeCode": "180000",
+    "amedasCode": "57066",
+    "amedasName": "福井",
+    "lat": 36.055,
+    "lon": 136.22166666666666
+  },
+  {
+    "code": "190010",
+    "name": "中・西部",
+    "officeCode": "190000",
+    "amedasCode": "49142",
+    "amedasName": "甲府",
+    "lat": 35.666666666666664,
+    "lon": 138.55333333333334
+  },
+  {
+    "code": "190020",
+    "name": "東部・富士五湖",
+    "officeCode": "190000",
+    "amedasCode": "49142",
+    "amedasName": "甲府",
+    "lat": 35.666666666666664,
+    "lon": 138.55333333333334
+  },
+  {
+    "code": "200010",
+    "name": "北部",
+    "officeCode": "200000",
+    "amedasCode": "48156",
+    "amedasName": "長野",
+    "lat": 36.66166666666667,
+    "lon": 138.19166666666666
+  },
+  {
+    "code": "200020",
+    "name": "中部",
+    "officeCode": "200000",
+    "amedasCode": "48156",
+    "amedasName": "長野",
+    "lat": 36.66166666666667,
+    "lon": 138.19166666666666
+  },
+  {
+    "code": "200030",
+    "name": "南部",
+    "officeCode": "200000",
+    "amedasCode": "48156",
+    "amedasName": "長野",
+    "lat": 36.66166666666667,
+    "lon": 138.19166666666666
+  },
+  {
+    "code": "210010",
+    "name": "美濃地方",
+    "officeCode": "210000",
+    "amedasCode": "52586",
+    "amedasName": "岐阜",
+    "lat": 35.4,
+    "lon": 136.76166666666666
+  },
+  {
+    "code": "210020",
+    "name": "飛騨地方",
+    "officeCode": "210000",
+    "amedasCode": "52586",
+    "amedasName": "岐阜",
+    "lat": 35.4,
+    "lon": 136.76166666666666
+  },
+  {
+    "code": "220010",
+    "name": "中部",
+    "officeCode": "220000",
+    "amedasCode": "50331",
+    "amedasName": "静岡",
+    "lat": 34.975,
+    "lon": 138.40333333333334
+  },
+  {
+    "code": "220040",
+    "name": "西部",
+    "officeCode": "220000",
+    "amedasCode": "50331",
+    "amedasName": "静岡",
+    "lat": 34.975,
+    "lon": 138.40333333333334
+  },
+  {
+    "code": "220030",
+    "name": "東部",
+    "officeCode": "220000",
+    "amedasCode": "50331",
+    "amedasName": "静岡",
+    "lat": 34.975,
+    "lon": 138.40333333333334
+  },
+  {
+    "code": "220020",
+    "name": "伊豆",
+    "officeCode": "220000",
+    "amedasCode": "50331",
+    "amedasName": "静岡",
+    "lat": 34.975,
+    "lon": 138.40333333333334
+  },
+  {
+    "code": "230010",
+    "name": "西部",
+    "officeCode": "230000",
+    "amedasCode": "51106",
+    "amedasName": "名古屋",
+    "lat": 35.166666666666664,
+    "lon": 136.965
+  },
+  {
+    "code": "230020",
+    "name": "東部",
+    "officeCode": "230000",
+    "amedasCode": "51106",
+    "amedasName": "名古屋",
+    "lat": 35.166666666666664,
+    "lon": 136.965
+  },
+  {
+    "code": "240010",
+    "name": "北中部",
+    "officeCode": "240000",
+    "amedasCode": "53133",
+    "amedasName": "津",
+    "lat": 34.733333333333334,
+    "lon": 136.51833333333335
+  },
+  {
+    "code": "240020",
+    "name": "南部",
+    "officeCode": "240000",
+    "amedasCode": "53133",
+    "amedasName": "津",
+    "lat": 34.733333333333334,
+    "lon": 136.51833333333335
+  },
+  {
+    "code": "250010",
+    "name": "南部",
+    "officeCode": "250000",
+    "amedasCode": "60131",
+    "amedasName": "彦根",
+    "lat": 35.275,
+    "lon": 136.24333333333334
+  },
+  {
+    "code": "250020",
+    "name": "北部",
+    "officeCode": "250000",
+    "amedasCode": "60131",
+    "amedasName": "彦根",
+    "lat": 35.275,
+    "lon": 136.24333333333334
+  },
+  {
+    "code": "260010",
+    "name": "南部",
+    "officeCode": "260000",
+    "amedasCode": "61286",
+    "amedasName": "京都",
+    "lat": 35.013333333333335,
+    "lon": 135.73166666666665
+  },
+  {
+    "code": "260020",
+    "name": "北部",
+    "officeCode": "260000",
+    "amedasCode": "61286",
+    "amedasName": "京都",
+    "lat": 35.013333333333335,
+    "lon": 135.73166666666665
+  },
+  {
+    "code": "270000",
+    "name": "大阪府",
+    "officeCode": "270000",
+    "amedasCode": "62078",
+    "amedasName": "大阪",
+    "lat": 34.681666666666665,
+    "lon": 135.51833333333335
+  },
+  {
+    "code": "280010",
+    "name": "南部",
+    "officeCode": "280000",
+    "amedasCode": "63518",
+    "amedasName": "神戸",
+    "lat": 34.696666666666665,
+    "lon": 135.21166666666667
+  },
+  {
+    "code": "280020",
+    "name": "北部",
+    "officeCode": "280000",
+    "amedasCode": "63518",
+    "amedasName": "神戸",
+    "lat": 34.696666666666665,
+    "lon": 135.21166666666667
+  },
+  {
+    "code": "290010",
+    "name": "北部",
+    "officeCode": "290000",
+    "amedasCode": "64036",
+    "amedasName": "奈良",
+    "lat": 34.67333333333333,
+    "lon": 135.83666666666667
+  },
+  {
+    "code": "290020",
+    "name": "南部",
+    "officeCode": "290000",
+    "amedasCode": "64036",
+    "amedasName": "奈良",
+    "lat": 34.67333333333333,
+    "lon": 135.83666666666667
+  },
+  {
+    "code": "300010",
+    "name": "北部",
+    "officeCode": "300000",
+    "amedasCode": "65042",
+    "amedasName": "和歌山",
+    "lat": 34.22833333333333,
+    "lon": 135.16333333333333
+  },
+  {
+    "code": "300020",
+    "name": "南部",
+    "officeCode": "300000",
+    "amedasCode": "65042",
+    "amedasName": "和歌山",
+    "lat": 34.22833333333333,
+    "lon": 135.16333333333333
+  },
+  {
+    "code": "310010",
+    "name": "東部",
+    "officeCode": "310000",
+    "amedasCode": "69122",
+    "amedasName": "鳥取",
+    "lat": 35.486666666666665,
+    "lon": 134.23833333333334
+  },
+  {
+    "code": "310020",
+    "name": "中・西部",
+    "officeCode": "310000",
+    "amedasCode": "69122",
+    "amedasName": "鳥取",
+    "lat": 35.486666666666665,
+    "lon": 134.23833333333334
+  },
+  {
+    "code": "320010",
+    "name": "東部",
+    "officeCode": "320000",
+    "amedasCode": "68132",
+    "amedasName": "松江",
+    "lat": 35.45666666666666,
+    "lon": 133.065
+  },
+  {
+    "code": "320020",
+    "name": "西部",
+    "officeCode": "320000",
+    "amedasCode": "68132",
+    "amedasName": "松江",
+    "lat": 35.45666666666666,
+    "lon": 133.065
+  },
+  {
+    "code": "320030",
+    "name": "隠岐",
+    "officeCode": "320000",
+    "amedasCode": "68132",
+    "amedasName": "松江",
+    "lat": 35.45666666666666,
+    "lon": 133.065
+  },
+  {
+    "code": "330010",
+    "name": "南部",
+    "officeCode": "330000",
+    "amedasCode": "66408",
+    "amedasName": "岡山",
+    "lat": 34.685,
+    "lon": 133.925
+  },
+  {
+    "code": "330020",
+    "name": "北部",
+    "officeCode": "330000",
+    "amedasCode": "66408",
+    "amedasName": "岡山",
+    "lat": 34.685,
+    "lon": 133.925
+  },
+  {
+    "code": "340010",
+    "name": "南部",
+    "officeCode": "340000",
+    "amedasCode": "67437",
+    "amedasName": "広島",
+    "lat": 34.39833333333333,
+    "lon": 132.46166666666667
+  },
+  {
+    "code": "340020",
+    "name": "北部",
+    "officeCode": "340000",
+    "amedasCode": "67437",
+    "amedasName": "広島",
+    "lat": 34.39833333333333,
+    "lon": 132.46166666666667
+  },
+  {
+    "code": "350010",
+    "name": "西部",
+    "officeCode": "350000",
+    "amedasCode": "81428",
+    "amedasName": "下関",
+    "lat": 33.94833333333333,
+    "lon": 130.925
+  },
+  {
+    "code": "350020",
+    "name": "中部",
+    "officeCode": "350000",
+    "amedasCode": "81428",
+    "amedasName": "下関",
+    "lat": 33.94833333333333,
+    "lon": 130.925
+  },
+  {
+    "code": "350030",
+    "name": "東部",
+    "officeCode": "350000",
+    "amedasCode": "81428",
+    "amedasName": "下関",
+    "lat": 33.94833333333333,
+    "lon": 130.925
+  },
+  {
+    "code": "350040",
+    "name": "北部",
+    "officeCode": "350000",
+    "amedasCode": "81428",
+    "amedasName": "下関",
+    "lat": 33.94833333333333,
+    "lon": 130.925
+  },
+  {
+    "code": "360010",
+    "name": "北部",
+    "officeCode": "360000",
+    "amedasCode": "71106",
+    "amedasName": "徳島",
+    "lat": 34.06666666666667,
+    "lon": 134.57333333333332
+  },
+  {
+    "code": "360020",
+    "name": "南部",
+    "officeCode": "360000",
+    "amedasCode": "71106",
+    "amedasName": "徳島",
+    "lat": 34.06666666666667,
+    "lon": 134.57333333333332
+  },
+  {
+    "code": "370000",
+    "name": "香川県",
+    "officeCode": "370000",
+    "amedasCode": "72086",
+    "amedasName": "高松",
+    "lat": 34.318333333333335,
+    "lon": 134.05333333333334
+  },
+  {
+    "code": "380010",
+    "name": "中予",
+    "officeCode": "380000",
+    "amedasCode": "73166",
+    "amedasName": "松山",
+    "lat": 33.843333333333334,
+    "lon": 132.77666666666667
+  },
+  {
+    "code": "380020",
+    "name": "東予",
+    "officeCode": "380000",
+    "amedasCode": "73166",
+    "amedasName": "松山",
+    "lat": 33.843333333333334,
+    "lon": 132.77666666666667
+  },
+  {
+    "code": "380030",
+    "name": "南予",
+    "officeCode": "380000",
+    "amedasCode": "73166",
+    "amedasName": "松山",
+    "lat": 33.843333333333334,
+    "lon": 132.77666666666667
+  },
+  {
+    "code": "390010",
+    "name": "中部",
+    "officeCode": "390000",
+    "amedasCode": "74182",
+    "amedasName": "高知",
+    "lat": 33.56666666666667,
+    "lon": 133.54833333333335
+  },
+  {
+    "code": "390020",
+    "name": "東部",
+    "officeCode": "390000",
+    "amedasCode": "74182",
+    "amedasName": "高知",
+    "lat": 33.56666666666667,
+    "lon": 133.54833333333335
+  },
+  {
+    "code": "390030",
+    "name": "西部",
+    "officeCode": "390000",
+    "amedasCode": "74182",
+    "amedasName": "高知",
+    "lat": 33.56666666666667,
+    "lon": 133.54833333333335
+  },
+  {
+    "code": "400010",
+    "name": "福岡地方",
+    "officeCode": "400000",
+    "amedasCode": "82182",
+    "amedasName": "福岡",
+    "lat": 33.58166666666666,
+    "lon": 130.375
+  },
+  {
+    "code": "400020",
+    "name": "北九州地方",
+    "officeCode": "400000",
+    "amedasCode": "82182",
+    "amedasName": "福岡",
+    "lat": 33.58166666666666,
+    "lon": 130.375
+  },
+  {
+    "code": "400030",
+    "name": "筑豊地方",
+    "officeCode": "400000",
+    "amedasCode": "82182",
+    "amedasName": "福岡",
+    "lat": 33.58166666666666,
+    "lon": 130.375
+  },
+  {
+    "code": "400040",
+    "name": "筑後地方",
+    "officeCode": "400000",
+    "amedasCode": "82182",
+    "amedasName": "福岡",
+    "lat": 33.58166666666666,
+    "lon": 130.375
+  },
+  {
+    "code": "410010",
+    "name": "南部",
+    "officeCode": "410000",
+    "amedasCode": "85142",
+    "amedasName": "佐賀",
+    "lat": 33.265,
+    "lon": 130.305
+  },
+  {
+    "code": "410020",
+    "name": "北部",
+    "officeCode": "410000",
+    "amedasCode": "85142",
+    "amedasName": "佐賀",
+    "lat": 33.265,
+    "lon": 130.305
+  },
+  {
+    "code": "420010",
+    "name": "南部",
+    "officeCode": "420000",
+    "amedasCode": "84496",
+    "amedasName": "長崎",
+    "lat": 32.733333333333334,
+    "lon": 129.86666666666667
+  },
+  {
+    "code": "420020",
+    "name": "北部",
+    "officeCode": "420000",
+    "amedasCode": "84496",
+    "amedasName": "長崎",
+    "lat": 32.733333333333334,
+    "lon": 129.86666666666667
+  },
+  {
+    "code": "420030",
+    "name": "壱岐・対馬",
+    "officeCode": "420000",
+    "amedasCode": "84496",
+    "amedasName": "長崎",
+    "lat": 32.733333333333334,
+    "lon": 129.86666666666667
+  },
+  {
+    "code": "420040",
+    "name": "五島",
+    "officeCode": "420000",
+    "amedasCode": "84496",
+    "amedasName": "長崎",
+    "lat": 32.733333333333334,
+    "lon": 129.86666666666667
+  },
+  {
+    "code": "430010",
+    "name": "熊本地方",
+    "officeCode": "430000",
+    "amedasCode": "86141",
+    "amedasName": "熊本",
+    "lat": 32.81333333333333,
+    "lon": 130.70666666666668
+  },
+  {
+    "code": "430020",
+    "name": "阿蘇地方",
+    "officeCode": "430000",
+    "amedasCode": "86141",
+    "amedasName": "熊本",
+    "lat": 32.81333333333333,
+    "lon": 130.70666666666668
+  },
+  {
+    "code": "430030",
+    "name": "天草・芦北地方",
+    "officeCode": "430000",
+    "amedasCode": "86141",
+    "amedasName": "熊本",
+    "lat": 32.81333333333333,
+    "lon": 130.70666666666668
+  },
+  {
+    "code": "430040",
+    "name": "球磨地方",
+    "officeCode": "430000",
+    "amedasCode": "86141",
+    "amedasName": "熊本",
+    "lat": 32.81333333333333,
+    "lon": 130.70666666666668
+  },
+  {
+    "code": "440010",
+    "name": "中部",
+    "officeCode": "440000",
+    "amedasCode": "83216",
+    "amedasName": "大分",
+    "lat": 33.235,
+    "lon": 131.61833333333334
+  },
+  {
+    "code": "440020",
+    "name": "北部",
+    "officeCode": "440000",
+    "amedasCode": "83216",
+    "amedasName": "大分",
+    "lat": 33.235,
+    "lon": 131.61833333333334
+  },
+  {
+    "code": "440030",
+    "name": "西部",
+    "officeCode": "440000",
+    "amedasCode": "83216",
+    "amedasName": "大分",
+    "lat": 33.235,
+    "lon": 131.61833333333334
+  },
+  {
+    "code": "440040",
+    "name": "南部",
+    "officeCode": "440000",
+    "amedasCode": "83216",
+    "amedasName": "大分",
+    "lat": 33.235,
+    "lon": 131.61833333333334
+  },
+  {
+    "code": "450010",
+    "name": "南部平野部",
+    "officeCode": "450000",
+    "amedasCode": "87376",
+    "amedasName": "宮崎",
+    "lat": 31.938333333333333,
+    "lon": 131.41333333333333
+  },
+  {
+    "code": "450020",
+    "name": "北部平野部",
+    "officeCode": "450000",
+    "amedasCode": "87376",
+    "amedasName": "宮崎",
+    "lat": 31.938333333333333,
+    "lon": 131.41333333333333
+  },
+  {
+    "code": "450030",
+    "name": "南部山沿い",
+    "officeCode": "450000",
+    "amedasCode": "87376",
+    "amedasName": "宮崎",
+    "lat": 31.938333333333333,
+    "lon": 131.41333333333333
+  },
+  {
+    "code": "450040",
+    "name": "北部山沿い",
+    "officeCode": "450000",
+    "amedasCode": "87376",
+    "amedasName": "宮崎",
+    "lat": 31.938333333333333,
+    "lon": 131.41333333333333
+  },
+  {
+    "code": "460040",
+    "name": "奄美地方",
+    "officeCode": "460040",
+    "amedasCode": "88837",
+    "amedasName": "名瀬",
+    "lat": 28.385,
+    "lon": 129.49333333333334
+  },
+  {
+    "code": "460010",
+    "name": "薩摩地方",
+    "officeCode": "460100",
+    "amedasCode": "88317",
+    "amedasName": "鹿児島",
+    "lat": 31.555,
+    "lon": 130.54666666666665
+  },
+  {
+    "code": "460020",
+    "name": "大隅地方",
+    "officeCode": "460100",
+    "amedasCode": "88317",
+    "amedasName": "鹿児島",
+    "lat": 31.555,
+    "lon": 130.54666666666665
+  },
+  {
+    "code": "460030",
+    "name": "種子島・屋久島地方",
+    "officeCode": "460100",
+    "amedasCode": "88317",
+    "amedasName": "鹿児島",
+    "lat": 31.555,
+    "lon": 130.54666666666665
+  },
+  {
+    "code": "460040",
+    "name": "奄美地方",
+    "officeCode": "460100",
+    "amedasCode": "88837",
+    "amedasName": "名瀬",
+    "lat": 28.385,
+    "lon": 129.49333333333334
+  },
+  {
+    "code": "471010",
+    "name": "本島中南部",
+    "officeCode": "471000",
+    "amedasCode": "91197",
+    "amedasName": "那覇",
+    "lat": 26.206666666666667,
+    "lon": 127.68666666666667
+  },
+  {
+    "code": "471020",
+    "name": "本島北部",
+    "officeCode": "471000",
+    "amedasCode": "91197",
+    "amedasName": "那覇",
+    "lat": 26.206666666666667,
+    "lon": 127.68666666666667
+  },
+  {
+    "code": "471030",
+    "name": "久米島",
+    "officeCode": "471000",
+    "amedasCode": "91197",
+    "amedasName": "那覇",
+    "lat": 26.206666666666667,
+    "lon": 127.68666666666667
+  },
+  {
+    "code": "472000",
+    "name": "大東島地方",
+    "officeCode": "472000",
+    "amedasCode": "92011",
+    "amedasName": "南大東",
+    "lat": 25.828333333333333,
+    "lon": 131.22833333333332
+  },
+  {
+    "code": "473000",
+    "name": "宮古島地方",
+    "officeCode": "473000",
+    "amedasCode": "93041",
+    "amedasName": "宮古島",
+    "lat": 24.793333333333333,
+    "lon": 125.27833333333334
+  },
+  {
+    "code": "474010",
+    "name": "石垣島地方",
+    "officeCode": "474000",
+    "amedasCode": "94081",
+    "amedasName": "石垣島",
+    "lat": 24.336666666666666,
+    "lon": 124.16333333333333
+  },
+  {
+    "code": "474020",
+    "name": "与那国島地方",
+    "officeCode": "474000",
+    "amedasCode": "94081",
+    "amedasName": "石垣島",
+    "lat": 24.336666666666666,
+    "lon": 124.16333333333333
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "reportDatetime": "2026-09-25T10:14:00+09:00",
+  "headlineText": "大東島地方では、急な強い雨や落雷に注意してください。",
+  "areaTypes": [
+    {
+      "areas": [
+        {
+          "code": "472000",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "areas": [
+        {
+          "code": "4735700",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "4735800",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

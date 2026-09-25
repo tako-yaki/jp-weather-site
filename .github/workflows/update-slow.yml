@@ -1,0 +1,39 @@
+name: update-slow
+
+# 予報テキスト + 地域の代表地点(緯度経度)算出を2時間おきに更新する。
+# Open-Meteoはここでは一切呼ばない(時系列グラフ・10日間予報の参考日・市区町村の気温は
+# ブラウザが直接Open-Meteoへ取得する)。ここで変わるファイル(forecast/・region-points.json)は
+# Astroが読み込んでHTMLへ焼き込む対象なので、Cloudflare Pagesのビルド対象に含める。
+on:
+  schedule:
+    - cron: "13 */2 * * *" # 毎時0分の負荷集中を避けて13分にずらす
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-slow
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python3 pipelines/update_slow.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add apps/web/public/data/forecast apps/web/public/data/region-points.json pipelines/common/amedastable.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update forecast text + region points"
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && break
+            sleep 5
+          done

@@ -1,6 +1,5 @@
 {
-  "reportDatetime": "2026-05-27T16:08:00+09:00",
-  "publishingOffice": "松山地方気象台",
+  "reportDatetime": "2026-09-22T10:16:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -9,7 +8,8 @@
           "code": "380010",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -17,13 +17,26 @@
           "code": "380020",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
         {
           "code": "380030",
           "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"
@@ -42,7 +55,8 @@
           "code": "3820100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -50,13 +64,26 @@
           "code": "3820200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
         {
           "code": "3820300",
           "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"
@@ -71,7 +98,16 @@
           "code": "3820400",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -79,7 +115,12 @@
           "code": "3820500",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -87,7 +128,8 @@
           "code": "3820600",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -95,7 +137,16 @@
           "code": "3820700",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -103,7 +154,8 @@
           "code": "3821000",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -111,7 +163,8 @@
           "code": "3821300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -119,7 +172,16 @@
           "code": "3821400",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -127,7 +189,8 @@
           "code": "3821500",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -135,7 +198,8 @@
           "code": "3835600",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -143,7 +207,8 @@
           "code": "3838600",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -151,7 +216,8 @@
           "code": "3840100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -159,7 +225,8 @@
           "code": "3840200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -167,7 +234,12 @@
           "code": "3842200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -175,13 +247,26 @@
           "code": "3844200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
         {
           "code": "3848400",
           "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"
@@ -192,6 +277,10 @@
           "code": "3848800",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "解除"
             }
@@ -200,6 +289,10 @@
         {
           "code": "3850600",
           "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            },
             {
               "code": "15",
               "status": "解除"

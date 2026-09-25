@@ -1,0 +1,283 @@
+{
+  "reportDatetime": "2026-09-24T19:39:00+09:00",
+  "headlineText": "注意報を解除します。",
+  "areaTypes": [
+    {
+      "areas": [
+        {
+          "code": "017010",
+          "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "017020",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "areas": [
+        {
+          "code": "0120200",
+          "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0123600",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0133100",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0133200",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0133300",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0133400",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0133700",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0134300",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0134500",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0134601",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0134602",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0134700",
+          "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0136100",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0136200",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0136300",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0136400",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0136700",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0137000",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "0137100",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

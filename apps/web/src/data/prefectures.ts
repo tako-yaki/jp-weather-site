@@ -1,61 +1,102 @@
-// 都道府県 -> 気象庁の予報エリアコード(office) + Open-Meteo用の緯度経度(県庁所在地)。
+// 気象庁の予報区(office) + Open-Meteo用の緯度経度。
 // コードは気象庁 area.json (https://www.jma.go.jp/bosai/common/const/area.json) の
-// offices から取得し、緯度経度は Open-Meteo Geocoding API で県庁所在地を検索して求めた。
-// 北海道は気象庁の予報区が8分割されているため、便宜上 石狩・空知・後志地方(札幌) を採用。
-// 鹿児島県は奄美地方を除く本土側、沖縄県は沖縄本島地方のコードを採用。
+// offices から取得し、緯度経度は Open-Meteo Geocoding API で地方気象台の所在地(県庁所在地など)を
+// 検索して求めた(候補は country_code=JP かつ feature_code PPLC/PPLA/PPLA2 を優先し、
+// 全件を目視確認してから採用している)。
+//
+// 北海道・鹿児島県・沖縄県の3県だけ、気象庁の予報区(office)が県内で複数に分かれているため、
+// この3県だけ複数エントリになる。groupName は地点選択UIで都道府県ごとにまとめる(optgroup)ためのキー。
 export interface Prefecture {
 	code: string;
 	name: string;
+	groupName: string;
 	lat: number;
 	lon: number;
+	// 十勝地方(014030)と奄美地方(460040)は area.json 上は独立したofficeだが、
+	// 気象庁の短期・週間予報テキストは自前のJSONを持たず、隣接する官署(釧路・根室/鹿児島)の
+	// 予報JSON内に「複数エリアのうちの1つ」として同居している(警報注意報は自前のJSONがある)。
+	// そのため forecastSource(予報JSONの取得元office)と、その中から自分の行を選び出すための
+	// forecastAreaCode(天気・降水確率、class10コード)/tempAreaCode(気温、アメダスコード)が必要。
+	forecastSource?: string;
+	forecastAreaCode?: string;
+	tempAreaCode?: string;
 }
 
 export const PREFECTURES: Prefecture[] = [
-	{ code: '016000', name: '北海道', lat: 43.0667, lon: 141.35 },
-	{ code: '020000', name: '青森県', lat: 40.8167, lon: 140.7333 },
-	{ code: '030000', name: '岩手県', lat: 39.7, lon: 141.15 },
-	{ code: '040000', name: '宮城県', lat: 38.2667, lon: 140.8667 },
-	{ code: '050000', name: '秋田県', lat: 39.7167, lon: 140.1167 },
-	{ code: '060000', name: '山形県', lat: 38.2333, lon: 140.3667 },
-	{ code: '070000', name: '福島県', lat: 37.75, lon: 140.4667 },
-	{ code: '080000', name: '茨城県', lat: 36.35, lon: 140.45 },
-	{ code: '090000', name: '栃木県', lat: 36.5667, lon: 139.8833 },
-	{ code: '100000', name: '群馬県', lat: 36.4, lon: 139.0833 },
-	{ code: '110000', name: '埼玉県', lat: 35.9081, lon: 139.6566 },
-	{ code: '120000', name: '千葉県', lat: 35.6, lon: 140.1167 },
-	{ code: '130000', name: '東京都', lat: 35.6895, lon: 139.6917 },
-	{ code: '140000', name: '神奈川県', lat: 35.4333, lon: 139.65 },
-	{ code: '150000', name: '新潟県', lat: 37.9226, lon: 139.0412 },
-	{ code: '160000', name: '富山県', lat: 36.7, lon: 137.2167 },
-	{ code: '170000', name: '石川県', lat: 36.6, lon: 136.6167 },
-	{ code: '180000', name: '福井県', lat: 36.0644, lon: 136.2226 },
-	{ code: '190000', name: '山梨県', lat: 35.6667, lon: 138.5667 },
-	{ code: '200000', name: '長野県', lat: 36.65, lon: 138.1833 },
-	{ code: '210000', name: '岐阜県', lat: 35.4229, lon: 136.7604 },
-	{ code: '220000', name: '静岡県', lat: 34.9833, lon: 138.3833 },
-	{ code: '230000', name: '愛知県', lat: 35.1815, lon: 136.9064 },
-	{ code: '240000', name: '三重県', lat: 34.7333, lon: 136.5167 },
-	{ code: '250000', name: '滋賀県', lat: 35.0, lon: 135.8667 },
-	{ code: '260000', name: '京都府', lat: 35.0211, lon: 135.7538 },
-	{ code: '270000', name: '大阪府', lat: 34.6938, lon: 135.5011 },
-	{ code: '280000', name: '兵庫県', lat: 34.6913, lon: 135.183 },
-	{ code: '290000', name: '奈良県', lat: 34.685, lon: 135.8049 },
-	{ code: '300000', name: '和歌山県', lat: 34.2333, lon: 135.1667 },
-	{ code: '310000', name: '鳥取県', lat: 35.5, lon: 134.2333 },
-	{ code: '320000', name: '島根県', lat: 35.4833, lon: 133.05 },
-	{ code: '330000', name: '岡山県', lat: 34.65, lon: 133.9333 },
-	{ code: '340000', name: '広島県', lat: 34.4, lon: 132.45 },
-	{ code: '350000', name: '山口県', lat: 34.1833, lon: 131.4667 },
-	{ code: '360000', name: '徳島県', lat: 34.0667, lon: 134.5667 },
-	{ code: '370000', name: '香川県', lat: 34.3333, lon: 134.05 },
-	{ code: '380000', name: '愛媛県', lat: 33.8392, lon: 132.7657 },
-	{ code: '390000', name: '高知県', lat: 33.55, lon: 133.5333 },
-	{ code: '400000', name: '福岡県', lat: 33.6, lon: 130.4167 },
-	{ code: '410000', name: '佐賀県', lat: 33.2333, lon: 130.3 },
-	{ code: '420000', name: '長崎県', lat: 32.75, lon: 129.8833 },
-	{ code: '430000', name: '熊本県', lat: 32.8059, lon: 130.6918 },
-	{ code: '440000', name: '大分県', lat: 33.2333, lon: 131.6 },
-	{ code: '450000', name: '宮崎県', lat: 31.9167, lon: 131.4167 },
-	{ code: '460100', name: '鹿児島県', lat: 31.5667, lon: 130.55 },
-	{ code: '471000', name: '沖縄県', lat: 26.213, lon: 127.6785 },
+	{ code: '011000', name: '宗谷地方', groupName: '北海道', lat: 45.40944, lon: 141.67389 },
+	{ code: '012000', name: '上川・留萌地方', groupName: '北海道', lat: 43.77063, lon: 142.36488 },
+	{ code: '013000', name: '網走・北見・紋別地方', groupName: '北海道', lat: 44.02127, lon: 144.26971 },
+	{
+		code: '014030',
+		name: '十勝地方',
+		groupName: '北海道',
+		lat: 42.91722,
+		lon: 143.20444,
+		forecastSource: '014100',
+		forecastAreaCode: '014030',
+		tempAreaCode: '20432',
+	},
+	{ code: '014100', name: '釧路・根室地方', groupName: '北海道', lat: 42.975, lon: 144.37473 },
+	{ code: '015000', name: '胆振・日高地方', groupName: '北海道', lat: 42.31722, lon: 140.98807 },
+	{ code: '016000', name: '石狩・空知・後志地方', groupName: '北海道', lat: 43.0667, lon: 141.35 },
+	{ code: '017000', name: '渡島・檜山地方', groupName: '北海道', lat: 41.77583, lon: 140.73666 },
+	{ code: '020000', name: '青森県', groupName: '青森県', lat: 40.8167, lon: 140.7333 },
+	{ code: '030000', name: '岩手県', groupName: '岩手県', lat: 39.7, lon: 141.15 },
+	{ code: '040000', name: '宮城県', groupName: '宮城県', lat: 38.2667, lon: 140.8667 },
+	{ code: '050000', name: '秋田県', groupName: '秋田県', lat: 39.7167, lon: 140.1167 },
+	{ code: '060000', name: '山形県', groupName: '山形県', lat: 38.2333, lon: 140.3667 },
+	{ code: '070000', name: '福島県', groupName: '福島県', lat: 37.75, lon: 140.4667 },
+	{ code: '080000', name: '茨城県', groupName: '茨城県', lat: 36.35, lon: 140.45 },
+	{ code: '090000', name: '栃木県', groupName: '栃木県', lat: 36.5667, lon: 139.8833 },
+	{ code: '100000', name: '群馬県', groupName: '群馬県', lat: 36.4, lon: 139.0833 },
+	{ code: '110000', name: '埼玉県', groupName: '埼玉県', lat: 35.9081, lon: 139.6566 },
+	{ code: '120000', name: '千葉県', groupName: '千葉県', lat: 35.6, lon: 140.1167 },
+	{ code: '130000', name: '東京都', groupName: '東京都', lat: 35.6895, lon: 139.6917 },
+	{ code: '140000', name: '神奈川県', groupName: '神奈川県', lat: 35.4333, lon: 139.65 },
+	{ code: '150000', name: '新潟県', groupName: '新潟県', lat: 37.9226, lon: 139.0412 },
+	{ code: '160000', name: '富山県', groupName: '富山県', lat: 36.7, lon: 137.2167 },
+	{ code: '170000', name: '石川県', groupName: '石川県', lat: 36.6, lon: 136.6167 },
+	{ code: '180000', name: '福井県', groupName: '福井県', lat: 36.0644, lon: 136.2226 },
+	{ code: '190000', name: '山梨県', groupName: '山梨県', lat: 35.6667, lon: 138.5667 },
+	{ code: '200000', name: '長野県', groupName: '長野県', lat: 36.65, lon: 138.1833 },
+	{ code: '210000', name: '岐阜県', groupName: '岐阜県', lat: 35.4229, lon: 136.7604 },
+	{ code: '220000', name: '静岡県', groupName: '静岡県', lat: 34.9833, lon: 138.3833 },
+	{ code: '230000', name: '愛知県', groupName: '愛知県', lat: 35.1815, lon: 136.9064 },
+	{ code: '240000', name: '三重県', groupName: '三重県', lat: 34.7333, lon: 136.5167 },
+	{ code: '250000', name: '滋賀県', groupName: '滋賀県', lat: 35.0, lon: 135.8667 },
+	{ code: '260000', name: '京都府', groupName: '京都府', lat: 35.0211, lon: 135.7538 },
+	{ code: '270000', name: '大阪府', groupName: '大阪府', lat: 34.6938, lon: 135.5011 },
+	{ code: '280000', name: '兵庫県', groupName: '兵庫県', lat: 34.6913, lon: 135.183 },
+	{ code: '290000', name: '奈良県', groupName: '奈良県', lat: 34.685, lon: 135.8049 },
+	{ code: '300000', name: '和歌山県', groupName: '和歌山県', lat: 34.2333, lon: 135.1667 },
+	{ code: '310000', name: '鳥取県', groupName: '鳥取県', lat: 35.5, lon: 134.2333 },
+	{ code: '320000', name: '島根県', groupName: '島根県', lat: 35.4833, lon: 133.05 },
+	{ code: '330000', name: '岡山県', groupName: '岡山県', lat: 34.65, lon: 133.9333 },
+	{ code: '340000', name: '広島県', groupName: '広島県', lat: 34.4, lon: 132.45 },
+	{ code: '350000', name: '山口県', groupName: '山口県', lat: 34.1833, lon: 131.4667 },
+	{ code: '360000', name: '徳島県', groupName: '徳島県', lat: 34.0667, lon: 134.5667 },
+	{ code: '370000', name: '香川県', groupName: '香川県', lat: 34.3333, lon: 134.05 },
+	{ code: '380000', name: '愛媛県', groupName: '愛媛県', lat: 33.8392, lon: 132.7657 },
+	{ code: '390000', name: '高知県', groupName: '高知県', lat: 33.55, lon: 133.5333 },
+	{ code: '400000', name: '福岡県', groupName: '福岡県', lat: 33.6, lon: 130.4167 },
+	{ code: '410000', name: '佐賀県', groupName: '佐賀県', lat: 33.2333, lon: 130.3 },
+	{ code: '420000', name: '長崎県', groupName: '長崎県', lat: 32.75, lon: 129.8833 },
+	{ code: '430000', name: '熊本県', groupName: '熊本県', lat: 32.8059, lon: 130.6918 },
+	{ code: '440000', name: '大分県', groupName: '大分県', lat: 33.2333, lon: 131.6 },
+	{ code: '450000', name: '宮崎県', groupName: '宮崎県', lat: 31.9167, lon: 131.4167 },
+	{
+		code: '460040',
+		name: '奄美地方',
+		groupName: '鹿児島県',
+		lat: 28.3769,
+		lon: 129.49379,
+		forecastSource: '460100',
+		forecastAreaCode: '460040',
+		tempAreaCode: '88837',
+	},
+	{ code: '460100', name: '鹿児島県（本土）', groupName: '鹿児島県', lat: 31.5667, lon: 130.55 },
+	{ code: '471000', name: '沖縄本島地方', groupName: '沖縄県', lat: 26.213, lon: 127.6785 },
+	{ code: '472000', name: '大東島地方', groupName: '沖縄県', lat: 25.82987, lon: 131.23235 },
+	{ code: '473000', name: '宮古島地方', groupName: '沖縄県', lat: 24.79016, lon: 125.31109 },
+	{ code: '474000', name: '八重山地方', groupName: '沖縄県', lat: 24.34478, lon: 124.15717 },
 ];

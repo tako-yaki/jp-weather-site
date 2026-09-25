@@ -11,6 +11,18 @@ interface Props {
 	currentCode?: string;
 }
 const { title, weatherCategory, sunrise, sunset, currentCode } = Astro.props;
+
+// 都道府県(groupName)ごとに連続するエントリをまとめる。北海道・鹿児島県・沖縄県だけ
+// 複数officeを持つため <optgroup> になり、それ以外は単一の <option> のまま表示する。
+const locationGroups: { groupName: string; items: typeof PREFECTURES }[] = [];
+for (const pref of PREFECTURES) {
+	const last = locationGroups[locationGroups.length - 1];
+	if (last && last.groupName === pref.groupName) {
+		last.items.push(pref);
+	} else {
+		locationGroups.push({ groupName: pref.groupName, items: [pref] });
+	}
+}
 ---
 
 <html lang="ja" data-weather={weatherCategory} data-sunrise={sunrise} data-sunset={sunset}>
@@ -44,11 +56,21 @@ const { title, weatherCategory, sunrise, sunset, currentCode } = Astro.props;
 						aria-label="地点を選択"
 						onchange="if (this.value) location.href = '/' + this.value"
 					>
-						{PREFECTURES.map((pref) => (
-							<option value={pref.code} selected={pref.code === currentCode}>
-								{pref.name}
-							</option>
-						))}
+						{locationGroups.map((group) =>
+							group.items.length > 1 ? (
+								<optgroup label={group.groupName}>
+									{group.items.map((pref) => (
+										<option value={pref.code} selected={pref.code === currentCode}>
+											{pref.name}
+										</option>
+									))}
+								</optgroup>
+							) : (
+								<option value={group.items[0].code} selected={group.items[0].code === currentCode}>
+									{group.items[0].name}
+								</option>
+							),
+						)}
 					</select>
 				</div>
 			</header>
@@ -89,6 +111,10 @@ const { title, weatherCategory, sunrise, sunset, currentCode } = Astro.props;
 
 		--sat-color: #2a78d6;
 		--sun-color: #d03b3b;
+
+		/* 最高気温/最低気温を色でも区別するための診断色(暖色/寒色)。値はsun-color/sat-colorと揃えている */
+		--temp-high: #d03b3b;
+		--temp-low: #2a78d6;
 	}
 
 	@media (prefers-color-scheme: dark) {

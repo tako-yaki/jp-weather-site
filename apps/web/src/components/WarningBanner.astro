@@ -1,0 +1,303 @@
+---
+interface Props {
+	officeCode: string;
+	// 一次細分区分(class10)コード→名前。警報の対象区分名を表示するための静的マップ
+	// (区分名自体は変わらないためビルド時に埋め込んでよい)。
+	regionNameByCode: Record<string, string>;
+	// このofficeが持つ一次細分区分(class10)の総数。東京都(本土+伊豆諸島×2+小笠原)のように
+	// 複数区分を持つofficeでは「どの区分の話か」を明示する。1区分しかないofficeでは付けない。
+	regionCount: number;
+	// 市区町村一覧(コード・名前・代表地点)は変わらないため静的。どの警報が出ているかは
+	// クライアント側でofficeの警報JSONを取得してから埋める。
+	municipalityWarnings: { code: string; name: string; point: { lat: number; lon: number } | null }[];
+}
+const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astro.props;
+---
+
+<section class="alert-banner" data-severity="loading">
+	<h2>警報注意報</h2>
+	<p class="warning-status">読み込み中...</p>
+	<ul class="warning-list" hidden></ul>
+
+	<div class="muni-lookup">
+		<label class="muni-label" for="muni-select">市区町村で見る</label>
+		<select id="muni-select" class="muni-select" aria-label="市区町村を選択">
+			<option value="">市区町村を選択...</option>
+			{municipalityWarnings.map((m: any) => (
+				<option value={m.code}>{m.name}</option>
+			))}
+		</select>
+		<div class="muni-result" data-state="empty" hidden />
+		<script type="application/json" class="muni-data" set:html={JSON.stringify(municipalityWarnings)} />
+	</div>
+
+	<script
+		type="application/json"
+		class="warning-config"
+		set:html={JSON.stringify({ officeCode, regionNameByCode, regionCount })}
+	/>
+</section>
+
+<script>
+	import { describeWarningCode, isActiveStatus } from '../lib/warningCodes';
+	import { describeWmoCode } from '../lib/wmoWeatherCodes';
+	import { fetchOfficeWarning } from '../lib/clientData';
+
+	type Municipality = { code: string; name: string; point: { lat: number; lon: number } | null };
+
+	const REFRESH_INTERVAL_MS = 3 * 60 * 1000;
+
+	function initWarningBanner(container: Element) {
+		const configEl = container.querySelector('.warning-config');
+		const muniDataEl = container.querySelector('.muni-data');
+		if (!configEl || !muniDataEl) return;
+
+		const { officeCode, regionNameByCode, regionCount }: {
+			officeCode: string;
+			regionNameByCode: Record<string, string>;
+			regionCount: number;
+		} = JSON.parse(configEl.textContent ?? '{}');
+		const municipalities: Municipality[] = JSON.parse(muniDataEl.textContent ?? '[]');
+		const showRegionLabel = regionCount > 1;
+
+		const statusEl = container.querySelector('.warning-status') as HTMLElement | null;
+		const listEl = container.querySelector('.warning-list') as HTMLElement | null;
+		const select = container.querySelector('.muni-select') as HTMLSelectElement | null;
+		const result = container.querySelector('.muni-result') as HTMLElement | null;
+		if (!statusEl || !listEl || !select || !result) return;
+
+		// officeの警報JSON取得後、市区町村コード→現在有効な警報リストのマップを作っておき、
+		// muni-select の変更時にここから引く(選択のたびに再取得はしない)。
+		let municipalityActiveByCode: Record<string, string[]> = {};
+
+		function renderRegionWarnings(warning: any) {
+			const activeWarnings = (warning.areaTypes?.[0]?.areas ?? []).flatMap((a: any) =>
+				(a.warnings ?? [])
+					.filter((w: any) => w.code && isActiveStatus(w.status))
+					.map((w: any) => ({ code: w.code, status: w.status, regionName: regionNameByCode[a.code] ?? a.code })),
+			);
+
+			listEl!.textContent = '';
+			if (activeWarnings.length > 0) {
+				container.setAttribute('data-severity', 'warning');
+				statusEl!.hidden = true;
+				listEl!.hidden = false;
+				for (const w of activeWarnings) {
+					const li = document.createElement('li');
+					if (showRegionLabel) {
+						const span = document.createElement('span');
+						span.className = 'warn-region';
+						span.textContent = `${w.regionName}: `;
+						li.appendChild(span);
+					}
+					li.appendChild(document.createTextNode(`${describeWarningCode(w.code)}（${w.status}）`));
+					listEl!.appendChild(li);
+				}
+			} else {
+				container.setAttribute('data-severity', 'none');
+				listEl!.hidden = true;
+				statusEl!.hidden = false;
+				statusEl!.textContent = '現在、発表されている警報・注意報はありません';
+			}
+		}
+
+		function indexMunicipalityWarnings(warning: any) {
+			const map: Record<string, string[]> = {};
+			for (const a of warning.areaTypes?.[1]?.areas ?? []) {
+				map[a.code] = (a.warnings ?? [])
+					.filter((w: any) => w.code && isActiveStatus(w.status))
+					.map((w: any) => `${describeWarningCode(w.code)}（${w.status}）`);
+			}
+			municipalityActiveByCode = map;
+			// すでに市区町村が選択されている状態で再取得(定期更新)した場合は表示も更新する
+			if (select!.value) renderMuniResult(select!.value, false);
+		}
+
+		let everLoaded = false;
+
+		async function refresh() {
+			try {
+				const warning = await fetchOfficeWarning(officeCode);
+				renderRegionWarnings(warning);
+				indexMunicipalityWarnings(warning);
+				everLoaded = true;
+			} catch {
+				// 一度でも取得できていれば、直前の表示を維持する(壊れた状態を見せない)。
+				// 一度も取得できていない(初回失敗)場合だけ、ずっと「読み込み中」のままにならないよう
+				// エラー表示に切り替える。
+				if (!everLoaded) {
+					container.setAttribute('data-severity', 'error');
+					listEl!.hidden = true;
+					statusEl!.hidden = false;
+					statusEl!.textContent = '警報注意報の取得に失敗しました(再読み込みしてください)';
+				}
+			}
+		}
+
+		// --- 市区町村選択 ---
+		let requestToken = 0;
+
+		function renderMuniResult(code: string, refetchWeather: boolean) {
+			const token = ++requestToken;
+			const found = municipalities.find((m) => m.code === code);
+			result!.textContent = '';
+			if (!found) {
+				result!.hidden = true;
+				return;
+			}
+			result!.hidden = false;
+
+			const nameEl = document.createElement('p');
+			nameEl.className = 'muni-name';
+			nameEl.textContent = found.name;
+			result!.appendChild(nameEl);
+
+			const active = municipalityActiveByCode[found.code] ?? [];
+			if (active.length === 0) {
+				result!.dataset.state = 'none';
+				const p = document.createElement('p');
+				p.className = 'muni-none';
+				p.textContent = '現在、発表されている警報・注意報はありません';
+				result!.appendChild(p);
+			} else {
+				result!.dataset.state = 'warning';
+				const ul = document.createElement('ul');
+				ul.className = 'muni-warning-list';
+				for (const w of active) {
+					const li = document.createElement('li');
+					li.textContent = w;
+					ul.appendChild(li);
+				}
+				result!.appendChild(ul);
+			}
+
+			if (found.point && refetchWeather) {
+				const weatherEl = document.createElement('p');
+				weatherEl.className = 'muni-weather';
+				weatherEl.textContent = '現在の気温を取得中...';
+				result!.appendChild(weatherEl);
+
+				const { lat, lon } = found.point;
+				const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&timezone=Asia%2FTokyo`;
+				fetch(url)
+					.then((res) => (res.ok ? res.json() : Promise.reject(new Error(String(res.status)))))
+					.then((data) => {
+						if (token !== requestToken) return;
+						const temp = data?.current?.temperature_2m;
+						const code = data?.current?.weather_code;
+						if (typeof temp !== 'number' || typeof code !== 'number') {
+							weatherEl.remove();
+							return;
+						}
+						const info = describeWmoCode(code);
+						weatherEl.textContent = `${info.icon} ${info.label}　${temp.toFixed(1)}℃`;
+					})
+					.catch(() => {
+						if (token !== requestToken) return;
+						weatherEl.remove();
+					});
+			}
+		}
+
+		select.addEventListener('change', () => renderMuniResult(select.value, true));
+
+		refresh();
+		setInterval(refresh, REFRESH_INTERVAL_MS);
+	}
+
+	document.querySelectorAll('.alert-banner').forEach(initWarningBanner);
+</script>
+
+<style>
+	.alert-banner {
+		border-left: 4px solid var(--border);
+	}
+	.alert-banner[data-severity='warning'] {
+		border-left-color: var(--status-warning);
+		background: color-mix(in srgb, var(--status-warning) 10%, var(--surface-1));
+	}
+	.alert-banner[data-severity='error'] {
+		border-left-color: var(--status-critical);
+	}
+	.alert-banner[data-severity='error'] .warning-status {
+		color: var(--status-critical);
+	}
+	.alert-banner h2 {
+		margin-bottom: 6px;
+	}
+	.alert-banner ul {
+		margin: 0;
+		padding-left: 20px;
+	}
+	.warning-status {
+		margin: 0;
+		color: var(--text-secondary);
+		font-size: 14px;
+	}
+	.warn-region {
+		color: var(--text-muted);
+		font-size: 12.5px;
+	}
+
+	.muni-lookup {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 6px 8px;
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top: 1px solid var(--gridline);
+	}
+	.muni-label {
+		font-size: 12px;
+		color: var(--text-muted);
+		white-space: nowrap;
+	}
+	.muni-select {
+		flex: 1 1 auto;
+		min-width: 0;
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		background: var(--surface-1);
+		color: var(--text-primary);
+		font-family: inherit;
+		font-size: 13px;
+		padding: 5px 8px;
+	}
+	.muni-result {
+		flex-basis: 100%;
+		margin-top: 4px;
+	}
+</style>
+
+<!--
+	.muni-result の中身(muni-name/muni-none/muni-warning-list/muni-weather)と
+	.warning-list の中身(li/span.warn-region)は client script が document.createElement で
+	生成するため、Astroのスコープ付きCSS(data-astro-cid-*)はテンプレート上の要素にしか
+	付与されず、これらの動的要素には効かない。そのため is:global で別出しにしている。
+-->
+<style is:global>
+	.muni-result .muni-name {
+		margin: 0 0 4px;
+		font-weight: 600;
+		font-size: 13px;
+	}
+	.muni-result .muni-none {
+		margin: 0;
+		color: var(--text-secondary);
+		font-size: 13px;
+	}
+	.muni-result .muni-warning-list {
+		margin: 0;
+		padding-left: 18px;
+		font-size: 13px;
+	}
+	.muni-result .muni-weather {
+		margin: 6px 0 0;
+		font-size: 13px;
+		color: var(--text-secondary);
+	}
+	.muni-result[data-state='warning'] .muni-name {
+		color: var(--status-warning);
+	}
+</style>

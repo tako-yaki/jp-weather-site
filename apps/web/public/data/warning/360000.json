@@ -1,6 +1,5 @@
 {
-  "reportDatetime": "2026-05-28T04:27:00+09:00",
-  "publishingOffice": "徳島地方気象台",
+  "reportDatetime": "2026-09-22T10:13:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -8,6 +7,14 @@
         {
           "code": "360010",
           "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
             {
               "code": "14",
               "status": "解除"
@@ -18,15 +25,19 @@
           "code": "360020",
           "warnings": [
             {
+              "code": "29",
+              "status": "解除"
+            },
+            {
               "code": "14",
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -39,6 +50,10 @@
           "code": "3620100",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
               "code": "14",
               "status": "解除"
             }
@@ -48,6 +63,10 @@
           "code": "3620200",
           "warnings": [
             {
+              "code": "10",
+              "status": "解除"
+            },
+            {
               "code": "14",
               "status": "解除"
             }
@@ -56,6 +75,10 @@
         {
           "code": "3620300",
           "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
             {
               "code": "14",
               "status": "解除"
@@ -88,6 +111,10 @@
           "code": "3620600",
           "warnings": [
             {
+              "code": "29",
+              "status": "解除"
+            },
+            {
               "code": "14",
               "status": "解除"
             }
@@ -96,6 +123,10 @@
         {
           "code": "3620701",
           "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
             {
               "code": "14",
               "status": "解除"
@@ -114,6 +145,10 @@
         {
           "code": "3620800",
           "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
             {
               "code": "14",
               "status": "解除"
@@ -178,15 +213,19 @@
           "code": "3638300",
           "warnings": [
             {
+              "code": "29",
+              "status": "解除"
+            },
+            {
               "code": "14",
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -195,15 +234,19 @@
           "code": "3638700",
           "warnings": [
             {
+              "code": "29",
+              "status": "解除"
+            },
+            {
               "code": "14",
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -212,15 +255,19 @@
           "code": "3638800",
           "warnings": [
             {
+              "code": "29",
+              "status": "解除"
+            },
+            {
               "code": "14",
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -274,6 +321,10 @@
           "code": "3646801",
           "warnings": [
             {
+              "code": "29",
+              "status": "解除"
+            },
+            {
               "code": "14",
               "status": "解除"
             }
@@ -291,6 +342,10 @@
         {
           "code": "3648900",
           "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
             {
               "code": "14",
               "status": "解除"

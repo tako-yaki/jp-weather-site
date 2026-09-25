@@ -3,10 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HourlyChart from '../components/HourlyChart.astro';
+import WarningBanner from '../components/WarningBanner.astro';
 import { describeWeatherCode } from '../lib/weatherCodes';
-import { describeWmoCode } from '../lib/wmoWeatherCodes';
-import { describeWarningCode, isActiveStatus } from '../lib/warningCodes';
-import { getMoonPhase } from '../lib/moonPhase';
 import { PREFECTURES } from '../data/prefectures';
 
 export function getStaticPaths() {
@@ -18,14 +16,28 @@ export function getStaticPaths() {
 
 const { prefecture } = Astro.props;
 
+// ビルド時に焼き込むのはJMAの予報テキストだけ(2〜3時間おきの再ビルドで更新)。
+// 警報注意報・アメダス実況・Open-Meteo系のデータはリアルタイム性が必要なので、
+// ここでは読み込まずクライアント側で取得する(lib/clientData.ts)。
 const forecastPath = path.join(process.cwd(), `public/data/forecast/${prefecture.code}.json`);
-const warningPath = path.join(process.cwd(), `public/data/warning/${prefecture.code}.json`);
-const openMeteoPath = path.join(process.cwd(), `public/data/openmeteo/${prefecture.code}.json`);
-const openMeteoDailyPath = path.join(process.cwd(), `public/data/openmeteo/daily-${prefecture.code}.json`);
+const areaMasterPath = path.join(process.cwd(), 'public/data/area-master.json');
+const municipalitiesPath = path.join(process.cwd(), 'public/data/municipalities.json');
+const regionPointsPath = path.join(process.cwd(), 'public/data/region-points.json');
 const forecast: any = JSON.parse(fs.readFileSync(forecastPath, 'utf-8'));
-const warning: any = JSON.parse(fs.readFileSync(warningPath, 'utf-8'));
-const openMeteo: any = JSON.parse(fs.readFileSync(openMeteoPath, 'utf-8'));
-const openMeteoDaily: any = JSON.parse(fs.readFileSync(openMeteoDailyPath, 'utf-8'));
+const areaMaster: any = JSON.parse(fs.readFileSync(areaMasterPath, 'utf-8'));
+// 市区町村(class20)ごとの代表地点。政令指定都市を東西南北に分けるJMA独自区分など
+// 一部(約1%)は解決できていないため、無い場合はundefinedのまま(気温取得を出さないだけ)。
+const municipalityPoints: Record<string, { lat: number; lon: number }> = JSON.parse(
+	fs.readFileSync(municipalitiesPath, 'utf-8'),
+);
+// 一次細分区分(class10)ごとの代表地点(緯度経度)とアメダス観測地点コード。
+// pipelines/area/build_region_points.py が算出したもの。クライアント側のOpen-Meteo取得先。
+const regionPointsList: { code: string; lat: number; lon: number; amedasCode: string | null }[] = JSON.parse(
+	fs.readFileSync(regionPointsPath, 'utf-8'),
+);
+const regionPointByCode: Record<string, { lat: number; lon: number; amedasCode: string | null }> = Object.fromEntries(
+	regionPointsList.map((p) => [p.code, p]),
+);
 
 const shortTerm = forecast[0];
 const weekly = forecast[1];
@@ -45,276 +57,509 @@ const jstWeekdayIndex = (iso: string) => {
 	const wd = new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: 'Asia/Tokyo' }).format(new Date(iso));
 	return WEEKDAY_EN_TO_INDEX[wd];
 };
-const jstHour = (iso: string) => Number(iso.slice(11, 13));
 
-// ISO文字列に "+09:00" を明示しておくことで、閲覧者のブラウザのタイムゾーンに関わらず
-// クライアント側スクリプトが日本時間として正しく解釈できるようにする。
-const withJstOffset = (iso: string) => `${iso}:00+09:00`;
-
-// --- 警報注意報 ---
-// areaTypes[0].areas[0] が、その都道府県の主たる（本土側の）区域。
-// 気象庁のJSONは areas 配列の先頭が常にその都道府県の代表区域になる構造を利用している。
-const primaryAreaWarnings = warning.areaTypes[0].areas[0];
-const activeWarnings = (primaryAreaWarnings?.warnings ?? []).filter(
-	(w: any) => w.code && isActiveStatus(w.status),
+// --- 警報注意報(区分名の静的マップだけをここで作る。実際の発表状況はクライアント側取得) ---
+const regionNameByCode: Record<string, string> = Object.fromEntries(
+	shortTerm.timeSeries[0].areas.map((a: any) => [a.area.code, a.area.name]),
 );
 
-// --- 現在の天気 + 明日の天気 ---
-// 気温は気象庁の短期予報だと意味が曖昧な2値しかないため、Open-Meteoの日別最高/最低を使う
+// --- 市区町村単位(二次細分区分)の一覧(コード・名前・代表地点) ---
+// officeの範囲に含まれる市区町村は area-master.json の親子関係から辿れる
+// (どのclass20がこのofficeの子孫かはclass15→class10→officeのチェーンで判定)。
+const officeClass10Codes = new Set(
+	Object.entries(areaMaster.class10s)
+		.filter(([, v]: [string, any]) => v.parent === prefecture.code)
+		.map(([code]) => code),
+);
+const officeClass15Codes = new Set(
+	Object.entries(areaMaster.class15s)
+		.filter(([, v]: [string, any]) => officeClass10Codes.has(v.parent))
+		.map(([code]) => code),
+);
+const municipalityWarnings = Object.entries(areaMaster.class20s)
+	.filter(([, v]: [string, any]) => officeClass15Codes.has(v.parent))
+	.map(([code, v]: [string, any]) => ({
+		code,
+		name: v.name,
+		point: municipalityPoints[code] ?? null,
+	}))
+	.sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+
+// --- 天気予報（一次細分区分ごとに切り替え可能）---
+// JMAの短期予報JSONは、officeの中に複数の一次細分区分(class10)を含んでいることが多い
+// (例: 東京都なら「東京地方」「伊豆諸島北部」「伊豆諸島南部」「小笠原諸島」の4つ)。
+//
+// 十勝地方(014030)・奄美地方(460040)は自前の予報JSONを持たず隣接officeのJSONに間借りしているため、
+// このofficeのページでは forecastAreaCode に一致する行だけに絞り込む(隣のofficeの区域は出さない)。
 const wwSeries = shortTerm.timeSeries[0];
-const wwArea = wwSeries.areas[0];
-const areaName = wwArea.area.name;
+const regionSourceAreas = prefecture.forecastAreaCode
+	? wwSeries.areas.filter((a: any) => a.area.code === prefecture.forecastAreaCode)
+	: wwSeries.areas;
 
-const heroWeather = describeWeatherCode(wwArea.weatherCodes[0]);
-const heroMin = openMeteo.daily.temperature_2m_min[0];
-const heroMax = openMeteo.daily.temperature_2m_max[0];
-const heroPop = openMeteoDaily.daily.precipitation_probability_max[0];
+// 降水確率(pops)は一次細分区分ごとに3時間刻みで入っているので、今日/明日の最大値を計算する。
+// JMAのtimeDefinesは常に+09:00付きのISO文字列なので、先頭10文字を取るだけで日本時間の日付になる。
+const popSeries = shortTerm.timeSeries[1];
+const todayDateStr = wwSeries.timeDefines[0].slice(0, 10);
+const tomorrowDateStr = wwSeries.timeDefines[1].slice(0, 10);
 
-const tomorrowWeather = describeWeatherCode(wwArea.weatherCodes[1]);
-const tomorrowMin = openMeteo.daily.temperature_2m_min[1];
-const tomorrowMax = openMeteo.daily.temperature_2m_max[1];
-const tomorrowPop = openMeteoDaily.daily.precipitation_probability_max[1];
-
-// --- 日の出・日の入り・月齢（Open-Meteo daily）---
-const todaySunrise = withJstOffset(openMeteo.daily.sunrise[0]);
-const todaySunset = withJstOffset(openMeteo.daily.sunset[0]);
-const moon = getMoonPhase(new Date());
-
-// --- 時系列予報（Open-Meteo、1時間刻みの元データ。表示間隔はクライアント側で切替）---
-const nowMs = Date.now();
-
-function isNightAt(iso: string): boolean {
-	const dateStr = iso.slice(0, 10);
-	const idx = openMeteo.daily.time.indexOf(dateStr);
-	if (idx === -1) return false;
-	const t = new Date(withJstOffset(iso)).getTime();
-	const sr = new Date(withJstOffset(openMeteo.daily.sunrise[idx])).getTime();
-	const ss = new Date(withJstOffset(openMeteo.daily.sunset[idx])).getTime();
-	return t < sr || t >= ss;
+function maxPopForDate(areaCode: string, dateStr: string): number | null {
+	const area = popSeries?.areas.find((a: any) => a.area.code === areaCode);
+	if (!area) return null;
+	const values = popSeries.timeDefines
+		.map((t: string, i: number) => ({ date: t.slice(0, 10), pop: area.pops[i] }))
+		.filter((x: any) => x.date === dateStr && x.pop !== '');
+	if (values.length === 0) return null;
+	return Math.max(...values.map((v: any) => Number(v.pop)));
 }
 
-// --- 現在の状況（Open-Meteoのリアルタイム観測）---
-const current = openMeteo.current;
-const currentWeather = describeWmoCode(current.weathercode, isNightAt(current.time));
-const currentUpdatedLabel = new Intl.DateTimeFormat('ja-JP', {
-	hour: '2-digit',
-	minute: '2-digit',
-	timeZone: 'Asia/Tokyo',
-}).format(new Date(withJstOffset(current.time)));
-
-const hourlyPoints = openMeteo.hourly.time
-	.map((t: string, i: number) => ({ time: t, temp: openMeteo.hourly.temperature_2m[i], precip: openMeteo.hourly.precipitation[i], code: openMeteo.hourly.weathercode[i] }))
-	.filter((h: any) => new Date(withJstOffset(h.time)).getTime() >= nowMs - 3600_000)
-	.map((h: any) => {
-		const weather = describeWmoCode(h.code, isNightAt(h.time));
-		return {
-			iso: h.time,
-			hour: jstHour(h.time),
-			dateLabel: dateLabel(withJstOffset(h.time)),
-			temp: h.temp,
-			precip: h.precip,
-			icon: weather.icon,
-			weatherLabel: weather.label,
-		};
-	});
-
-// --- 10日間予報 ---
-// 明後日〜7日後: 気象庁の週間予報（確度A/B/C付き）
-// 8〜10日後: Open-Meteo（気象庁は7日先までしか出さないための補完。確度の概念がないため「参考値」として区別する）
+// --- 週間予報(地域ごとに切り替え、JMA分の1〜6日目だけ。7〜10日目はクライアント側でOpen-Meteoを追加) ---
+// 週間予報は短期予報より地域区分が粗いことが多い(例: 東京都は短期予報が4区分でも、
+// 週間予報は「東京地方/伊豆諸島/小笠原諸島」の3区分にまとまる)。そのため一次細分区分コードで
+// 完全一致しなければ、地域名の前方一致(「伊豆諸島北部」→「伊豆諸島」)でフォールバックする。
 const weeklyWeatherSeries = weekly.timeSeries[0];
-const weeklyWeatherArea = weeklyWeatherSeries.areas[0];
 const weeklyTempSeries = weekly.timeSeries[1];
-const weeklyTempArea = weeklyTempSeries.areas[0];
 
-const jmaDaysRaw = weeklyWeatherSeries.timeDefines
-	.map((date: string, i: number) => {
-		const hasTemp = weeklyTempArea.tempsMin[i] !== '' && weeklyTempArea.tempsMax[i] !== '';
-		const min = hasTemp ? Number(weeklyTempArea.tempsMin[i]) : NaN;
-		const max = hasTemp ? Number(weeklyTempArea.tempsMax[i]) : NaN;
-		return {
-			label: dateLabel(date),
-			weekdayIndex: jstWeekdayIndex(date),
-			weather: describeWeatherCode(weeklyWeatherArea.weatherCodes[i]),
-			pop: weeklyWeatherArea.pops[i] as string,
-			reliability: weeklyWeatherArea.reliabilities[i] as string,
-			isReference: false,
-			hasTemp,
-			min,
-			max,
-		};
-	})
-	// 明日(先頭)は気象庁データが欠けることがあるため、週間予報は明後日から表示する
-	.slice(1);
+function findWeeklyIndex(class10Code: string, class10Name: string): number {
+	const byCode = weeklyWeatherSeries.areas.findIndex((a: any) => a.area.code === class10Code);
+	if (byCode !== -1) return byCode;
+	const byName = weeklyWeatherSeries.areas.findIndex((a: any) => class10Name.startsWith(a.area.name));
+	if (byName !== -1) return byName;
+	return 0;
+}
 
-// Open-Meteo daily は index0 = 今日 なので、8〜10日後は index8〜11
-const EXTRA_DAY_INDICES = [8, 9, 10, 11];
-const extraDaysRaw = EXTRA_DAY_INDICES.map((idx) => {
-	const dateStr = openMeteoDaily.daily.time[idx];
-	const weather = describeWmoCode(openMeteoDaily.daily.weathercode[idx]);
+function buildJmaTenDays(weeklyIdx: number) {
+	const weeklyTempIdx = prefecture.tempAreaCode
+		? weeklyTempSeries.areas.findIndex((a: any) => a.area.code === prefecture.tempAreaCode)
+		: weeklyIdx;
+	const weeklyWeatherArea = weeklyWeatherSeries.areas[weeklyIdx];
+	const weeklyTempArea = weeklyTempSeries.areas[weeklyTempIdx] ?? weeklyTempSeries.areas[0];
+
+	return weeklyWeatherSeries.timeDefines
+		.map((date: string, i: number) => {
+			const hasTemp = weeklyTempArea.tempsMin[i] !== '' && weeklyTempArea.tempsMax[i] !== '';
+			const min = hasTemp ? Number(weeklyTempArea.tempsMin[i]) : NaN;
+			const max = hasTemp ? Number(weeklyTempArea.tempsMax[i]) : NaN;
+			return {
+				label: dateLabel(date),
+				weekdayIndex: jstWeekdayIndex(date),
+				weather: describeWeatherCode(weeklyWeatherArea.weatherCodes[i]),
+				pop: weeklyWeatherArea.pops[i] as string,
+				reliability: weeklyWeatherArea.reliabilities[i] as string,
+				hasTemp,
+				min,
+				max,
+			};
+		})
+		// 明日(先頭)は気象庁データが欠けることがあるため、週間予報は明後日から表示する
+		.slice(1);
+}
+
+// --- 地域(一次細分区分)ごとの表示データをまとめる ---
+// regions[0] が常に代表(本土側)区域になる(regionSourceAreasの並び順を踏襲)。
+const regions = regionSourceAreas.map((area: any) => {
+	const code = area.area.code;
+	const name = area.area.name;
+	const weeklyIdx = findWeeklyIndex(code, name);
+	const point = regionPointByCode[code] ?? null;
+
 	return {
-		label: dateLabel(dateStr),
-		weekdayIndex: jstWeekdayIndex(dateStr),
-		weather: { icon: weather.icon, label: weather.label },
-		pop: String(openMeteoDaily.daily.precipitation_probability_max[idx]),
-		reliability: '',
-		isReference: true,
-		hasTemp: true,
-		min: openMeteoDaily.daily.temperature_2m_min[idx],
-		max: openMeteoDaily.daily.temperature_2m_max[idx],
+		code,
+		name,
+		todayWeather: describeWeatherCode(area.weatherCodes[0]),
+		tomorrowWeather: describeWeatherCode(area.weatherCodes[1]),
+		todayPop: maxPopForDate(code, todayDateStr),
+		tomorrowPop: maxPopForDate(code, tomorrowDateStr),
+		lat: point?.lat ?? null,
+		lon: point?.lon ?? null,
+		amedasCode: point?.amedasCode ?? null,
+		jmaTenDays: buildJmaTenDays(weeklyIdx),
 	};
 });
 
-const tenDaysRaw = [...jmaDaysRaw, ...extraDaysRaw];
-
-const validTemps = tenDaysRaw.filter((d: any) => d.hasTemp);
-const weekMin = Math.min(...validTemps.map((d: any) => d.min));
-const weekMax = Math.max(...validTemps.map((d: any) => d.max));
-const weekRange = weekMax - weekMin || 1;
-
-const tenDays = tenDaysRaw.map((d: any) => ({
-	...d,
-	barLeft: d.hasTemp ? ((d.min - weekMin) / weekRange) * 100 : 0,
-	barWidth: d.hasTemp ? ((d.max - d.min) / weekRange) * 100 : 0,
-}));
+const primaryRegion = regions[0];
+const areaName = primaryRegion.name;
+const heroWeather = primaryRegion.todayWeather;
 ---
 
 <BaseLayout
 	title={`${areaName}の天気予報（開発中）`}
 	currentCode={prefecture.code}
 	weatherCategory={heroWeather.category === 'unknown' ? undefined : heroWeather.category}
-	sunrise={todaySunrise}
-	sunset={todaySunset}
 >
+	<WarningBanner officeCode={prefecture.code} regionNameByCode={regionNameByCode} regionCount={regions.length} municipalityWarnings={municipalityWarnings} />
+
 	{
-		activeWarnings.length > 0 ? (
-			<section class="alert-banner" data-severity="warning">
-				<h2>⚠️ 警報注意報</h2>
-				<ul>
-					{activeWarnings.map((w: any) => (
-						<li>
-							{describeWarningCode(w.code)}（{w.status}）
-						</li>
-					))}
-				</ul>
+		regions.map((r: any, i: number) => (
+			<section class="current" data-region={r.code} hidden={i !== 0}>
+				<div class="current-head">
+					<h2>現在の状況</h2>
+					<span class="current-updated">読み込み中...</span>
+				</div>
+				<div class="current-grid">
+					<div class="stat-tile">
+						<span class="stat-label">天候</span>
+						<span class="stat-icon">—</span>
+						<span class="stat-value">—</span>
+					</div>
+					<div class="stat-tile">
+						<span class="stat-label">気温</span>
+						<span class="stat-value">—</span>
+					</div>
+					<div class="stat-tile">
+						<span class="stat-label">降水量</span>
+						<span class="stat-value">—</span>
+					</div>
+					<div class="stat-tile">
+						<span class="stat-label">湿度</span>
+						<span class="stat-value">—</span>
+					</div>
+				</div>
 			</section>
-		) : (
-			<section class="alert-banner" data-severity="none">
-				<h2>警報注意報</h2>
-				<p>現在、発表されている警報・注意報はありません</p>
-			</section>
-		)
+		))
 	}
 
 	<section class="hero">
-		<h2>{areaName}</h2>
-		<div class="hero-row">
-			<div class="hero-today">
-				<div class="hero-main">
-					<span class="hero-icon">{heroWeather.icon}</span>
-					<span class="hero-label">{heroWeather.label}</span>
-				</div>
-				<p class="hero-temp">
-					最低 {Math.round(heroMin)}℃ ／ 最高 {Math.round(heroMax)}℃ ／ ☔ {heroPop}%
-				</p>
-			</div>
-			<div class="hero-tomorrow">
-				<p class="ht-caption">明日</p>
-				<div class="ht-main">
-					<span class="ht-icon">{tomorrowWeather.icon}</span>
-					<div class="ht-info">
-						<p class="ht-label">{tomorrowWeather.label}</p>
-						<p class="ht-temp">
-							{Math.round(tomorrowMin)}° / {Math.round(tomorrowMax)}°
-						</p>
-						<p class="ht-pop">☔ {tomorrowPop}%</p>
+		<div class="hero-head">
+			<h2 id="hero-area-name">{areaName}</h2>
+			{
+				regions.length > 1 && (
+					<select class="region-select" aria-label="予報区分を選択">
+						{regions.map((r: any) => (
+							<option value={r.code}>{r.name}</option>
+						))}
+					</select>
+				)
+			}
+		</div>
+		{
+			regions.map((r: any, i: number) => (
+				<div class="region-hero" data-region={r.code} hidden={i !== 0}>
+					<div class="hero-row">
+						<div class="hero-today">
+							<div class="hero-main">
+								<span class="hero-icon">{r.todayWeather.icon}</span>
+								<span class="hero-label">{r.todayWeather.label}</span>
+							</div>
+							<p class="hero-temp">
+								最高 <span class="temp-high hero-max">—</span> ／ 最低 <span class="temp-low hero-min">—</span> ／ ☔ {r.todayPop ?? '—'}%
+							</p>
+						</div>
+						<div class="hero-tomorrow">
+							<p class="ht-caption">明日</p>
+							<div class="ht-main">
+								<span class="ht-icon">{r.tomorrowWeather.icon}</span>
+								<div class="ht-info">
+									<p class="ht-label">{r.tomorrowWeather.label}</p>
+									<p class="ht-temp">
+										<span class="temp-high tomorrow-max">—</span> / <span class="temp-low tomorrow-min">—</span>
+									</p>
+									<p class="ht-pop">☔ {r.tomorrowPop ?? '—'}%</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hero-sub">
+						<span>🌅 日の出 <span class="sunrise-label">—:—</span></span>
+						<span>🌇 日の入り <span class="sunset-label">—:—</span></span>
+						<span class="moon-info">—</span>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="hero-sub">
-			<span>🌅 日の出 {new Intl.DateTimeFormat('ja-JP', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Tokyo' }).format(new Date(todaySunrise))}</span>
-			<span>🌇 日の入り {new Intl.DateTimeFormat('ja-JP', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Tokyo' }).format(new Date(todaySunset))}</span>
-			<span>{moon.icon} {moon.label}（月齢 {moon.age.toFixed(1)}）</span>
-		</div>
+			))
+		}
 	</section>
 
-	<section class="current">
-		<div class="current-head">
-			<h2>現在の状況</h2>
-			<span class="current-updated">{currentUpdatedLabel} 更新</span>
-		</div>
-		<div class="current-grid">
-			<div class="stat-tile">
-				<span class="stat-label">天候</span>
-				<span class="stat-icon">{currentWeather.icon}</span>
-				<span class="stat-value">{currentWeather.label}</span>
+	{
+		regions.map((r: any, i: number) => (
+			<div class="region-hourly" data-region={r.code} hidden={i !== 0}>
+				<HourlyChart />
 			</div>
-			<div class="stat-tile">
-				<span class="stat-label">気温</span>
-				<span class="stat-value">{Math.round(current.temperature_2m)}℃</span>
-			</div>
-			<div class="stat-tile">
-				<span class="stat-label">降水量</span>
-				<span class="stat-value">{current.precipitation.toFixed(1)}mm</span>
-			</div>
-			<div class="stat-tile">
-				<span class="stat-label">湿度</span>
-				<span class="stat-value">{current.relative_humidity_2m}%</span>
-			</div>
-		</div>
-	</section>
-
-	<HourlyChart points={hourlyPoints} />
+		))
+	}
 
 	<section class="weekly">
 		<h2>10日間予報（明後日〜）</h2>
-		<div class="weekly-scroll">
-			{tenDays.map((d: any) => (
-				<div class="weekly-card" data-source={d.isReference ? 'reference' : 'jma'}>
-					<p class={`wc-date ${d.weekdayIndex === 0 ? 'sun' : d.weekdayIndex === 6 ? 'sat' : ''}`}>{d.label}</p>
-					<p class="wc-icon">{d.weather.icon}</p>
-					<p class="wc-label">{d.weather.label}</p>
-					<p class="wc-pop">{d.pop ? `☔ ${d.pop}%` : '—'}</p>
-					{d.hasTemp ? (
-						<>
-							<div class="wc-range-track">
-								<div class="wc-range-fill" style={`left:${d.barLeft}%;width:${d.barWidth}%`} />
-							</div>
-							<p class="wc-range-values">
-								{d.min}° / {d.max}°
+		{
+			regions.map((r: any, i: number) => (
+				<div class="weekly-scroll" data-region={r.code} hidden={i !== 0}>
+					{r.jmaTenDays.map((d: any) => (
+						<div class="weekly-card" data-source="jma" data-has-temp={d.hasTemp} data-min={d.hasTemp ? d.min : ''} data-max={d.hasTemp ? d.max : ''}>
+							<p class={`wc-date ${d.weekdayIndex === 0 ? 'sun' : d.weekdayIndex === 6 ? 'sat' : ''}`}>{d.label}</p>
+							<p class="wc-icon">{d.weather.icon}</p>
+							<p class="wc-label">{d.weather.label}</p>
+							<p class="wc-pop">{d.pop ? `☔ ${d.pop}%` : '—'}</p>
+							{d.hasTemp ? (
+								<>
+									<div class="wc-range-track">
+										<div class="wc-range-fill" />
+									</div>
+									<p class="wc-range-values">
+										<span class="temp-high">{d.max}°</span> / <span class="temp-low">{d.min}°</span>
+									</p>
+								</>
+							) : (
+								<p class="wc-range-values">—</p>
+							)}
+							<p class="wc-reliability" title="予報の確度（A: 高い 〜 C: 低い）">
+								確度 {d.reliability || '—'}
 							</p>
-						</>
-					) : (
-						<p class="wc-range-values">—</p>
-					)}
-					<p class="wc-reliability" title={d.isReference ? '気象庁の週間予報の範囲外のため参考値（確度の情報なし）' : '予報の確度（A: 高い 〜 C: 低い）'}>
-						{d.isReference ? '参考値' : `確度 ${d.reliability || '—'}`}
-					</p>
+						</div>
+					))}
 				</div>
-			))}
-		</div>
+			))
+		}
 	</section>
+
+	<script type="application/json" id="region-config" set:html={JSON.stringify(regions.map((r: any) => ({ code: r.code, lat: r.lat, lon: r.lon, amedasCode: r.amedasCode })))} />
 </BaseLayout>
 
+<script>
+	import { describeWmoCode } from '../lib/wmoWeatherCodes';
+	import { getMoonPhase } from '../lib/moonPhase';
+	import { fetchAmedasCurrent, fetchRegionOpenMeteo, fetchRegionOpenMeteoExtended } from '../lib/clientData';
+
+	type RegionConfig = { code: string; lat: number | null; lon: number | null; amedasCode: string | null };
+
+	// ISO文字列に "+09:00" を明示しておくことで、閲覧者のブラウザのタイムゾーンに関わらず
+	// 日本時間として正しく解釈できるようにする。
+	const withJstOffset = (iso: string) => `${iso}:00+09:00`;
+	const hm = (date: Date) =>
+		new Intl.DateTimeFormat('ja-JP', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Tokyo' }).format(date);
+	const dateLabel = (iso: string) =>
+		new Intl.DateTimeFormat('ja-JP', { month: 'numeric', day: 'numeric', weekday: 'short', timeZone: 'Asia/Tokyo' }).format(new Date(iso));
+	const jstHour = (iso: string) => Number(iso.slice(11, 13));
+
+	function isNightAt(iso: string, dailyTime: string[], sunriseArr: string[], sunsetArr: string[]): boolean {
+		const dateStr = iso.slice(0, 10);
+		const idx = dailyTime.indexOf(dateStr);
+		if (idx === -1) return false;
+		const t = new Date(withJstOffset(iso)).getTime();
+		const sr = new Date(withJstOffset(sunriseArr[idx])).getTime();
+		const ss = new Date(withJstOffset(sunsetArr[idx])).getTime();
+		return t < sr || t >= ss;
+	}
+
+	// 週間カード(JMA分+Open-Meteo参考分)のバーは、その時点でDOMにある全カードのmin/maxから
+	// スケールを決める。ページ読み込み直後(JMA6枚のみ)と、参考4枚を追加した後の2回呼ぶ。
+	function recomputeWeeklyBars(scrollEl: Element) {
+		const cards = Array.from(scrollEl.querySelectorAll<HTMLElement>('.weekly-card[data-has-temp="true"]'));
+		if (cards.length === 0) return;
+		const mins = cards.map((c) => Number(c.dataset.min));
+		const maxs = cards.map((c) => Number(c.dataset.max));
+		const weekMin = Math.min(...mins);
+		const weekMax = Math.max(...maxs);
+		const range = weekMax - weekMin || 1;
+		for (const card of cards) {
+			const min = Number(card.dataset.min);
+			const max = Number(card.dataset.max);
+			const fill = card.querySelector<HTMLElement>('.wc-range-fill');
+			if (!fill) continue;
+			fill.style.left = `${((min - weekMin) / range) * 100}%`;
+			fill.style.width = `${((max - min) / range) * 100}%`;
+		}
+	}
+
+	function appendReferenceDays(scrollEl: Element, extended: any) {
+		// Open-Meteo daily は index0 = 今日 なので、8〜10日後は index8〜11
+		// (気象庁は7日先までしか出ないための補完。確度の概念がないため「参考値」として区別する)。
+		const EXTRA_DAY_INDICES = [8, 9, 10, 11];
+		for (const idx of EXTRA_DAY_INDICES) {
+			const dateStr = extended.daily.time[idx];
+			if (!dateStr) continue;
+			const weather = describeWmoCode(extended.daily.weathercode[idx]);
+			const min = extended.daily.temperature_2m_min[idx];
+			const max = extended.daily.temperature_2m_max[idx];
+			const pop = extended.daily.precipitation_probability_max[idx];
+			const wd = new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: 'Asia/Tokyo' }).format(new Date(dateStr));
+			const weekdayIndex = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[wd] ?? 1;
+
+			const card = document.createElement('div');
+			card.className = 'weekly-card';
+			card.dataset.source = 'reference';
+			card.dataset.hasTemp = 'true';
+			card.dataset.min = String(min);
+			card.dataset.max = String(max);
+			card.innerHTML = `
+				<p class="wc-date ${weekdayIndex === 0 ? 'sun' : weekdayIndex === 6 ? 'sat' : ''}">${dateLabel(dateStr)}</p>
+				<p class="wc-icon">${weather.icon}</p>
+				<p class="wc-label">${weather.label}</p>
+				<p class="wc-pop">${pop != null ? `☔ ${pop}%` : '—'}</p>
+				<div class="wc-range-track"><div class="wc-range-fill"></div></div>
+				<p class="wc-range-values"><span class="temp-high">${Math.round(max)}°</span> / <span class="temp-low">${Math.round(min)}°</span></p>
+				<p class="wc-reliability" title="気象庁の週間予報の範囲外のため参考値（確度の情報なし）">参考値</p>
+			`;
+			scrollEl.appendChild(card);
+		}
+		recomputeWeeklyBars(scrollEl);
+	}
+
+	const loadedRegions = new Set<string>();
+	let amedasCurrentPromise: Promise<any> | null = null;
+	let primaryRegionApplied = false;
+
+	async function loadRegion(config: RegionConfig) {
+		if (loadedRegions.has(config.code) || config.lat == null || config.lon == null) return;
+		loadedRegions.add(config.code);
+
+		const currentSection = document.querySelector(`.current[data-region="${config.code}"]`);
+		const heroSection = document.querySelector(`.region-hero[data-region="${config.code}"]`);
+		const hourlyRoot = document.querySelector<HTMLElement & { setHourlyPoints?: (p: any[]) => void }>(
+			`.region-hourly[data-region="${config.code}"] .hourly-chart`,
+		);
+		const weeklyScroll = document.querySelector(`.weekly-scroll[data-region="${config.code}"]`);
+
+		if (!amedasCurrentPromise) amedasCurrentPromise = fetchAmedasCurrent().catch(() => null);
+
+		try {
+			const [regular, extended, amedasCurrent] = await Promise.all([
+				fetchRegionOpenMeteo(config.lat, config.lon),
+				fetchRegionOpenMeteoExtended(config.lat, config.lon),
+				amedasCurrentPromise,
+			]);
+
+			// --- 現在の状況 ---
+			if (currentSection) {
+				const current = regular.current;
+				const night = isNightAt(current.time, regular.daily.time, regular.daily.sunrise, regular.daily.sunset);
+				const weather = describeWmoCode(current.weathercode, night);
+				const amedasStation = config.amedasCode ? amedasCurrent?.stations?.[config.amedasCode] : null;
+				const amedasTemp = amedasStation?.temp?.[0] ?? null;
+				const amedasPrecip = amedasStation?.precipitation1h?.[0] ?? null;
+				const amedasHumidity = amedasStation?.humidity?.[0] ?? null;
+
+				const updatedEl = currentSection.querySelector('.current-updated');
+				if (updatedEl) {
+					updatedEl.textContent = amedasStation
+						? `アメダス ${hm(new Date(amedasCurrent.observedAt))} 観測`
+						: `${hm(new Date(withJstOffset(current.time)))} 更新`;
+				}
+				const tiles = currentSection.querySelectorAll('.stat-tile');
+				const [wxTile, tempTile, precipTile, humidTile] = Array.from(tiles);
+				wxTile?.querySelector('.stat-icon')?.replaceChildren(document.createTextNode(weather.icon));
+				wxTile?.querySelector('.stat-value')?.replaceChildren(document.createTextNode(weather.label));
+				tempTile?.querySelector('.stat-value')?.replaceChildren(
+					document.createTextNode(`${(amedasTemp ?? current.temperature_2m).toFixed(1)}℃`),
+				);
+				precipTile?.querySelector('.stat-value')?.replaceChildren(
+					document.createTextNode(`${(amedasPrecip ?? current.precipitation).toFixed(1)}mm`),
+				);
+				humidTile?.querySelector('.stat-value')?.replaceChildren(
+					document.createTextNode(`${Math.round(amedasHumidity ?? current.relative_humidity_2m)}%`),
+				);
+			}
+
+			// --- ヒーロー(最高/最低気温・日の出日の入り) ---
+			if (heroSection) {
+				heroSection.querySelector('.hero-max')?.replaceChildren(document.createTextNode(`${Math.round(regular.daily.temperature_2m_max[0])}℃`));
+				heroSection.querySelector('.hero-min')?.replaceChildren(document.createTextNode(`${Math.round(regular.daily.temperature_2m_min[0])}℃`));
+				heroSection.querySelector('.tomorrow-max')?.replaceChildren(document.createTextNode(`${Math.round(regular.daily.temperature_2m_max[1])}°`));
+				heroSection.querySelector('.tomorrow-min')?.replaceChildren(document.createTextNode(`${Math.round(regular.daily.temperature_2m_min[1])}°`));
+				heroSection.querySelector('.sunrise-label')?.replaceChildren(document.createTextNode(hm(new Date(withJstOffset(regular.daily.sunrise[0])))));
+				heroSection.querySelector('.sunset-label')?.replaceChildren(document.createTextNode(hm(new Date(withJstOffset(regular.daily.sunset[0])))));
+			}
+
+			// --- 背景の昼夜判定は最初に表示されている(=代表)区域の日の出日の入りで決める ---
+			if (!primaryRegionApplied && heroSection && !(heroSection as HTMLElement).hidden) {
+				primaryRegionApplied = true;
+				const root = document.documentElement;
+				root.dataset.sunrise = withJstOffset(regular.daily.sunrise[0]);
+				root.dataset.sunset = withJstOffset(regular.daily.sunset[0]);
+				const now = new Date();
+				const isNight = now < new Date(root.dataset.sunrise) || now >= new Date(root.dataset.sunset);
+				root.dataset.daypart = isNight ? 'night' : 'day';
+			}
+
+			// --- 時系列グラフ ---
+			if (hourlyRoot?.setHourlyPoints) {
+				const nowMs = Date.now();
+				const points = regular.hourly.time
+					.map((t: string, i: number) => ({ t, i }))
+					.filter(({ t }: any) => new Date(withJstOffset(t)).getTime() >= nowMs - 3600_000)
+					.map(({ t, i }: any) => {
+						const weather = describeWmoCode(
+							regular.hourly.weathercode[i],
+							isNightAt(t, regular.daily.time, regular.daily.sunrise, regular.daily.sunset),
+						);
+						return {
+							iso: t,
+							hour: jstHour(t),
+							dateLabel: dateLabel(withJstOffset(t)),
+							temp: regular.hourly.temperature_2m[i],
+							precip: regular.hourly.precipitation[i],
+							icon: weather.icon,
+							weatherLabel: weather.label,
+						};
+					});
+				hourlyRoot.setHourlyPoints(points);
+			}
+
+			// --- 10日間予報(参考の7〜10日目を追加) ---
+			if (weeklyScroll) appendReferenceDays(weeklyScroll, extended);
+		} catch {
+			// 取得に失敗した場合は「—」表示のまま残す(壊れた状態を見せない)
+		}
+	}
+
+	function initRegionSelect(select: Element, configs: RegionConfig[]) {
+		const el = select as HTMLSelectElement;
+		el.addEventListener('change', () => {
+			const code = el.value;
+			document.querySelectorAll('[data-region]').forEach((node) => {
+				(node as HTMLElement).hidden = (node as HTMLElement).dataset.region !== code;
+			});
+			const heroName = document.getElementById('hero-area-name');
+			const selectedOption = el.options[el.selectedIndex];
+			if (heroName && selectedOption) heroName.textContent = selectedOption.textContent ?? '';
+			const config = configs.find((c) => c.code === code);
+			if (config) loadRegion(config);
+		});
+	}
+
+	const configEl = document.getElementById('region-config');
+	const configs: RegionConfig[] = configEl ? JSON.parse(configEl.textContent ?? '[]') : [];
+
+	// 月齢は地域に依存しないので、ページ読み込み時に一度だけ計算して全区分ぶんに反映する
+	const moon = getMoonPhase(new Date());
+	document.querySelectorAll('.moon-info').forEach((el) => {
+		el.textContent = `${moon.icon} ${moon.label}（月齢 ${moon.age.toFixed(1)}）`;
+	});
+	// 週間予報(JMA分)のバーは、参考日を待たずまず表示できる範囲で描画しておく
+	document.querySelectorAll('.weekly-scroll').forEach((el) => recomputeWeeklyBars(el));
+
+	document.querySelectorAll('.region-select').forEach((el) => initRegionSelect(el, configs));
+
+	// 初期表示されている(hidden=falseの)区域だけを読み込む。他の区域はセレクタで切り替えた時に遅延読み込みする。
+	const initiallyVisible = configs.find((c) => {
+		const el = document.querySelector(`.current[data-region="${c.code}"]`) as HTMLElement | null;
+		return el && !el.hidden;
+	});
+	if (initiallyVisible) loadRegion(initiallyVisible);
+</script>
+
 <style>
-	.alert-banner {
-		border-left: 4px solid var(--border);
+	.hero-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		flex-wrap: wrap;
 	}
-	.alert-banner[data-severity='warning'] {
-		border-left-color: var(--status-warning);
-		background: color-mix(in srgb, var(--status-warning) 10%, var(--surface-1));
-	}
-	.alert-banner h2 {
-		margin-bottom: 6px;
-	}
-	.alert-banner ul {
+	.hero-head h2 {
 		margin: 0;
-		padding-left: 20px;
 	}
-	.alert-banner p {
-		margin: 0;
-		color: var(--text-secondary);
-		font-size: 14px;
+	.region-select {
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		background: var(--surface-1);
+		color: var(--text-primary);
+		font-family: inherit;
+		font-size: 12.5px;
+		padding: 5px 8px;
+		max-width: 60%;
+	}
+	/* .weekly-scroll などは display を明示指定しているため、hidden属性だけでは隠れない。
+	   属性セレクタ2つ(specificity 0,2,0)にして確実にクラス指定より優先させる。 */
+	[data-region][hidden] {
+		display: none;
 	}
 
 	.hero-row {
@@ -344,7 +589,6 @@ const tenDays = tenDaysRaw.map((d: any) => ({
 		color: var(--text-secondary);
 		font-size: 15px;
 	}
-
 	.hero-tomorrow {
 		flex: 37 1 0%;
 		min-width: 0;
@@ -453,6 +697,23 @@ const tenDays = tenDaysRaw.map((d: any) => ({
 		margin: 0 -16px;
 		padding: 0 16px 4px;
 	}
+</style>
+
+<!--
+	10日間予報の参考日(7〜10日目)は client script が innerHTML で動的生成するため、
+	Astroのスコープ付きCSS(data-astro-cid-*)がテンプレート上の要素にしか付与されない
+	(HourlyChart.astro/WarningBanner.astroと同じ理由)。.weekly-card関連とtemp-high/lowは
+	動的生成分にも適用する必要があるため is:global で別出しにしている。
+-->
+<style is:global>
+	.temp-high {
+		color: var(--temp-high);
+		font-weight: 600;
+	}
+	.temp-low {
+		color: var(--temp-low);
+		font-weight: 600;
+	}
 	.weekly-card {
 		scroll-snap-align: start;
 		flex: 0 0 108px;
@@ -498,7 +759,8 @@ const tenDays = tenDaysRaw.map((d: any) => ({
 		top: 0;
 		height: 6px;
 		border-radius: 3px;
-		background: var(--seq-450);
+		/* 左(最低)から右(最高)へ、気温の寒暖を色でも表す */
+		background: linear-gradient(to right, var(--temp-low), var(--temp-high));
 	}
 	.wc-range-values {
 		font-size: 12px;

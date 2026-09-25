@@ -1,0 +1,89 @@
+{
+  "reportDatetime": "2026-09-25T16:24:00+09:00",
+  "headlineText": "宮古島地方では、高波に注意してください。",
+  "areaTypes": [
+    {
+      "areas": [
+        {
+          "code": "473000",
+          "warnings": [
+            {
+              "code": "48",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "areas": [
+        {
+          "code": "4721400",
+          "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "4737500",
+          "warnings": [
+            {
+              "code": "48",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

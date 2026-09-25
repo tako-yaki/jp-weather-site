@@ -1,0 +1,307 @@
+{
+  "reportDatetime": "2026-09-25T09:29:00+09:00",
+  "headlineText": "根室、釧路地方では、霜に対する農作物の管理に注意してください。",
+  "areaTypes": [
+    {
+      "areas": [
+        {
+          "code": "014010",
+          "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "014020",
+          "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "areas": [
+        {
+          "code": "0120601",
+          "warnings": [
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0120602",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0120603",
+          "warnings": [
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0122300",
+          "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0166100",
+          "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0166200",
+          "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0166300",
+          "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0166400",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0166500",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0166700",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0166800",
+          "warnings": [
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0169100",
+          "warnings": [
+            {
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0169200",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0169300",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        },
+        {
+          "code": "0169400",
+          "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

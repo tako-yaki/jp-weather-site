@@ -1,6 +1,5 @@
 {
-  "reportDatetime": "2026-05-28T09:16:00+09:00",
-  "publishingOffice": "宇都宮地方気象台",
+  "reportDatetime": "2026-09-24T09:46:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -8,6 +7,18 @@
         {
           "code": "090010",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -17,6 +28,10 @@
         {
           "code": "090020",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -31,7 +46,7 @@
           "code": "0920100",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -40,7 +55,7 @@
           "code": "0920200",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -49,7 +64,15 @@
           "code": "0920300",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -57,6 +80,10 @@
         {
           "code": "0920400",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -67,6 +94,10 @@
           "code": "0920500",
           "warnings": [
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "20",
               "status": "解除"
             }
@@ -75,6 +106,10 @@
         {
           "code": "0920601",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -85,6 +120,10 @@
           "code": "0920602",
           "warnings": [
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "20",
               "status": "解除"
             }
@@ -93,6 +132,10 @@
         {
           "code": "0920603",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -103,6 +146,10 @@
           "code": "0920604",
           "warnings": [
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "20",
               "status": "解除"
             }
@@ -111,6 +158,10 @@
         {
           "code": "0920605",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -121,7 +172,7 @@
           "code": "0920800",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -130,7 +181,7 @@
           "code": "0920900",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -139,7 +190,7 @@
           "code": "0921000",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -147,6 +198,10 @@
         {
           "code": "0921100",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -157,6 +212,10 @@
           "code": "0921300",
           "warnings": [
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "20",
               "status": "解除"
             }
@@ -166,7 +225,7 @@
           "code": "0921400",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -175,7 +234,7 @@
           "code": "0921500",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -184,7 +243,7 @@
           "code": "0921600",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -193,7 +252,7 @@
           "code": "0930100",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -202,7 +261,7 @@
           "code": "0934200",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -211,7 +270,7 @@
           "code": "0934300",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -220,7 +279,7 @@
           "code": "0934400",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -229,7 +288,7 @@
           "code": "0934500",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -238,7 +297,7 @@
           "code": "0936100",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -247,7 +306,7 @@
           "code": "0936400",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -255,6 +314,10 @@
         {
           "code": "0938400",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -265,7 +328,7 @@
           "code": "0938600",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]
@@ -273,6 +336,10 @@
         {
           "code": "0940700",
           "warnings": [
+            {
+              "code": "15",
+              "status": "解除"
+            },
             {
               "code": "20",
               "status": "解除"
@@ -283,7 +350,7 @@
           "code": "0941100",
           "warnings": [
             {
-              "code": "20",
+              "code": "15",
               "status": "解除"
             }
           ]

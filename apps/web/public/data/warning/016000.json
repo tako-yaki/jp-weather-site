@@ -1,7 +1,6 @@
 {
-  "reportDatetime": "2026-05-28T04:03:00+09:00",
-  "publishingOffice": "札幌管区気象台",
-  "headlineText": "石狩、空知、後志地方では、急な強い雨や落雷、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-09-25T09:44:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -9,12 +8,20 @@
           "code": "016010",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -22,12 +29,16 @@
           "code": "016020",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -35,12 +46,24 @@
           "code": "016030",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -52,12 +75,12 @@
           "code": "0110000",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -65,12 +88,20 @@
           "code": "0120300",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -78,12 +109,12 @@
           "code": "0120900",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -91,12 +122,12 @@
           "code": "0121000",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -104,12 +135,12 @@
           "code": "0121500",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -117,12 +148,12 @@
           "code": "0121600",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -130,12 +161,12 @@
           "code": "0121700",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -143,12 +174,12 @@
           "code": "0121800",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -156,12 +187,12 @@
           "code": "0122200",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -169,12 +200,12 @@
           "code": "0122400",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -182,12 +213,12 @@
           "code": "0122500",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -195,12 +226,12 @@
           "code": "0122600",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -208,12 +239,12 @@
           "code": "0122700",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -221,12 +252,12 @@
           "code": "0122800",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -234,12 +265,12 @@
           "code": "0123100",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -247,12 +278,12 @@
           "code": "0123400",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -260,12 +291,20 @@
           "code": "0123500",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -273,12 +312,12 @@
           "code": "0130300",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -286,12 +325,12 @@
           "code": "0130400",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -299,12 +338,16 @@
           "code": "0139100",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -312,12 +355,16 @@
           "code": "0139200",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -325,12 +372,12 @@
           "code": "0139300",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -338,12 +385,20 @@
           "code": "0139400",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -351,12 +406,8 @@
           "code": "0139500",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -364,12 +415,8 @@
           "code": "0139600",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -377,12 +424,8 @@
           "code": "0139700",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -390,12 +433,8 @@
           "code": "0139800",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -403,12 +442,8 @@
           "code": "0139900",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -416,12 +451,8 @@
           "code": "0140000",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -429,12 +460,16 @@
           "code": "0140100",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -442,12 +477,16 @@
           "code": "0140200",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -455,12 +494,16 @@
           "code": "0140300",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -468,12 +511,16 @@
           "code": "0140400",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -481,12 +528,16 @@
           "code": "0140500",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -494,12 +545,16 @@
           "code": "0140600",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -507,12 +562,8 @@
           "code": "0140700",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -520,12 +571,16 @@
           "code": "0140800",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -533,12 +588,8 @@
           "code": "0140900",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -546,12 +597,12 @@
           "code": "0142300",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -559,12 +610,12 @@
           "code": "0142400",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -572,12 +623,12 @@
           "code": "0142500",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -585,12 +636,12 @@
           "code": "0142700",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -598,12 +649,12 @@
           "code": "0142800",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -611,12 +662,12 @@
           "code": "0142900",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -624,12 +675,12 @@
           "code": "0143000",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -637,12 +688,12 @@
           "code": "0143100",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -650,12 +701,12 @@
           "code": "0143200",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -663,12 +714,12 @@
           "code": "0143300",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -676,12 +727,12 @@
           "code": "0143400",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -689,12 +740,12 @@
           "code": "0143600",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -702,12 +753,16 @@
           "code": "0143700",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -715,4650 +770,12 @@
           "code": "0143800",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "20",
-              "status": "継続"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "timeSeries": [
-    {
-      "timeDefines": [
-        "2026-05-28T03:00:00+09:00",
-        "2026-05-28T06:00:00+09:00",
-        "2026-05-28T09:00:00+09:00",
-        "2026-05-28T12:00:00+09:00",
-        "2026-05-28T15:00:00+09:00",
-        "2026-05-28T18:00:00+09:00",
-        "2026-05-28T21:00:00+09:00",
-        "2026-05-29T00:00:00+09:00",
-        "2026-05-29T03:00:00+09:00"
-      ],
-      "areaTypes": [
-        {
-          "areas": [
-            {
-              "code": "016010",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "016020",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "016030",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "areas": [
-            {
-              "code": "0110000",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0120300",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0120900",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0121000",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0121500",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0121600",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0121700",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0121800",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0122200",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0122400",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0122500",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0122600",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0122700",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0122800",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0123100",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0123400",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0123500",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0130300",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0130400",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139100",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139200",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139300",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139400",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139500",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139600",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139700",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139800",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0139900",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140000",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140100",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140200",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140300",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140400",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140500",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140600",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140700",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140800",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "value": "10"
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "陸上",
-                          "values": [
-                            "200"
-                          ]
-                        },
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0140900",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0142300",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0142400",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0142500",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0142700",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0142800",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0142900",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0143000",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0143100",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0143200",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0143300",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0143400",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0143600",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0143700",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "0143800",
-              "warnings": [
-                {
-                  "code": "14",
-                  "levels": [
-                    {
-                      "type": "雷危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "00",
-                            "00",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ],
-                          "additions": [
-                            "突風",
-                            "ひょう"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "continueLevels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "value": "10"
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "values": [
-                            "200"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "status": "解除"
             }
           ]
         }

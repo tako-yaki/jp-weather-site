@@ -1,7 +1,6 @@
 {
-  "reportDatetime": "2026-05-28T09:42:00+09:00",
-  "publishingOffice": "津地方気象台",
-  "headlineText": "三重県では、２８日夜遅くまで濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-09-22T10:13:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -9,8 +8,12 @@
           "code": "240010",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -18,8 +21,20 @@
           "code": "240020",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
@@ -28,11 +43,20 @@
     {
       "areas": [
         {
-          "code": "2420100",
+          "code": "2420111",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "2420112",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -40,8 +64,12 @@
           "code": "2420200",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -49,17 +77,30 @@
           "code": "2420300",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
         {
-          "code": "2420400",
+          "code": "2420411",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
+            }
+          ]
+        },
+        {
+          "code": "2420412",
+          "warnings": [
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -67,8 +108,12 @@
           "code": "2420500",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -76,8 +121,8 @@
           "code": "2420700",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -85,7 +130,8 @@
           "code": "2420800",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -93,7 +139,12 @@
           "code": "2420900",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -101,7 +152,8 @@
           "code": "2421000",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -109,8 +161,16 @@
           "code": "2421100",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -118,7 +178,12 @@
           "code": "2421200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -126,7 +191,8 @@
           "code": "2421400",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -134,8 +200,16 @@
           "code": "2421500",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -143,7 +217,8 @@
           "code": "2421600",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -151,8 +226,8 @@
           "code": "2430300",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -160,7 +235,8 @@
           "code": "2432400",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -168,7 +244,12 @@
           "code": "2434100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -176,7 +257,8 @@
           "code": "2434300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -184,8 +266,8 @@
           "code": "2434400",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -193,7 +275,8 @@
           "code": "2444100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -201,8 +284,8 @@
           "code": "2444200",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -210,7 +293,8 @@
           "code": "2444300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -218,7 +302,8 @@
           "code": "2446100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -226,7 +311,12 @@
           "code": "2447000",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -234,7 +324,12 @@
           "code": "2447100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -242,8 +337,20 @@
           "code": "2447200",
           "warnings": [
             {
-              "code": "20",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -251,7 +358,12 @@
           "code": "2454300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -259,7 +371,12 @@
           "code": "2456100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -267,640 +384,12 @@
           "code": "2456200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "timeSeries": [
-    {
-      "timeDefines": [
-        "2026-05-28T09:00:00+09:00",
-        "2026-05-28T12:00:00+09:00",
-        "2026-05-28T15:00:00+09:00",
-        "2026-05-28T18:00:00+09:00",
-        "2026-05-28T21:00:00+09:00",
-        "2026-05-29T00:00:00+09:00",
-        "2026-05-29T03:00:00+09:00",
-        "2026-05-29T06:00:00+09:00",
-        "2026-05-29T09:00:00+09:00"
-      ],
-      "areaTypes": [
-        {
-          "areas": [
-            {
-              "code": "240010",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "240020",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "areas": [
-            {
-              "code": "2420100",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2420200",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2420300",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "内海",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "内海",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2420400",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2420500",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2420700",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2421100",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "内海",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        },
-                        {
-                          "localAreaName": "外海",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "内海",
-                          "values": [
-                            "500"
-                          ]
-                        },
-                        {
-                          "localAreaName": "外海",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2421500",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "外海",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "外海",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2430300",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2434400",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2444200",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "海上",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "code": "2447200",
-              "warnings": [
-                {
-                  "code": "20",
-                  "levels": [
-                    {
-                      "type": "濃霧危険度",
-                      "localAreas": [
-                        {
-                          "localAreaName": "外海",
-                          "values": [
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "10",
-                            "00",
-                            "00",
-                            "00",
-                            "00"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "properties": [
-                    {
-                      "type": "視程",
-                      "localAreas": [
-                        {
-                          "localAreaName": "外海",
-                          "values": [
-                            "500"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
