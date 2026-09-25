@@ -1,0 +1,9 @@
+{
+	"name": "jp-weather-site",
+	"compatibility_date": "2026-09-25",
+	// このサイトはAstroが静的に生成したファイル(dist/)を配信するだけで、
+	// サーバー側で動くWorkerスクリプトは無いので assets のみを指定する。
+	"assets": {
+		"directory": "./dist"
+	}
+}
