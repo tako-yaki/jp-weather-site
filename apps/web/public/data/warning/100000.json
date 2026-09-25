@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-26T04:11:00+09:00",
-  "headlineText": "南部では、低い土地の浸水や河川の増水に注意してください。",
+  "reportDatetime": "2026-09-26T07:08:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -21,7 +21,7 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -421,7 +421,7 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         }
