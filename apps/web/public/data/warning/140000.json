@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-26T07:35:00+09:00",
-  "headlineText": "神奈川県では、強風に注意してください。",
+  "reportDatetime": "2026-09-26T15:57:00+09:00",
+  "headlineText": "東部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,12 +20,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -115,12 +115,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -145,12 +145,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -205,12 +205,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -226,12 +226,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -315,12 +315,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
