@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-26T12:30:00+09:00",
-  "headlineText": "宗谷地方では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-26T15:09:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -25,11 +25,11 @@
             },
             {
               "code": "03",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "29",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -75,7 +75,7 @@
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -151,11 +151,11 @@
             },
             {
               "code": "03",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "29",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -243,11 +243,11 @@
             },
             {
               "code": "10",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "29",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
