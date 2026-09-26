@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-25T10:14:00+09:00",
-  "headlineText": "大東島地方では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-09-27T08:03:00+09:00",
+  "headlineText": "大東島地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,11 +12,11 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -33,11 +33,11 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -50,11 +50,11 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
