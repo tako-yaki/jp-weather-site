@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-09-27T00:09:00+09:00",
+  "reportDatetime": "2026-09-27T00:35:00+09:00",
   "headlineText": "佐賀県では、土砂災害に注意してください。",
   "areaTypes": [
     {
@@ -141,11 +141,11 @@
             },
             {
               "code": "03",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -290,6 +290,14 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
