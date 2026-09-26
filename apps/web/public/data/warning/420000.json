@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-26T18:35:00+09:00",
-  "headlineText": "南部、北部、五島では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-09-26T19:57:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -25,20 +25,20 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "継続"
-            },
-            {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -97,20 +97,20 @@
           "code": "4220201",
           "warnings": [
             {
-              "code": "10",
-              "status": "継続"
-            },
-            {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -191,20 +191,20 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "発表"
-            },
-            {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -414,20 +414,20 @@
           "code": "4239100",
           "warnings": [
             {
-              "code": "10",
-              "status": "継続"
-            },
-            {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
