@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-27T05:35:00+09:00",
-  "headlineText": "胆振地方では、強風に注意してください。",
+  "reportDatetime": "2026-09-27T07:42:00+09:00",
+  "headlineText": "胆振地方では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -14,16 +14,16 @@
             {
               "code": "15",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "015020",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "10",
               "status": "解除"
@@ -127,6 +127,10 @@
             {
               "code": "15",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -206,10 +210,6 @@
           "code": "0160700",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
@@ -252,10 +252,6 @@
         {
           "code": "0161000",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
