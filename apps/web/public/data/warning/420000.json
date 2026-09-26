@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-27T04:23:00+09:00",
-  "headlineText": "南部、北部では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-27T05:03:00+09:00",
+  "headlineText": "南部では、低い土地の浸水や河川の増水に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,12 +16,12 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             }
           ]
         },
@@ -41,11 +41,11 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -160,12 +160,12 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
@@ -181,12 +181,12 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             }
           ]
         },
@@ -304,11 +304,11 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -394,11 +394,11 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]
