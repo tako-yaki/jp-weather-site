@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-26T05:33:00+09:00",
-  "headlineText": "天草・芦北地方では、強風に注意してください。",
+  "reportDatetime": "2026-09-26T16:10:00+09:00",
+  "headlineText": "熊本地方では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -8,15 +8,15 @@
           "code": "430010",
           "warnings": [
             {
+              "code": "14",
+              "status": "発表"
+            },
+            {
               "code": "10",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "14",
               "status": "発表"
             }
           ]
@@ -51,10 +51,6 @@
           "code": "430040",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -68,11 +64,15 @@
           "code": "4310000",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -153,10 +153,6 @@
           "code": "4321100",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -174,14 +170,6 @@
         {
           "code": "4321300",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -478,10 +466,6 @@
         {
           "code": "4351300",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
