@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-27T18:03:00+09:00",
-  "headlineText": "千葉県では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-09-28T04:23:00+09:00",
+  "headlineText": "南部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -38,15 +38,15 @@
               "status": "解除"
             },
             {
+              "code": "14",
+              "status": "発表"
+            },
+            {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
               "status": "発表"
             }
           ]
@@ -108,15 +108,15 @@
           "code": "1220600",
           "warnings": [
             {
+              "code": "14",
+              "status": "発表"
+            },
+            {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
               "status": "発表"
             }
           ]
@@ -289,15 +289,15 @@
           "code": "1222500",
           "warnings": [
             {
+              "code": "14",
+              "status": "発表"
+            },
+            {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
               "status": "発表"
             }
           ]
@@ -306,15 +306,15 @@
           "code": "1222600",
           "warnings": [
             {
+              "code": "14",
+              "status": "発表"
+            },
+            {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
               "status": "発表"
             }
           ]
@@ -341,15 +341,15 @@
           "code": "1222900",
           "warnings": [
             {
+              "code": "14",
+              "status": "発表"
+            },
+            {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
               "status": "発表"
             }
           ]
