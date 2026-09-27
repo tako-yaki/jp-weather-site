@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-27T13:49:00+09:00",
-  "headlineText": "南予では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-27T14:19:00+09:00",
+  "headlineText": "南予では、低い土地の浸水や河川の増水に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -38,12 +38,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             }
           ]
         }
@@ -85,12 +85,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             }
           ]
         },
@@ -180,12 +180,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
