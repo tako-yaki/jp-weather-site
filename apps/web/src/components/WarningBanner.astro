@@ -15,7 +15,10 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 ---
 
 <section class="alert-banner" data-severity="loading">
-	<h2>警報注意報</h2>
+	<div class="warning-head">
+		<h2>警報注意報</h2>
+		<span class="warning-time" hidden></span>
+	</div>
 	<p class="warning-status">読み込み中...</p>
 	<div class="warning-groups" hidden></div>
 
@@ -60,17 +63,37 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		const municipalities: Municipality[] = JSON.parse(muniDataEl.textContent ?? '[]');
 		const showRegionLabel = regionCount > 1;
 
+		const timeEl = container.querySelector('.warning-time') as HTMLElement | null;
 		const statusEl = container.querySelector('.warning-status') as HTMLElement | null;
 		const groupsEl = container.querySelector('.warning-groups') as HTMLElement | null;
 		const select = container.querySelector('.muni-select') as HTMLSelectElement | null;
 		const result = container.querySelector('.muni-result') as HTMLElement | null;
-		if (!statusEl || !groupsEl || !select || !result) return;
+		if (!timeEl || !statusEl || !groupsEl || !select || !result) return;
+
+		const reportTimeFormatter = new Intl.DateTimeFormat('ja-JP', {
+			month: 'numeric',
+			day: 'numeric',
+			hour: '2-digit',
+			minute: '2-digit',
+			timeZone: 'Asia/Tokyo',
+		});
+
+		function formatReportDatetime(iso: unknown): string | null {
+			if (typeof iso !== 'string') return null;
+			const date = new Date(iso);
+			if (Number.isNaN(date.getTime())) return null;
+			return `${reportTimeFormatter.format(date)} 発表`;
+		}
 
 		// officeの警報JSON取得後、市区町村コード→現在有効な警報リストのマップを作っておき、
 		// muni-select の変更時にここから引く(選択のたびに再取得はしない)。
 		let municipalityActiveByCode: Record<string, { code: string; text: string }[]> = {};
 
 		function renderRegionWarnings(warning: any) {
+			const reportTime = formatReportDatetime(warning.reportDatetime);
+			timeEl!.textContent = reportTime ?? '';
+			timeEl!.hidden = !reportTime;
+
 			// 地域(class10)ごとにまとめる。1地域に複数の現象が出ている場合、地域名を毎行繰り返さず
 			// 見出し1つの下にまとめて表示したほうが読みやすいため。
 			const groups = (warning.areaTypes?.[0]?.areas ?? [])
@@ -254,8 +277,18 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 	.alert-banner[data-severity='error'] .warning-status {
 		color: var(--status-critical);
 	}
-	.alert-banner h2 {
+	.warning-head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
 		margin-bottom: 6px;
+	}
+	.alert-banner h2 {
+		margin: 0;
+	}
+	.warning-time {
+		font-size: 11px;
+		color: var(--text-muted);
 	}
 	.warning-status {
 		margin: 0;
