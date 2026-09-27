@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-09-27T02:27:00+09:00",
-  "headlineText": "愛媛県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-09-27T13:16:00+09:00",
+  "headlineText": "南予では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "380010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -20,14 +16,6 @@
         {
           "code": "380020",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -48,6 +36,14 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         }
@@ -59,10 +55,6 @@
           "code": "3820100",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -71,14 +63,6 @@
         {
           "code": "3820200",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -98,6 +82,14 @@
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
