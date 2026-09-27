@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-28T05:51:00+09:00",
-  "headlineText": "佐賀県では、土砂災害に厳重に警戒してください。",
+  "reportDatetime": "2026-09-28T06:43:00+09:00",
+  "headlineText": "南部では、低い土地の浸水や河川の増水に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,11 +12,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "49",
+              "status": "発表"
             },
             {
-              "code": "49",
+              "code": "03",
               "status": "発表"
             }
           ]
@@ -37,11 +37,11 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "49",
               "status": "継続"
             },
             {
-              "code": "49",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -97,11 +97,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -127,11 +127,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "49",
+              "status": "発表"
             },
             {
-              "code": "49",
+              "code": "03",
               "status": "発表"
             }
           ]
@@ -170,12 +170,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
@@ -249,11 +249,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "49",
               "status": "継続"
             },
             {
-              "code": "49",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -266,12 +266,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
@@ -283,12 +283,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
@@ -300,12 +300,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
