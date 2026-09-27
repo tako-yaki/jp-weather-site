@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-09-27T20:31:00+09:00",
-  "headlineText": "島根県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-09-28T04:35:00+09:00",
+  "headlineText": "西部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "320010",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
@@ -22,6 +18,10 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
@@ -33,10 +33,6 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
@@ -47,6 +43,14 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -85,6 +89,10 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
@@ -93,10 +101,6 @@
           "warnings": [
             {
               "code": "48",
-              "status": "解除"
-            },
-            {
-              "code": "10",
               "status": "解除"
             },
             {
@@ -127,16 +131,16 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "3220400",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
@@ -165,16 +169,20 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "3220600",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
@@ -188,10 +196,6 @@
         {
           "code": "3220700",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
