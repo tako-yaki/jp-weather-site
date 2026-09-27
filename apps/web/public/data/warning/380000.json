@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-09-27T13:16:00+09:00",
+  "reportDatetime": "2026-09-27T13:49:00+09:00",
   "headlineText": "南予では、土砂災害に注意してください。",
   "areaTypes": [
     {
@@ -39,11 +39,11 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -86,11 +86,11 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -177,6 +177,14 @@
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
