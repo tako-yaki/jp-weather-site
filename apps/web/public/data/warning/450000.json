@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-27T13:22:00+09:00",
-  "headlineText": "北部山沿いでは、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-27T21:08:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -56,7 +56,7 @@
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         }
@@ -352,7 +352,7 @@
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
