@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-27T13:37:00+09:00",
-  "headlineText": "大東島地方では、強風に注意してください。",
+  "reportDatetime": "2026-09-27T19:13:00+09:00",
+  "headlineText": "大東島地方では、高波に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -8,15 +8,15 @@
           "code": "472000",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "07",
               "status": "発表"
             }
           ]
@@ -29,15 +29,15 @@
           "code": "4735700",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "07",
               "status": "発表"
             }
           ]
@@ -46,15 +46,15 @@
           "code": "4735800",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "07",
               "status": "発表"
             }
           ]
