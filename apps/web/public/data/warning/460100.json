@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-27T22:30:00+09:00",
-  "headlineText": "薩摩地方では、低い土地の浸水や河川の増水に注意してください。",
+  "reportDatetime": "2026-09-27T23:02:00+09:00",
+  "headlineText": "薩摩地方では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -18,16 +18,16 @@
             {
               "code": "10",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "460020",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
@@ -64,6 +64,10 @@
             },
             {
               "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -190,10 +194,6 @@
           "code": "4621700",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             }
@@ -231,16 +231,16 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "4622100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
@@ -356,10 +356,6 @@
           "code": "4649000",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             }
@@ -381,10 +377,6 @@
         {
           "code": "4649200",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
