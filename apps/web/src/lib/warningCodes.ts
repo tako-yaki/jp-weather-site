@@ -30,3 +30,33 @@ export function describeWarningCode(code: string): string {
 export function isActiveStatus(status: string): boolean {
 	return status !== '発表警報・注意報はなし' && status !== '解除';
 }
+
+// 警戒レベル相当の4区分。ラベル名の末尾から判定する(「危険警報」は「警報」でも終わるため、
+// より限定的な接尾辞から順にチェックする)。コード表に載っていない(要確認)ものは 'unknown'。
+export type WarningSeverity = 'advisory' | 'warning' | 'danger' | 'special' | 'unknown';
+
+// 内閣府(防災担当)「大雨の警戒レベルをわかりやすく伝えるための5色の配色」(令和2年5月29日)より。
+// レベル2=注意報/黄、レベル3=警報/赤、レベル4=危険警報/紫、レベル5=特別警報/黒。
+const SEVERITY_RANK: Record<WarningSeverity, number> = {
+	unknown: 1,
+	advisory: 0,
+	warning: 2,
+	danger: 3,
+	special: 4,
+};
+
+export function describeWarningSeverity(code: string): WarningSeverity {
+	const label = WARNING_CODE_TABLE[code];
+	if (!label) return 'unknown';
+	if (label.endsWith('特別警報')) return 'special';
+	if (label.endsWith('危険警報')) return 'danger';
+	if (label.endsWith('警報')) return 'warning';
+	return 'advisory';
+}
+
+export function highestSeverity(severities: WarningSeverity[]): WarningSeverity {
+	return severities.reduce<WarningSeverity>(
+		(max, s) => (SEVERITY_RANK[s] > SEVERITY_RANK[max] ? s : max),
+		'advisory',
+	);
+}

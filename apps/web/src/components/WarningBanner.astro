@@ -17,7 +17,7 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 <section class="alert-banner" data-severity="loading">
 	<h2>警報注意報</h2>
 	<p class="warning-status">読み込み中...</p>
-	<ul class="warning-list" hidden></ul>
+	<div class="warning-groups" hidden></div>
 
 	<div class="muni-lookup">
 		<label class="muni-label" for="muni-select">市区町村で見る</label>
@@ -39,7 +39,7 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 </section>
 
 <script>
-	import { describeWarningCode, isActiveStatus } from '../lib/warningCodes';
+	import { describeWarningCode, isActiveStatus, describeWarningSeverity, highestSeverity } from '../lib/warningCodes';
 	import { describeWmoCode } from '../lib/wmoWeatherCodes';
 	import { fetchOfficeWarning } from '../lib/clientData';
 
@@ -61,52 +61,67 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		const showRegionLabel = regionCount > 1;
 
 		const statusEl = container.querySelector('.warning-status') as HTMLElement | null;
-		const listEl = container.querySelector('.warning-list') as HTMLElement | null;
+		const groupsEl = container.querySelector('.warning-groups') as HTMLElement | null;
 		const select = container.querySelector('.muni-select') as HTMLSelectElement | null;
 		const result = container.querySelector('.muni-result') as HTMLElement | null;
-		if (!statusEl || !listEl || !select || !result) return;
+		if (!statusEl || !groupsEl || !select || !result) return;
 
 		// officeの警報JSON取得後、市区町村コード→現在有効な警報リストのマップを作っておき、
 		// muni-select の変更時にここから引く(選択のたびに再取得はしない)。
-		let municipalityActiveByCode: Record<string, string[]> = {};
+		let municipalityActiveByCode: Record<string, { code: string; text: string }[]> = {};
 
 		function renderRegionWarnings(warning: any) {
-			const activeWarnings = (warning.areaTypes?.[0]?.areas ?? []).flatMap((a: any) =>
-				(a.warnings ?? [])
-					.filter((w: any) => w.code && isActiveStatus(w.status))
-					.map((w: any) => ({ code: w.code, status: w.status, regionName: regionNameByCode[a.code] ?? a.code })),
-			);
+			// 地域(class10)ごとにまとめる。1地域に複数の現象が出ている場合、地域名を毎行繰り返さず
+			// 見出し1つの下にまとめて表示したほうが読みやすいため。
+			const groups = (warning.areaTypes?.[0]?.areas ?? [])
+				.map((a: any) => ({
+					regionName: regionNameByCode[a.code] ?? a.code,
+					warnings: (a.warnings ?? []).filter((w: any) => w.code && isActiveStatus(w.status)),
+				}))
+				.filter((g: any) => g.warnings.length > 0);
 
-			listEl!.textContent = '';
-			if (activeWarnings.length > 0) {
-				container.setAttribute('data-severity', 'warning');
+			groupsEl!.textContent = '';
+			if (groups.length > 0) {
+				const severity = highestSeverity(
+					groups.flatMap((g: any) => g.warnings.map((w: any) => describeWarningSeverity(w.code))),
+				);
+				container.setAttribute('data-severity', severity);
 				statusEl!.hidden = true;
-				listEl!.hidden = false;
-				for (const w of activeWarnings) {
-					const li = document.createElement('li');
+				groupsEl!.hidden = false;
+				for (const g of groups) {
+					const group = document.createElement('div');
+					group.className = 'warn-group';
 					if (showRegionLabel) {
-						const span = document.createElement('span');
-						span.className = 'warn-region';
-						span.textContent = `${w.regionName}: `;
-						li.appendChild(span);
+						const heading = document.createElement('p');
+						heading.className = 'warn-region-heading';
+						heading.textContent = g.regionName;
+						group.appendChild(heading);
 					}
-					li.appendChild(document.createTextNode(`${describeWarningCode(w.code)}（${w.status}）`));
-					listEl!.appendChild(li);
+					const ul = document.createElement('ul');
+					ul.className = 'warning-list';
+					for (const w of g.warnings) {
+						const li = document.createElement('li');
+						li.dataset.severity = describeWarningSeverity(w.code);
+						li.textContent = `${describeWarningCode(w.code)}（${w.status}）`;
+						ul.appendChild(li);
+					}
+					group.appendChild(ul);
+					groupsEl!.appendChild(group);
 				}
 			} else {
 				container.setAttribute('data-severity', 'none');
-				listEl!.hidden = true;
+				groupsEl!.hidden = true;
 				statusEl!.hidden = false;
 				statusEl!.textContent = '現在、発表されている警報・注意報はありません';
 			}
 		}
 
 		function indexMunicipalityWarnings(warning: any) {
-			const map: Record<string, string[]> = {};
+			const map: Record<string, { code: string; text: string }[]> = {};
 			for (const a of warning.areaTypes?.[1]?.areas ?? []) {
 				map[a.code] = (a.warnings ?? [])
 					.filter((w: any) => w.code && isActiveStatus(w.status))
-					.map((w: any) => `${describeWarningCode(w.code)}（${w.status}）`);
+					.map((w: any) => ({ code: w.code, text: `${describeWarningCode(w.code)}（${w.status}）` }));
 			}
 			municipalityActiveByCode = map;
 			// すでに市区町村が選択されている状態で再取得(定期更新)した場合は表示も更新する
@@ -160,12 +175,13 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 				p.textContent = '現在、発表されている警報・注意報はありません';
 				result!.appendChild(p);
 			} else {
-				result!.dataset.state = 'warning';
+				result!.dataset.state = highestSeverity(active.map((w) => describeWarningSeverity(w.code)));
 				const ul = document.createElement('ul');
 				ul.className = 'muni-warning-list';
 				for (const w of active) {
 					const li = document.createElement('li');
-					li.textContent = w;
+					li.dataset.severity = describeWarningSeverity(w.code);
+					li.textContent = w.text;
 					ul.appendChild(li);
 				}
 				result!.appendChild(ul);
@@ -212,9 +228,25 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 	.alert-banner {
 		border-left: 4px solid var(--border);
 	}
-	.alert-banner[data-severity='warning'] {
+	.alert-banner[data-severity='unknown'] {
 		border-left-color: var(--status-warning);
 		background: color-mix(in srgb, var(--status-warning) 10%, var(--surface-1));
+	}
+	.alert-banner[data-severity='advisory'] {
+		border-left-color: var(--warn-advisory);
+		background: color-mix(in srgb, var(--warn-advisory) 12%, var(--surface-1));
+	}
+	.alert-banner[data-severity='warning'] {
+		border-left-color: var(--warn-warning);
+		background: color-mix(in srgb, var(--warn-warning) 10%, var(--surface-1));
+	}
+	.alert-banner[data-severity='danger'] {
+		border-left-color: var(--warn-danger);
+		background: color-mix(in srgb, var(--warn-danger) 10%, var(--surface-1));
+	}
+	.alert-banner[data-severity='special'] {
+		border-left-color: var(--warn-special);
+		background: color-mix(in srgb, var(--warn-special) 14%, var(--surface-1));
 	}
 	.alert-banner[data-severity='error'] {
 		border-left-color: var(--status-critical);
@@ -225,18 +257,10 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 	.alert-banner h2 {
 		margin-bottom: 6px;
 	}
-	.alert-banner ul {
-		margin: 0;
-		padding-left: 20px;
-	}
 	.warning-status {
 		margin: 0;
 		color: var(--text-secondary);
 		font-size: 14px;
-	}
-	.warn-region {
-		color: var(--text-muted);
-		font-size: 12.5px;
 	}
 
 	.muni-lookup {
@@ -272,11 +296,39 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 
 <!--
 	.muni-result の中身(muni-name/muni-none/muni-warning-list/muni-weather)と
-	.warning-list の中身(li/span.warn-region)は client script が document.createElement で
-	生成するため、Astroのスコープ付きCSS(data-astro-cid-*)はテンプレート上の要素にしか
-	付与されず、これらの動的要素には効かない。そのため is:global で別出しにしている。
+	.warning-groups の中身(warn-group/warn-region-heading/warning-list/li)は client script が
+	document.createElement で生成するため、Astroのスコープ付きCSS(data-astro-cid-*)はテンプレート
+	上の要素にしか付与されず、これらの動的要素には効かない。そのため is:global で別出しにしている。
 -->
 <style is:global>
+	.warn-group + .warn-group {
+		margin-top: 8px;
+	}
+	.warn-region-heading {
+		margin: 0 0 2px;
+		font-weight: 600;
+		font-size: 13px;
+		color: var(--text-primary);
+	}
+	.warning-list {
+		margin: 0;
+		padding-left: 20px;
+	}
+	.warning-list li[data-severity='unknown'] {
+		color: var(--status-warning);
+	}
+	.warning-list li[data-severity='advisory'] {
+		color: color-mix(in srgb, var(--warn-advisory) 70%, var(--text-primary));
+	}
+	.warning-list li[data-severity='warning'] {
+		color: var(--warn-warning);
+	}
+	.warning-list li[data-severity='danger'] {
+		color: var(--warn-danger);
+	}
+	.warning-list li[data-severity='special'] {
+		color: var(--warn-special);
+	}
 	.muni-result .muni-name {
 		margin: 0 0 4px;
 		font-weight: 600;
@@ -297,7 +349,34 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		font-size: 13px;
 		color: var(--text-secondary);
 	}
-	.muni-result[data-state='warning'] .muni-name {
+	.muni-result[data-state='unknown'] .muni-name {
 		color: var(--status-warning);
+	}
+	.muni-result[data-state='advisory'] .muni-name {
+		color: color-mix(in srgb, var(--warn-advisory) 70%, var(--text-primary));
+	}
+	.muni-result[data-state='warning'] .muni-name {
+		color: var(--warn-warning);
+	}
+	.muni-result[data-state='danger'] .muni-name {
+		color: var(--warn-danger);
+	}
+	.muni-result[data-state='special'] .muni-name {
+		color: var(--warn-special);
+	}
+	.muni-warning-list li[data-severity='unknown'] {
+		color: var(--status-warning);
+	}
+	.muni-warning-list li[data-severity='advisory'] {
+		color: color-mix(in srgb, var(--warn-advisory) 70%, var(--text-primary));
+	}
+	.muni-warning-list li[data-severity='warning'] {
+		color: var(--warn-warning);
+	}
+	.muni-warning-list li[data-severity='danger'] {
+		color: var(--warn-danger);
+	}
+	.muni-warning-list li[data-severity='special'] {
+		color: var(--warn-special);
 	}
 </style>
