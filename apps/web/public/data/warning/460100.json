@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-27T05:03:00+09:00",
-  "headlineText": "薩摩、大隅、種子島・屋久島地方では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-09-27T22:30:00+09:00",
+  "headlineText": "薩摩地方では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -14,16 +14,16 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "460020",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "29",
               "status": "解除"
@@ -61,16 +61,16 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "4620300",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "継続"
@@ -190,10 +190,6 @@
           "code": "4621700",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "29",
               "status": "解除"
             },
@@ -241,10 +237,6 @@
         {
           "code": "4622100",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "29",
               "status": "解除"
