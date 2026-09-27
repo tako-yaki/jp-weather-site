@@ -277,36 +277,40 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 	.alert-banner[data-severity='error'] .warning-status {
 		color: var(--status-critical);
 	}
+	.alert-banner {
+		padding: 12px 14px;
+	}
 	.warning-head {
 		display: flex;
 		align-items: baseline;
 		justify-content: space-between;
-		margin-bottom: 6px;
+		margin-bottom: 5px;
 	}
 	.alert-banner h2 {
 		margin: 0;
+		font-size: 12px;
 	}
 	.warning-time {
-		font-size: 11px;
+		font-size: 10.5px;
 		color: var(--text-muted);
 	}
 	.warning-status {
 		margin: 0;
 		color: var(--text-secondary);
-		font-size: 14px;
+		font-size: 13px;
 	}
 
 	.muni-lookup {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 6px 8px;
-		margin-top: 10px;
-		padding-top: 10px;
+		gap: 5px 8px;
+		margin-top: 8px;
+		padding-top: 8px;
 		border-top: 1px solid var(--gridline);
 	}
 	.muni-label {
-		font-size: 12px;
+		font-size: 11px;
 		color: var(--text-muted);
 		white-space: nowrap;
 	}
@@ -318,12 +322,40 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		background: var(--surface-1);
 		color: var(--text-primary);
 		font-family: inherit;
-		font-size: 13px;
-		padding: 5px 8px;
+		font-size: 12px;
+		padding: 4px 7px;
 	}
 	.muni-result {
 		flex-basis: 100%;
 		margin-top: 4px;
+	}
+
+	/* スマホ幅ではさらに一回り小さく、余白も詰める(元サイズの75%程度が目安) */
+	@media (max-width: 480px) {
+		.alert-banner {
+			padding: 10px 12px;
+		}
+		.alert-banner h2 {
+			font-size: 10px;
+		}
+		.warning-time {
+			font-size: 9px;
+		}
+		.warning-status {
+			font-size: 10.5px;
+		}
+		.muni-lookup {
+			gap: 4px 6px;
+			margin-top: 6px;
+			padding-top: 6px;
+		}
+		.muni-label {
+			font-size: 9px;
+		}
+		.muni-select {
+			font-size: 10px;
+			padding: 3px 6px;
+		}
 	}
 </style>
 
@@ -335,17 +367,18 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 -->
 <style is:global>
 	.warn-group + .warn-group {
-		margin-top: 8px;
+		margin-top: 6px;
 	}
 	.warn-region-heading {
 		margin: 0 0 2px;
 		font-weight: 600;
-		font-size: 13px;
+		font-size: 12px;
 		color: var(--text-primary);
 	}
 	.warning-list {
 		margin: 0;
-		padding-left: 20px;
+		padding-left: 18px;
+		font-size: 13px;
 	}
 	.warning-list li[data-severity='unknown'] {
 		color: var(--status-warning);
@@ -365,21 +398,21 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 	.muni-result .muni-name {
 		margin: 0 0 4px;
 		font-weight: 600;
-		font-size: 13px;
+		font-size: 12px;
 	}
 	.muni-result .muni-none {
 		margin: 0;
 		color: var(--text-secondary);
-		font-size: 13px;
+		font-size: 12px;
 	}
 	.muni-result .muni-warning-list {
 		margin: 0;
-		padding-left: 18px;
-		font-size: 13px;
+		padding-left: 16px;
+		font-size: 12px;
 	}
 	.muni-result .muni-weather {
 		margin: 6px 0 0;
-		font-size: 13px;
+		font-size: 12px;
 		color: var(--text-secondary);
 	}
 	.muni-result[data-state='unknown'] .muni-name {
@@ -411,5 +444,30 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 	}
 	.muni-warning-list li[data-severity='special'] {
 		color: var(--warn-special);
+	}
+
+	/* スマホ幅ではさらに一回り小さく(元サイズの75%程度が目安) */
+	@media (max-width: 480px) {
+		.warn-group + .warn-group {
+			margin-top: 5px;
+		}
+		.warn-region-heading {
+			font-size: 9.5px;
+		}
+		.warning-list {
+			padding-left: 15px;
+			font-size: 10px;
+		}
+		.muni-result .muni-name {
+			font-size: 9.5px;
+		}
+		.muni-result .muni-none,
+		.muni-result .muni-warning-list,
+		.muni-result .muni-weather {
+			font-size: 10px;
+		}
+		.muni-result .muni-warning-list {
+			padding-left: 14px;
+		}
 	}
 </style>
