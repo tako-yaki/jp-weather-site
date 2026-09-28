@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-28T15:41:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-09-28T16:22:00+09:00",
+  "headlineText": "東部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -38,12 +38,12 @@
           "code": "350030",
           "warnings": [
             {
-              "code": "29",
+              "code": "14",
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -238,10 +238,6 @@
           "code": "3532100",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -253,6 +249,10 @@
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
