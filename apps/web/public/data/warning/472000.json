@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-28T08:13:00+09:00",
-  "headlineText": "大東島地方では、暴風に警戒してください。",
+  "reportDatetime": "2026-09-28T13:54:00+09:00",
+  "headlineText": "大東島地方では、強風に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,8 +16,8 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         }
@@ -37,8 +37,8 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         },
@@ -54,8 +54,8 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         }
