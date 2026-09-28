@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-29T02:06:00+09:00",
-  "headlineText": "鳥取県では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-29T04:19:00+09:00",
+  "headlineText": "東部では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,11 +20,11 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -71,7 +71,7 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -87,12 +87,12 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
@@ -172,12 +172,12 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
@@ -193,12 +193,12 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
@@ -214,12 +214,12 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
