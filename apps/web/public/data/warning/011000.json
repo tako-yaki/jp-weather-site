@@ -1,20 +1,12 @@
 {
-  "reportDatetime": "2026-09-28T15:51:00+09:00",
-  "headlineText": "宗谷地方では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-09-29T03:25:00+09:00",
+  "headlineText": "宗谷地方では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "011000",
           "warnings": [
-            {
-              "code": "03",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -26,6 +18,14 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         }
@@ -53,10 +53,6 @@
         {
           "code": "0151100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -122,14 +118,6 @@
           "code": "0151600",
           "warnings": [
             {
-              "code": "03",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -140,6 +128,14 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -197,14 +193,6 @@
         {
           "code": "0152000",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
