@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-28T12:59:00+09:00",
-  "headlineText": "北部では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-28T17:02:00+09:00",
+  "headlineText": "南部では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -33,12 +33,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
             }
           ]
         }
@@ -67,12 +67,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
@@ -92,12 +92,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
@@ -113,12 +113,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
