@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-09-28T21:43:00+09:00",
-  "headlineText": "胆振、日高地方では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-09-29T05:08:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "015010",
           "warnings": [
-            {
-              "code": "29",
-              "status": "継続"
-            },
             {
               "code": "10",
               "status": "解除"
@@ -26,6 +22,10 @@
             {
               "code": "20",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -79,10 +79,6 @@
           "code": "0121300",
           "warnings": [
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
@@ -93,6 +89,10 @@
             {
               "code": "20",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -185,10 +185,6 @@
           "code": "0157800",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
@@ -199,6 +195,10 @@
             {
               "code": "20",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },

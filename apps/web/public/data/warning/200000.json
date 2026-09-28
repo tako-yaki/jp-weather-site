@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-29T02:20:00+09:00",
-  "headlineText": "北部では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-09-29T04:59:00+09:00",
+  "headlineText": "南部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -31,7 +31,7 @@
           "warnings": [
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -129,7 +129,7 @@
           "warnings": [
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -354,7 +354,7 @@
           "warnings": [
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -363,7 +363,7 @@
           "warnings": [
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -380,7 +380,7 @@
           "warnings": [
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -484,7 +484,8 @@
           "code": "2041500",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -525,7 +526,7 @@
           "warnings": [
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
