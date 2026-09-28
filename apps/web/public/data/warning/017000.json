@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-09-28T10:26:00+09:00",
-  "headlineText": "檜山地方では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-28T10:57:00+09:00",
+  "headlineText": "檜山地方では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "017010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
@@ -42,6 +38,10 @@
             },
             {
               "code": "29",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -249,10 +249,6 @@
           "code": "0134700",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
@@ -361,6 +357,10 @@
             },
             {
               "code": "29",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
