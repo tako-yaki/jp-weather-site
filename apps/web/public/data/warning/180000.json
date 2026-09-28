@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-29T00:55:00+09:00",
-  "headlineText": "嶺北では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-29T02:03:00+09:00",
+  "headlineText": "嶺北では、低い土地の浸水や河川の増水に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,12 +20,12 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             }
           ]
         },
@@ -66,12 +66,12 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "継続"
-            },
-            {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
@@ -147,11 +147,11 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -185,12 +185,12 @@
               "status": "解除"
             },
             {
-              "code": "10",
+              "code": "29",
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             }
           ]
         },
@@ -278,11 +278,11 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]

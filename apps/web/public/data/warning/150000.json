@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-28T23:40:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-09-29T02:01:00+09:00",
+  "headlineText": "上越では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -21,15 +21,7 @@
           "code": "150020",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "10",
               "status": "解除"
             }
           ]
@@ -44,6 +36,14 @@
             {
               "code": "20",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -137,10 +137,6 @@
             {
               "code": "14",
               "status": "解除"
-            },
-            {
-              "code": "10",
-              "status": "解除"
             }
           ]
         },
@@ -185,6 +181,14 @@
             {
               "code": "20",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -324,10 +328,6 @@
         {
           "code": "1546100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
