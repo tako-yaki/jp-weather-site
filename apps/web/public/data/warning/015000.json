@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-09-28T00:29:00+09:00",
-  "headlineText": "胆振地方では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-28T14:02:00+09:00",
+  "headlineText": "胆振地方では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "015010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
@@ -25,6 +21,10 @@
             },
             {
               "code": "29",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -71,10 +71,6 @@
           "code": "0121300",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
@@ -101,6 +97,10 @@
             },
             {
               "code": "20",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -160,10 +160,6 @@
         {
           "code": "0157800",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
