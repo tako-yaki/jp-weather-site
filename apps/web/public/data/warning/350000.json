@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-28T05:32:00+09:00",
-  "headlineText": "東部では、土砂災害に注意してください。",
+  "reportDatetime": "2026-09-28T10:10:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -38,12 +38,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
-            },
-            {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
@@ -155,7 +155,7 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -242,12 +242,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
-            },
-            {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
