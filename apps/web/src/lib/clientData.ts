@@ -26,11 +26,12 @@ export async function fetchRegionOpenMeteo(lat: number, lon: number): Promise<an
 	const params = new URLSearchParams({
 		latitude: String(lat),
 		longitude: String(lon),
-		current: 'temperature_2m,relative_humidity_2m,precipitation,weathercode',
-		hourly: 'temperature_2m,precipitation,weathercode',
+		current: 'temperature_2m,relative_humidity_2m,precipitation,weathercode,windspeed_10m,winddirection_10m',
+		hourly: 'temperature_2m,precipitation,weathercode,windspeed_10m,winddirection_10m',
 		daily: 'sunrise,sunset,temperature_2m_max,temperature_2m_min',
 		timezone: 'Asia/Tokyo',
 		forecast_days: '3',
+		wind_speed_unit: 'ms', // アメダス実況(m/s)と単位を揃える(Open-Meteoの既定はkm/h)
 	});
 	const res = await fetch(`${OPEN_METEO_BASE}?${params}`);
 	if (!res.ok) throw new Error(`open-meteo fetch failed: ${res.status}`);

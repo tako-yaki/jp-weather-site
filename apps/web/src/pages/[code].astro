@@ -213,6 +213,11 @@ const heroWeather = primaryRegion.todayWeather;
 						<span class="stat-label">湿度</span>
 						<span class="stat-value">—</span>
 					</div>
+					<div class="stat-tile">
+						<span class="stat-label">風</span>
+						<span class="stat-icon wind-arrow">—</span>
+						<span class="stat-value">—</span>
+					</div>
 				</div>
 			</section>
 		))
@@ -316,6 +321,7 @@ const heroWeather = primaryRegion.todayWeather;
 	import { describeWmoCode } from '../lib/wmoWeatherCodes';
 	import { getMoonPhase } from '../lib/moonPhase';
 	import { fetchAmedasCurrent, fetchRegionOpenMeteo, fetchRegionOpenMeteoExtended } from '../lib/clientData';
+	import { degreesToDirection16 } from '../lib/windDirection';
 
 	type RegionConfig = { code: string; lat: number | null; lon: number | null; amedasCode: string | null };
 
@@ -425,6 +431,14 @@ const heroWeather = primaryRegion.todayWeather;
 				const amedasTemp = amedasStation?.temp?.[0] ?? null;
 				const amedasPrecip = amedasStation?.precipitation1h?.[0] ?? null;
 				const amedasHumidity = amedasStation?.humidity?.[0] ?? null;
+				// アメダスの風向は0(静穏)〜16(北)の16方位コード、Open-Meteoは度(0〜360、北=0)。
+				// どちらも「北からの角度」に揃えて扱う(静穏はnull=矢印なし)。
+				const amedasWindCode = amedasStation?.windDirection?.[0] ?? null;
+				const windSpeed = amedasStation?.wind?.[0] ?? current.windspeed_10m;
+				const windDeg = amedasStation
+					? (amedasWindCode ? amedasWindCode * 22.5 : null)
+					: current.winddirection_10m;
+				const windLabel = windDeg == null ? '静穏' : degreesToDirection16(windDeg);
 
 				const updatedEl = currentSection.querySelector('.current-updated');
 				if (updatedEl) {
@@ -433,7 +447,7 @@ const heroWeather = primaryRegion.todayWeather;
 						: `${hm(new Date(withJstOffset(current.time)))} 更新`;
 				}
 				const tiles = currentSection.querySelectorAll('.stat-tile');
-				const [wxTile, tempTile, precipTile, humidTile] = Array.from(tiles);
+				const [wxTile, tempTile, precipTile, humidTile, windTile] = Array.from(tiles);
 				wxTile?.querySelector('.stat-icon')?.replaceChildren(document.createTextNode(weather.icon));
 				wxTile?.querySelector('.stat-value')?.replaceChildren(document.createTextNode(weather.label));
 				tempTile?.querySelector('.stat-value')?.replaceChildren(
@@ -444,6 +458,14 @@ const heroWeather = primaryRegion.todayWeather;
 				);
 				humidTile?.querySelector('.stat-value')?.replaceChildren(
 					document.createTextNode(`${Math.round(amedasHumidity ?? current.relative_humidity_2m)}%`),
+				);
+				const windArrow = windTile?.querySelector('.wind-arrow') as HTMLElement | null;
+				if (windArrow) {
+					windArrow.textContent = windDeg == null ? '—' : '↑';
+					windArrow.style.transform = windDeg == null ? '' : `rotate(${(windDeg + 180) % 360}deg)`;
+				}
+				windTile?.querySelector('.stat-value')?.replaceChildren(
+					document.createTextNode(windDeg == null ? windLabel : `${windLabel} ${windSpeed.toFixed(1)}m/s`),
 				);
 			}
 
@@ -487,6 +509,8 @@ const heroWeather = primaryRegion.todayWeather;
 							precip: regular.hourly.precipitation[i],
 							icon: weather.icon,
 							weatherLabel: weather.label,
+							windSpeed: regular.hourly.windspeed_10m[i],
+							windDirection: regular.hourly.winddirection_10m[i],
 						};
 					});
 				hourlyRoot.setHourlyPoints(points);
@@ -661,7 +685,7 @@ const heroWeather = primaryRegion.todayWeather;
 	}
 	.current-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
 		gap: 8px;
 		margin-top: 12px;
 	}
@@ -682,6 +706,10 @@ const heroWeather = primaryRegion.todayWeather;
 	.stat-icon {
 		font-size: 20px;
 		line-height: 1;
+	}
+	.wind-arrow {
+		display: inline-block;
+		transition: transform 0.3s ease;
 	}
 	.stat-value {
 		font-size: 15px;

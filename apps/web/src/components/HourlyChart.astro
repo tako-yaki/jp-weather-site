@@ -18,6 +18,7 @@
 		<div class="hc-temp-values" data-layer="temp"></div>
 		<svg class="hc-precip-svg" data-layer="precip"></svg>
 		<div class="hc-precip-values" data-layer="precip"></div>
+		<div class="hc-wind" data-layer="wind"></div>
 	</div>
 
 	<div class="hc-legend" hidden>
@@ -26,6 +27,9 @@
 		</button>
 		<button type="button" class="hc-legend-btn" data-layer-toggle="precip" aria-pressed="true">
 			<span class="swatch precip"></span>降水量
+		</button>
+		<button type="button" class="hc-legend-btn" data-layer-toggle="wind" aria-pressed="true">
+			<span class="swatch wind"></span>風向風速
 		</button>
 		<button type="button" class="hc-legend-btn" data-layer-toggle="icon" aria-pressed="true">
 			<span class="swatch icon"></span>天気マーク
@@ -42,6 +46,8 @@
 		precip: number;
 		icon: string;
 		weatherLabel: string;
+		windSpeed: number;
+		windDirection: number;
 	};
 
 	// データはビルド時に埋め込まず、呼び出し側(親ページ)が地域の緯度経度でOpen-Meteoを取得した後に
@@ -58,6 +64,7 @@
 		const iconsEl = root.querySelector<HTMLElement>('.hc-icons')!;
 		const tempValuesEl = root.querySelector<HTMLElement>('.hc-temp-values')!;
 		const precipValuesEl = root.querySelector<HTMLElement>('.hc-precip-values')!;
+		const windEl = root.querySelector<HTMLElement>('.hc-wind')!;
 		const axisEl = root.querySelector<HTMLElement>('.hc-axis')!;
 		const crosshairEl = root.querySelector<HTMLElement>('.hc-crosshair')!;
 		const stepButtons = root.querySelectorAll<HTMLButtonElement>('[data-step]');
@@ -89,6 +96,27 @@
 			container.appendChild(cell);
 		}
 
+		// 風向は気象学的な「吹いてくる方向」(0=北)。矢印は吹いていく向きを指すよう180度足して回転させる。
+		function makeWindCell(container: HTMLElement, i: number, speed: number, direction: number) {
+			const cell = document.createElement('div');
+			cell.className = 'hc-wind-cell';
+			cell.style.left = `${xAt(i) - SPACING / 2}px`;
+			cell.style.width = `${SPACING}px`;
+
+			const arrow = document.createElement('span');
+			arrow.className = 'hc-wind-arrow';
+			arrow.textContent = '↑';
+			arrow.style.transform = `rotate(${(direction + 180) % 360}deg)`;
+			cell.appendChild(arrow);
+
+			const value = document.createElement('span');
+			value.className = 'hc-wind-value';
+			value.textContent = speed.toFixed(1);
+			cell.appendChild(value);
+
+			container.appendChild(cell);
+		}
+
 		function render(step: number) {
 			currentStep = step;
 			currentPoints = allPoints.filter((p) => p.hour % step === 0);
@@ -107,8 +135,9 @@
 			iconsEl.textContent = '';
 			tempValuesEl.textContent = '';
 			precipValuesEl.textContent = '';
+			windEl.textContent = '';
 			axisEl.textContent = '';
-			[hoursEl, iconsEl, tempValuesEl, precipValuesEl, axisEl].forEach((el) => {
+			[hoursEl, iconsEl, tempValuesEl, precipValuesEl, windEl, axisEl].forEach((el) => {
 				el.style.width = `${width}px`;
 			});
 
@@ -170,6 +199,7 @@
 
 				makeCell(tempValuesEl, i, 'hc-temp-value-cell', `${Math.round(p.temp)}°`);
 				makeCell(precipValuesEl, i, 'hc-precip-value-cell', p.precip > 0 ? `${p.precip.toFixed(1)}` : '-');
+				makeWindCell(windEl, i, p.windSpeed, p.windDirection);
 			});
 		}
 
@@ -291,12 +321,16 @@
 	.hc-hours,
 	.hc-icons,
 	.hc-temp-values,
-	.hc-precip-values {
+	.hc-precip-values,
+	.hc-wind {
 		position: relative;
 		height: 20px;
 	}
 	.hc-icons {
 		height: 26px;
+	}
+	.hc-wind {
+		height: 30px;
 	}
 	.hc-hourlabel-cell,
 	.hc-temp-value-cell,
@@ -320,6 +354,24 @@
 		top: 0;
 		text-align: center;
 		font-size: 18px;
+	}
+	.hc-wind-cell {
+		position: absolute;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1px;
+	}
+	.hc-wind-arrow {
+		display: inline-block;
+		font-size: 13px;
+		color: var(--text-secondary);
+	}
+	.hc-wind-value {
+		font-size: 10px;
+		font-variant-numeric: tabular-nums;
+		color: var(--text-muted);
 	}
 
 	.hc-temp-svg,
@@ -386,5 +438,13 @@
 	}
 	.swatch.icon::before {
 		content: '☀️';
+	}
+	.swatch.wind {
+		font-size: 11px;
+		color: var(--text-secondary);
+		height: auto;
+	}
+	.swatch.wind::before {
+		content: '↑';
 	}
 </style>
