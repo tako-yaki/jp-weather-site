@@ -162,13 +162,29 @@ const regions = regionSourceAreas.map((area: any) => {
 	const weeklyIdx = findWeeklyIndex(code, name);
 	const point = regionPointByCode[code] ?? null;
 
+	// 「今日/明日」は本来カレンダー上の日付で決まるべきだが、JMAの短期予報レポートは
+	// 1日5回ほどしか更新されないため、日付が変わってから次のレポートが来るまでの数時間は
+	// timeDefines[0]がまだ前日のままになる(=todayWeatherが実質「昨日の予報」、
+	// tomorrowWeatherが実質「今日の予報」になってしまう)。これをビルド時の決め打ちだけに頼らず、
+	// 閲覧者のブラウザ側の実際の日付でも補正できるよう、全timeDefinesぶんの日付付きデータを
+	// days として持たせておく(client scriptで日付が一致する要素に差し替える)。
+	const days = wwSeries.timeDefines.map((t: string, i: number) => {
+		const dateStr = t.slice(0, 10);
+		return {
+			date: dateStr,
+			weather: describeWeatherCode(area.weatherCodes[i]),
+			pop: maxPopForDate(code, dateStr),
+		};
+	});
+
 	return {
 		code,
 		name,
-		todayWeather: describeWeatherCode(area.weatherCodes[0]),
-		tomorrowWeather: describeWeatherCode(area.weatherCodes[1]),
-		todayPop: maxPopForDate(code, todayDateStr),
-		tomorrowPop: maxPopForDate(code, tomorrowDateStr),
+		todayWeather: days[0].weather,
+		tomorrowWeather: days[1].weather,
+		todayPop: days[0].pop,
+		tomorrowPop: days[1].pop,
+		days,
 		lat: point?.lat ?? null,
 		lon: point?.lon ?? null,
 		amedasCode: point?.amedasCode ?? null,
@@ -246,7 +262,7 @@ const heroWeather = primaryRegion.todayWeather;
 								<span class="hero-label">{r.todayWeather.label}</span>
 							</div>
 							<p class="hero-temp">
-								最高 <span class="temp-high hero-max">—</span> ／ 最低 <span class="temp-low hero-min">—</span> ／ ☔ {r.todayPop ?? '—'}%
+								最高 <span class="temp-high hero-max">—</span> ／ 最低 <span class="temp-low hero-min">—</span> ／ ☔ <span class="hero-pop">{r.todayPop ?? '—'}</span>%
 							</p>
 						</div>
 						<div class="hero-tomorrow">
@@ -314,7 +330,7 @@ const heroWeather = primaryRegion.todayWeather;
 		}
 	</section>
 
-	<script type="application/json" id="region-config" set:html={JSON.stringify(regions.map((r: any) => ({ code: r.code, lat: r.lat, lon: r.lon, amedasCode: r.amedasCode })))} />
+	<script type="application/json" id="region-config" set:html={JSON.stringify(regions.map((r: any) => ({ code: r.code, lat: r.lat, lon: r.lon, amedasCode: r.amedasCode, days: r.days })))} />
 </BaseLayout>
 
 <script>
@@ -323,7 +339,39 @@ const heroWeather = primaryRegion.todayWeather;
 	import { fetchAmedasCurrent, fetchRegionOpenMeteo, fetchRegionOpenMeteoExtended } from '../lib/clientData';
 	import { degreesToDirection16 } from '../lib/windDirection';
 
-	type RegionConfig = { code: string; lat: number | null; lon: number | null; amedasCode: string | null };
+	type ForecastDay = { date: string; weather: { icon: string; label: string }; pop: number | null };
+	type RegionConfig = {
+		code: string;
+		lat: number | null;
+		lon: number | null;
+		amedasCode: string | null;
+		days: ForecastDay[];
+	};
+
+	// JSTでの「今日」「明日」の日付文字列(YYYY-MM-DD)。ビルド時に焼き込まれた
+	// today/tomorrowWeatherは、日付が変わってからJMAの次のレポートが来るまでの数時間
+	// (最大で1日5回更新のため数時間ズレることがある)実際の日付と食い違うことがあるため、
+	// 閲覧者のブラウザ時刻を基準に days から該当する日付の予報を探して差し替える。
+	const jstDateStr = (offsetDays: number) =>
+		new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Tokyo' }).format(new Date(Date.now() + offsetDays * 86_400_000));
+
+	function applyDateCorrectedForecast(config: RegionConfig) {
+		const heroSection = document.querySelector(`.region-hero[data-region="${config.code}"]`);
+		if (!heroSection || !config.days?.length) return;
+		const todayStr = jstDateStr(0);
+		const tomorrowStr = jstDateStr(1);
+		const todayDay = config.days.find((d) => d.date === todayStr) ?? config.days[0];
+		const tomorrowDay = config.days.find((d) => d.date === tomorrowStr) ?? config.days[Math.min(1, config.days.length - 1)];
+
+		heroSection.querySelector('.hero-icon')?.replaceChildren(document.createTextNode(todayDay.weather.icon));
+		heroSection.querySelector('.hero-label')?.replaceChildren(document.createTextNode(todayDay.weather.label));
+		heroSection.querySelector('.hero-pop')?.replaceChildren(document.createTextNode(todayDay.pop != null ? String(todayDay.pop) : '—'));
+		heroSection.querySelector('.ht-icon')?.replaceChildren(document.createTextNode(tomorrowDay.weather.icon));
+		heroSection.querySelector('.ht-label')?.replaceChildren(document.createTextNode(tomorrowDay.weather.label));
+		heroSection.querySelector('.ht-pop')?.replaceChildren(
+			document.createTextNode(tomorrowDay.pop != null ? `☔ ${tomorrowDay.pop}%` : '☔ —%'),
+		);
+	}
 
 	// ISO文字列に "+09:00" を明示しておくことで、閲覧者のブラウザのタイムゾーンに関わらず
 	// 日本時間として正しく解釈できるようにする。
@@ -540,6 +588,7 @@ const heroWeather = primaryRegion.todayWeather;
 
 	const configEl = document.getElementById('region-config');
 	const configs: RegionConfig[] = configEl ? JSON.parse(configEl.textContent ?? '[]') : [];
+	configs.forEach((c) => applyDateCorrectedForecast(c));
 
 	// 月齢は地域に依存しないので、ページ読み込み時に一度だけ計算して全区分ぶんに反映する
 	const moon = getMoonPhase(new Date());
