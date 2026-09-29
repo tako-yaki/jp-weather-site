@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-29T16:05:00+09:00",
-  "headlineText": "長野県では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-09-29T22:29:00+09:00",
+  "headlineText": "南部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -34,12 +34,12 @@
           "code": "200030",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         }
@@ -111,6 +111,10 @@
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -149,12 +153,12 @@
           "code": "2020911",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -416,12 +420,12 @@
           "code": "2038200",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -429,12 +433,12 @@
           "code": "2038300",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -451,12 +455,12 @@
           "code": "2038500",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -572,12 +576,12 @@
           "code": "2041500",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -585,12 +589,12 @@
           "code": "2041600",
           "warnings": [
             {
-              "code": "29",
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "20",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -625,12 +629,12 @@
           "code": "2042500",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
