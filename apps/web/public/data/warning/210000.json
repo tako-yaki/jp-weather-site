@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-09-29T16:11:00+09:00",
+  "reportDatetime": "2026-09-29T22:01:00+09:00",
   "headlineText": "美濃地方では、土砂災害に注意してください。",
   "areaTypes": [
     {
@@ -47,10 +47,6 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             }
           ]
@@ -104,7 +100,7 @@
             },
             {
               "code": "29",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -422,10 +418,6 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             }
           ]
