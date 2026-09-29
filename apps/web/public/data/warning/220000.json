@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-29T08:45:00+09:00",
-  "headlineText": "静岡県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-09-29T12:06:00+09:00",
+  "headlineText": "西部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -28,10 +28,6 @@
         {
           "code": "220020",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -63,11 +59,11 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -253,10 +249,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -300,10 +292,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -312,10 +300,6 @@
         {
           "code": "2221900",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -369,11 +353,11 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -386,11 +370,11 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -442,10 +426,6 @@
         {
           "code": "2230400",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
