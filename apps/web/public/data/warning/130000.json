@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-01T01:16:00+09:00",
-  "headlineText": "伊豆諸島南部では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-01T05:04:00+09:00",
+  "headlineText": "伊豆諸島南部では、竜巻などの激しい突風や急な強い雨、落雷、濃霧による視程障害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -17,7 +17,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -29,8 +29,12 @@
           "code": "130030",
           "warnings": [
             {
-              "code": "14",
-              "status": "継続"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "警報から注意報"
             },
             {
               "code": "15",
@@ -41,12 +45,12 @@
               "status": "継続"
             },
             {
-              "code": "10",
-              "status": "解除"
+              "code": "14",
+              "status": "継続"
             },
             {
-              "code": "29",
-              "status": "警報から注意報"
+              "code": "20",
+              "status": "発表"
             }
           ]
         },
@@ -491,7 +495,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -504,7 +508,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -517,7 +521,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -530,7 +534,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -542,15 +546,15 @@
           "code": "1338100",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             }
           ]
@@ -559,19 +563,19 @@
           "code": "1338200",
           "warnings": [
             {
-              "code": "14",
+              "code": "29",
               "status": "継続"
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
             },
             {
-              "code": "29",
+              "code": "14",
               "status": "継続"
             }
           ]
@@ -580,8 +584,12 @@
           "code": "1340100",
           "warnings": [
             {
-              "code": "14",
-              "status": "継続"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "警報から注意報"
             },
             {
               "code": "15",
@@ -592,12 +600,12 @@
               "status": "継続"
             },
             {
-              "code": "10",
-              "status": "解除"
+              "code": "14",
+              "status": "継続"
             },
             {
-              "code": "29",
-              "status": "警報から注意報"
+              "code": "20",
+              "status": "発表"
             }
           ]
         },
@@ -605,16 +613,20 @@
           "code": "1340200",
           "warnings": [
             {
-              "code": "14",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "20",
+              "status": "発表"
             }
           ]
         },
