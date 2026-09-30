@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-30T16:06:00+09:00",
-  "headlineText": "根室地方では、高波に注意してください。",
+  "reportDatetime": "2026-10-01T04:25:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -21,7 +21,7 @@
             },
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -256,7 +256,7 @@
             },
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -273,7 +273,7 @@
             },
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
