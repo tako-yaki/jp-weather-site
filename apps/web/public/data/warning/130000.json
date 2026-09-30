@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-09-30T20:06:00+09:00",
-  "headlineText": "伊豆諸島南部では、土砂災害に警戒してください。",
+  "reportDatetime": "2026-10-01T01:16:00+09:00",
+  "headlineText": "伊豆諸島南部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,10 +29,6 @@
           "code": "130030",
           "warnings": [
             {
-              "code": "10",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
@@ -45,8 +41,12 @@
               "status": "継続"
             },
             {
-              "code": "09",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "警報から注意報"
             }
           ]
         },
@@ -580,10 +580,6 @@
           "code": "1340100",
           "warnings": [
             {
-              "code": "10",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
@@ -596,8 +592,12 @@
               "status": "継続"
             },
             {
-              "code": "09",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "警報から注意報"
             }
           ]
         },
