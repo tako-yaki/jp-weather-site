@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-01T08:09:00+09:00",
-  "headlineText": "北部、中部では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-10-01T09:55:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -9,7 +9,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -26,7 +26,7 @@
             },
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -79,8 +79,7 @@
           "code": "2020300",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -124,7 +123,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -157,8 +156,7 @@
           "code": "2021100",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -167,7 +165,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -175,8 +173,7 @@
           "code": "2021300",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -210,7 +207,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -228,10 +225,6 @@
             {
               "code": "10",
               "status": "解除"
-            },
-            {
-              "code": "20",
-              "status": "解除"
             }
           ]
         },
@@ -248,7 +241,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -257,7 +250,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -266,7 +259,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -275,7 +268,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -284,7 +277,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -293,7 +286,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -302,7 +295,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -311,7 +304,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -320,7 +313,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -328,8 +321,7 @@
           "code": "2034900",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -337,8 +329,7 @@
           "code": "2035000",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -616,7 +607,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -625,7 +616,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -634,7 +625,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -643,7 +634,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -675,8 +666,7 @@
           "code": "2056100",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -684,8 +674,7 @@
           "code": "2056200",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -693,8 +682,7 @@
           "code": "2056300",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -726,8 +714,7 @@
           "code": "2060200",
           "warnings": [
             {
-              "code": "20",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         }
