@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-01T16:02:00+09:00",
-  "headlineText": "茨城県では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-10-01T21:15:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -41,12 +41,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "20",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
@@ -299,12 +299,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "20",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -429,12 +429,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "20",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -459,12 +459,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "20",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
