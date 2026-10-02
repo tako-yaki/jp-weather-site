@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-02T03:39:00+09:00",
-  "headlineText": "網走、北見、紋別地方では、強風に注意してください。",
+  "reportDatetime": "2026-10-02T10:04:00+09:00",
+  "headlineText": "網走地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,15 +12,15 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -80,15 +80,15 @@
           "code": "0120802",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -97,15 +97,15 @@
           "code": "0121100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -145,15 +145,15 @@
           "code": "0154500",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -171,15 +171,15 @@
           "code": "0154700",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
