@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-02T19:10:00+09:00",
-  "headlineText": "伊豆諸島北部、伊豆諸島南部では、高波に注意してください。",
+  "reportDatetime": "2026-10-03T01:08:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -51,7 +51,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         }
@@ -600,7 +600,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         }
