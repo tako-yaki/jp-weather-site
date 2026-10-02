@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-02T04:07:00+09:00",
-  "headlineText": "小笠原諸島では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-10-02T15:24:00+09:00",
+  "headlineText": "伊豆諸島北部、伊豆諸島南部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -17,11 +17,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -38,11 +38,11 @@
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -487,12 +487,7 @@
           "code": "1336100",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -501,11 +496,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -514,11 +509,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -527,11 +522,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -540,11 +535,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -557,11 +552,11 @@
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -578,11 +573,11 @@
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -591,11 +586,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
