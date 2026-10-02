@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-02T18:06:00+09:00",
-  "headlineText": "伊豆では、強風に注意してください。",
+  "reportDatetime": "2026-10-02T19:07:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -17,7 +17,7 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -77,7 +77,7 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
