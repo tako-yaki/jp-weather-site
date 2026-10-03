@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-03T04:52:00+09:00",
-  "headlineText": "宗谷地方では、高波に注意してください。",
+  "reportDatetime": "2026-10-03T09:52:00+09:00",
+  "headlineText": "宗谷地方では、霜に対する農作物の管理に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,16 +16,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         }
@@ -37,16 +37,16 @@
           "code": "0121400",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -54,16 +54,16 @@
           "code": "0151100",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -71,16 +71,16 @@
           "code": "0151200",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -88,8 +88,8 @@
           "code": "0151300",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -97,16 +97,16 @@
           "code": "0151400",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -122,26 +122,22 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "0151700",
           "warnings": [
-            {
-              "code": "14",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
@@ -156,10 +152,6 @@
           "code": "0151800",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
@@ -172,10 +164,6 @@
         {
           "code": "0151900",
           "warnings": [
-            {
-              "code": "14",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
@@ -190,16 +178,16 @@
           "code": "0152000",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         }
