@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-03T11:32:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-04T00:10:00+09:00",
+  "headlineText": "宗谷地方では、濃霧による視程障害や霜に対する農作物の管理に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,12 +20,16 @@
               "status": "解除"
             },
             {
-              "code": "24",
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "24",
+              "status": "継続"
             }
           ]
         }
@@ -41,12 +45,16 @@
               "status": "解除"
             },
             {
-              "code": "24",
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "24",
+              "status": "継続"
             }
           ]
         },
@@ -58,12 +66,16 @@
               "status": "解除"
             },
             {
-              "code": "24",
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "24",
+              "status": "継続"
             }
           ]
         },
@@ -75,8 +87,12 @@
               "status": "解除"
             },
             {
-              "code": "24",
+              "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "24",
+              "status": "継続"
             }
           ]
         },
@@ -84,8 +100,12 @@
           "code": "0151300",
           "warnings": [
             {
-              "code": "24",
+              "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "24",
+              "status": "継続"
             }
           ]
         },
@@ -97,8 +117,12 @@
               "status": "解除"
             },
             {
-              "code": "24",
+              "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "24",
+              "status": "継続"
             }
           ]
         },
@@ -118,12 +142,16 @@
               "status": "解除"
             },
             {
-              "code": "24",
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "24",
+              "status": "継続"
             }
           ]
         },
@@ -174,12 +202,16 @@
               "status": "解除"
             },
             {
-              "code": "24",
+              "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "20",
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "24",
+              "status": "継続"
             }
           ]
         }
