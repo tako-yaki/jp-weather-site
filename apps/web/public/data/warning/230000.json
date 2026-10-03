@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-09-30T04:03:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-03T22:50:00+09:00",
+  "headlineText": "東部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "230010",
           "warnings": [
-            {
-              "code": "16",
-              "status": "解除"
-            },
             {
               "code": "10",
               "status": "解除"
@@ -29,16 +25,16 @@
           "code": "230020",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
@@ -63,16 +59,16 @@
           "code": "2320100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -223,10 +219,6 @@
           "code": "2321600",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -353,16 +345,16 @@
           "code": "2323100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -514,10 +506,6 @@
           "code": "2344500",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -526,10 +514,6 @@
         {
           "code": "2344600",
           "warnings": [
-            {
-              "code": "16",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
