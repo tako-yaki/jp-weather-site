@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-04T10:03:00+09:00",
-  "headlineText": "伊豆諸島北部、伊豆諸島南部、小笠原諸島では、高波に注意してください。",
+  "reportDatetime": "2026-10-04T12:41:00+09:00",
+  "headlineText": "小笠原諸島では、高波に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -51,11 +51,11 @@
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         }
@@ -596,11 +596,11 @@
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         }
