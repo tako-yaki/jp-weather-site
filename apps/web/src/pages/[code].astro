@@ -81,9 +81,11 @@ const municipalityWarnings = Object.entries(areaMaster.class20s)
 	.map(([code, v]: [string, any]) => ({
 		code,
 		name: v.name,
+		kana: v.kana ?? '',
 		point: municipalityPoints[code] ?? null,
 	}))
-	.sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+	// 漢字の名前のままだと「あきる野市 奥多摩町 港区 小笠原村…」のように五十音順にならないため、読み(kana)で並べる。
+	.sort((a, b) => (a.kana || a.name).localeCompare(b.kana || b.name, 'ja'));
 
 // --- 天気予報（一次細分区分ごとに切り替え可能）---
 // JMAの短期予報JSONは、officeの中に複数の一次細分区分(class10)を含んでいることが多い
@@ -124,8 +126,19 @@ function findWeeklyIndex(class10Code: string, class10Name: string): number {
 	if (byCode !== -1) return byCode;
 	const byName = weeklyWeatherSeries.areas.findIndex((a: any) => class10Name.startsWith(a.area.name));
 	if (byName !== -1) return byName;
+	// 週間予報側が複数の区分をまとめている場合(例: 青森の「下北」「三八上北」→「下北・三八上北」)。
+	// これを拾わないと先頭区分(津軽)の予報に黙ってすり替わってしまう。
+	const byMerged = weeklyWeatherSeries.areas.findIndex((a: any) => a.area.name.includes(class10Name));
+	if (byMerged !== -1) return byMerged;
 	return 0;
 }
+
+// 週間予報の表示範囲は「明後日から」。気象庁の週間予報は11時・17時発表で、17時発表分は翌朝まで
+// 使われる(その間は先頭日が「今日」になる)ため、先頭を固定で捨てずに日付で判定する。
+// ここ(ビルド時点)の判定はJS無効時の初期表示用で、実際の閲覧日での判定はクライアント側でやり直す。
+const jstDateStrAt = (offsetDays: number) =>
+	new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Tokyo' }).format(new Date(Date.now() + offsetDays * 86_400_000));
+const weeklyFromDate = jstDateStrAt(2);
 
 function buildJmaTenDays(weeklyIdx: number) {
 	const weeklyTempIdx = prefecture.tempAreaCode
@@ -140,6 +153,7 @@ function buildJmaTenDays(weeklyIdx: number) {
 			const min = hasTemp ? Number(weeklyTempArea.tempsMin[i]) : NaN;
 			const max = hasTemp ? Number(weeklyTempArea.tempsMax[i]) : NaN;
 			return {
+				date: date.slice(0, 10),
 				label: dateLabel(date),
 				weekdayIndex: jstWeekdayIndex(date),
 				weather: describeWeatherCode(weeklyWeatherArea.weatherCodes[i]),
@@ -149,9 +163,7 @@ function buildJmaTenDays(weeklyIdx: number) {
 				min,
 				max,
 			};
-		})
-		// 明日(先頭)は気象庁データが欠けることがあるため、週間予報は明後日から表示する
-		.slice(1);
+		});
 }
 
 // --- 地域(一次細分区分)ごとの表示データをまとめる ---
@@ -172,7 +184,7 @@ const regions = regionSourceAreas.map((area: any) => {
 		const dateStr = t.slice(0, 10);
 		return {
 			date: dateStr,
-			weather: describeWeatherCode(area.weatherCodes[i]),
+			weather: describeWeatherCode(area.weatherCodes[i], area.weathers?.[i]),
 			pop: maxPopForDate(code, dateStr),
 		};
 	});
@@ -200,6 +212,9 @@ const heroWeather = primaryRegion.todayWeather;
 <BaseLayout
 	title={`${areaName}の天気予報（開発中）`}
 	currentCode={prefecture.code}
+	lat={prefecture.lat}
+	lon={prefecture.lon}
+	description={`${areaName}の天気予報・警報注意報・アメダス実況・時間別予報。気象庁のデータをもとに更新しています。`}
 	weatherCategory={heroWeather.category === 'unknown' ? undefined : heroWeather.category}
 >
 	<WarningBanner officeCode={prefecture.code} regionNameByCode={regionNameByCode} regionCount={regions.length} municipalityWarnings={municipalityWarnings} />
@@ -235,6 +250,7 @@ const heroWeather = primaryRegion.todayWeather;
 						<span class="stat-value">—</span>
 					</div>
 				</div>
+				<p class="source-note">気温・降水量・湿度・風はアメダスの実測値、天候マークはOpen-Meteoの値です。</p>
 			</section>
 		))
 	}
@@ -262,7 +278,7 @@ const heroWeather = primaryRegion.todayWeather;
 								<span class="hero-label">{r.todayWeather.label}</span>
 							</div>
 							<p class="hero-temp">
-								最高 <span class="temp-high hero-max">—</span> ／ 最低 <span class="temp-low hero-min">—</span> ／ ☔ <span class="hero-pop">{r.todayPop ?? '—'}</span>%
+								最高 <span class="temp-high hero-max">—</span> ／ 最低 <span class="temp-low hero-min">—</span> ／ ☔ <span class="hero-pop">{r.todayPop != null ? `${r.todayPop}%` : '—'}</span>
 							</p>
 						</div>
 						<div class="hero-tomorrow">
@@ -274,7 +290,7 @@ const heroWeather = primaryRegion.todayWeather;
 									<p class="ht-temp">
 										<span class="temp-high tomorrow-max">—</span> / <span class="temp-low tomorrow-min">—</span>
 									</p>
-									<p class="ht-pop">☔ {r.tomorrowPop ?? '—'}%</p>
+									<p class="ht-pop">☔ {r.tomorrowPop != null ? `${r.tomorrowPop}%` : '—'}</p>
 								</div>
 							</div>
 						</div>
@@ -287,6 +303,7 @@ const heroWeather = primaryRegion.todayWeather;
 				</div>
 			))
 		}
+		<p class="source-note">天気・降水確率は気象庁、最高・最低気温と日の出・日の入りはOpen-Meteoの予測値です。</p>
 	</section>
 
 	{
@@ -303,7 +320,7 @@ const heroWeather = primaryRegion.todayWeather;
 			regions.map((r: any, i: number) => (
 				<div class="weekly-scroll" data-region={r.code} hidden={i !== 0}>
 					{r.jmaTenDays.map((d: any) => (
-						<div class="weekly-card" data-source="jma" data-has-temp={d.hasTemp} data-min={d.hasTemp ? d.min : ''} data-max={d.hasTemp ? d.max : ''}>
+						<div class="weekly-card" data-source="jma" data-date={d.date} hidden={d.date < weeklyFromDate} data-has-temp={d.hasTemp} data-min={d.hasTemp ? d.min : ''} data-max={d.hasTemp ? d.max : ''}>
 							<p class={`wc-date ${d.weekdayIndex === 0 ? 'sun' : d.weekdayIndex === 6 ? 'sat' : ''}`}>{d.label}</p>
 							<p class="wc-icon">{d.weather.icon}</p>
 							<p class="wc-label">{d.weather.label}</p>
@@ -339,7 +356,7 @@ const heroWeather = primaryRegion.todayWeather;
 	import { fetchAmedasCurrent, fetchRegionOpenMeteo, fetchRegionOpenMeteoExtended } from '../lib/clientData';
 	import { degreesToDirection16 } from '../lib/windDirection';
 
-	type ForecastDay = { date: string; weather: { icon: string; label: string }; pop: number | null };
+	type ForecastDay = { date: string; weather: { icon: string; label: string; category?: string }; pop: number | null };
 	type RegionConfig = {
 		code: string;
 		lat: number | null;
@@ -352,6 +369,15 @@ const heroWeather = primaryRegion.todayWeather;
 	// today/tomorrowWeatherは、日付が変わってからJMAの次のレポートが来るまでの数時間
 	// (最大で1日5回更新のため数時間ズレることがある)実際の日付と食い違うことがあるため、
 	// 閲覧者のブラウザ時刻を基準に days から該当する日付の予報を探して差し替える。
+	// 先頭の区分(region-configの0番目)が、背景の天気演出に使う代表の区分
+	const primaryRegionCode: string | undefined = (() => {
+		try {
+			return JSON.parse(document.getElementById('region-config')?.textContent ?? '[]')[0]?.code;
+		} catch {
+			return undefined;
+		}
+	})();
+
 	const jstDateStr = (offsetDays: number) =>
 		new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Tokyo' }).format(new Date(Date.now() + offsetDays * 86_400_000));
 
@@ -363,13 +389,18 @@ const heroWeather = primaryRegion.todayWeather;
 		const todayDay = config.days.find((d) => d.date === todayStr) ?? config.days[0];
 		const tomorrowDay = config.days.find((d) => d.date === tomorrowStr) ?? config.days[Math.min(1, config.days.length - 1)];
 
+		// 背景の天気演出も、ビルド時に焼き込んだ値ではなく閲覧日の「今日」の予報に合わせる(代表の区分のみ)。
+		if (config.code === primaryRegionCode) {
+			const category = todayDay.weather.category;
+			if (category && category !== 'unknown') document.documentElement.dataset.weather = category;
+		}
 		heroSection.querySelector('.hero-icon')?.replaceChildren(document.createTextNode(todayDay.weather.icon));
 		heroSection.querySelector('.hero-label')?.replaceChildren(document.createTextNode(todayDay.weather.label));
-		heroSection.querySelector('.hero-pop')?.replaceChildren(document.createTextNode(todayDay.pop != null ? String(todayDay.pop) : '—'));
+		heroSection.querySelector('.hero-pop')?.replaceChildren(document.createTextNode(todayDay.pop != null ? `${todayDay.pop}%` : '—'));
 		heroSection.querySelector('.ht-icon')?.replaceChildren(document.createTextNode(tomorrowDay.weather.icon));
 		heroSection.querySelector('.ht-label')?.replaceChildren(document.createTextNode(tomorrowDay.weather.label));
 		heroSection.querySelector('.ht-pop')?.replaceChildren(
-			document.createTextNode(tomorrowDay.pop != null ? `☔ ${tomorrowDay.pop}%` : '☔ —%'),
+			document.createTextNode(tomorrowDay.pop != null ? `☔ ${tomorrowDay.pop}%` : '☔ —'),
 		);
 	}
 
@@ -395,7 +426,7 @@ const heroWeather = primaryRegion.todayWeather;
 	// 週間カード(JMA分+Open-Meteo参考分)のバーは、その時点でDOMにある全カードのmin/maxから
 	// スケールを決める。ページ読み込み直後(JMA6枚のみ)と、参考4枚を追加した後の2回呼ぶ。
 	function recomputeWeeklyBars(scrollEl: Element) {
-		const cards = Array.from(scrollEl.querySelectorAll<HTMLElement>('.weekly-card[data-has-temp="true"]'));
+		const cards = Array.from(scrollEl.querySelectorAll<HTMLElement>('.weekly-card[data-has-temp="true"]:not([hidden])'));
 		if (cards.length === 0) return;
 		const mins = cards.map((c) => Number(c.dataset.min));
 		const maxs = cards.map((c) => Number(c.dataset.max));
@@ -412,13 +443,29 @@ const heroWeather = primaryRegion.todayWeather;
 		}
 	}
 
+	// 週間予報(JMA分)の表示範囲は「閲覧日の明後日から」。17時発表分を翌朝まで使っている間は
+	// 先頭日が今日になるため、日付で判定して範囲外のカード(今日・明日)を隠す。
+	function applyWeeklyWindow(scrollEl: Element) {
+		const from = jstDateStr(2);
+		scrollEl.querySelectorAll<HTMLElement>('.weekly-card[data-source="jma"]').forEach((card) => {
+			card.hidden = (card.dataset.date ?? '') < from;
+		});
+	}
+
 	function appendReferenceDays(scrollEl: Element, extended: any) {
-		// Open-Meteo daily は index0 = 今日 なので、8〜10日後は index8〜11
-		// (気象庁は7日先までしか出ないための補完。確度の概念がないため「参考値」として区別する)。
-		const EXTRA_DAY_INDICES = [8, 9, 10, 11];
-		for (const idx of EXTRA_DAY_INDICES) {
+		// 気象庁の週間予報が終わった翌日から、閲覧日+11日目(=明後日から数えて10日間)までを
+		// Open-Meteoで補完する(確度の概念がないため「参考値」として区別する)。
+		// JMAの最終日は発表時刻によって変わる(今日起点なら+6日目、明日起点なら+7日目)ので、
+		// 固定の日数ではなく「表示中のJMAカードの最終日」の次の日から埋めて、抜けや重複を防ぐ。
+		scrollEl.querySelectorAll('.weekly-card[data-source="reference"]').forEach((el) => el.remove());
+		const jmaDates = Array.from(scrollEl.querySelectorAll<HTMLElement>('.weekly-card[data-source="jma"]:not([hidden])')).map(
+			(c) => c.dataset.date ?? '',
+		);
+		const lastJmaDate = jmaDates.length > 0 ? jmaDates.reduce((a, b) => (a > b ? a : b)) : jstDateStr(1);
+		const lastDate = jstDateStr(11);
+		for (let idx = 0; idx < extended.daily.time.length; idx++) {
 			const dateStr = extended.daily.time[idx];
-			if (!dateStr) continue;
+			if (!dateStr || dateStr <= lastJmaDate || dateStr > lastDate) continue;
 			const weather = describeWmoCode(extended.daily.weathercode[idx]);
 			const min = extended.daily.temperature_2m_min[idx];
 			const max = extended.daily.temperature_2m_max[idx];
@@ -446,13 +493,30 @@ const heroWeather = primaryRegion.todayWeather;
 		recomputeWeeklyBars(scrollEl);
 	}
 
-	const loadedRegions = new Set<string>();
+	const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
+	// 取得中の区分(二重取得の防止)と、一度でも描画できた区分(2回目以降は再取得=更新扱い)
+	const inflightRegions = new Set<string>();
+	const renderedRegions = new Set<string>();
 	let amedasCurrentPromise: Promise<any> | null = null;
 	let primaryRegionApplied = false;
 
+	// 取得できなかったとき、「読み込み中...」のままにせず失敗したことを表示する(再取得は次回の自動更新か再読み込み)。
+	function showRegionLoadError(code: string) {
+		const updated = document.querySelector(`.current[data-region="${code}"] .current-updated`);
+		if (updated) updated.textContent = '取得できませんでした(自動で再試行します)';
+		const hourlyLoading = document.querySelector(`.region-hourly[data-region="${code}"] .hc-loading`);
+		if (hourlyLoading) hourlyLoading.textContent = '時系列データを取得できませんでした(自動で再試行します)';
+	}
+
 	async function loadRegion(config: RegionConfig) {
-		if (loadedRegions.has(config.code) || config.lat == null || config.lon == null) return;
-		loadedRegions.add(config.code);
+		if (inflightRegions.has(config.code)) return;
+		if (config.lat == null || config.lon == null) {
+			showRegionLoadError(config.code);
+			return;
+		}
+		inflightRegions.add(config.code);
+		// 一度描画できた区分の再実行は「更新」(現況・時系列の取り直し)。初回だけ週間予報の参考日も取る。
+		const isRefresh = renderedRegions.has(config.code);
 
 		const currentSection = document.querySelector(`.current[data-region="${config.code}"]`);
 		const heroSection = document.querySelector(`.region-hero[data-region="${config.code}"]`);
@@ -461,14 +525,23 @@ const heroWeather = primaryRegion.todayWeather;
 		);
 		const weeklyScroll = document.querySelector(`.weekly-scroll[data-region="${config.code}"]`);
 
-		if (!amedasCurrentPromise) amedasCurrentPromise = fetchAmedasCurrent().catch(() => null);
+		// 更新時はアメダスも取り直す(失敗してもOpen-Meteoの値で表示できるのでnullにして続行)
+		if (isRefresh || !amedasCurrentPromise) amedasCurrentPromise = fetchAmedasCurrent().catch(() => null);
 
 		try {
+			// 3つの取得は独立させる。10日間予報用の取得だけ失敗しても、現況・ヒーロー・グラフは出す。
+			// 週間予報の参考日は、まだ付いていない区分でだけ(初回、または前回失敗した場合の更新時に)取りにいく。
+			const needExtended = !weeklyScroll?.querySelector('[data-source="reference"]');
 			const [regular, extended, amedasCurrent] = await Promise.all([
-				fetchRegionOpenMeteo(config.lat, config.lon),
-				fetchRegionOpenMeteoExtended(config.lat, config.lon),
+				fetchRegionOpenMeteo(config.lat, config.lon).catch(() => null),
+				needExtended ? fetchRegionOpenMeteoExtended(config.lat, config.lon).catch(() => null) : Promise.resolve(null),
 				amedasCurrentPromise,
 			]);
+			if (!regular) {
+				// 更新時の失敗は、直前の表示(観測時刻つき)をそのまま残す。初回の失敗だけ明示する。
+				if (!isRefresh) showRegionLoadError(config.code);
+				return;
+			}
 
 			// --- 現在の状況 ---
 			if (currentSection) {
@@ -564,10 +637,14 @@ const heroWeather = primaryRegion.todayWeather;
 				hourlyRoot.setHourlyPoints(points);
 			}
 
-			// --- 10日間予報(参考の7〜10日目を追加) ---
-			if (weeklyScroll) appendReferenceDays(weeklyScroll, extended);
+			// --- 10日間予報(気象庁の週間予報の後ろに、Open-Meteoの参考日を追加) ---
+			if (weeklyScroll && extended) appendReferenceDays(weeklyScroll, extended);
+			renderedRegions.add(config.code);
 		} catch {
-			// 取得に失敗した場合は「—」表示のまま残す(壊れた状態を見せない)
+			// 描画中の想定外のエラー。初回なら失敗として表示し、更新時は直前の表示を残す(壊れた状態を見せない)
+			if (!isRefresh) showRegionLoadError(config.code);
+		} finally {
+			inflightRegions.delete(config.code);
 		}
 	}
 
@@ -582,7 +659,8 @@ const heroWeather = primaryRegion.todayWeather;
 			const selectedOption = el.options[el.selectedIndex];
 			if (heroName && selectedOption) heroName.textContent = selectedOption.textContent ?? '';
 			const config = configs.find((c) => c.code === code);
-			if (config) loadRegion(config);
+			// 取得済みの区分は、切り替えのたびには取り直さない(自動更新に任せる)
+			if (config && !renderedRegions.has(code)) loadRegion(config);
 		});
 	}
 
@@ -595,8 +673,11 @@ const heroWeather = primaryRegion.todayWeather;
 	document.querySelectorAll('.moon-info').forEach((el) => {
 		el.textContent = `${moon.icon} ${moon.label}（月齢 ${moon.age.toFixed(1)}）`;
 	});
-	// 週間予報(JMA分)のバーは、参考日を待たずまず表示できる範囲で描画しておく
-	document.querySelectorAll('.weekly-scroll').forEach((el) => recomputeWeeklyBars(el));
+	// 週間予報(JMA分)は、閲覧日に合わせて表示範囲を決め、参考日を待たずにバーを描画しておく
+	document.querySelectorAll('.weekly-scroll').forEach((el) => {
+		applyWeeklyWindow(el);
+		recomputeWeeklyBars(el);
+	});
 
 	document.querySelectorAll('.region-select').forEach((el) => initRegionSelect(el, configs));
 
@@ -606,6 +687,17 @@ const heroWeather = primaryRegion.todayWeather;
 		return el && !el.hidden;
 	});
 	if (initiallyVisible) loadRegion(initiallyVisible);
+
+	// 表示中の区分の現況・時系列を定期的に取り直す(開いたままのタブが古い値のままにならないように)。
+	// 取得に失敗していた区分は、同じ周期で初回取得をやり直す。非表示のタブでは何もしない。
+	setInterval(() => {
+		if (document.hidden) return;
+		const visible = configs.find((c) => {
+			const el = document.querySelector(`.current[data-region="${c.code}"]`) as HTMLElement | null;
+			return el && !el.hidden;
+		});
+		if (visible) loadRegion(visible);
+	}, REFRESH_INTERVAL_MS);
 </script>
 
 <style>
@@ -707,6 +799,12 @@ const heroWeather = primaryRegion.todayWeather;
 		font-size: 12.5px;
 		color: var(--seq-450);
 		margin-top: 3px;
+	}
+
+	.source-note {
+		margin: 10px 0 0;
+		font-size: 11px;
+		color: var(--text-muted);
 	}
 
 	.hero-sub {

@@ -9,8 +9,21 @@ interface Props {
 	sunset?: string;
 	// 地点切り替え用: 表示中の都道府県コード
 	currentCode?: string;
+	// 緯度経度: Open-Meteoの応答を待たずに、端末側で日の出・日の入りを計算して昼夜の背景を決めるため
+	lat?: number;
+	lon?: number;
+	description?: string;
 }
-const { title, weatherCategory, sunrise, sunset, currentCode } = Astro.props;
+const {
+	title,
+	weatherCategory,
+	sunrise,
+	sunset,
+	currentCode,
+	lat,
+	lon,
+	description = '気象庁のデータをもとにした天気予報・警報注意報・アメダス実況のサイト',
+} = Astro.props;
 
 // 都道府県(groupName)ごとに連続するエントリをまとめる。北海道・鹿児島県・沖縄県だけ
 // 複数officeを持つため <optgroup> になり、それ以外は単一の <option> のまま表示する。
@@ -25,13 +38,18 @@ for (const pref of PREFECTURES) {
 }
 ---
 
-<html lang="ja" data-weather={weatherCategory} data-sunrise={sunrise} data-sunset={sunset}>
+<html lang="ja" data-weather={weatherCategory} data-sunrise={sunrise} data-sunset={sunset} data-lat={lat} data-lon={lon}>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="ja_JP" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
 		<script is:inline>
 			// 日の出/日の入り時刻(ビューア端末のその時点の時刻)から昼/夜を判定する。
 			// ビルド時刻ではなく閲覧時刻で決まるよう、あえてクライアント側で実行する。
@@ -39,7 +57,34 @@ for (const pref of PREFECTURES) {
 				var root = document.documentElement;
 				var sunrise = root.dataset.sunrise;
 				var sunset = root.dataset.sunset;
-				if (!sunrise || !sunset) return;
+				// 日の出・日の入りが渡されていないとき(通常はこちら)は、緯度経度から端末側で計算する。
+				// ページ読み込み直後に背景を決められる(Open-Meteoの取得待ち・失敗に左右されない)。
+				// 日の出入りの式(NOAAのSunrise equation)。Open-Meteoの値と1〜2分以内で一致することを確認済み。
+				// 取得後は、client scriptがOpen-Meteoの値で上書きする。
+				if (!sunrise || !sunset) {
+					var lat = parseFloat(root.dataset.lat);
+					var lon = parseFloat(root.dataset.lon);
+					if (isNaN(lat) || isNaN(lon)) return;
+					var jst = new Date(Date.now() + 9 * 3600e3);
+					var jd = Date.UTC(jst.getUTCFullYear(), jst.getUTCMonth(), jst.getUTCDate(), 3, 0, 0) / 86400000 + 2440587.5;
+					var Jstar = Math.ceil(jd - 2451545.0 + 0.0008) - lon / 360;
+					var M = (357.5291 + 0.98560028 * Jstar) % 360;
+					var Mr = (M * Math.PI) / 180;
+					var C = 1.9148 * Math.sin(Mr) + 0.02 * Math.sin(2 * Mr) + 0.0003 * Math.sin(3 * Mr);
+					var lr = (((M + C + 180 + 102.9372) % 360) * Math.PI) / 180;
+					var Jtransit = 2451545.0 + Jstar + 0.0053 * Math.sin(Mr) - 0.0069 * Math.sin(2 * lr);
+					var sinD = Math.sin(lr) * Math.sin((23.4397 * Math.PI) / 180);
+					var cosW =
+						(Math.sin((-0.833 * Math.PI) / 180) - Math.sin((lat * Math.PI) / 180) * sinD) /
+						(Math.cos((lat * Math.PI) / 180) * Math.cos(Math.asin(sinD)));
+					if (cosW > 1 || cosW < -1) return;
+					var W = (Math.acos(cosW) * 180) / Math.PI / 360;
+					var toIso = function (j) { return new Date((j - 2440587.5) * 86400000).toISOString(); };
+					sunrise = toIso(Jtransit - W);
+					sunset = toIso(Jtransit + W);
+					root.dataset.sunrise = sunrise;
+					root.dataset.sunset = sunset;
+				}
 				var now = new Date();
 				var isNight = now < new Date(sunrise) || now >= new Date(sunset);
 				root.dataset.daypart = isNight ? 'night' : 'day';
@@ -79,7 +124,14 @@ for (const pref of PREFECTURES) {
 			</main>
 			<footer class="site-footer">
 				<div class="container">
-					<p>データ出典: 気象庁</p>
+					<p>
+						データ出典:
+						<a href="https://www.jma.go.jp/">気象庁</a>(天気予報・週間予報・警報注意報・アメダス。気象庁のデータを加工して表示しています)
+					</p>
+					<p>
+						時系列予報・最高/最低気温・日の出日の入り・10日間予報の参考値・一部の現況の補完:
+						<a href="https://open-meteo.com/">Open-Meteo.com</a>(<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)
+					</p>
 				</div>
 			</footer>
 		</div>
@@ -116,6 +168,15 @@ for (const pref of PREFECTURES) {
 		--warn-danger: #aa00aa;
 		--warn-special: #0c000c;
 
+		/* 警報・注意報の「文字色」専用。上の色は縁取り・背景用(内閣府の推奨RGB)で、
+		   文字にそのまま使うと注意報(黄)・不明(橙)・警報(赤)が背景に対して読みにくい
+		   (コントラスト比が WCAG AA の 4.5:1 を下回る)ため、文字だけ暗めにしている。 */
+		--warn-advisory-text: #7a6a00;
+		--warn-unknown-text: #8a5a00;
+		--warn-warning-text: #c81e00;
+		--warn-danger-text: #aa00aa;
+		--warn-special-text: #0c000c;
+
 		--sat-color: #2a78d6;
 		--sun-color: #d03b3b;
 
@@ -141,6 +202,16 @@ for (const pref of PREFECTURES) {
 			--seq-400: #3987e5;
 			--seq-450: #3987e5;
 			--seq-600: #6da7ec;
+
+			/* ダークでは特別警報(黒)・危険警報(紫)が背景に溶ける(特別警報は約1.1:1)ので、
+			   縁取り・背景用の色も明るい側に差し替える。文字用トークンも明るい色にする。 */
+			--warn-danger: #d878d8;
+			--warn-special: #ffffff;
+			--warn-advisory-text: #f6ee4d;
+			--warn-unknown-text: #fab219;
+			--warn-warning-text: #ff6a4d;
+			--warn-danger-text: #d878d8;
+			--warn-special-text: #ffffff;
 		}
 	}
 
@@ -242,6 +313,13 @@ for (const pref of PREFECTURES) {
 		padding: 20px 0 40px;
 		color: var(--text-muted);
 		font-size: 12.5px;
+	}
+	.site-footer p {
+		margin: 0 0 8px;
+	}
+	.site-footer a {
+		color: inherit;
+		text-decoration: underline;
 	}
 
 	section {

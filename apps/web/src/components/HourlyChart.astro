@@ -12,7 +12,7 @@
 	<div class="hc-scroll" hidden>
 		<div class="hc-crosshair" hidden></div>
 		<div class="hc-axis"></div>
-		<div class="hc-hours" data-layer="icon"></div>
+		<div class="hc-hours"></div>
 		<div class="hc-icons" data-layer="icon"></div>
 		<svg class="hc-temp-svg" data-layer="temp"></svg>
 		<div class="hc-temp-values" data-layer="temp"></div>
@@ -203,13 +203,17 @@
 			});
 		}
 
+		// グラフ本体は .hc-scroll の左パディングの内側から始まる。ポインタ位置の換算と十字線の位置の両方で
+		// そのぶんを考慮しないと、データ点より左(パディング分)にずれる。
 		function onMove(evt: PointerEvent) {
+			if (currentPoints.length === 0) return;
+			const padLeft = parseFloat(getComputedStyle(scrollEl).paddingLeft) || 0;
 			const rect = scrollEl.getBoundingClientRect();
-			const x = evt.clientX - rect.left + scrollEl.scrollLeft;
+			const x = evt.clientX - rect.left + scrollEl.scrollLeft - padLeft;
 			let idx = Math.round((x - SPACING / 2) / SPACING);
 			idx = Math.max(0, Math.min(currentPoints.length - 1, idx));
 			crosshairEl.hidden = false;
-			crosshairEl.style.left = `${xAt(idx)}px`;
+			crosshairEl.style.left = `${padLeft + xAt(idx)}px`;
 		}
 
 		scrollEl.addEventListener('pointermove', onMove);

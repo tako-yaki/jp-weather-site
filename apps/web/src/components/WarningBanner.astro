@@ -9,7 +9,7 @@ interface Props {
 	regionCount: number;
 	// 市区町村一覧(コード・名前・代表地点)は変わらないため静的。どの警報が出ているかは
 	// クライアント側でofficeの警報JSONを取得してから埋める。
-	municipalityWarnings: { code: string; name: string; point: { lat: number; lon: number } | null }[];
+	municipalityWarnings: { code: string; name: string; kana: string; point: { lat: number; lon: number } | null }[];
 }
 const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astro.props;
 ---
@@ -24,6 +24,13 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 
 	<div class="muni-lookup">
 		<label class="muni-label" for="muni-select">市区町村で見る</label>
+		<input
+			type="search"
+			class="muni-filter"
+			placeholder="名前・読みで絞り込み"
+			aria-label="市区町村を名前または読みで絞り込む"
+			autocomplete="off"
+		/>
 		<select id="muni-select" class="muni-select" aria-label="市区町村を選択">
 			<option value="">市区町村を選択...</option>
 			{municipalityWarnings.map((m: any) => (
@@ -46,7 +53,7 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 	import { describeWmoCode } from '../lib/wmoWeatherCodes';
 	import { fetchOfficeWarning } from '../lib/clientData';
 
-	type Municipality = { code: string; name: string; point: { lat: number; lon: number } | null };
+	type Municipality = { code: string; name: string; kana: string; point: { lat: number; lon: number } | null };
 
 	const REFRESH_INTERVAL_MS = 3 * 60 * 1000;
 
@@ -67,6 +74,7 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		const statusEl = container.querySelector('.warning-status') as HTMLElement | null;
 		const groupsEl = container.querySelector('.warning-groups') as HTMLElement | null;
 		const select = container.querySelector('.muni-select') as HTMLSelectElement | null;
+		const filterInput = container.querySelector('.muni-filter') as HTMLInputElement | null;
 		const result = container.querySelector('.muni-result') as HTMLElement | null;
 		if (!timeEl || !statusEl || !groupsEl || !select || !result) return;
 
@@ -165,7 +173,7 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 				// エラー表示に切り替える。
 				if (!everLoaded) {
 					container.setAttribute('data-severity', 'error');
-					listEl!.hidden = true;
+					groupsEl!.hidden = true;
 					statusEl!.hidden = false;
 					statusEl!.textContent = '警報注意報の取得に失敗しました(再読み込みしてください)';
 				}
@@ -239,6 +247,31 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		}
 
 		select.addEventListener('change', () => renderMuniResult(select.value, true));
+
+		// --- 絞り込み ---
+		// 件数が多い(最大81件)ので、名前または読みの部分一致でプルダウンの候補を絞る。
+		// カタカナで入力しても読み(ひらがな)に当たるようにそろえる。選択中の市区町村は絞り込み後も残す。
+		const toHiragana = (s: string) => s.replace(/[\u30a1-\u30f6]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
+		function applyFilter() {
+			const query = toHiragana((filterInput!.value ?? '').trim().toLowerCase());
+			const selected = select!.value;
+			const matches = municipalities.filter(
+				(m) => !query || m.code === selected || m.name.includes(query) || toHiragana(m.kana).includes(query),
+			);
+			select!.textContent = '';
+			const placeholder = document.createElement('option');
+			placeholder.value = '';
+			placeholder.textContent = query ? `${matches.length}件が見つかりました` : '市区町村を選択...';
+			select!.appendChild(placeholder);
+			for (const m of matches) {
+				const opt = document.createElement('option');
+				opt.value = m.code;
+				opt.textContent = m.name;
+				opt.selected = m.code === selected;
+				select!.appendChild(opt);
+			}
+		}
+		filterInput?.addEventListener('input', applyFilter);
 
 		refresh();
 		setInterval(refresh, REFRESH_INTERVAL_MS);
@@ -314,6 +347,7 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		color: var(--text-muted);
 		white-space: nowrap;
 	}
+	.muni-filter,
 	.muni-select {
 		flex: 1 1 auto;
 		min-width: 0;
@@ -330,19 +364,19 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		margin-top: 4px;
 	}
 
-	/* スマホ幅ではさらに一回り小さく、余白も詰める(元サイズの75%程度が目安) */
+	/* スマホ幅では余白を詰め、文字は一回りだけ小さくする(警報は最重要の情報なので、読める大きさ(11〜12px)は下回らない) */
 	@media (max-width: 480px) {
 		.alert-banner {
 			padding: 10px 12px;
 		}
 		.alert-banner h2 {
-			font-size: 10px;
+			font-size: 11px;
 		}
 		.warning-time {
-			font-size: 9px;
+			font-size: 10px;
 		}
 		.warning-status {
-			font-size: 10.5px;
+			font-size: 12px;
 		}
 		.muni-lookup {
 			gap: 4px 6px;
@@ -350,10 +384,11 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 			padding-top: 6px;
 		}
 		.muni-label {
-			font-size: 9px;
-		}
-		.muni-select {
 			font-size: 10px;
+		}
+		.muni-filter,
+		.muni-select {
+			font-size: 11px;
 			padding: 3px 6px;
 		}
 	}
@@ -381,19 +416,19 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		font-size: 13px;
 	}
 	.warning-list li[data-severity='unknown'] {
-		color: var(--status-warning);
+		color: var(--warn-unknown-text);
 	}
 	.warning-list li[data-severity='advisory'] {
-		color: color-mix(in srgb, var(--warn-advisory) 70%, var(--text-primary));
+		color: var(--warn-advisory-text);
 	}
 	.warning-list li[data-severity='warning'] {
-		color: var(--warn-warning);
+		color: var(--warn-warning-text);
 	}
 	.warning-list li[data-severity='danger'] {
-		color: var(--warn-danger);
+		color: var(--warn-danger-text);
 	}
 	.warning-list li[data-severity='special'] {
-		color: var(--warn-special);
+		color: var(--warn-special-text);
 	}
 	.muni-result .muni-name {
 		margin: 0 0 4px;
@@ -416,34 +451,34 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		color: var(--text-secondary);
 	}
 	.muni-result[data-state='unknown'] .muni-name {
-		color: var(--status-warning);
+		color: var(--warn-unknown-text);
 	}
 	.muni-result[data-state='advisory'] .muni-name {
-		color: color-mix(in srgb, var(--warn-advisory) 70%, var(--text-primary));
+		color: var(--warn-advisory-text);
 	}
 	.muni-result[data-state='warning'] .muni-name {
-		color: var(--warn-warning);
+		color: var(--warn-warning-text);
 	}
 	.muni-result[data-state='danger'] .muni-name {
-		color: var(--warn-danger);
+		color: var(--warn-danger-text);
 	}
 	.muni-result[data-state='special'] .muni-name {
-		color: var(--warn-special);
+		color: var(--warn-special-text);
 	}
 	.muni-warning-list li[data-severity='unknown'] {
-		color: var(--status-warning);
+		color: var(--warn-unknown-text);
 	}
 	.muni-warning-list li[data-severity='advisory'] {
-		color: color-mix(in srgb, var(--warn-advisory) 70%, var(--text-primary));
+		color: var(--warn-advisory-text);
 	}
 	.muni-warning-list li[data-severity='warning'] {
-		color: var(--warn-warning);
+		color: var(--warn-warning-text);
 	}
 	.muni-warning-list li[data-severity='danger'] {
-		color: var(--warn-danger);
+		color: var(--warn-danger-text);
 	}
 	.muni-warning-list li[data-severity='special'] {
-		color: var(--warn-special);
+		color: var(--warn-special-text);
 	}
 
 	/* スマホ幅ではさらに一回り小さく(元サイズの75%程度が目安) */
@@ -452,19 +487,19 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 			margin-top: 5px;
 		}
 		.warn-region-heading {
-			font-size: 9.5px;
+			font-size: 11px;
 		}
 		.warning-list {
 			padding-left: 15px;
-			font-size: 10px;
+			font-size: 12px;
 		}
 		.muni-result .muni-name {
-			font-size: 9.5px;
+			font-size: 11px;
 		}
 		.muni-result .muni-none,
 		.muni-result .muni-warning-list,
 		.muni-result .muni-weather {
-			font-size: 10px;
+			font-size: 11px;
 		}
 		.muni-result .muni-warning-list {
 			padding-left: 14px;

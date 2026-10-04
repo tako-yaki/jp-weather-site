@@ -1,5 +1,7 @@
 // 気象庁 天気コード（weatherCode）の表示用マッピング。
-// 網羅リストではなく、よく出る範囲のみ。未知のコードは先頭桁で分類してフォールバックする。
+// 網羅リストではなく、実データ(コードと天気テキストの組)で確認できたものだけを載せている。
+// 気象庁が公開しているコード表の原本は見つけられなかったため、記憶や推測で足さない。
+// 表にないコードは、天気テキストがあればそれをそのまま表示し(短期予報)、無ければ先頭桁で分類する(週間予報)。
 export type WeatherCategory = 'sun' | 'cloud' | 'rain' | 'snow' | 'unknown';
 
 interface WeatherCodeInfo {
@@ -11,6 +13,8 @@ interface WeatherCodeInfo {
 const CODE_TABLE: Record<string, WeatherCodeInfo> = {
 	'100': { label: '晴れ', icon: '☀️', category: 'sun' },
 	'101': { label: '晴れ時々くもり', icon: '🌤️', category: 'sun' },
+	'102': { label: '晴れ一時雨', icon: '🌦️', category: 'sun' },
+	'103': { label: '晴れ時々雨', icon: '🌦️', category: 'sun' },
 	'110': { label: '晴れ後時々くもり', icon: '🌤️', category: 'sun' },
 	'111': { label: '晴れ後くもり', icon: '🌥️', category: 'sun' },
 	'112': { label: '晴れ後一時雨', icon: '🌦️', category: 'sun' },
@@ -47,9 +51,14 @@ const CATEGORY_FALLBACK: Record<string, WeatherCodeInfo> = {
 	'4': { label: '雪', icon: '❄️', category: 'snow' },
 };
 
-export function describeWeatherCode(code: string): WeatherCodeInfo {
+// text: 気象庁の天気テキスト(短期予報のweathers。全角スペース区切り)。表に無いコードのときだけ使う。
+export function describeWeatherCode(code: string, text?: string): WeatherCodeInfo {
 	if (CODE_TABLE[code]) return CODE_TABLE[code];
 	const firstDigit = code[0];
-	if (CATEGORY_FALLBACK[firstDigit]) return CATEGORY_FALLBACK[firstDigit];
+	if (CATEGORY_FALLBACK[firstDigit]) {
+		const fallback = CATEGORY_FALLBACK[firstDigit];
+		const detail = text?.replace(/[\s\u3000]+/g, '');
+		return detail ? { ...fallback, label: detail } : fallback;
+	}
 	return { label: `不明(${code})`, icon: '❔', category: 'unknown' };
 }
