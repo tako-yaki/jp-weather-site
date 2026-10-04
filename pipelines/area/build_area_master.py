@@ -47,8 +47,10 @@ def build(area: dict) -> dict:
         "class15s": {
             code: {"name": v["name"], "parent": v["parent"]} for code, v in area["class15s"].items()
         },
+        # kana は市区町村セレクタの五十音順の並び替えと、読みでの絞り込みに使う。
         "class20s": {
-            code: {"name": v["name"], "parent": v["parent"]} for code, v in area["class20s"].items()
+            code: {"name": v["name"], "kana": v.get("kana", ""), "parent": v["parent"]}
+            for code, v in area["class20s"].items()
         },
         "prefectureGroups": [
             {"name": name, "officeCodes": codes} for name, codes in prefecture_groups
