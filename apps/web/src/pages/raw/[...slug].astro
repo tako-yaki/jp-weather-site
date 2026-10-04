@@ -2,6 +2,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+// 開発用(npm run dev)のときだけ /raw として表示する。本番ビルドではページを生成しない。
+// (デバッグ用の東京固定のページが、本番サイトにそのまま公開されないようにするため)
+export function getStaticPaths() {
+	return import.meta.env.DEV ? [{ params: { slug: undefined } }] : [];
+}
+
 // データ確認用ページ: 生の気象庁JSONの主要な項目を一通り生のまま表示する
 const jsonPath = path.join(process.cwd(), 'public/data/forecast/130000.json');
 const raw: any = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
