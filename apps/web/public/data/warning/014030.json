@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-05T15:18:00+09:00",
-  "headlineText": "十勝地方では、急な強い雨や落雷、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-10-06T04:09:00+09:00",
+  "headlineText": "十勝地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,20 +16,20 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         }
@@ -179,20 +179,20 @@
           "code": "0164100",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -200,20 +200,20 @@
           "code": "0164200",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -247,20 +247,20 @@
           "code": "0164500",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -307,20 +307,20 @@
           "code": "0164900",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         }
