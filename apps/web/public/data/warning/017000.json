@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-10-05T15:04:00+09:00",
-  "headlineText": "渡島地方では、高波に注意してください。",
+  "reportDatetime": "2026-10-05T18:32:00+09:00",
+  "headlineText": "檜山地方では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "017010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -33,10 +29,6 @@
           "code": "017020",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
@@ -47,6 +39,14 @@
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         }
@@ -57,10 +57,6 @@
         {
           "code": "0120200",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -230,6 +226,14 @@
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -318,10 +322,6 @@
           "code": "0136700",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
@@ -339,10 +339,6 @@
           "code": "0137000",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
@@ -355,10 +351,6 @@
         {
           "code": "0137100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
