@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-05T07:44:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-06T01:56:00+09:00",
+  "headlineText": "中部では、濃霧による視程障害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -25,7 +25,7 @@
             },
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -78,7 +78,8 @@
           "code": "2020300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "20",
+              "status": "発表"
             }
           ]
         },
@@ -122,7 +123,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -205,7 +206,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -223,6 +224,10 @@
             {
               "code": "10",
               "status": "解除"
+            },
+            {
+              "code": "20",
+              "status": "発表"
             }
           ]
         },
@@ -239,7 +244,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -248,7 +253,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -257,7 +262,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -266,7 +271,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -275,7 +280,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -284,7 +289,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -293,7 +298,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -302,7 +307,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -311,7 +316,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -319,7 +324,8 @@
           "code": "2034900",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "20",
+              "status": "発表"
             }
           ]
         },
@@ -327,7 +333,8 @@
           "code": "2035000",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "20",
+              "status": "発表"
             }
           ]
         },
