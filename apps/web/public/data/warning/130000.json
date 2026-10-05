@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-10-05T00:41:00+09:00",
+  "reportDatetime": "2026-10-05T17:45:00+09:00",
   "headlineText": "小笠原諸島では、高波に警戒してください。",
   "areaTypes": [
     {
@@ -17,7 +17,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -38,7 +38,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -496,7 +496,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -509,7 +509,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -522,7 +522,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -535,7 +535,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -548,7 +548,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -565,7 +565,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -585,10 +585,6 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "継続"
             }
@@ -597,10 +593,6 @@
         {
           "code": "1340200",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "継続"
