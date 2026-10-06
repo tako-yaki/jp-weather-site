@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-07T04:06:00+09:00",
-  "headlineText": "山口県では、空気の乾燥した状態が続くため、火の取り扱いに注意してください。",
+  "reportDatetime": "2026-10-07T06:13:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -38,10 +38,6 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             }
@@ -59,12 +55,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "21",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
@@ -115,12 +111,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "21",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -155,10 +151,6 @@
           "code": "3521000",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             }
@@ -176,22 +168,18 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "21",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
         {
           "code": "3521200",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "発表"
@@ -233,10 +221,6 @@
           "code": "3530500",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             }
@@ -259,10 +243,6 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             }
@@ -272,10 +252,6 @@
           "code": "3534300",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             }
@@ -284,10 +260,6 @@
         {
           "code": "3534400",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "発表"
@@ -302,12 +274,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "21",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
