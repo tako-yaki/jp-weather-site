@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-06T06:23:00+09:00",
-  "headlineText": "南部では、高波に注意してください。",
+  "reportDatetime": "2026-10-06T15:17:00+09:00",
+  "headlineText": "三重県では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -17,6 +17,10 @@
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -47,6 +51,10 @@
           "warnings": [
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -90,6 +98,10 @@
           "warnings": [
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -270,6 +282,10 @@
           "warnings": [
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
