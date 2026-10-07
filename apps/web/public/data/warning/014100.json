@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-07T09:15:00+09:00",
-  "headlineText": "根室、釧路地方では、霜に対する農作物の管理に注意してください。",
+  "reportDatetime": "2026-10-07T20:17:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -16,12 +16,12 @@
               "status": "継続"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -214,12 +214,12 @@
           "code": "0169200",
           "warnings": [
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -227,12 +227,12 @@
           "code": "0169300",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -240,12 +240,12 @@
           "code": "0169400",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
