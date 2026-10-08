@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-07T07:54:00+09:00",
-  "headlineText": "伊豆諸島北部、伊豆諸島南部、小笠原諸島では、高波に注意してください。",
+  "reportDatetime": "2026-10-09T00:34:00+09:00",
+  "headlineText": "伊豆諸島南部、小笠原諸島では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -10,10 +10,6 @@
             {
               "code": "15",
               "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
             }
           ]
         },
@@ -22,7 +18,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -75,10 +71,6 @@
             {
               "code": "15",
               "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
             }
           ]
         },
@@ -87,10 +79,6 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
               "status": "解除"
             }
           ]
@@ -137,10 +125,6 @@
             {
               "code": "15",
               "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
             }
           ]
         },
@@ -149,10 +133,6 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
               "status": "解除"
             }
           ]
@@ -171,10 +151,6 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
               "status": "解除"
             }
           ]
@@ -283,10 +259,6 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
               "status": "解除"
             }
           ]
@@ -536,7 +508,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -545,7 +517,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -554,7 +526,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -563,7 +535,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -572,7 +544,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -585,7 +557,7 @@
             },
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
