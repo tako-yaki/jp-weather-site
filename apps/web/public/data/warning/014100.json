@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-08T12:24:00+09:00",
-  "headlineText": "釧路地方では、強風に注意してください。",
+  "reportDatetime": "2026-10-08T15:34:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -12,12 +12,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -33,16 +33,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
@@ -54,16 +54,16 @@
           "code": "0120601",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -80,16 +80,16 @@
           "code": "0120603",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -101,12 +101,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -118,16 +118,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -139,12 +139,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -156,12 +156,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -200,16 +200,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "24",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
