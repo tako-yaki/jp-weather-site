@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-08T10:04:00+09:00",
-  "headlineText": "宗谷地方では、乾燥や霜に対する農作物の管理に注意してください。",
+  "reportDatetime": "2026-10-08T16:23:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -16,20 +16,20 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "21",
               "status": "継続"
             },
             {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
@@ -41,20 +41,20 @@
           "code": "0121400",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "21",
               "status": "継続"
             },
             {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -62,16 +62,16 @@
           "code": "0151100",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "21",
               "status": "継続"
             },
             {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -79,16 +79,16 @@
           "code": "0151200",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "21",
               "status": "継続"
             },
             {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -96,16 +96,16 @@
           "code": "0151300",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
               "code": "21",
               "status": "継続"
             },
             {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -113,16 +113,16 @@
           "code": "0151400",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "21",
               "status": "継続"
             },
             {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -138,20 +138,20 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "21",
               "status": "継続"
             },
             {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -159,16 +159,16 @@
           "code": "0151700",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "21",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -176,16 +176,16 @@
           "code": "0151800",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "21",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -193,16 +193,16 @@
           "code": "0151900",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "21",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -210,20 +210,20 @@
           "code": "0152000",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "21",
               "status": "継続"
             },
             {
               "code": "24",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
