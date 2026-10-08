@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-07T04:07:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-08T09:35:00+09:00",
+  "headlineText": "南部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -25,12 +25,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         }
@@ -87,12 +87,12 @@
           "code": "3020601",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -140,12 +140,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -328,12 +328,12 @@
           "code": "3040100",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -350,12 +350,12 @@
           "code": "3040600",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -367,12 +367,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -384,12 +384,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -423,12 +423,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         }
