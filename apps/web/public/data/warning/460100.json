@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-10-10T05:40:00+09:00",
-  "headlineText": "種子島・屋久島地方では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-10T06:09:00+09:00",
+  "headlineText": "種子島・屋久島地方では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "460010",
           "warnings": [
-            {
-              "code": "03",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -28,10 +24,6 @@
         {
           "code": "460020",
           "warnings": [
-            {
-              "code": "03",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -60,6 +52,10 @@
             {
               "code": "29",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         }
@@ -70,10 +66,6 @@
         {
           "code": "4620100",
           "warnings": [
-            {
-              "code": "03",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -201,10 +193,6 @@
           "code": "4621600",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -218,10 +206,6 @@
           "code": "4621700",
           "warnings": [
             {
-              "code": "03",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -230,10 +214,6 @@
         {
           "code": "4621800",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -256,10 +236,6 @@
         {
           "code": "4622000",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -294,10 +270,6 @@
         {
           "code": "4622300",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -494,6 +466,10 @@
             },
             {
               "code": "29",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
