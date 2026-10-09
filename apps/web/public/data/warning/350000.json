@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-08T21:12:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-09T21:06:00+09:00",
+  "headlineText": "西部では、強風に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -14,6 +14,10 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -35,10 +39,6 @@
           "warnings": [
             {
               "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "15",
               "status": "解除"
             },
             {
@@ -78,6 +78,10 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -87,6 +91,10 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -147,10 +155,6 @@
           "code": "3521000",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "解除"
             }
@@ -176,10 +180,6 @@
         {
           "code": "3521200",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "解除"
@@ -214,16 +214,16 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "3530500",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "解除"
@@ -247,10 +247,6 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "解除"
             }
@@ -260,10 +256,6 @@
           "code": "3534300",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "解除"
             }
@@ -272,10 +264,6 @@
         {
           "code": "3534400",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "解除"
