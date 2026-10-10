@@ -55,7 +55,11 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 
 	type Municipality = { code: string; name: string; kana: string; point: { lat: number; lon: number } | null };
 
-	const REFRESH_INTERVAL_MS = 3 * 60 * 1000;
+	// 警報は人命に関わる「今の状況」なので、なるべく早く反映する。気象庁のJSONは約1分キャッシュされ、
+	// 1回あたりの転送は1〜2KB(gzip)と小さいので、1分ごとに取り直す(非表示のタブでは止め、戻った時にすぐ取り直す)。
+	const REFRESH_INTERVAL_MS = 60 * 1000;
+	// 連続でこの回数失敗したら「更新できていません」と明示する(直前の表示は残したまま)。
+	const FAILURES_BEFORE_STALE_NOTICE = 3;
 
 	function initWarningBanner(container: Element) {
 		const configEl = container.querySelector('.warning-config');
@@ -78,6 +82,11 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		const result = container.querySelector('.muni-result') as HTMLElement | null;
 		if (!timeEl || !statusEl || !groupsEl || !select || !result) return;
 
+		const checkedTimeFormatter = new Intl.DateTimeFormat('ja-JP', {
+			hour: '2-digit',
+			minute: '2-digit',
+			timeZone: 'Asia/Tokyo',
+		});
 		const reportTimeFormatter = new Intl.DateTimeFormat('ja-JP', {
 			month: 'numeric',
 			day: 'numeric',
@@ -97,10 +106,31 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		// muni-select の変更時にここから引く(選択のたびに再取得はしない)。
 		let municipalityActiveByCode: Record<string, { code: string; text: string }[]> = {};
 
+		// ヘッダー右の「○○ 発表 ・ 確認 HH:MM」。「確認」は、最後に気象庁へ問い合わせて最新を確かめた時刻
+		// (発表がなくても進む。これが止まっていれば、表示が古い可能性があると読み取れる)。
+		let lastReport: any = null;
+		let lastCheckedAt: Date | null = null;
+		let failureCount = 0;
+
+		function renderTimeLabel() {
+			if (!lastReport || !lastCheckedAt) return;
+			const reportTime = formatReportDatetime(lastReport.reportDatetime);
+			const checked = `確認 ${checkedTimeFormatter.format(lastCheckedAt)}`;
+			let text = [reportTime, checked].filter(Boolean).join(' ・ ');
+			const notes: string[] = [];
+			// 気象庁から直接取得できなかったときは、バックアップ(最新でない可能性がある)を表示していることを明示する。
+			if (lastReport.source === 'backup') notes.push('バックアップ表示・最新でない可能性');
+			if (failureCount >= FAILURES_BEFORE_STALE_NOTICE) notes.push('更新できていません');
+			if (notes.length > 0) text += `(${notes.join('・')})`;
+			timeEl!.textContent = text;
+			timeEl!.dataset.stale = String(notes.length > 0);
+			timeEl!.hidden = false;
+		}
+
 		function renderRegionWarnings(warning: any) {
-			const reportTime = formatReportDatetime(warning.reportDatetime);
-			timeEl!.textContent = reportTime ?? '';
-			timeEl!.hidden = !reportTime;
+			lastReport = warning;
+			lastCheckedAt = new Date();
+			renderTimeLabel();
 
 			// 地域(class10)ごとにまとめる。1地域に複数の現象が出ている場合、地域名を毎行繰り返さず
 			// 見出し1つの下にまとめて表示したほうが読みやすいため。
@@ -161,22 +191,32 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 
 		let everLoaded = false;
 
+		let inflight = false;
+
 		async function refresh() {
+			if (inflight) return;
+			inflight = true;
 			try {
 				const warning = await fetchOfficeWarning(officeCode);
+				failureCount = 0;
 				renderRegionWarnings(warning);
 				indexMunicipalityWarnings(warning);
 				everLoaded = true;
 			} catch {
-				// 一度でも取得できていれば、直前の表示を維持する(壊れた状態を見せない)。
-				// 一度も取得できていない(初回失敗)場合だけ、ずっと「読み込み中」のままにならないよう
-				// エラー表示に切り替える。
-				if (!everLoaded) {
+				failureCount++;
+				// 一度でも取得できていれば、直前の表示を維持する(壊れた状態を見せない)。連続で失敗したときは
+				// 「更新できていません」を添える。一度も取得できていない(初回失敗)場合だけ、ずっと
+				// 「読み込み中」のままにならないよう、エラー表示に切り替える。
+				if (everLoaded) {
+					renderTimeLabel();
+				} else {
 					container.setAttribute('data-severity', 'error');
 					groupsEl!.hidden = true;
 					statusEl!.hidden = false;
-					statusEl!.textContent = '警報注意報の取得に失敗しました(再読み込みしてください)';
+					statusEl!.textContent = '警報注意報の取得に失敗しました(自動で再試行します)';
 				}
+			} finally {
+				inflight = false;
 			}
 		}
 
@@ -274,7 +314,13 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 		filterInput?.addEventListener('input', applyFilter);
 
 		refresh();
-		setInterval(refresh, REFRESH_INTERVAL_MS);
+		setInterval(() => {
+			if (!document.hidden) refresh();
+		}, REFRESH_INTERVAL_MS);
+		// 非表示のタブでは止めているので、表示に戻ったときは次のタイマーを待たずにすぐ最新にする
+		document.addEventListener('visibilitychange', () => {
+			if (!document.hidden) refresh();
+		});
 	}
 
 	document.querySelectorAll('.alert-banner').forEach(initWarningBanner);
@@ -326,6 +372,11 @@ const { officeCode, regionNameByCode, regionCount, municipalityWarnings } = Astr
 	.warning-time {
 		font-size: 10.5px;
 		color: var(--text-muted);
+	}
+	/* バックアップ表示・更新できていないときは目立たせる */
+	.warning-time[data-stale='true'] {
+		color: var(--warn-warning-text);
+		font-weight: 600;
 	}
 	.warning-status {
 		margin: 0;

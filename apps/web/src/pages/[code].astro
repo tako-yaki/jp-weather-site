@@ -353,7 +353,7 @@ const heroWeather = primaryRegion.todayWeather;
 <script>
 	import { describeWmoCode } from '../lib/wmoWeatherCodes';
 	import { getMoonPhase } from '../lib/moonPhase';
-	import { fetchAmedasCurrent, fetchRegionOpenMeteo, fetchRegionOpenMeteoExtended } from '../lib/clientData';
+	import { fetchAmedasCurrent, fetchAmedasLatestTime, fetchRegionOpenMeteo, fetchRegionOpenMeteoExtended } from '../lib/clientData';
 	import { degreesToDirection16 } from '../lib/windDirection';
 
 	type ForecastDay = { date: string; weather: { icon: string; label: string; category?: string }; pop: number | null };
@@ -497,8 +497,106 @@ const heroWeather = primaryRegion.todayWeather;
 	// 取得中の区分(二重取得の防止)と、一度でも描画できた区分(2回目以降は再取得=更新扱い)
 	const inflightRegions = new Set<string>();
 	const renderedRegions = new Set<string>();
-	let amedasCurrentPromise: Promise<any> | null = null;
 	let primaryRegionApplied = false;
+
+	// --- 現況(アメダス)の描画と、リアルタイムの更新 ---
+	// 現況は「今の状況」なので、なるべく早く反映する。アメダスは10分ごとに観測が更新されるため、
+	// 1分ごとに最新の観測時刻(数バイト)だけを確認し、新しい観測が出た時だけ地点のデータを取って描画する。
+	// Open-Meteo(天候マーク・補完値・時系列グラフなど)の取り直しは、これとは別に5分ごと。
+	const AMEDAS_POLL_INTERVAL_MS = 60 * 1000;
+	const STALE_MINUTES = 30; // アメダスは通常10分ごと。これ以上古いときは更新の遅れを明示する
+	const lastRegular = new Map<string, any>(); // 区分ごとの直近のOpen-Meteo応答(アメダスだけ更新するときの土台)
+	const lastAmedas = new Map<string, { observedAt: string; stations: Record<string, any> }>();
+	const inflightAmedas = new Set<string>();
+
+	// 「アメダス 22:10 観測(3分前)」。古すぎるときは「更新が遅れています」を付ける。経過時間は30秒ごとに更新する。
+	function renderUpdatedLabel(el: Element) {
+		const observed = (el as HTMLElement).dataset.observed;
+		if (!observed) return;
+		const date = new Date(observed);
+		const ageMin = Math.max(0, Math.floor((Date.now() - date.getTime()) / 60000));
+		const stale = ageMin >= STALE_MINUTES;
+		(el as HTMLElement).dataset.stale = String(stale);
+		el.textContent = `アメダス ${hm(date)} 観測(${ageMin < 1 ? 'たった今' : `${ageMin}分前`}${stale ? '・更新が遅れています' : ''})`;
+	}
+
+	function renderCurrent(config: RegionConfig, regular: any, amedasCurrent: any) {
+		const currentSection = document.querySelector(`.current[data-region="${config.code}"]`);
+		if (!currentSection) return;
+
+		// 取得に失敗した/古いバックアップが返ってきたときに、すでに表示している新しい観測を失わないようにする
+		// (ISO文字列は同じ+09:00表記なので文字列比較で新旧が判定できる)。
+		let amedas = amedasCurrent;
+		const prev = lastAmedas.get(config.code);
+		if (prev && (!amedas || amedas.observedAt < prev.observedAt)) amedas = prev;
+		if (amedas) lastAmedas.set(config.code, amedas);
+
+		const current = regular.current;
+		const night = isNightAt(current.time, regular.daily.time, regular.daily.sunrise, regular.daily.sunset);
+		const weather = describeWmoCode(current.weathercode, night);
+		const amedasStation = config.amedasCode ? amedas?.stations?.[config.amedasCode] : null;
+		const amedasTemp = amedasStation?.temp?.[0] ?? null;
+		const amedasPrecip = amedasStation?.precipitation1h?.[0] ?? null;
+		const amedasHumidity = amedasStation?.humidity?.[0] ?? null;
+		// アメダスの風向は0(静穏)〜16(北)の16方位コード、Open-Meteoは度(0〜360、北=0)。
+		// どちらも「北からの角度」に揃えて扱う(静穏はnull=矢印なし)。
+		const amedasWindCode = amedasStation?.windDirection?.[0] ?? null;
+		const windSpeed = amedasStation?.wind?.[0] ?? current.windspeed_10m;
+		const windDeg = amedasStation
+			? (amedasWindCode ? amedasWindCode * 22.5 : null)
+			: current.winddirection_10m;
+		const windLabel = windDeg == null ? '静穏' : degreesToDirection16(windDeg);
+
+		const updatedEl = currentSection.querySelector<HTMLElement>('.current-updated');
+		if (updatedEl) {
+			if (amedasStation) {
+				updatedEl.dataset.observed = amedas.observedAt;
+				renderUpdatedLabel(updatedEl);
+			} else {
+				delete updatedEl.dataset.observed;
+				delete updatedEl.dataset.stale;
+				updatedEl.textContent = `${hm(new Date(withJstOffset(current.time)))} 更新`;
+			}
+		}
+		const tiles = currentSection.querySelectorAll('.stat-tile');
+		const [wxTile, tempTile, precipTile, humidTile, windTile] = Array.from(tiles);
+		wxTile?.querySelector('.stat-icon')?.replaceChildren(document.createTextNode(weather.icon));
+		wxTile?.querySelector('.stat-value')?.replaceChildren(document.createTextNode(weather.label));
+		tempTile?.querySelector('.stat-value')?.replaceChildren(
+			document.createTextNode(`${(amedasTemp ?? current.temperature_2m).toFixed(1)}℃`),
+		);
+		precipTile?.querySelector('.stat-value')?.replaceChildren(
+			document.createTextNode(`${(amedasPrecip ?? current.precipitation).toFixed(1)}mm`),
+		);
+		humidTile?.querySelector('.stat-value')?.replaceChildren(
+			document.createTextNode(`${Math.round(amedasHumidity ?? current.relative_humidity_2m)}%`),
+		);
+		const windArrow = windTile?.querySelector('.wind-arrow') as HTMLElement | null;
+		if (windArrow) {
+			windArrow.textContent = windDeg == null ? '—' : '↑';
+			windArrow.style.transform = windDeg == null ? '' : `rotate(${(windDeg + 180) % 360}deg)`;
+		}
+		windTile?.querySelector('.stat-value')?.replaceChildren(
+			document.createTextNode(windDeg == null ? windLabel : `${windLabel} ${windSpeed.toFixed(1)}m/s`),
+		);
+	}
+
+	// 新しい観測が出ていれば、アメダスの現況だけを取り直して描画する(Open-Meteoは取り直さない)。
+	async function refreshAmedas(config: RegionConfig) {
+		if (!config.amedasCode || inflightAmedas.has(config.code)) return;
+		const regular = lastRegular.get(config.code);
+		if (!regular) return; // まだ初回の描画が済んでいない(初回はloadRegionが取る)
+		inflightAmedas.add(config.code);
+		try {
+			const latest = await fetchAmedasLatestTime();
+			if (latest === lastAmedas.get(config.code)?.observedAt) return;
+			renderCurrent(config, regular, await fetchAmedasCurrent(config.amedasCode, latest));
+		} catch {
+			// 失敗時は直前の表示を残す。「○分前」の表示が古さを伝え、30分を超えれば遅れを明示する。
+		} finally {
+			inflightAmedas.delete(config.code);
+		}
+	}
 
 	// 取得できなかったとき、「読み込み中...」のままにせず失敗したことを表示する(再取得は次回の自動更新か再読み込み)。
 	function showRegionLoadError(code: string) {
@@ -518,15 +616,14 @@ const heroWeather = primaryRegion.todayWeather;
 		// 一度描画できた区分の再実行は「更新」(現況・時系列の取り直し)。初回だけ週間予報の参考日も取る。
 		const isRefresh = renderedRegions.has(config.code);
 
-		const currentSection = document.querySelector(`.current[data-region="${config.code}"]`);
 		const heroSection = document.querySelector(`.region-hero[data-region="${config.code}"]`);
 		const hourlyRoot = document.querySelector<HTMLElement & { setHourlyPoints?: (p: any[]) => void }>(
 			`.region-hourly[data-region="${config.code}"] .hourly-chart`,
 		);
 		const weeklyScroll = document.querySelector(`.weekly-scroll[data-region="${config.code}"]`);
 
-		// 更新時はアメダスも取り直す(失敗してもOpen-Meteoの値で表示できるのでnullにして続行)
-		if (isRefresh || !amedasCurrentPromise) amedasCurrentPromise = fetchAmedasCurrent().catch(() => null);
+		// アメダスは区分ごとの観測点だけを取る(更新のたびに取り直す)。失敗してもOpen-Meteoの値で表示できるのでnullにして続行。
+		const amedasPromise = config.amedasCode ? fetchAmedasCurrent(config.amedasCode).catch(() => null) : Promise.resolve(null);
 
 		try {
 			// 3つの取得は独立させる。10日間予報用の取得だけ失敗しても、現況・ヒーロー・グラフは出す。
@@ -535,7 +632,7 @@ const heroWeather = primaryRegion.todayWeather;
 			const [regular, extended, amedasCurrent] = await Promise.all([
 				fetchRegionOpenMeteo(config.lat, config.lon).catch(() => null),
 				needExtended ? fetchRegionOpenMeteoExtended(config.lat, config.lon).catch(() => null) : Promise.resolve(null),
-				amedasCurrentPromise,
+				amedasPromise,
 			]);
 			if (!regular) {
 				// 更新時の失敗は、直前の表示(観測時刻つき)をそのまま残す。初回の失敗だけ明示する。
@@ -543,52 +640,9 @@ const heroWeather = primaryRegion.todayWeather;
 				return;
 			}
 
-			// --- 現在の状況 ---
-			if (currentSection) {
-				const current = regular.current;
-				const night = isNightAt(current.time, regular.daily.time, regular.daily.sunrise, regular.daily.sunset);
-				const weather = describeWmoCode(current.weathercode, night);
-				const amedasStation = config.amedasCode ? amedasCurrent?.stations?.[config.amedasCode] : null;
-				const amedasTemp = amedasStation?.temp?.[0] ?? null;
-				const amedasPrecip = amedasStation?.precipitation1h?.[0] ?? null;
-				const amedasHumidity = amedasStation?.humidity?.[0] ?? null;
-				// アメダスの風向は0(静穏)〜16(北)の16方位コード、Open-Meteoは度(0〜360、北=0)。
-				// どちらも「北からの角度」に揃えて扱う(静穏はnull=矢印なし)。
-				const amedasWindCode = amedasStation?.windDirection?.[0] ?? null;
-				const windSpeed = amedasStation?.wind?.[0] ?? current.windspeed_10m;
-				const windDeg = amedasStation
-					? (amedasWindCode ? amedasWindCode * 22.5 : null)
-					: current.winddirection_10m;
-				const windLabel = windDeg == null ? '静穏' : degreesToDirection16(windDeg);
-
-				const updatedEl = currentSection.querySelector('.current-updated');
-				if (updatedEl) {
-					updatedEl.textContent = amedasStation
-						? `アメダス ${hm(new Date(amedasCurrent.observedAt))} 観測`
-						: `${hm(new Date(withJstOffset(current.time)))} 更新`;
-				}
-				const tiles = currentSection.querySelectorAll('.stat-tile');
-				const [wxTile, tempTile, precipTile, humidTile, windTile] = Array.from(tiles);
-				wxTile?.querySelector('.stat-icon')?.replaceChildren(document.createTextNode(weather.icon));
-				wxTile?.querySelector('.stat-value')?.replaceChildren(document.createTextNode(weather.label));
-				tempTile?.querySelector('.stat-value')?.replaceChildren(
-					document.createTextNode(`${(amedasTemp ?? current.temperature_2m).toFixed(1)}℃`),
-				);
-				precipTile?.querySelector('.stat-value')?.replaceChildren(
-					document.createTextNode(`${(amedasPrecip ?? current.precipitation).toFixed(1)}mm`),
-				);
-				humidTile?.querySelector('.stat-value')?.replaceChildren(
-					document.createTextNode(`${Math.round(amedasHumidity ?? current.relative_humidity_2m)}%`),
-				);
-				const windArrow = windTile?.querySelector('.wind-arrow') as HTMLElement | null;
-				if (windArrow) {
-					windArrow.textContent = windDeg == null ? '—' : '↑';
-					windArrow.style.transform = windDeg == null ? '' : `rotate(${(windDeg + 180) % 360}deg)`;
-				}
-				windTile?.querySelector('.stat-value')?.replaceChildren(
-					document.createTextNode(windDeg == null ? windLabel : `${windLabel} ${windSpeed.toFixed(1)}m/s`),
-				);
-			}
+			// --- 現在の状況(アメダスは、Open-Meteoの再取得とは別に、新しい観測が出るたびにrenderCurrentで更新される) ---
+			lastRegular.set(config.code, regular);
+			renderCurrent(config, regular, amedasCurrent);
 
 			// --- ヒーロー(最高/最低気温・日の出日の入り) ---
 			if (heroSection) {
@@ -688,16 +742,45 @@ const heroWeather = primaryRegion.todayWeather;
 	});
 	if (initiallyVisible) loadRegion(initiallyVisible);
 
-	// 表示中の区分の現況・時系列を定期的に取り直す(開いたままのタブが古い値のままにならないように)。
-	// 取得に失敗していた区分は、同じ周期で初回取得をやり直す。非表示のタブでは何もしない。
-	setInterval(() => {
-		if (document.hidden) return;
-		const visible = configs.find((c) => {
+	// 表示中の区分(代表の区分以外に切り替えている場合はその区分)。
+	const visibleConfig = () =>
+		configs.find((c) => {
 			const el = document.querySelector(`.current[data-region="${c.code}"]`) as HTMLElement | null;
 			return el && !el.hidden;
 		});
-		if (visible) loadRegion(visible);
+
+	// 開いたままのタブが古い値のままにならないよう、定期的に取り直す。非表示のタブでは何もしない
+	// (表示に戻った時にすぐ追いつく)。取得に失敗していた区分は、同じ周期で初回取得をやり直す。
+	//  - アメダスの現況: 1分ごとに新しい観測の有無を確認(10分ごとの観測に、最大でも1〜2分遅れで追従)
+	//  - Open-Meteo(天候マーク・時系列グラフ・ヒーロー): 5分ごと
+	//  - 「○分前」の経過時間の表示: 30秒ごと
+	let lastFullLoadAt = Date.now();
+	function loadVisibleRegion() {
+		const visible = visibleConfig();
+		if (!visible) return;
+		lastFullLoadAt = Date.now();
+		loadRegion(visible);
+	}
+	setInterval(() => {
+		if (document.hidden) return;
+		const visible = visibleConfig();
+		if (visible) refreshAmedas(visible);
+	}, AMEDAS_POLL_INTERVAL_MS);
+	setInterval(() => {
+		if (!document.hidden) loadVisibleRegion();
 	}, REFRESH_INTERVAL_MS);
+	setInterval(() => {
+		if (!document.hidden) document.querySelectorAll('.current-updated[data-observed]').forEach(renderUpdatedLabel);
+	}, 30 * 1000);
+	document.addEventListener('visibilitychange', () => {
+		if (document.hidden) return;
+		// タブに戻ってきた時は、次のタイマーを待たずにすぐ最新にする
+		document.querySelectorAll('.current-updated[data-observed]').forEach(renderUpdatedLabel);
+		const visible = visibleConfig();
+		if (!visible) return;
+		if (Date.now() - lastFullLoadAt >= REFRESH_INTERVAL_MS) loadVisibleRegion();
+		else refreshAmedas(visible);
+	});
 </script>
 
 <style>
@@ -829,6 +912,11 @@ const heroWeather = primaryRegion.todayWeather;
 	.current-updated {
 		font-size: 11px;
 		color: var(--text-muted);
+	}
+	/* アメダスの観測が30分以上更新されていない(通常は10分ごと)ときは目立たせる */
+	.current-updated[data-stale='true'] {
+		color: var(--warn-warning-text);
+		font-weight: 600;
 	}
 	.current-grid {
 		display: grid;
