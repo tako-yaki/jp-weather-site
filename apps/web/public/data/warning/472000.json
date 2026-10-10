@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-09T16:08:00+09:00",
-  "headlineText": "大東島地方では、高波に注意してください。",
+  "reportDatetime": "2026-10-11T04:12:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -12,12 +12,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
             }
           ]
         }
@@ -33,12 +33,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -50,12 +50,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "14",
+              "status": "解除"
             }
           ]
         }
