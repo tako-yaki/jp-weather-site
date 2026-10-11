@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-11T10:08:00+09:00",
-  "headlineText": "五島では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-10-11T21:21:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -42,12 +42,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
@@ -165,12 +165,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
