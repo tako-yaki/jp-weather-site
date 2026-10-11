@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-10T03:47:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-11T09:53:00+09:00",
+  "headlineText": "宮古島地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,7 +29,7 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         }
@@ -58,7 +58,7 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -79,7 +79,7 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         }
