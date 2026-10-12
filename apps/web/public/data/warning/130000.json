@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-09T09:40:00+09:00",
-  "headlineText": "伊豆諸島北部、伊豆諸島南部、小笠原諸島では、高波に注意してください。",
+  "reportDatetime": "2026-10-12T15:55:00+09:00",
+  "headlineText": "伊豆諸島南部では、急な強い雨や落雷に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -18,7 +18,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -36,16 +36,16 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "130040",
           "warnings": [
-            {
-              "code": "14",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "継続"
@@ -508,7 +508,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -517,7 +517,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -526,7 +526,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -535,7 +535,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -544,7 +544,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -557,7 +557,7 @@
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -575,6 +575,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -584,16 +588,16 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "1342100",
           "warnings": [
-            {
-              "code": "14",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "継続"
