@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-11T10:04:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-13T16:09:00+09:00",
+  "headlineText": "大東島地方では、濃霧による視程障害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,12 +12,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "20",
+              "status": "発表"
             }
           ]
         }
@@ -33,12 +33,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "20",
+              "status": "発表"
             }
           ]
         },
@@ -50,12 +50,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "20",
+              "status": "発表"
             }
           ]
         }
