@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-13T15:55:00+09:00",
-  "headlineText": "新潟県では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-10-14T06:03:00+09:00",
+  "headlineText": "下越、佐渡では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -8,11 +8,11 @@
           "code": "150010",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -42,12 +42,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             }
           ]
         },
@@ -55,15 +55,15 @@
           "code": "150040",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
+              "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -112,10 +112,6 @@
           "code": "1520600",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -161,11 +157,11 @@
           "code": "1521200",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -191,12 +187,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             }
           ]
         },
@@ -222,12 +218,12 @@
           "code": "1522200",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             }
           ]
         },
@@ -244,15 +240,15 @@
           "code": "1522400",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
+              "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -279,10 +275,6 @@
           "code": "1522700",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -291,10 +283,6 @@
         {
           "code": "1530700",
           "warnings": [
-            {
-              "code": "16",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -381,11 +369,11 @@
           "code": "1558600",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
