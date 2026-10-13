@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-14T05:54:00+09:00",
-  "headlineText": "能登では、高波に注意してください。",
+  "reportDatetime": "2026-10-14T07:52:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -12,11 +12,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "10",
               "status": "解除"
             }
           ]
@@ -54,11 +54,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "10",
               "status": "解除"
             }
           ]
@@ -84,11 +84,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "10",
               "status": "解除"
             }
           ]
@@ -143,11 +143,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "10",
               "status": "解除"
             }
           ]
