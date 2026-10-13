@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-13T19:22:00+09:00",
-  "headlineText": "奄美地方では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-14T04:07:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -16,16 +16,16 @@
               "status": "解除"
             },
             {
+              "code": "29",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         }
@@ -42,11 +42,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -58,16 +58,16 @@
               "status": "解除"
             },
             {
+              "code": "29",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -80,11 +80,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -97,11 +97,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -114,11 +114,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -131,11 +131,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -148,11 +148,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -165,11 +165,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -182,11 +182,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -199,11 +199,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -220,11 +220,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -241,11 +241,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -258,11 +258,11 @@
             },
             {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         }
