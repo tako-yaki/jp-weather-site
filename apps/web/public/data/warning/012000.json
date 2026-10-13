@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-14T03:23:00+09:00",
-  "headlineText": "留萌地方では、高波に注意してください。",
+  "reportDatetime": "2026-10-14T06:20:00+09:00",
+  "headlineText": "留萌地方では、暴風に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -41,11 +41,11 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "05",
               "status": "継続"
             }
           ]
@@ -87,12 +87,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             }
           ]
         },
@@ -502,12 +502,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             }
           ]
         },
@@ -523,12 +523,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             }
           ]
         },
@@ -548,12 +548,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             }
           ]
         },
@@ -569,12 +569,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             }
           ]
         },
@@ -590,11 +590,11 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "05",
               "status": "継続"
             }
           ]
@@ -611,12 +611,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             }
           ]
         },
@@ -632,12 +632,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             }
           ]
         },
@@ -653,12 +653,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             }
           ]
         }
