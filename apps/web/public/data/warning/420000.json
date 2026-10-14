@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-14T04:06:00+09:00",
-  "headlineText": "長崎県では、強風に注意してください。",
+  "reportDatetime": "2026-10-14T15:30:00+09:00",
+  "headlineText": "五島では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -47,7 +47,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -55,15 +55,15 @@
           "code": "420040",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -106,15 +106,15 @@
           "code": "4220202",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -128,7 +128,7 @@
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -197,7 +197,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -210,7 +210,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -223,7 +223,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -231,15 +231,15 @@
           "code": "4221100",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -261,15 +261,15 @@
           "code": "4221202",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -365,15 +365,15 @@
           "code": "4238300",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -395,15 +395,15 @@
           "code": "4241100",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
