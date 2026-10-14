@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-14T09:39:00+09:00",
-  "headlineText": "久米島では、強風に注意してください。",
+  "reportDatetime": "2026-10-14T16:08:00+09:00",
+  "headlineText": "沖縄本島地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -50,12 +50,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             }
           ]
         }
@@ -543,12 +543,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
