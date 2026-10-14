@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-14T12:24:00+09:00",
-  "headlineText": "新潟県では、強風に注意してください。",
+  "reportDatetime": "2026-10-14T15:17:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -16,12 +16,12 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
@@ -193,12 +193,12 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "10",
+              "status": "解除"
             }
           ]
         },
