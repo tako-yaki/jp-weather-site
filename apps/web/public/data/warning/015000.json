@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-15T15:56:00+09:00",
-  "headlineText": "胆振、日高地方では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-10-16T01:12:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -13,10 +13,6 @@
             },
             {
               "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "15",
               "status": "解除"
             },
             {
@@ -33,16 +29,16 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
@@ -54,10 +50,6 @@
           "code": "0120500",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -67,10 +59,6 @@
           "code": "0121300",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -79,10 +67,6 @@
         {
           "code": "0123000",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -133,10 +117,6 @@
           "code": "0157800",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -145,10 +125,6 @@
         {
           "code": "0158100",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -181,10 +157,6 @@
           "code": "0158600",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -207,10 +179,6 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -229,10 +197,6 @@
           "code": "0160400",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -242,16 +206,16 @@
           "code": "0160700",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -259,16 +223,16 @@
           "code": "0160800",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -276,26 +240,22 @@
           "code": "0160900",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
         {
           "code": "0161000",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
