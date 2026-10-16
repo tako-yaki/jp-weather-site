@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-16T04:30:00+09:00",
-  "headlineText": "下越、佐渡では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-10-16T13:56:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -43,16 +43,16 @@
           "code": "150040",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
@@ -207,16 +207,16 @@
           "code": "1522400",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
