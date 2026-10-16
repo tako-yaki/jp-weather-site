@@ -1,20 +1,12 @@
 {
-  "reportDatetime": "2026-10-16T01:08:00+09:00",
-  "headlineText": "沿岸では、高波に注意してください。",
+  "reportDatetime": "2026-10-16T09:39:00+09:00",
+  "headlineText": "秋田県では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "050010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "継続"
@@ -30,6 +22,14 @@
             {
               "code": "16",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -37,20 +37,20 @@
           "code": "050020",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         }
@@ -62,14 +62,6 @@
           "code": "0520100",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
@@ -83,6 +75,14 @@
             },
             {
               "code": "16",
+              "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -111,10 +111,6 @@
         {
           "code": "0520300",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "継続"
@@ -189,14 +185,6 @@
           "code": "0521000",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
@@ -211,6 +199,14 @@
             {
               "code": "16",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -239,20 +235,20 @@
           "code": "0521200",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -272,10 +268,6 @@
         {
           "code": "0521400",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "継続"
@@ -297,10 +289,6 @@
         {
           "code": "0521500",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "継続"
@@ -467,10 +455,6 @@
         {
           "code": "0543400",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "継続"
