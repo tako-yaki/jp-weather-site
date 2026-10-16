@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-16T09:39:00+09:00",
-  "headlineText": "網走、北見、紋別地方では、乾燥や霜に対する農作物の管理に注意してください。",
+  "reportDatetime": "2026-10-16T15:31:00+09:00",
+  "headlineText": "網走地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,19 +12,19 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             },
             {
               "code": "24",
+              "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -84,19 +84,15 @@
           "code": "0120802",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             },
             {
               "code": "24",
+              "status": "発表"
+            },
+            {
+              "code": "15",
               "status": "発表"
             }
           ]
@@ -105,19 +101,15 @@
           "code": "0121100",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             },
             {
               "code": "24",
+              "status": "発表"
+            },
+            {
+              "code": "15",
               "status": "発表"
             }
           ]
@@ -165,19 +157,19 @@
           "code": "0154500",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             },
             {
               "code": "24",
+              "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -199,19 +191,19 @@
           "code": "0154700",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             },
             {
               "code": "24",
+              "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
