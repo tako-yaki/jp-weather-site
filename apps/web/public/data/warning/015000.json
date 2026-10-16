@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-16T01:12:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-16T13:20:00+09:00",
+  "headlineText": "胆振、日高地方では、急な強い雨や落雷、霜に対する農作物の管理に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -17,6 +17,10 @@
             },
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -33,12 +37,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         }
@@ -51,6 +59,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -60,6 +72,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -69,6 +85,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -78,6 +98,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -87,6 +111,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -100,6 +128,10 @@
             },
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -109,6 +141,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -118,6 +154,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -127,6 +167,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -136,6 +180,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -149,6 +197,10 @@
             },
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -158,6 +210,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -167,6 +223,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -180,6 +240,10 @@
             },
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -189,6 +253,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -198,6 +266,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
@@ -210,12 +282,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -227,12 +303,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -244,12 +324,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -258,6 +342,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "継続"
+            },
+            {
+              "code": "24",
               "status": "発表"
             }
           ]
