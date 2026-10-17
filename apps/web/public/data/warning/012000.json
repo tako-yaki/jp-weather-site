@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-17T09:40:00+09:00",
-  "headlineText": "上川、留萌地方では、霜に対する農作物の管理に注意してください。",
+  "reportDatetime": "2026-10-17T16:14:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -29,12 +29,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
@@ -63,12 +63,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -298,12 +298,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -315,12 +315,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -336,12 +336,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -353,12 +353,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -371,7 +371,7 @@
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -383,12 +383,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -400,12 +400,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -417,12 +417,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "発表"
             },
             {
-              "code": "24",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
