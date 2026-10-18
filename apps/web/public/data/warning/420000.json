@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-17T10:02:00+09:00",
-  "headlineText": "北部、壱岐・対馬、五島では、強風に注意してください。",
+  "reportDatetime": "2026-10-18T10:12:00+09:00",
+  "headlineText": "壱岐・対馬では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -40,6 +40,10 @@
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -47,12 +51,8 @@
           "code": "420040",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -86,12 +86,8 @@
           "code": "4220202",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -158,6 +154,10 @@
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -167,6 +167,10 @@
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -183,12 +187,8 @@
           "code": "4221100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -205,12 +205,8 @@
           "code": "4221202",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -281,12 +277,8 @@
           "code": "4238300",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -303,12 +295,8 @@
           "code": "4241100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
