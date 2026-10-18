@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-10-18T19:03:00+09:00",
-  "headlineText": "南部平野部、北部平野部では、高波に注意してください。",
+  "reportDatetime": "2026-10-18T22:23:00+09:00",
+  "headlineText": "北部平野部では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "450010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
@@ -34,6 +30,10 @@
             },
             {
               "code": "16",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -100,16 +100,16 @@
             {
               "code": "16",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "4520400",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
