@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-18T16:24:00+09:00",
-  "headlineText": "能登では、高波に注意してください。",
+  "reportDatetime": "2026-10-18T21:12:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -8,12 +8,12 @@
           "code": "170010",
           "warnings": [
             {
-              "code": "21",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "21",
+              "status": "解除"
             }
           ]
         },
@@ -46,12 +46,12 @@
           "code": "1720100",
           "warnings": [
             {
-              "code": "21",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "21",
+              "status": "解除"
             }
           ]
         },
@@ -68,12 +68,12 @@
           "code": "1720300",
           "warnings": [
             {
-              "code": "21",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "21",
+              "status": "解除"
             }
           ]
         },
@@ -115,12 +115,12 @@
           "code": "1720600",
           "warnings": [
             {
-              "code": "21",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "21",
+              "status": "解除"
             }
           ]
         },
@@ -141,12 +141,12 @@
           "code": "1720900",
           "warnings": [
             {
-              "code": "21",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "21",
+              "status": "解除"
             }
           ]
         },
@@ -154,12 +154,12 @@
           "code": "1721000",
           "warnings": [
             {
-              "code": "21",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "21",
+              "status": "解除"
             }
           ]
         },
@@ -167,12 +167,12 @@
           "code": "1721100",
           "warnings": [
             {
-              "code": "21",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "21",
+              "status": "解除"
             }
           ]
         },
@@ -181,7 +181,7 @@
           "warnings": [
             {
               "code": "21",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -190,7 +190,7 @@
           "warnings": [
             {
               "code": "21",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -199,7 +199,7 @@
           "warnings": [
             {
               "code": "21",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -207,12 +207,12 @@
           "code": "1736500",
           "warnings": [
             {
-              "code": "21",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "21",
+              "status": "解除"
             }
           ]
         },

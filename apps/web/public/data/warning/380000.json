@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-14T21:22:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-18T21:10:00+09:00",
+  "headlineText": "愛媛県では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,7 +9,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -18,17 +18,13 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
         {
           "code": "380030",
           "warnings": [
-            {
-              "code": "14",
-              "status": "解除"
-            },
             {
               "code": "10",
               "status": "解除"
@@ -44,6 +40,10 @@
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         }
@@ -56,7 +56,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -65,7 +65,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -73,16 +73,16 @@
           "code": "3820300",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -91,7 +91,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -100,7 +100,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -109,7 +109,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -117,12 +117,12 @@
           "code": "3820700",
           "warnings": [
             {
-              "code": "14",
+              "code": "10",
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -131,7 +131,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -140,7 +140,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -149,7 +149,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -158,7 +158,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -167,7 +167,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -176,7 +176,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -185,7 +185,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -194,7 +194,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -202,16 +202,16 @@
           "code": "3842200",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
             {
               "code": "29",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -220,7 +220,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -228,12 +228,12 @@
           "code": "3848400",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -241,12 +241,12 @@
           "code": "3848800",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -254,16 +254,16 @@
           "code": "3850600",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         }
