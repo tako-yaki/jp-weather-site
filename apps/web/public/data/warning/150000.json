@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-19T04:15:00+09:00",
-  "headlineText": "下越、佐渡では、高波に注意してください。",
+  "reportDatetime": "2026-10-19T06:07:00+09:00",
+  "headlineText": "下越、佐渡では、急な強い雨や落雷に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,11 +12,11 @@
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "16",
+              "status": "発表"
             },
             {
-              "code": "16",
+              "code": "14",
               "status": "発表"
             }
           ]
@@ -43,16 +43,16 @@
           "code": "150040",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         }
@@ -64,8 +64,8 @@
           "code": "1510000",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -97,8 +97,8 @@
           "code": "1520600",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -142,11 +142,11 @@
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "16",
+              "status": "発表"
             },
             {
-              "code": "16",
+              "code": "14",
               "status": "発表"
             }
           ]
@@ -155,8 +155,8 @@
           "code": "1521300",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -181,8 +181,8 @@
           "code": "1521800",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -198,8 +198,8 @@
           "code": "1522300",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -207,16 +207,16 @@
           "code": "1522400",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -240,8 +240,8 @@
           "code": "1522700",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -249,8 +249,8 @@
           "code": "1530700",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -258,8 +258,8 @@
           "code": "1534200",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -275,8 +275,8 @@
           "code": "1538500",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -317,8 +317,8 @@
           "code": "1558100",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -326,11 +326,11 @@
           "code": "1558600",
           "warnings": [
             {
-              "code": "21",
-              "status": "解除"
+              "code": "16",
+              "status": "発表"
             },
             {
-              "code": "16",
+              "code": "14",
               "status": "発表"
             }
           ]
