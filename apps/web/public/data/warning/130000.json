@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-18T15:18:00+09:00",
-  "headlineText": "小笠原諸島では、高波に注意してください。",
+  "reportDatetime": "2026-10-19T10:08:00+09:00",
+  "headlineText": "東京地方、小笠原諸島では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,7 +9,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -30,10 +34,6 @@
             },
             {
               "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "16",
               "status": "解除"
             }
           ]
@@ -60,7 +60,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -69,7 +69,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -78,7 +82,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -119,7 +127,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -128,7 +140,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -145,7 +161,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -242,7 +262,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -545,10 +569,6 @@
             {
               "code": "29",
               "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
             }
           ]
         },
@@ -556,8 +576,7 @@
           "code": "1340200",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
