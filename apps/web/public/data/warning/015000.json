@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-19T13:26:00+09:00",
-  "headlineText": "胆振、日高地方では、霜に対する農作物の管理に注意してください。",
+  "reportDatetime": "2026-10-19T16:05:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -33,16 +33,16 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
             {
               "code": "24",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
@@ -230,16 +230,16 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
             {
               "code": "24",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -251,16 +251,16 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
             {
               "code": "24",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -272,16 +272,16 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
             {
               "code": "24",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
