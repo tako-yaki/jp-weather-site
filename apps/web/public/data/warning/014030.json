@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-19T15:25:00+09:00",
-  "headlineText": "十勝地方では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-10-20T00:31:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -16,16 +16,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
@@ -175,16 +175,16 @@
           "code": "0164100",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -192,16 +192,16 @@
           "code": "0164200",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -235,16 +235,16 @@
           "code": "0164500",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -291,16 +291,16 @@
           "code": "0164900",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
