@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-10-19T10:24:00+09:00",
+  "reportDatetime": "2026-10-19T15:07:00+09:00",
   "headlineText": "新潟県では、急な強い雨や落雷に注意してください。",
   "areaTypes": [
     {
@@ -30,7 +30,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -43,7 +43,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -52,7 +52,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -82,7 +82,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -91,7 +91,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -100,7 +100,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -118,7 +118,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -127,7 +127,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -135,7 +135,8 @@
           "code": "1521000",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -144,7 +145,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -183,7 +184,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -192,7 +193,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -210,7 +211,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -228,7 +229,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -244,7 +245,8 @@
           "code": "1522500",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -252,7 +254,8 @@
           "code": "1522600",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -288,7 +291,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -306,7 +309,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -314,7 +317,8 @@
           "code": "1546100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -324,6 +328,10 @@
             {
               "code": "29",
               "status": "解除"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -332,7 +340,7 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
