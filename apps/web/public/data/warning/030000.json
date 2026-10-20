@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-10-21T07:30:00+09:00",
-  "headlineText": "内陸、沿岸北部では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-21T07:50:00+09:00",
+  "headlineText": "内陸では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "030010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "発表"
@@ -22,16 +18,16 @@
             {
               "code": "29",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "030020",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
@@ -85,16 +81,16 @@
             {
               "code": "29",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "0320200",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
@@ -133,10 +129,6 @@
         {
           "code": "0320500",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "発表"
@@ -241,10 +233,6 @@
           "code": "0321300",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "発表"
             },
@@ -304,10 +292,6 @@
         {
           "code": "0330100",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "発表"
