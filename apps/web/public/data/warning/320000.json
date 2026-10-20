@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-20T18:36:00+09:00",
-  "headlineText": "島根県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-10-20T23:15:00+09:00",
+  "headlineText": "隠岐では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -50,16 +50,16 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         }
@@ -317,16 +317,16 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         }
