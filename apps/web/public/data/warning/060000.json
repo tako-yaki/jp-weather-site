@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-21T06:05:00+09:00",
-  "headlineText": "庄内では、高波に注意してください。",
+  "reportDatetime": "2026-10-21T07:21:00+09:00",
+  "headlineText": "庄内では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -34,14 +34,6 @@
           "code": "060030",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
@@ -55,6 +47,14 @@
             },
             {
               "code": "16",
+              "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -106,14 +106,6 @@
           "code": "0620300",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
@@ -135,10 +127,6 @@
           "code": "0620400",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
@@ -152,6 +140,14 @@
             },
             {
               "code": "16",
+              "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -524,10 +520,6 @@
           "code": "0642600",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -545,10 +537,6 @@
           "code": "0642800",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -565,10 +553,6 @@
         {
           "code": "0646100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "継続"
