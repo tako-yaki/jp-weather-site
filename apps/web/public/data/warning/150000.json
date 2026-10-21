@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-21T14:46:00+09:00",
-  "headlineText": "佐渡では、土砂災害に警戒してください。",
+  "reportDatetime": "2026-10-21T16:02:00+09:00",
+  "headlineText": "佐渡では、低い土地の浸水や河川の増水に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -83,11 +83,11 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "09",
               "status": "発表"
             },
             {
-              "code": "09",
+              "code": "03",
               "status": "発表"
             }
           ]
@@ -348,11 +348,11 @@
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "09",
               "status": "発表"
             },
             {
-              "code": "09",
+              "code": "03",
               "status": "発表"
             }
           ]

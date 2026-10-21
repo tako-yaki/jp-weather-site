@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-21T10:14:00+09:00",
-  "headlineText": "宮古島地方では、強風に注意してください。",
+  "reportDatetime": "2026-10-21T16:14:00+09:00",
+  "headlineText": "宮古島地方では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,15 +20,15 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
+              "code": "07",
+              "status": "発表"
+            },
+            {
+              "code": "14",
               "status": "発表"
             }
           ]
@@ -49,15 +49,15 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
+              "code": "07",
+              "status": "発表"
+            },
+            {
+              "code": "14",
               "status": "発表"
             }
           ]
@@ -70,15 +70,15 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
+              "code": "07",
+              "status": "発表"
+            },
+            {
+              "code": "14",
               "status": "発表"
             }
           ]
