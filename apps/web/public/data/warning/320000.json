@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-21T08:53:00+09:00",
-  "headlineText": "隠岐では、低い土地の浸水や河川の増水に注意してください。",
+  "reportDatetime": "2026-10-21T10:10:00+09:00",
+  "headlineText": "東部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -8,16 +8,16 @@
           "code": "320010",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -26,10 +26,6 @@
           "warnings": [
             {
               "code": "48",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -77,6 +73,10 @@
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -127,10 +127,6 @@
           "code": "3220500",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
@@ -143,10 +139,6 @@
         {
           "code": "3220600",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
