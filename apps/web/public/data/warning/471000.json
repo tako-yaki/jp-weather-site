@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-10-22T00:19:00+09:00",
-  "headlineText": "沖縄本島地方では、高波に警戒してください。",
+  "reportDatetime": "2026-10-22T10:20:00+09:00",
+  "headlineText": "本島中南部では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "471010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -22,16 +18,16 @@
             {
               "code": "07",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
         {
           "code": "471020",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "29",
               "status": "解除"
@@ -130,10 +126,6 @@
           "code": "4720900",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "29",
               "status": "解除"
             },
@@ -172,10 +164,6 @@
           "code": "4721100",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -186,6 +174,10 @@
             {
               "code": "07",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "継続"
             }
           ]
         },
@@ -209,10 +201,6 @@
         {
           "code": "4721300",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -358,10 +346,6 @@
           "code": "4731300",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "29",
               "status": "解除"
             },
@@ -383,10 +367,6 @@
           "code": "4731400",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "29",
               "status": "解除"
             },
@@ -407,10 +387,6 @@
         {
           "code": "4731500",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "29",
               "status": "解除"
@@ -450,10 +426,6 @@
           "code": "4732500",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -470,10 +442,6 @@
         {
           "code": "4732600",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -565,6 +533,10 @@
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
