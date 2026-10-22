@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-10-22T09:55:00+09:00",
+  "reportDatetime": "2026-10-22T14:48:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -22,7 +22,7 @@
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -370,7 +370,7 @@
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
