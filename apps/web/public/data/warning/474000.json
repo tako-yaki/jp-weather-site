@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-10-22T16:10:00+09:00",
-  "headlineText": "八重山地方では、高波に警戒してください。",
+  "reportDatetime": "2026-10-22T18:05:00+09:00",
+  "headlineText": "八重山地方では、暴風に警戒してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "474010",
           "warnings": [
-            {
-              "code": "48",
-              "status": "解除"
-            },
             {
               "code": "10",
               "status": "解除"
@@ -24,11 +20,15 @@
               "status": "発表"
             },
             {
-              "code": "05",
+              "code": "07",
+              "status": "継続"
+            },
+            {
+              "code": "19",
               "status": "発表"
             },
             {
-              "code": "07",
+              "code": "05",
               "status": "継続"
             }
           ]
@@ -41,11 +41,11 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "07",
+              "status": "継続"
             },
             {
-              "code": "07",
+              "code": "05",
               "status": "継続"
             }
           ]
@@ -57,10 +57,6 @@
         {
           "code": "4720700",
           "warnings": [
-            {
-              "code": "48",
-              "status": "解除"
-            },
             {
               "code": "10",
               "status": "解除"
@@ -74,11 +70,11 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "07",
+              "status": "継続"
             },
             {
-              "code": "07",
+              "code": "05",
               "status": "継続"
             }
           ]
@@ -86,10 +82,6 @@
         {
           "code": "4738100",
           "warnings": [
-            {
-              "code": "48",
-              "status": "解除"
-            },
             {
               "code": "29",
               "status": "解除"
@@ -99,11 +91,15 @@
               "status": "発表"
             },
             {
-              "code": "05",
+              "code": "07",
+              "status": "継続"
+            },
+            {
+              "code": "19",
               "status": "発表"
             },
             {
-              "code": "07",
+              "code": "05",
               "status": "継続"
             }
           ]
@@ -116,11 +112,11 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "07",
+              "status": "継続"
             },
             {
-              "code": "07",
+              "code": "05",
               "status": "継続"
             }
           ]
