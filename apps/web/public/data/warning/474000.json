@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-22T20:10:00+09:00",
-  "headlineText": "石垣島地方では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-22T22:15:00+09:00",
+  "headlineText": "八重山地方では、高波に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,14 +9,6 @@
           "warnings": [
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
-              "code": "19",
               "status": "発表"
             },
             {
@@ -30,6 +22,14 @@
             {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "08",
+              "status": "発表"
+            },
+            {
+              "code": "07",
+              "status": "継続"
             }
           ]
         },
@@ -41,11 +41,11 @@
               "status": "発表"
             },
             {
-              "code": "07",
+              "code": "05",
               "status": "継続"
             },
             {
-              "code": "05",
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -62,10 +62,6 @@
               "status": "発表"
             },
             {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "05",
               "status": "継続"
             },
@@ -76,6 +72,10 @@
             {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "07",
+              "status": "継続"
             }
           ]
         },
@@ -87,20 +87,20 @@
               "status": "発表"
             },
             {
-              "code": "07",
-              "status": "継続"
-            },
-            {
-              "code": "19",
-              "status": "発表"
-            },
-            {
               "code": "05",
               "status": "継続"
             },
             {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "08",
+              "status": "発表"
+            },
+            {
+              "code": "07",
+              "status": "継続"
             }
           ]
         },
@@ -112,11 +112,11 @@
               "status": "発表"
             },
             {
-              "code": "07",
+              "code": "05",
               "status": "継続"
             },
             {
-              "code": "05",
+              "code": "07",
               "status": "継続"
             }
           ]
