@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-10-21T21:11:00+09:00",
+  "reportDatetime": "2026-10-22T16:10:00+09:00",
   "headlineText": "八重山地方では、高波に警戒してください。",
   "areaTypes": [
     {
@@ -24,8 +24,8 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             },
             {
               "code": "07",
@@ -41,12 +41,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             },
             {
               "code": "07",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -74,8 +74,8 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             },
             {
               "code": "07",
@@ -99,8 +99,8 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             },
             {
               "code": "07",
@@ -116,12 +116,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
+              "code": "05",
+              "status": "発表"
             },
             {
               "code": "07",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
