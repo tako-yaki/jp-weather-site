@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-10-22T10:16:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-23T21:14:00+09:00",
+  "headlineText": "隠岐では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "320010",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "29",
               "status": "解除"
@@ -50,10 +46,6 @@
           "code": "320030",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
@@ -64,6 +56,10 @@
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         }
@@ -74,10 +70,6 @@
         {
           "code": "3220100",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "29",
               "status": "解除"
@@ -116,10 +108,6 @@
         {
           "code": "3220300",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "解除"
@@ -313,10 +301,6 @@
           "code": "3252800",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
@@ -327,6 +311,10 @@
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         }
