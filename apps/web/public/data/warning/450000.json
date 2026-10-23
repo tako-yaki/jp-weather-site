@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-23T23:50:00+09:00",
-  "headlineText": "南部平野部では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-24T00:29:00+09:00",
+  "headlineText": "南部平野部では、低い土地の浸水や河川の増水に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,12 +16,12 @@
               "status": "発表"
             },
             {
-              "code": "03",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "03",
+              "status": "継続"
             }
           ]
         },
@@ -76,12 +76,12 @@
               "status": "発表"
             },
             {
-              "code": "03",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "03",
+              "status": "継続"
             }
           ]
         },
@@ -204,6 +204,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
