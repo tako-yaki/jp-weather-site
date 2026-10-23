@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-23T04:09:00+09:00",
-  "headlineText": "石垣島地方では、高潮に厳重に警戒してください。",
+  "reportDatetime": "2026-10-23T14:53:00+09:00",
+  "headlineText": "石垣島地方では、土砂災害に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,19 +16,19 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "07",
               "status": "継続"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "48",
+              "status": "発表"
             },
             {
-              "code": "48",
+              "code": "03",
+              "status": "発表"
+            },
+            {
+              "code": "09",
               "status": "発表"
             }
           ]
@@ -47,6 +47,14 @@
             {
               "code": "07",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         }
@@ -66,15 +74,15 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "07",
               "status": "継続"
             },
             {
               "code": "10",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -91,19 +99,19 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "07",
               "status": "継続"
             },
             {
-              "code": "10",
+              "code": "48",
               "status": "発表"
             },
             {
-              "code": "48",
+              "code": "03",
+              "status": "発表"
+            },
+            {
+              "code": "09",
               "status": "発表"
             }
           ]
@@ -122,6 +130,14 @@
             {
               "code": "07",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         }
