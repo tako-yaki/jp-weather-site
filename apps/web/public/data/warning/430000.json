@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-23T10:24:00+09:00",
-  "headlineText": "熊本県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-10-24T04:12:00+09:00",
+  "headlineText": "天草・芦北地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -38,10 +38,6 @@
           "code": "430030",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "29",
               "status": "解除"
             },
@@ -51,6 +47,10 @@
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -221,10 +221,6 @@
           "code": "4321500",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "29",
               "status": "解除"
             },
@@ -234,6 +230,10 @@
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -565,15 +565,15 @@
           "code": "4353100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
