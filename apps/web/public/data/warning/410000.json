@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-24T02:40:00+09:00",
-  "headlineText": "佐賀県では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-10-25T02:39:00+09:00",
+  "headlineText": "北部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,10 +9,6 @@
           "warnings": [
             {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -25,19 +21,19 @@
           "code": "410020",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "29",
+              "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -63,15 +59,19 @@
           "code": "4120200",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -114,10 +114,6 @@
         {
           "code": "4120600",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -204,15 +200,15 @@
           "code": "4138700",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -220,10 +216,6 @@
         {
           "code": "4140100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
