@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-25T04:50:00+09:00",
-  "headlineText": "愛媛県では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-10-25T07:52:00+09:00",
+  "headlineText": "南予では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -34,16 +34,16 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "14",
-              "status": "発表"
             }
           ]
         }
@@ -73,12 +73,12 @@
           "code": "3820300",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -86,16 +86,16 @@
           "code": "3820400",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -125,16 +125,16 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -160,16 +160,16 @@
           "code": "3821400",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -239,16 +239,16 @@
           "code": "3844200",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -274,12 +274,12 @@
           "code": "3850600",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         }
