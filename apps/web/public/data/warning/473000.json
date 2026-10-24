@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-24T15:59:00+09:00",
-  "headlineText": "宮古島地方では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-25T03:48:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -12,24 +12,24 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
-              "status": "警報から注意報"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
             {
               "code": "29",
               "status": "危険警報から注意報"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         }
@@ -41,24 +41,24 @@
           "code": "4721400",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
-              "status": "警報から注意報"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
             {
               "code": "29",
               "status": "危険警報から注意報"
+            },
+            {
+              "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -70,16 +70,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "警報から注意報"
             },
             {
-              "code": "07",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             }
           ]
         }
