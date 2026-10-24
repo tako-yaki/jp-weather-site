@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-23T09:54:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-25T01:34:00+09:00",
+  "headlineText": "佐渡では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,10 +29,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             }
@@ -41,10 +37,6 @@
         {
           "code": "150030",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "解除"
@@ -61,6 +53,10 @@
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         }
@@ -106,10 +102,6 @@
         {
           "code": "1520500",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "解除"
@@ -199,10 +191,6 @@
           "code": "1521600",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             }
@@ -234,10 +222,6 @@
           "code": "1522200",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             }
@@ -262,6 +246,10 @@
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
