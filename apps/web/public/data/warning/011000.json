@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-10-24T22:05:00+09:00",
+  "reportDatetime": "2026-10-25T03:41:00+09:00",
   "headlineText": "宗谷地方では、強風に注意してください。",
   "areaTypes": [
     {
@@ -72,7 +72,7 @@
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -81,10 +81,6 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -98,7 +94,7 @@
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
