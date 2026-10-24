@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-25T04:30:00+09:00",
-  "headlineText": "山口県では、強風に注意してください。",
+  "reportDatetime": "2026-10-25T08:24:00+09:00",
+  "headlineText": "中部、東部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,11 +29,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -50,11 +50,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -99,6 +99,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -110,11 +114,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -144,11 +148,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -161,11 +165,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -175,6 +179,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "15",
               "status": "発表"
             }
           ]
@@ -187,11 +195,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -221,11 +229,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -239,7 +247,7 @@
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -255,11 +263,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -269,6 +277,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "15",
               "status": "発表"
             }
           ]
@@ -281,11 +293,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -295,6 +307,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "15",
               "status": "発表"
             }
           ]
@@ -311,11 +327,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -328,11 +344,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -345,11 +361,11 @@
               "status": "発表"
             },
             {
-              "code": "16",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
