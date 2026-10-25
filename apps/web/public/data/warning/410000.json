@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-25T09:42:00+09:00",
-  "headlineText": "佐賀県では、高波に注意してください。",
+  "reportDatetime": "2026-10-25T10:24:00+09:00",
+  "headlineText": "北部では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -33,15 +33,15 @@
               "status": "継続"
             },
             {
-              "code": "10",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -79,15 +79,15 @@
               "status": "継続"
             },
             {
-              "code": "10",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -130,11 +130,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "発表"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -291,6 +291,10 @@
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
