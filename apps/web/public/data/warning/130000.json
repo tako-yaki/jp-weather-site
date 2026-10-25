@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-10-25T10:27:00+09:00",
+  "reportDatetime": "2026-10-25T16:11:00+09:00",
   "headlineText": "東京地方、伊豆諸島北部、伊豆諸島南部では、急な強い雨や落雷に注意してください。",
   "areaTypes": [
     {
@@ -9,11 +9,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
@@ -30,7 +30,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -51,7 +51,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -72,7 +72,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
@@ -85,11 +85,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
@@ -102,11 +102,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
@@ -155,11 +155,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
@@ -172,11 +172,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
@@ -198,11 +198,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
@@ -314,11 +314,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
@@ -605,7 +605,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -618,7 +618,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -631,7 +631,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -644,7 +644,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -657,7 +657,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -674,7 +674,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -692,6 +692,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
@@ -701,6 +705,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "発表"
             }
           ]
         },
