@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-25T10:33:00+09:00",
-  "headlineText": "北部では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-25T11:06:00+09:00",
+  "headlineText": "北部では、土砂災害に厳重に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,8 +20,8 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "49",
+              "status": "発表"
             }
           ]
         },
@@ -118,7 +118,7 @@
             },
             {
               "code": "03",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "29",
@@ -255,12 +255,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "49",
+              "status": "発表"
             }
           ]
         },
@@ -276,8 +276,8 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             },
             {
               "code": "29",
@@ -295,6 +295,14 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -310,8 +318,8 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             },
             {
               "code": "29",
@@ -331,12 +339,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "03",
               "status": "発表"
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -352,8 +360,8 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             },
             {
               "code": "29",
@@ -394,12 +402,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "49",
+              "status": "発表"
             }
           ]
         },
@@ -415,12 +423,12 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "03",
+              "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "49",
+              "status": "発表"
             }
           ]
         },
