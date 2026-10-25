@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-25T04:39:00+09:00",
-  "headlineText": "福井県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-10-25T10:09:00+09:00",
+  "headlineText": "嶺北では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,15 +12,15 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -28,10 +28,6 @@
         {
           "code": "180020",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
@@ -58,15 +54,15 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -74,10 +70,6 @@
         {
           "code": "1820200",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
@@ -135,10 +127,6 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -147,10 +135,6 @@
         {
           "code": "1820800",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
@@ -178,15 +162,15 @@
           "code": "1821000",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]

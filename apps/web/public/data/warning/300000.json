@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-25T09:30:00+09:00",
-  "headlineText": "和歌山県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-10-25T10:00:00+09:00",
+  "headlineText": "北部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,16 +12,16 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "03",
               "status": "継続"
             },
             {
               "code": "29",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -50,16 +50,16 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "03",
               "status": "継続"
             },
             {
               "code": "29",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -71,16 +71,16 @@
               "status": "発表"
             },
             {
+              "code": "14",
+              "status": "発表"
+            },
+            {
               "code": "10",
               "status": "継続"
             },
             {
               "code": "29",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -94,6 +94,14 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -106,6 +114,14 @@
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -193,16 +209,16 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "継続"
+              "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "03",
+              "status": "発表"
             },
             {
               "code": "29",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -214,16 +230,16 @@
               "status": "発表"
             },
             {
-              "code": "10",
+              "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "03",
               "status": "発表"
             },
             {
               "code": "29",
-              "status": "発表"
-            },
-            {
-              "code": "14",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -250,6 +266,14 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
