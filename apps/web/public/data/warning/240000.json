@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-10-27T04:51:00+09:00",
+  "reportDatetime": "2026-10-27T05:01:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -33,15 +33,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -201,15 +201,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -248,15 +248,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -372,7 +372,7 @@
             },
             {
               "code": "29",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -405,15 +405,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -430,11 +430,11 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             },
             {
-              "code": "16",
+              "code": "29",
               "status": "解除"
             }
           ]
