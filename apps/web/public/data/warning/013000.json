@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-26T03:49:00+09:00",
-  "headlineText": "網走、北見、紋別地方では、空気の乾燥した状態が続くため、火の取り扱いに注意してください。",
+  "reportDatetime": "2026-10-26T10:07:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -12,16 +12,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "21",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
-              "code": "21",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -41,10 +41,6 @@
         {
           "code": "013030",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "発表"
@@ -72,16 +68,16 @@
           "code": "0120802",
           "warnings": [
             {
-              "code": "16",
+              "code": "21",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
-              "code": "21",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -89,26 +85,22 @@
           "code": "0121100",
           "warnings": [
             {
-              "code": "16",
+              "code": "21",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
-              "code": "21",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
         {
           "code": "0121900",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "発表"
@@ -137,16 +129,16 @@
           "code": "0154500",
           "warnings": [
             {
-              "code": "16",
+              "code": "21",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
-              "code": "21",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -163,16 +155,16 @@
           "code": "0154700",
           "warnings": [
             {
-              "code": "16",
+              "code": "21",
               "status": "発表"
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
-              "code": "21",
-              "status": "発表"
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -224,10 +216,6 @@
           "code": "0155900",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             }
@@ -246,10 +234,6 @@
           "code": "0156100",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "21",
               "status": "発表"
             }
@@ -267,10 +251,6 @@
         {
           "code": "0156300",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "発表"
