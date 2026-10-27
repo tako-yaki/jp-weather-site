@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-27T10:06:00+09:00",
-  "headlineText": "南部では、高波に注意してください。",
+  "reportDatetime": "2026-10-27T16:15:00+09:00",
+  "headlineText": "茨城県では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,8 +16,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -33,12 +37,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "20",
               "status": "解除"
             },
             {
-              "code": "20",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
             },
             {
               "code": "16",
@@ -75,8 +79,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -164,8 +172,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -177,8 +189,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -234,8 +250,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -243,12 +263,12 @@
           "code": "0822200",
           "warnings": [
             {
-              "code": "15",
+              "code": "20",
               "status": "解除"
             },
             {
-              "code": "20",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
             },
             {
               "code": "16",
@@ -259,10 +279,6 @@
         {
           "code": "0822300",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "解除"
@@ -361,12 +377,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "20",
               "status": "解除"
             },
             {
-              "code": "20",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
             },
             {
               "code": "16",
@@ -378,10 +394,6 @@
           "code": "0823300",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             }
@@ -391,12 +403,12 @@
           "code": "0823400",
           "warnings": [
             {
-              "code": "15",
+              "code": "20",
               "status": "解除"
             },
             {
-              "code": "20",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
             },
             {
               "code": "16",
@@ -447,8 +459,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -477,8 +493,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
