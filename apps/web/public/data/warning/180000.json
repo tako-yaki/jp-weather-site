@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-28T10:14:00+09:00",
-  "headlineText": "嶺南では、強風に注意してください。",
+  "reportDatetime": "2026-10-28T14:33:00+09:00",
+  "headlineText": "福井県では、霜に対する農作物の管理に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,16 +16,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -33,16 +33,16 @@
           "code": "180020",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         }
@@ -62,16 +62,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -79,16 +79,16 @@
           "code": "1820200",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -96,16 +96,16 @@
           "code": "1820400",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -113,8 +113,8 @@
           "code": "1820500",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -122,8 +122,8 @@
           "code": "1820600",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -135,12 +135,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -148,16 +148,16 @@
           "code": "1820800",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -169,12 +169,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -186,16 +186,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -203,12 +203,12 @@
           "code": "1832200",
           "warnings": [
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -220,12 +220,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "15",
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -237,16 +237,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -258,16 +258,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -275,16 +275,16 @@
           "code": "1844200",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -292,16 +292,16 @@
           "code": "1848100",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -309,16 +309,16 @@
           "code": "1848300",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         },
@@ -326,16 +326,16 @@
           "code": "1850100",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "24",
+              "status": "発表"
             }
           ]
         }
