@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-28T20:32:00+09:00",
-  "headlineText": "上川地方では、電線等への着雪に注意してください。",
+  "reportDatetime": "2026-10-28T22:02:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -17,7 +17,7 @@
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -29,16 +29,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         }
@@ -50,8 +46,7 @@
           "code": "0120400",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -59,16 +54,12 @@
           "code": "0121200",
           "warnings": [
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -77,7 +68,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -86,7 +77,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -94,8 +85,7 @@
           "code": "0122900",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -103,8 +93,7 @@
           "code": "0145200",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -112,8 +101,7 @@
           "code": "0145300",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -121,8 +109,7 @@
           "code": "0145400",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -130,8 +117,7 @@
           "code": "0145500",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -139,8 +125,7 @@
           "code": "0145600",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -154,10 +139,6 @@
             {
               "code": "12",
               "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
             }
           ]
         },
@@ -165,8 +146,7 @@
           "code": "0145800",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -174,8 +154,7 @@
           "code": "0145900",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -183,8 +162,7 @@
           "code": "0146000",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -192,8 +170,7 @@
           "code": "0146100",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -201,8 +178,7 @@
           "code": "0146200",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -210,8 +186,7 @@
           "code": "0146300",
           "warnings": [
             {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -220,7 +195,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -229,7 +204,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -238,7 +213,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -247,7 +222,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -256,7 +231,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -265,7 +240,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -274,7 +249,7 @@
           "warnings": [
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -282,16 +257,12 @@
           "code": "0148100",
           "warnings": [
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -299,16 +270,12 @@
           "code": "0148200",
           "warnings": [
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -320,16 +287,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -337,16 +300,12 @@
           "code": "0148401",
           "warnings": [
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -354,11 +313,11 @@
           "code": "0148402",
           "warnings": [
             {
-              "code": "16",
-              "status": "警報から注意報"
+              "code": "15",
+              "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -367,16 +326,12 @@
           "code": "0148500",
           "warnings": [
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -384,16 +339,12 @@
           "code": "0148600",
           "warnings": [
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -401,16 +352,12 @@
           "code": "0148700",
           "warnings": [
             {
-              "code": "16",
-              "status": "警報から注意報"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "26",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         }

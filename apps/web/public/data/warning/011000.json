@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-28T15:28:00+09:00",
-  "headlineText": "宗谷地方では、急な強い雨や落雷、電線等への着雪に注意してください。",
+  "reportDatetime": "2026-10-28T21:56:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -17,19 +17,19 @@
             },
             {
               "code": "15",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -42,19 +42,19 @@
           "warnings": [
             {
               "code": "15",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -63,7 +63,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -71,11 +71,11 @@
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -92,11 +92,11 @@
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -105,15 +105,15 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -130,11 +130,11 @@
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -151,19 +151,19 @@
             },
             {
               "code": "15",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -172,19 +172,19 @@
           "warnings": [
             {
               "code": "15",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -193,19 +193,19 @@
           "warnings": [
             {
               "code": "15",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -214,19 +214,19 @@
           "warnings": [
             {
               "code": "15",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -235,19 +235,19 @@
           "warnings": [
             {
               "code": "15",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "警報から注意報"
+              "status": "継続"
             },
             {
               "code": "14",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
