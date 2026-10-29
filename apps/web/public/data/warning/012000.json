@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-30T00:17:00+09:00",
-  "headlineText": "留萌地方では、強風に注意してください。",
+  "reportDatetime": "2026-10-30T04:43:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -29,16 +29,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
@@ -59,15 +59,15 @@
           "code": "0121200",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -282,15 +282,15 @@
           "code": "0148100",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -299,15 +299,15 @@
           "code": "0148200",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
+              "status": "解除"
+            },
+            {
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -320,16 +320,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -337,16 +337,16 @@
           "code": "0148401",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -354,16 +354,16 @@
           "code": "0148402",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -371,16 +371,16 @@
           "code": "0148500",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -388,16 +388,16 @@
           "code": "0148600",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         },
@@ -405,16 +405,16 @@
           "code": "0148700",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "解除"
             }
           ]
         }
