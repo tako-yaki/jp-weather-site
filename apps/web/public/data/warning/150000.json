@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-31T07:35:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-31T08:12:00+09:00",
+  "headlineText": "中越では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -35,16 +35,16 @@
             {
               "code": "10",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "150030",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "継続"
@@ -121,6 +121,10 @@
             {
               "code": "10",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -203,10 +207,6 @@
           "code": "1521600",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             }
@@ -215,10 +215,6 @@
         {
           "code": "1521700",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -237,10 +233,6 @@
         {
           "code": "1522200",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "継続"
