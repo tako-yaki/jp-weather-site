@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-31T08:40:00+09:00",
-  "headlineText": "中越では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-31T08:50:00+09:00",
+  "headlineText": "中越では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -33,11 +33,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]
@@ -99,6 +99,10 @@
             {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
@@ -123,11 +127,11 @@
               "status": "発表"
             },
             {
-              "code": "10",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             },
             {
-              "code": "29",
+              "code": "10",
               "status": "継続"
             }
           ]
