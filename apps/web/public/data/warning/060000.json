@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-31T06:44:00+09:00",
-  "headlineText": "庄内では、強風に注意してください。",
+  "reportDatetime": "2026-10-31T14:52:00+09:00",
+  "headlineText": "庄内では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -30,10 +30,6 @@
           "code": "060030",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
@@ -43,6 +39,10 @@
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -82,15 +82,15 @@
           "code": "0620300",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -98,10 +98,6 @@
         {
           "code": "0620400",
           "warnings": [
-            {
-              "code": "16",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "継続"
@@ -112,6 +108,10 @@
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -402,15 +402,15 @@
           "code": "0646100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
