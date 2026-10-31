@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-31T10:04:00+09:00",
-  "headlineText": "下北では、土砂災害に注意してください。",
+  "reportDatetime": "2026-10-31T11:14:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -42,7 +42,7 @@
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -593,7 +593,7 @@
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
