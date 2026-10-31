@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-31T18:04:00+09:00",
-  "headlineText": "中越では、低い土地の浸水や河川の増水に警戒してください。",
+  "reportDatetime": "2026-10-31T18:39:00+09:00",
+  "headlineText": "中越では、土砂災害に厳重に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,16 +16,16 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "10",
-              "status": "継続"
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -41,15 +41,15 @@
               "status": "発表"
             },
             {
-              "code": "49",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "03",
+              "status": "継続"
+            },
+            {
+              "code": "49",
               "status": "継続"
             }
           ]
@@ -66,11 +66,11 @@
               "status": "発表"
             },
             {
-              "code": "29",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -125,15 +125,15 @@
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "03",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -159,15 +159,15 @@
               "status": "発表"
             },
             {
-              "code": "49",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "10",
+              "status": "継続"
+            },
+            {
+              "code": "49",
               "status": "継続"
             }
           ]
@@ -193,11 +193,11 @@
           "code": "1520800",
           "warnings": [
             {
-              "code": "29",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -229,7 +229,7 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -245,16 +245,16 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "10",
-              "status": "継続"
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -279,11 +279,11 @@
               "status": "発表"
             },
             {
-              "code": "29",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -318,11 +318,11 @@
               "status": "発表"
             },
             {
-              "code": "29",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -388,7 +388,7 @@
             },
             {
               "code": "10",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -475,15 +475,15 @@
           "code": "1550400",
           "warnings": [
             {
-              "code": "49",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "継続"
             },
             {
               "code": "10",
+              "status": "継続"
+            },
+            {
+              "code": "49",
               "status": "継続"
             }
           ]
