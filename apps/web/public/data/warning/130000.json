@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-10-31T11:27:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-10-31T16:04:00+09:00",
+  "headlineText": "伊豆諸島北部、伊豆諸島南部、小笠原諸島では、強風に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,11 +16,11 @@
           "code": "130020",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             }
           ]
@@ -37,16 +37,16 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
               "code": "16",
               "status": "継続"
             },
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "継続"
             }
           ]
         },
@@ -56,6 +56,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         }
@@ -500,11 +504,11 @@
           "code": "1336200",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             }
           ]
@@ -513,11 +517,11 @@
           "code": "1336300",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             }
           ]
@@ -526,11 +530,11 @@
           "code": "1336400",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             }
           ]
@@ -539,11 +543,11 @@
           "code": "1338100",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             }
           ]
@@ -556,11 +560,11 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "16",
+              "status": "継続"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             }
           ]
@@ -577,16 +581,16 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
               "code": "16",
               "status": "継続"
             },
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "継続"
             }
           ]
         },
@@ -594,16 +598,16 @@
           "code": "1340200",
           "warnings": [
             {
-              "code": "15",
-              "status": "発表"
-            },
-            {
               "code": "16",
               "status": "継続"
             },
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "継続"
             }
           ]
         },
@@ -613,6 +617,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         }
