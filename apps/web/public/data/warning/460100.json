@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-01T11:16:00+09:00",
-  "headlineText": "大隅地方では、高波に注意してください。",
+  "reportDatetime": "2026-11-01T15:55:00+09:00",
+  "headlineText": "大隅、種子島・屋久島地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -22,7 +22,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -36,6 +36,10 @@
             {
               "code": "29",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
@@ -103,7 +107,8 @@
           "code": "4621300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -186,7 +191,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -221,7 +226,8 @@
           "code": "4630300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -261,7 +267,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -270,7 +276,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -287,7 +293,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -296,7 +302,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -304,7 +310,8 @@
           "code": "4650100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -314,6 +321,10 @@
             {
               "code": "29",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -327,6 +338,10 @@
             {
               "code": "29",
               "status": "解除"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
