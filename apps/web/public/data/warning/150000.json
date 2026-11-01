@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-01T20:12:00+09:00",
-  "headlineText": "佐渡では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-02T04:20:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -48,7 +48,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         }
@@ -206,7 +206,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
