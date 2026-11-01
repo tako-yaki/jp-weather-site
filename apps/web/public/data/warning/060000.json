@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-01T15:55:00+09:00",
-  "headlineText": "庄内では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-02T03:53:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -33,12 +33,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -78,12 +78,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -99,12 +99,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -359,12 +359,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "発表"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
