@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-11-01T04:10:00+09:00",
+  "reportDatetime": "2026-11-01T19:08:00+09:00",
   "headlineText": "南予では、高波に注意してください。",
   "areaTypes": [
     {
@@ -38,16 +38,16 @@
           "code": "380030",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "継続"
             }
           ]
         }
@@ -89,16 +89,12 @@
           "code": "3820300",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -106,12 +102,16 @@
           "code": "3820400",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -141,12 +141,16 @@
           "code": "3820700",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -176,12 +180,16 @@
           "code": "3821400",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -238,10 +246,6 @@
           "code": "3842200",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -251,22 +255,22 @@
           "code": "3844200",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "3848400",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
@@ -277,10 +281,6 @@
           "code": "3848800",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -290,16 +290,12 @@
           "code": "3850600",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
