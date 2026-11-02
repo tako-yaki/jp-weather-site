@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-02T13:53:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-03T04:17:00+09:00",
+  "headlineText": "庄内では、空気の乾燥した状態が続くため、火の取り扱いに注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -36,12 +36,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
+              "code": "21",
+              "status": "発表"
             }
           ]
         },
@@ -85,8 +85,8 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "21",
+              "status": "発表"
             }
           ]
         },
@@ -106,8 +106,8 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "21",
+              "status": "発表"
             }
           ]
         },
@@ -339,8 +339,8 @@
           "code": "0642600",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
+              "code": "21",
+              "status": "発表"
             }
           ]
         },
@@ -348,8 +348,8 @@
           "code": "0642800",
           "warnings": [
             {
-              "code": "14",
-              "status": "解除"
+              "code": "21",
+              "status": "発表"
             }
           ]
         },
@@ -365,12 +365,12 @@
               "status": "解除"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
+              "code": "21",
+              "status": "発表"
             }
           ]
         }
