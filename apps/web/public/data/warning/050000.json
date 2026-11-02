@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-02T08:05:00+09:00",
-  "headlineText": "秋田県では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-11-02T10:04:00+09:00",
+  "headlineText": "沿岸では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,15 +20,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -66,15 +66,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -91,15 +91,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -263,6 +263,10 @@
             {
               "code": "20",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
