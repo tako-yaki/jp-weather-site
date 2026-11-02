@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-02T20:34:00+09:00",
-  "headlineText": "伊豆諸島南部では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-02T22:07:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -8,8 +8,7 @@
           "code": "130010",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -17,11 +16,11 @@
           "code": "130020",
           "warnings": [
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -38,16 +37,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -76,8 +75,7 @@
           "code": "1310200",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -85,8 +83,7 @@
           "code": "1310300",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -126,8 +123,7 @@
           "code": "1310800",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -135,8 +131,7 @@
           "code": "1310900",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -152,8 +147,7 @@
           "code": "1311100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -249,8 +243,7 @@
           "code": "1312300",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -498,11 +491,11 @@
           "code": "1336100",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -511,11 +504,11 @@
           "code": "1336200",
           "warnings": [
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -524,11 +517,11 @@
           "code": "1336300",
           "warnings": [
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -537,11 +530,11 @@
           "code": "1336400",
           "warnings": [
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -550,16 +543,12 @@
           "code": "1338100",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -571,16 +560,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
+              "code": "16",
+              "status": "継続"
             }
           ]
         },
@@ -596,16 +581,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -613,16 +598,16 @@
           "code": "1340200",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
