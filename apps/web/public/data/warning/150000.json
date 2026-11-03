@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-03T11:50:00+09:00",
-  "headlineText": "下越、中越では、霜に対する農作物の管理に注意してください。",
+  "reportDatetime": "2026-11-04T04:53:00+09:00",
+  "headlineText": "佐渡では、空気の乾燥した状態が続くため、火の取り扱いに注意してください。下越、中越では、霜に対する農作物の管理に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -17,7 +17,7 @@
             },
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -26,7 +26,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -49,6 +49,10 @@
             {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "21",
+              "status": "発表"
             }
           ]
         }
@@ -70,7 +74,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -79,7 +83,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -96,7 +100,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -105,7 +109,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -114,7 +118,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -123,7 +127,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -144,7 +148,7 @@
             },
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -179,7 +183,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -210,6 +214,10 @@
             {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "21",
+              "status": "発表"
             }
           ]
         },
@@ -218,7 +226,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -227,7 +235,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -236,7 +244,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -269,7 +277,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -286,7 +294,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -295,7 +303,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -312,7 +320,7 @@
           "warnings": [
             {
               "code": "24",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
