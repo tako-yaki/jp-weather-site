@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-04T09:29:00+09:00",
-  "headlineText": "伊豆諸島北部、伊豆諸島南部では、強風に注意してください。",
+  "reportDatetime": "2026-11-04T15:44:00+09:00",
+  "headlineText": "伊豆諸島南部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,10 +29,6 @@
           "code": "130030",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
@@ -43,6 +39,10 @@
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -549,16 +549,16 @@
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "1338200",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "継続"
@@ -572,10 +572,6 @@
         {
           "code": "1340100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "10",
               "status": "解除"
