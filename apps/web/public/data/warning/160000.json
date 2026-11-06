@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-06T22:38:00+09:00",
-  "headlineText": "東部では、高波に注意してください。",
+  "reportDatetime": "2026-11-07T01:34:00+09:00",
+  "headlineText": "東部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,10 +9,6 @@
           "warnings": [
             {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -26,16 +22,16 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "160020",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -50,10 +46,6 @@
           "code": "1620111",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -62,10 +54,6 @@
         {
           "code": "1620112",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -76,10 +64,6 @@
           "code": "1620113",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -88,10 +72,6 @@
         {
           "code": "1620200",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -118,10 +98,6 @@
         {
           "code": "1620500",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -153,10 +129,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
@@ -174,10 +146,6 @@
           "code": "1620800",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -186,10 +154,6 @@
         {
           "code": "1620900",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -200,10 +164,6 @@
           "code": "1621000",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -212,10 +172,6 @@
         {
           "code": "1621100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -257,10 +213,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
@@ -278,10 +230,6 @@
           "code": "1634300",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
@@ -292,6 +240,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         }
