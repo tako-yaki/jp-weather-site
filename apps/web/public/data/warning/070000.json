@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-07T04:13:00+09:00",
-  "headlineText": "福島県では、強風に注意してください。",
+  "reportDatetime": "2026-11-07T06:03:00+09:00",
+  "headlineText": "会津では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,10 +29,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
@@ -55,6 +51,10 @@
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -124,10 +124,6 @@
           "warnings": [
             {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -237,10 +233,6 @@
         {
           "code": "0721200",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "解除"
@@ -454,6 +446,10 @@
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -774,10 +770,6 @@
           "code": "0754100",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
@@ -794,10 +786,6 @@
         {
           "code": "0754200",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "解除"
@@ -816,10 +804,6 @@
           "code": "0754300",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
@@ -837,10 +821,6 @@
           "code": "0754400",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
@@ -853,10 +833,6 @@
         {
           "code": "0754500",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "解除"
@@ -875,10 +851,6 @@
           "code": "0754600",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "解除"
             },
@@ -895,10 +867,6 @@
         {
           "code": "0754700",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "解除"
