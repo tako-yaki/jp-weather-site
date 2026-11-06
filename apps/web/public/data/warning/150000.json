@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-07T04:10:00+09:00",
-  "headlineText": "下越、佐渡では、高波に警戒してください。",
+  "reportDatetime": "2026-11-07T05:00:00+09:00",
+  "headlineText": "中越、上越では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,15 +29,15 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -54,15 +54,15 @@
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -113,15 +113,15 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -143,15 +143,15 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -182,7 +182,7 @@
             },
             {
               "code": "29",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -201,6 +201,10 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -255,15 +259,15 @@
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -298,15 +302,15 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
