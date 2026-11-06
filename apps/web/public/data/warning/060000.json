@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-06T09:52:00+09:00",
-  "headlineText": "山形県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-06T23:04:00+09:00",
+  "headlineText": "置賜では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -27,6 +27,10 @@
             {
               "code": "20",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -35,10 +39,6 @@
           "warnings": [
             {
               "code": "03",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -471,6 +471,10 @@
             {
               "code": "20",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -529,10 +533,6 @@
         {
           "code": "0646100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "継続"
