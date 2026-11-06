@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-06T06:42:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-06T10:14:00+09:00",
+  "headlineText": "南部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -30,7 +30,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -162,7 +162,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -201,7 +201,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -332,7 +332,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
