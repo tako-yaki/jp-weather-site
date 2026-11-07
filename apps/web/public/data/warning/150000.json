@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-08T02:50:00+09:00",
-  "headlineText": "下越、佐渡では、高波に警戒してください。",
+  "reportDatetime": "2026-11-08T04:22:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -12,16 +12,16 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "29",
               "status": "解除"
             },
             {
               "code": "07",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -71,12 +71,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "07",
               "status": "継続"
             },
             {
-              "code": "07",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
@@ -92,12 +92,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -152,12 +152,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -213,12 +213,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "07",
               "status": "継続"
             },
             {
-              "code": "07",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -227,10 +227,6 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -312,12 +308,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "07",
               "status": "継続"
             },
             {
-              "code": "07",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -355,16 +351,16 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "29",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -376,12 +372,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -390,10 +386,6 @@
           "warnings": [
             {
               "code": "14",
-              "status": "解除"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -481,12 +473,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "07",
               "status": "継続"
             },
             {
-              "code": "07",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         }
