@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-07T16:06:00+09:00",
-  "headlineText": "渡島、檜山地方では、電線等への着雪に注意してください。",
+  "reportDatetime": "2026-11-08T04:07:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -24,12 +24,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -37,20 +33,16 @@
           "code": "017020",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
+              "code": "15",
+              "status": "警報から注意報"
             },
             {
               "code": "07",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -78,12 +70,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -99,12 +87,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -120,12 +104,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -141,12 +121,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -162,12 +138,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -183,12 +155,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -200,12 +168,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -221,12 +185,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -242,12 +202,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -267,12 +223,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -288,12 +240,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -309,12 +257,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -322,20 +266,16 @@
           "code": "0136100",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
+              "code": "15",
+              "status": "警報から注意報"
             },
             {
               "code": "07",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -343,20 +283,16 @@
           "code": "0136200",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
+              "code": "15",
+              "status": "警報から注意報"
             },
             {
               "code": "07",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -364,16 +300,12 @@
           "code": "0136300",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "14",
-              "status": "解除"
+              "code": "15",
+              "status": "警報から注意報"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -381,20 +313,16 @@
           "code": "0136400",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
+              "code": "15",
+              "status": "警報から注意報"
             },
             {
               "code": "07",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -402,20 +330,16 @@
           "code": "0136700",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
+              "code": "15",
+              "status": "警報から注意報"
             },
             {
               "code": "07",
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -427,12 +351,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -448,12 +368,8 @@
               "status": "継続"
             },
             {
-              "code": "14",
-              "status": "解除"
-            },
-            {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
