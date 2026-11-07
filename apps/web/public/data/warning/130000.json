@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-07T10:29:00+09:00",
-  "headlineText": "東京地方、伊豆諸島北部、伊豆諸島南部では、高波に注意してください。",
+  "reportDatetime": "2026-11-07T16:12:00+09:00",
+  "headlineText": "東京都では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,11 +9,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -63,7 +63,8 @@
           "code": "130040",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
@@ -76,7 +77,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -85,11 +86,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -98,11 +99,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -143,11 +144,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -156,11 +157,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -177,11 +178,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -278,11 +279,11 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -531,7 +532,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -662,7 +663,8 @@
           "code": "1342100",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
