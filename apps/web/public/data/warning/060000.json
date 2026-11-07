@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-07T17:59:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-07T20:12:00+09:00",
+  "headlineText": "庄内では、強風に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -38,12 +38,12 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         },
@@ -52,10 +52,6 @@
           "warnings": [
             {
               "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "15",
               "status": "解除"
             },
             {
@@ -94,12 +90,12 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         },
@@ -115,22 +111,18 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         },
         {
           "code": "0620500",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
@@ -276,10 +268,6 @@
           "code": "0636100",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -288,10 +276,6 @@
         {
           "code": "0636200",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
@@ -302,10 +286,6 @@
           "code": "0636300",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -314,10 +294,6 @@
         {
           "code": "0636400",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
@@ -328,10 +304,6 @@
           "code": "0636500",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -340,10 +312,6 @@
         {
           "code": "0636600",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "解除"
@@ -355,10 +323,6 @@
           "warnings": [
             {
               "code": "29",
-              "status": "解除"
-            },
-            {
-              "code": "15",
               "status": "解除"
             },
             {
@@ -428,12 +392,12 @@
           "code": "0642600",
           "warnings": [
             {
-              "code": "15",
-              "status": "警報から注意報"
-            },
-            {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "継続"
             }
           ]
         },
@@ -441,12 +405,12 @@
           "code": "0642800",
           "warnings": [
             {
-              "code": "15",
-              "status": "警報から注意報"
-            },
-            {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "継続"
             }
           ]
         },
@@ -458,12 +422,12 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         }
