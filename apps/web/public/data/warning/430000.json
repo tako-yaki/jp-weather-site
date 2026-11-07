@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-07T21:06:00+09:00",
-  "headlineText": "球磨地方では、濃霧による視程障害に注意してください。熊本県では、霜に対する農作物の管理に注意してください。",
+  "reportDatetime": "2026-11-08T02:07:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -9,10 +9,6 @@
           "warnings": [
             {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "15",
               "status": "解除"
             },
             {
@@ -42,12 +38,12 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "24",
               "status": "継続"
             },
             {
-              "code": "24",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             }
           ]
         },
@@ -76,10 +72,6 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "24",
               "status": "継続"
             }
@@ -88,10 +80,6 @@
         {
           "code": "4320211",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "24",
               "status": "継続"
@@ -124,10 +112,6 @@
           "code": "4320400",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "24",
               "status": "継続"
             }
@@ -137,10 +121,6 @@
           "code": "4320500",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "24",
               "status": "継続"
             }
@@ -149,10 +129,6 @@
         {
           "code": "4320600",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "24",
               "status": "継続"
@@ -181,10 +157,6 @@
           "code": "4321100",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "24",
               "status": "継続"
             }
@@ -196,20 +168,12 @@
             {
               "code": "29",
               "status": "解除"
-            },
-            {
-              "code": "15",
-              "status": "解除"
             }
           ]
         },
         {
           "code": "4321300",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "24",
               "status": "継続"
@@ -238,7 +202,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -281,10 +245,6 @@
         {
           "code": "4336800",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "24",
               "status": "継続"
@@ -421,10 +381,6 @@
           "code": "4346800",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "24",
               "status": "継続"
             }
@@ -434,10 +390,6 @@
           "code": "4348200",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "24",
               "status": "継続"
             }
@@ -446,10 +398,6 @@
         {
           "code": "4348400",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "24",
               "status": "継続"
@@ -582,7 +530,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
