@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-07T15:50:00+09:00",
-  "headlineText": "宗谷地方では、電線等への着雪に注意してください。",
+  "reportDatetime": "2026-11-07T23:44:00+09:00",
+  "headlineText": "宗谷地方では、高波に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,19 +16,19 @@
               "status": "解除"
             },
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -41,19 +41,19 @@
           "code": "0121400",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -66,19 +66,19 @@
               "status": "解除"
             },
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -87,19 +87,19 @@
           "code": "0151200",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -108,15 +108,15 @@
           "code": "0151300",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
               "status": "継続"
             }
           ]
@@ -125,19 +125,19 @@
           "code": "0151400",
           "warnings": [
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "継続"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -154,19 +154,19 @@
               "status": "解除"
             },
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -175,19 +175,19 @@
           "code": "0151700",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -196,19 +196,19 @@
           "code": "0151800",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -217,19 +217,19 @@
           "code": "0151900",
           "warnings": [
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -242,19 +242,19 @@
               "status": "解除"
             },
             {
-              "code": "05",
-              "status": "継続"
-            },
-            {
-              "code": "07",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "26",
+              "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "警報から注意報"
+            },
+            {
+              "code": "07",
               "status": "継続"
             }
           ]
