@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-08T16:09:00+09:00",
-  "headlineText": "伊豆諸島北部、伊豆諸島南部、小笠原諸島では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-09T00:52:00+09:00",
+  "headlineText": "伊豆諸島南部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -15,10 +15,6 @@
         {
           "code": "130020",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -41,15 +37,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "継続"
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -533,10 +529,6 @@
           "code": "1336300",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -571,10 +563,6 @@
           "code": "1338100",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
@@ -588,15 +576,15 @@
           "code": "1338200",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
