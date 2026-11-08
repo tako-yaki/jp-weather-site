@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-08T13:20:00+09:00",
-  "headlineText": "石狩、後志地方では、高波に注意してください。",
+  "reportDatetime": "2026-11-08T21:53:00+09:00",
+  "headlineText": "後志地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -25,7 +25,7 @@
             },
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -240,7 +240,7 @@
             },
             {
               "code": "16",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
