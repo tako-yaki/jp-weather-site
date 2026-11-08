@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-11-08T16:02:00+09:00",
+  "reportDatetime": "2026-11-08T21:10:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -33,11 +33,11 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "21",
+              "status": "解除"
             },
             {
-              "code": "21",
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -78,11 +78,11 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "21",
+              "status": "解除"
             },
             {
-              "code": "21",
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -99,11 +99,11 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "21",
+              "status": "解除"
             },
             {
-              "code": "21",
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -368,11 +368,11 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "21",
+              "status": "解除"
             },
             {
-              "code": "21",
+              "code": "16",
               "status": "解除"
             }
           ]
