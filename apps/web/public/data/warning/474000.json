@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-09T16:10:00+09:00",
-  "headlineText": "八重山地方では、強風に注意してください。",
+  "reportDatetime": "2026-11-09T21:35:00+09:00",
+  "headlineText": "八重山地方では、高波に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -24,12 +24,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -41,12 +41,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         }
@@ -66,12 +66,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -91,12 +91,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
             },
             {
-              "code": "15",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -108,12 +108,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         }
