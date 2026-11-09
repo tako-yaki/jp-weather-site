@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-08T21:39:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-09T16:22:00+09:00",
+  "headlineText": "薩摩、大隅、種子島・屋久島地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -8,12 +8,16 @@
           "code": "460010",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -23,6 +27,14 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -38,8 +50,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         }
@@ -69,12 +85,16 @@
           "code": "4620400",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -82,12 +102,16 @@
           "code": "4620600",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -104,12 +128,16 @@
           "code": "4621000",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -117,8 +145,12 @@
           "code": "4621300",
           "warnings": [
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -135,12 +167,16 @@
           "code": "4621501",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -148,12 +184,16 @@
           "code": "4621502",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -161,12 +201,16 @@
           "code": "4621600",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -192,12 +236,16 @@
           "code": "4621900",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -205,12 +253,16 @@
           "code": "4622000",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -220,6 +272,14 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -227,12 +287,16 @@
           "code": "4622300",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -258,8 +322,12 @@
           "code": "4630300",
           "warnings": [
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -276,12 +344,16 @@
           "code": "4640400",
           "warnings": [
             {
-              "code": "15",
+              "code": "21",
               "status": "解除"
             },
             {
-              "code": "21",
-              "status": "解除"
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -300,6 +372,14 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -309,6 +389,14 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -327,6 +415,14 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -336,6 +432,14 @@
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -343,8 +447,12 @@
           "code": "4650100",
           "warnings": [
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -356,8 +464,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -373,8 +485,12 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "発表"
+            },
+            {
               "code": "16",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         }
