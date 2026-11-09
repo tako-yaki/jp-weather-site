@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-09T07:30:00+09:00",
-  "headlineText": "小笠原諸島では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-09T10:21:00+09:00",
+  "headlineText": "伊豆諸島北部、小笠原諸島では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,16 +16,16 @@
           "code": "130020",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "14",
-              "status": "解除"
             }
           ]
         },
@@ -41,15 +41,15 @@
               "status": "発表"
             },
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "継続"
-            },
-            {
-              "code": "14",
               "status": "解除"
             }
           ]
@@ -58,11 +58,11 @@
           "code": "130040",
           "warnings": [
             {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -512,16 +512,16 @@
           "code": "1336200",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "14",
-              "status": "解除"
             }
           ]
         },
@@ -529,16 +529,16 @@
           "code": "1336300",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "14",
-              "status": "解除"
             }
           ]
         },
@@ -546,16 +546,16 @@
           "code": "1336400",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "14",
-              "status": "解除"
             }
           ]
         },
@@ -563,15 +563,15 @@
           "code": "1338100",
           "warnings": [
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "継続"
-            },
-            {
-              "code": "14",
               "status": "解除"
             }
           ]
@@ -584,15 +584,15 @@
               "status": "発表"
             },
             {
+              "code": "14",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "16",
-              "status": "継続"
-            },
-            {
-              "code": "14",
               "status": "解除"
             }
           ]
@@ -605,11 +605,11 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -618,11 +618,11 @@
           "code": "1340200",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "解除"
             }
           ]
@@ -631,11 +631,11 @@
           "code": "1342100",
           "warnings": [
             {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
             }
           ]
