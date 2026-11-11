@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-12T07:29:00+09:00",
-  "headlineText": "南部山沿いでは、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-11-12T08:23:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -39,7 +39,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -47,8 +47,7 @@
           "code": "450040",
           "warnings": [
             {
-              "code": "24",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         }
@@ -74,7 +73,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -101,7 +100,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -137,7 +136,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -146,7 +145,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -155,7 +154,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -195,8 +194,7 @@
           "code": "4540300",
           "warnings": [
             {
-              "code": "24",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -238,8 +236,7 @@
           "code": "4542900",
           "warnings": [
             {
-              "code": "24",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -247,8 +244,7 @@
           "code": "4543000",
           "warnings": [
             {
-              "code": "24",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -256,8 +252,7 @@
           "code": "4543100",
           "warnings": [
             {
-              "code": "24",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -265,8 +260,7 @@
           "code": "4544100",
           "warnings": [
             {
-              "code": "24",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -274,8 +268,7 @@
           "code": "4544200",
           "warnings": [
             {
-              "code": "24",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -283,8 +276,7 @@
           "code": "4544300",
           "warnings": [
             {
-              "code": "24",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         }
