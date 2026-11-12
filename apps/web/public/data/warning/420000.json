@@ -1,16 +1,12 @@
 {
-  "reportDatetime": "2026-11-12T16:07:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-13T01:51:00+09:00",
+  "headlineText": "壱岐・対馬では、強風に注意してください。",
   "areaTypes": [
     {
       "areas": [
         {
           "code": "420010",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "解除"
@@ -38,7 +34,8 @@
           "code": "420030",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -58,10 +55,6 @@
         {
           "code": "4220100",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "解除"
@@ -147,7 +140,8 @@
           "code": "4220901",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -155,7 +149,8 @@
           "code": "4220902",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -163,7 +158,8 @@
           "code": "4221000",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -179,10 +175,6 @@
         {
           "code": "4221201",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "21",
               "status": "解除"
