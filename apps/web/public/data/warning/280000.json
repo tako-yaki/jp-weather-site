@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-14T21:43:00+09:00",
-  "headlineText": "兵庫県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-15T07:53:00+09:00",
+  "headlineText": "南部では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,11 +12,11 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -50,10 +50,6 @@
           "code": "2810100",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -62,10 +58,6 @@
         {
           "code": "2810200",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -76,10 +68,6 @@
           "code": "2810500",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -88,10 +76,6 @@
         {
           "code": "2810600",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -133,10 +117,6 @@
           "code": "2811000",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -161,16 +141,16 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "2820200",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
@@ -190,10 +170,6 @@
           "code": "2820400",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -211,10 +187,6 @@
         {
           "code": "2820600",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
