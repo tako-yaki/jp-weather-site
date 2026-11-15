@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-14T21:43:00+09:00",
-  "headlineText": "大阪府では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-15T09:22:00+09:00",
+  "headlineText": "大阪府では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,11 +20,11 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -45,11 +45,11 @@
               "status": "解除"
             },
             {
-              "code": "10",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -67,6 +67,10 @@
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -179,10 +183,6 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "10",
               "status": "解除"
             },
             {
@@ -373,10 +373,6 @@
           "warnings": [
             {
               "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "10",
               "status": "解除"
             },
             {
