@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-16T21:30:00+09:00",
-  "headlineText": "宮崎県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-17T06:42:00+09:00",
+  "headlineText": "北部平野部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,15 +29,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -129,10 +129,6 @@
           "code": "4520600",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -215,6 +211,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -223,6 +223,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -249,10 +253,6 @@
           "code": "4540500",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             }
@@ -261,10 +261,6 @@
         {
           "code": "4540600",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
