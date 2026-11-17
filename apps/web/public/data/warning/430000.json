@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-18T04:03:00+09:00",
-  "headlineText": "熊本、天草・芦北地方では、強風に注意してください。",
+  "reportDatetime": "2026-11-18T06:14:00+09:00",
+  "headlineText": "天草・芦北地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -38,16 +38,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "20",
               "status": "発表"
             },
             {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -225,12 +225,12 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -533,12 +533,12 @@
           "code": "4353100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
