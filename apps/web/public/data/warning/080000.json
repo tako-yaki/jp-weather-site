@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-18T03:26:00+09:00",
-  "headlineText": "南部では、土砂災害に注意してください。",
+  "reportDatetime": "2026-11-18T05:50:00+09:00",
+  "headlineText": "警報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -37,12 +37,12 @@
               "status": "発表"
             },
             {
-              "code": "03",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "03",
+              "status": "解除"
             }
           ]
         }
@@ -373,12 +373,12 @@
               "status": "発表"
             },
             {
-              "code": "03",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "03",
+              "status": "解除"
             }
           ]
         },
