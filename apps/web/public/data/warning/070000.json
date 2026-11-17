@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-17T20:07:00+09:00",
-  "headlineText": "福島県では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-11-18T01:20:00+09:00",
+  "headlineText": "浜通りでは、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -35,16 +35,16 @@
             {
               "code": "20",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "070030",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "発表"
@@ -112,6 +112,10 @@
             },
             {
               "code": "20",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -340,10 +344,6 @@
         {
           "code": "0740500",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "20",
               "status": "発表"
