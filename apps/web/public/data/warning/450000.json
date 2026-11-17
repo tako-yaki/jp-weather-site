@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-18T01:02:00+09:00",
-  "headlineText": "南部山沿い、北部山沿いでは、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-11-18T04:19:00+09:00",
+  "headlineText": "南部平野部では、強風に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -8,26 +8,22 @@
           "code": "450010",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "450020",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "10",
               "status": "解除"
@@ -68,16 +64,16 @@
           "code": "4520100",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -93,10 +89,6 @@
         {
           "code": "4520300",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "解除"
@@ -182,7 +174,8 @@
           "code": "4538200",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -190,7 +183,8 @@
           "code": "4538300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
