@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-18T22:18:00+09:00",
-  "headlineText": "庄内では、高波に注意してください。",
+  "reportDatetime": "2026-11-19T04:52:00+09:00",
+  "headlineText": "置賜では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -17,11 +17,11 @@
           "code": "060020",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -345,11 +345,11 @@
           "code": "0640100",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -366,10 +366,6 @@
         {
           "code": "0640300",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "発表"
