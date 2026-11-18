@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-18T16:13:00+09:00",
-  "headlineText": "山形県では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-11-18T22:18:00+09:00",
+  "headlineText": "庄内では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -34,15 +34,15 @@
               "status": "解除"
             },
             {
+              "code": "14",
+              "status": "継続"
+            },
+            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "14",
               "status": "継続"
             }
           ]
@@ -82,15 +82,15 @@
           "code": "0620300",
           "warnings": [
             {
+              "code": "14",
+              "status": "継続"
+            },
+            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "14",
               "status": "継続"
             }
           ]
@@ -103,15 +103,15 @@
               "status": "解除"
             },
             {
+              "code": "14",
+              "status": "継続"
+            },
+            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "14",
               "status": "継続"
             }
           ]
@@ -382,6 +382,10 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -391,6 +395,10 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -398,15 +406,15 @@
           "code": "0646100",
           "warnings": [
             {
+              "code": "14",
+              "status": "継続"
+            },
+            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
-              "status": "発表"
-            },
-            {
-              "code": "14",
               "status": "継続"
             }
           ]
