@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-17T03:56:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-18T10:12:00+09:00",
+  "headlineText": "八重山地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -12,14 +12,6 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
@@ -30,6 +22,14 @@
             {
               "code": "29",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -39,6 +39,14 @@
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
@@ -50,16 +58,16 @@
           "code": "4720700",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -68,14 +76,6 @@
           "warnings": [
             {
               "code": "48",
-              "status": "解除"
-            },
-            {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
               "status": "解除"
             },
             {
@@ -89,6 +89,14 @@
             {
               "code": "29",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -98,6 +106,14 @@
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }

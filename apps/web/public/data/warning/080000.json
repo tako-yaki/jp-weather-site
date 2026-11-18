@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-11-18T06:23:00+09:00",
+  "reportDatetime": "2026-11-18T10:06:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -25,10 +25,6 @@
           "code": "080020",
           "warnings": [
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "03",
               "status": "解除"
             },
@@ -42,6 +38,10 @@
             },
             {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -361,10 +361,6 @@
           "code": "0823200",
           "warnings": [
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "03",
               "status": "解除"
             },
@@ -378,6 +374,10 @@
             },
             {
               "code": "14",
+              "status": "解除"
+            },
+            {
+              "code": "29",
               "status": "解除"
             }
           ]
