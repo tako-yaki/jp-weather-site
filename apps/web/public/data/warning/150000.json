@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-18T20:30:00+09:00",
-  "headlineText": "佐渡では、暴風に警戒してください。",
+  "reportDatetime": "2026-11-18T22:30:00+09:00",
+  "headlineText": "新潟県では、強風に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -91,8 +91,8 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         }
@@ -408,8 +408,8 @@
               "status": "発表"
             },
             {
-              "code": "05",
-              "status": "発表"
+              "code": "15",
+              "status": "警報から注意報"
             }
           ]
         },
