@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-19T00:57:00+09:00",
-  "headlineText": "会津では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-19T01:51:00+09:00",
+  "headlineText": "会津では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,10 +29,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
@@ -51,6 +47,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
@@ -115,10 +115,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "解除"
             },
@@ -163,6 +159,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
