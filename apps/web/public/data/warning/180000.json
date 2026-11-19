@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-19T07:22:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-19T10:26:00+09:00",
+  "headlineText": "福井県では、高波に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,16 +20,16 @@
               "status": "継続"
             },
             {
-              "code": "07",
-              "status": "発表"
-            },
-            {
               "code": "29",
               "status": "継続"
             },
             {
               "code": "10",
               "status": "解除"
+            },
+            {
+              "code": "07",
+              "status": "継続"
             }
           ]
         },
@@ -45,8 +45,8 @@
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         }
@@ -70,11 +70,11 @@
               "status": "継続"
             },
             {
-              "code": "07",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             },
             {
-              "code": "29",
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -91,8 +91,8 @@
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -108,8 +108,8 @@
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -188,12 +188,12 @@
               "status": "継続"
             },
             {
-              "code": "07",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "07",
+              "status": "継続"
             }
           ]
         },
@@ -238,12 +238,12 @@
               "status": "継続"
             },
             {
-              "code": "07",
+              "code": "29",
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
+              "code": "07",
+              "status": "継続"
             }
           ]
         },
@@ -305,11 +305,11 @@
               "status": "継続"
             },
             {
-              "code": "07",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             },
             {
-              "code": "29",
+              "code": "07",
               "status": "継続"
             }
           ]
@@ -330,16 +330,16 @@
               "status": "継続"
             },
             {
-              "code": "07",
-              "status": "発表"
-            },
-            {
               "code": "29",
               "status": "継続"
             },
             {
               "code": "10",
               "status": "解除"
+            },
+            {
+              "code": "07",
+              "status": "継続"
             }
           ]
         },
@@ -355,8 +355,8 @@
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -372,8 +372,8 @@
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -389,8 +389,8 @@
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -406,8 +406,8 @@
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         }
