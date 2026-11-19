@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-19T18:49:00+09:00",
-  "headlineText": "京都府では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-11-20T04:50:00+09:00",
+  "headlineText": "北部では、高波に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,16 +29,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         }
@@ -88,16 +88,16 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -131,16 +131,16 @@
           "code": "2620500",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -202,16 +202,16 @@
           "code": "2621200",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -326,16 +326,16 @@
           "code": "2646300",
           "warnings": [
             {
-              "code": "16",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
