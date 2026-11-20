@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-20T10:03:00+09:00",
-  "headlineText": "東京都では、高波に注意してください。",
+  "reportDatetime": "2026-11-20T12:23:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -42,16 +42,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -591,16 +591,16 @@
           "code": "1338100",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -608,16 +608,16 @@
           "code": "1338200",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -629,16 +629,16 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
@@ -646,16 +646,16 @@
           "code": "1340200",
           "warnings": [
             {
-              "code": "14",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "14",
+              "status": "解除"
             }
           ]
         },
