@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-11-20T10:23:00+09:00",
+  "reportDatetime": "2026-11-20T11:19:00+09:00",
   "headlineText": "北部では、竜巻などの激しい突風や落雷に注意してください。長野県では、電線等への着雪に注意してください。",
   "areaTypes": [
     {
@@ -76,8 +76,16 @@
           "code": "2020112",
           "warnings": [
             {
+              "code": "12",
+              "status": "発表"
+            },
+            {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "26",
+              "status": "発表"
             }
           ]
         },
@@ -664,11 +672,11 @@
           "warnings": [
             {
               "code": "12",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "26",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -677,11 +685,11 @@
           "warnings": [
             {
               "code": "12",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "26",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -739,7 +747,12 @@
           "code": "2054300",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "12",
+              "status": "発表"
+            },
+            {
+              "code": "26",
+              "status": "発表"
             }
           ]
         },
@@ -774,8 +787,16 @@
           "code": "2058300",
           "warnings": [
             {
+              "code": "12",
+              "status": "発表"
+            },
+            {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "26",
+              "status": "発表"
             }
           ]
         },
@@ -783,7 +804,12 @@
           "code": "2058800",
           "warnings": [
             {
-              "status": "発表警報・注意報はなし"
+              "code": "12",
+              "status": "発表"
+            },
+            {
+              "code": "26",
+              "status": "発表"
             }
           ]
         },
@@ -791,8 +817,16 @@
           "code": "2059000",
           "warnings": [
             {
+              "code": "12",
+              "status": "発表"
+            },
+            {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "26",
+              "status": "発表"
             }
           ]
         },
