@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-20T16:44:00+09:00",
-  "headlineText": "宗谷地方では、大雪に注意してください。",
+  "reportDatetime": "2026-11-21T04:18:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -24,16 +24,16 @@
               "status": "継続"
             },
             {
-              "code": "13",
-              "status": "継続"
-            },
-            {
               "code": "16",
               "status": "継続"
             },
             {
+              "code": "13",
+              "status": "継続"
+            },
+            {
               "code": "12",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         }
@@ -53,11 +53,11 @@
               "status": "継続"
             },
             {
-              "code": "13",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
+              "code": "13",
               "status": "継続"
             }
           ]
@@ -78,11 +78,11 @@
               "status": "継続"
             },
             {
-              "code": "13",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
+              "code": "13",
               "status": "継続"
             }
           ]
@@ -99,16 +99,16 @@
               "status": "継続"
             },
             {
-              "code": "13",
-              "status": "継続"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
+              "code": "13",
+              "status": "解除"
+            },
+            {
               "code": "12",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -125,11 +125,11 @@
             },
             {
               "code": "13",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "12",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -145,16 +145,16 @@
               "status": "継続"
             },
             {
-              "code": "13",
-              "status": "継続"
-            },
-            {
               "code": "16",
               "status": "発表"
             },
             {
+              "code": "13",
+              "status": "解除"
+            },
+            {
               "code": "12",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -178,11 +178,11 @@
               "status": "継続"
             },
             {
-              "code": "13",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
+              "code": "13",
               "status": "継続"
             }
           ]
@@ -199,11 +199,11 @@
               "status": "継続"
             },
             {
-              "code": "13",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
+              "code": "13",
               "status": "継続"
             }
           ]
@@ -220,11 +220,11 @@
               "status": "継続"
             },
             {
-              "code": "13",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
+              "code": "13",
               "status": "継続"
             }
           ]
@@ -241,11 +241,11 @@
               "status": "継続"
             },
             {
-              "code": "13",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
+              "code": "13",
               "status": "継続"
             }
           ]
@@ -266,11 +266,11 @@
               "status": "継続"
             },
             {
-              "code": "13",
+              "code": "16",
               "status": "継続"
             },
             {
-              "code": "16",
+              "code": "13",
               "status": "継続"
             }
           ]
