@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-22T00:12:00+09:00",
-  "headlineText": "鳥取県では、高波に注意してください。",
+  "reportDatetime": "2026-11-22T07:40:00+09:00",
+  "headlineText": "東部では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,16 +16,16 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -151,16 +151,16 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
