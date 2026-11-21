@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-21T11:24:00+09:00",
-  "headlineText": "西部では、電線等への着雪に注意してください。",
+  "reportDatetime": "2026-11-21T13:49:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -30,11 +30,11 @@
           "warnings": [
             {
               "code": "12",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -59,12 +59,7 @@
           "code": "0410002",
           "warnings": [
             {
-              "code": "12",
-              "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -115,12 +110,7 @@
           "code": "0420600",
           "warnings": [
             {
-              "code": "12",
-              "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -194,12 +184,7 @@
           "code": "0421302",
           "warnings": [
             {
-              "code": "12",
-              "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -234,11 +219,11 @@
           "warnings": [
             {
               "code": "12",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -255,12 +240,7 @@
           "code": "0430100",
           "warnings": [
             {
-              "code": "12",
-              "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -268,12 +248,7 @@
           "code": "0430200",
           "warnings": [
             {
-              "code": "12",
-              "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -308,12 +283,7 @@
           "code": "0432400",
           "warnings": [
             {
-              "code": "12",
-              "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -404,12 +374,7 @@
           "code": "0442102",
           "warnings": [
             {
-              "code": "12",
-              "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -426,12 +391,7 @@
           "code": "0442400",
           "warnings": [
             {
-              "code": "12",
-              "status": "解除"
-            },
-            {
-              "code": "26",
-              "status": "解除"
+              "status": "発表警報・注意報はなし"
             }
           ]
         },
@@ -440,11 +400,11 @@
           "warnings": [
             {
               "code": "12",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -453,11 +413,11 @@
           "warnings": [
             {
               "code": "12",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "26",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
