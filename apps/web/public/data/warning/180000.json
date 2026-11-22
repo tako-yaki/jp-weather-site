@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-22T23:56:00+09:00",
-  "headlineText": "嶺北では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-11-23T06:23:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -20,16 +20,16 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "14",
               "status": "解除"
             },
             {
               "code": "20",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -42,10 +42,6 @@
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -74,11 +70,11 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -92,10 +88,6 @@
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -155,11 +147,11 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -176,10 +168,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -189,11 +177,11 @@
           "code": "1820900",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -210,10 +198,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "解除"
             }
@@ -223,11 +207,11 @@
           "code": "1832200",
           "warnings": [
             {
-              "code": "29",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -253,11 +237,11 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -278,11 +262,11 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "14",
+              "status": "解除"
             },
             {
-              "code": "14",
+              "code": "29",
               "status": "解除"
             }
           ]
