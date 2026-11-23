@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-23T15:48:00+09:00",
-  "headlineText": "宮古島地方では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-24T01:52:00+09:00",
+  "headlineText": "宮古島地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,20 +20,20 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
@@ -53,20 +53,20 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -78,20 +78,20 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
             {
               "code": "21",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
