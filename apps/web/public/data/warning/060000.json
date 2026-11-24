@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-24T16:16:00+09:00",
-  "headlineText": "庄内では、土砂災害に注意してください。",
+  "reportDatetime": "2026-11-24T21:19:00+09:00",
+  "headlineText": "庄内では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -38,10 +38,6 @@
           "code": "060030",
           "warnings": [
             {
-              "code": "03",
-              "status": "解除"
-            },
-            {
               "code": "16",
               "status": "継続"
             },
@@ -55,6 +51,10 @@
             },
             {
               "code": "29",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -120,16 +120,16 @@
             {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "10",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "0620400",
           "warnings": [
-            {
-              "code": "03",
-              "status": "解除"
-            },
             {
               "code": "16",
               "status": "継続"
