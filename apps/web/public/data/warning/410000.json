@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-24T10:07:00+09:00",
-  "headlineText": "佐賀県では、霜に対する農作物の管理に注意してください。",
+  "reportDatetime": "2026-11-24T13:24:00+09:00",
+  "headlineText": "北部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -33,15 +33,15 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "24",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -75,15 +75,15 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "24",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -252,15 +252,15 @@
           "code": "4138700",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "24",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
