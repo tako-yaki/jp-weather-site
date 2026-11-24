@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-24T21:56:00+09:00",
-  "headlineText": "山形県では、落雷に注意してください。",
+  "reportDatetime": "2026-11-25T03:52:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -34,14 +34,6 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
-              "code": "10",
-              "status": "発表"
-            },
-            {
               "code": "13",
               "status": "発表"
             },
@@ -52,6 +44,14 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -94,14 +94,6 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
-              "code": "10",
-              "status": "発表"
-            },
-            {
               "code": "13",
               "status": "発表"
             },
@@ -112,6 +104,14 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "10",
+              "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
