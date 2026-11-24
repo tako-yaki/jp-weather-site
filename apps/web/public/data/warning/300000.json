@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-24T07:47:00+09:00",
-  "headlineText": "南部では、高波に注意してください。",
+  "reportDatetime": "2026-11-24T12:34:00+09:00",
+  "headlineText": "南部では、低い土地の浸水や河川の増水に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -29,10 +29,6 @@
           "code": "300020",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -46,6 +42,10 @@
             },
             {
               "code": "16",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -151,10 +151,6 @@
           "code": "3020601",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -243,10 +239,6 @@
         {
           "code": "3020700",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -616,10 +608,6 @@
           "code": "3040100",
           "warnings": [
             {
-              "code": "10",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -633,6 +621,10 @@
             },
             {
               "code": "16",
+              "status": "発表"
+            },
+            {
+              "code": "10",
               "status": "発表"
             }
           ]
@@ -678,10 +670,6 @@
         {
           "code": "3042100",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
@@ -758,10 +746,6 @@
         {
           "code": "3042800",
           "warnings": [
-            {
-              "code": "10",
-              "status": "解除"
-            },
             {
               "code": "15",
               "status": "発表"
