@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-25T07:54:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-25T10:08:00+09:00",
+  "headlineText": "茨城県では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -8,16 +8,16 @@
           "code": "080010",
           "warnings": [
             {
+              "code": "20",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "20",
-              "status": "解除"
             }
           ]
         },
@@ -34,7 +34,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -59,16 +59,16 @@
           "code": "0820200",
           "warnings": [
             {
+              "code": "20",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "20",
-              "status": "解除"
             }
           ]
         },
@@ -141,16 +141,16 @@
           "code": "0821400",
           "warnings": [
             {
+              "code": "20",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "20",
-              "status": "解除"
             }
           ]
         },
@@ -158,16 +158,16 @@
           "code": "0821500",
           "warnings": [
             {
+              "code": "20",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "20",
-              "status": "解除"
             }
           ]
         },
@@ -208,16 +208,16 @@
           "code": "0822100",
           "warnings": [
             {
+              "code": "20",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "20",
-              "status": "解除"
             }
           ]
         },
@@ -226,7 +226,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -321,7 +321,7 @@
             },
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -342,7 +342,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
@@ -380,16 +380,16 @@
           "code": "0830900",
           "warnings": [
             {
+              "code": "20",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "20",
-              "status": "解除"
             }
           ]
         },
@@ -406,16 +406,16 @@
           "code": "0834100",
           "warnings": [
             {
+              "code": "20",
+              "status": "解除"
+            },
+            {
               "code": "15",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "code": "16",
               "status": "継続"
-            },
-            {
-              "code": "20",
-              "status": "解除"
             }
           ]
         },
