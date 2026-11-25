@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-25T16:23:00+09:00",
-  "headlineText": "山形県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-26T02:31:00+09:00",
+  "headlineText": "庄内では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -30,10 +30,6 @@
           "code": "060030",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
@@ -42,15 +38,15 @@
               "status": "解除"
             },
             {
-              "code": "13",
-              "status": "解除"
+              "code": "14",
+              "status": "継続"
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -90,10 +86,6 @@
           "code": "0620300",
           "warnings": [
             {
-              "code": "16",
-              "status": "継続"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
@@ -102,15 +94,15 @@
               "status": "解除"
             },
             {
-              "code": "13",
-              "status": "解除"
+              "code": "14",
+              "status": "継続"
             },
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -119,19 +111,15 @@
           "code": "0620400",
           "warnings": [
             {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "13",
-              "status": "解除"
-            },
-            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -412,12 +400,12 @@
           "code": "0642600",
           "warnings": [
             {
-              "code": "13",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -425,12 +413,12 @@
           "code": "0642800",
           "warnings": [
             {
-              "code": "13",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -438,19 +426,15 @@
           "code": "0646100",
           "warnings": [
             {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "13",
-              "status": "解除"
-            },
-            {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "継続"
             }
           ]
