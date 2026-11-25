@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-25T10:35:00+09:00",
-  "headlineText": "富山県では、急な強い雨や落雷に注意してください。",
+  "reportDatetime": "2026-11-25T16:30:00+09:00",
+  "headlineText": "東部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,15 +16,15 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -35,10 +35,6 @@
             {
               "code": "29",
               "status": "発表"
-            },
-            {
-              "code": "15",
-              "status": "解除"
             },
             {
               "code": "14",
@@ -53,10 +49,6 @@
         {
           "code": "1620111",
           "warnings": [
-            {
-              "code": "15",
-              "status": "解除"
-            },
             {
               "code": "14",
               "status": "継続"
@@ -93,10 +85,6 @@
           "code": "1620200",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             }
@@ -106,15 +94,15 @@
           "code": "1620400",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -127,10 +115,6 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             }
@@ -140,15 +124,15 @@
           "code": "1620600",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -165,15 +149,15 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -221,10 +205,6 @@
           "code": "1621100",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "継続"
             }
@@ -269,15 +249,15 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
@@ -290,15 +270,15 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
-              "code": "16",
+              "code": "14",
               "status": "継続"
             },
             {
-              "code": "14",
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "継続"
             }
           ]
