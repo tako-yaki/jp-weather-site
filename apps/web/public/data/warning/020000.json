@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-25T16:32:00+09:00",
-  "headlineText": "青森県では、落雷に注意してください。",
+  "reportDatetime": "2026-11-25T18:43:00+09:00",
+  "headlineText": "津軽では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,10 +9,6 @@
           "warnings": [
             {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -38,16 +34,16 @@
             {
               "code": "26",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "020020",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "13",
               "status": "解除"
@@ -183,10 +179,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "13",
               "status": "解除"
             },
@@ -242,10 +234,6 @@
           "code": "0220800",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "13",
               "status": "解除"
             },
@@ -266,10 +254,6 @@
         {
           "code": "0220900",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "13",
               "status": "解除"
@@ -338,10 +322,6 @@
           "code": "0230300",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "13",
               "status": "解除"
             },
@@ -370,10 +350,6 @@
         {
           "code": "0230400",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "13",
               "status": "解除"
@@ -404,10 +380,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "13",
               "status": "解除"
             },
@@ -430,16 +402,16 @@
             {
               "code": "26",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
         {
           "code": "0232100",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "13",
               "status": "解除"
@@ -597,10 +569,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "13",
               "status": "解除"
             },
@@ -615,6 +583,10 @@
             {
               "code": "14",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -823,10 +795,6 @@
         {
           "code": "0242600",
           "warnings": [
-            {
-              "code": "29",
-              "status": "解除"
-            },
             {
               "code": "13",
               "status": "解除"
