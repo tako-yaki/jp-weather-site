@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-26T03:48:00+09:00",
-  "headlineText": "青森県では、高波に注意してください。",
+  "reportDatetime": "2026-11-26T04:36:00+09:00",
+  "headlineText": "津軽では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -24,15 +24,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -249,6 +249,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -368,15 +372,15 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
@@ -395,6 +399,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -537,15 +545,15 @@
               "status": "継続"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "継続"
             },
             {
               "code": "16",
+              "status": "継続"
+            },
+            {
+              "code": "29",
               "status": "継続"
             }
           ]
