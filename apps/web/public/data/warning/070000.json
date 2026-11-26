@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-26T21:17:00+09:00",
-  "headlineText": "会津では、濃霧による視程障害に注意してください。",
+  "reportDatetime": "2026-11-27T04:06:00+09:00",
+  "headlineText": "会津では、濃霧による視程障害やなだれに注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -47,6 +47,10 @@
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "22",
               "status": "発表"
             }
           ]
@@ -73,7 +77,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -91,7 +95,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -139,6 +143,10 @@
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "22",
               "status": "発表"
             }
           ]
@@ -280,7 +288,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -289,7 +297,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -298,6 +306,10 @@
           "warnings": [
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "22",
               "status": "発表"
             }
           ]
@@ -307,6 +319,10 @@
           "warnings": [
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "22",
               "status": "発表"
             }
           ]
@@ -316,7 +332,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -333,6 +349,10 @@
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "22",
               "status": "発表"
             }
           ]
@@ -346,6 +366,10 @@
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "22",
               "status": "発表"
             }
           ]
@@ -359,6 +383,10 @@
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "22",
               "status": "発表"
             }
           ]
@@ -376,6 +404,10 @@
             },
             {
               "code": "20",
+              "status": "継続"
+            },
+            {
+              "code": "22",
               "status": "発表"
             }
           ]
@@ -385,7 +417,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -394,7 +426,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -403,7 +435,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -412,7 +444,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -421,7 +453,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -430,7 +462,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -439,7 +471,7 @@
           "warnings": [
             {
               "code": "20",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
