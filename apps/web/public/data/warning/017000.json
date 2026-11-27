@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-28T05:46:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-28T05:50:00+09:00",
+  "headlineText": "渡島地方では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -20,16 +20,16 @@
               "status": "発表"
             },
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "10",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "29",
               "status": "継続"
-            },
-            {
-              "code": "15",
-              "status": "解除"
             }
           ]
         },
@@ -49,11 +49,11 @@
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -74,12 +74,12 @@
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -95,12 +95,12 @@
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "発表"
-            },
-            {
               "code": "15",
               "status": "解除"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -234,11 +234,11 @@
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "29",
               "status": "解除"
             }
           ]
@@ -256,11 +256,11 @@
             },
             {
               "code": "10",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "29",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -281,7 +281,7 @@
             },
             {
               "code": "29",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         },
@@ -373,11 +373,11 @@
               "status": "発表"
             },
             {
-              "code": "29",
-              "status": "継続"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "29",
               "status": "解除"
             }
           ]
