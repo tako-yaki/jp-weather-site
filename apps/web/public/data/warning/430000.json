@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-27T09:40:00+09:00",
-  "headlineText": "熊本県では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-11-27T20:36:00+09:00",
+  "headlineText": "天草・芦北地方では、強風に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -38,11 +38,11 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "15",
               "status": "発表"
             }
           ]
@@ -197,11 +197,11 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "15",
               "status": "発表"
             }
           ]
@@ -493,11 +493,11 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "15",
               "status": "発表"
             }
           ]
