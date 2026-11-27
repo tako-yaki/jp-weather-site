@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-27T18:06:00+09:00",
-  "headlineText": "静岡県では、竜巻などの激しい突風や急な強い雨、落雷に注意してください。",
+  "reportDatetime": "2026-11-28T04:29:00+09:00",
+  "headlineText": "中部、伊豆、西部では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,6 +9,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -25,15 +29,15 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -57,6 +61,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         }
@@ -69,6 +77,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -87,6 +99,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -119,6 +135,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -150,6 +170,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             }
           ]
         },
@@ -177,6 +201,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -186,6 +214,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -194,6 +226,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -222,6 +258,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -233,15 +273,15 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -261,6 +301,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -278,6 +322,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -306,6 +354,10 @@
             {
               "code": "14",
               "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -313,15 +365,15 @@
           "code": "2230100",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -330,15 +382,15 @@
           "code": "2230200",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -351,15 +403,15 @@
               "status": "解除"
             },
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -368,15 +420,15 @@
           "code": "2230500",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -385,15 +437,15 @@
           "code": "2230600",
           "warnings": [
             {
-              "code": "16",
-              "status": "解除"
+              "code": "14",
+              "status": "発表"
             },
             {
               "code": "15",
-              "status": "解除"
+              "status": "発表"
             },
             {
-              "code": "14",
+              "code": "16",
               "status": "発表"
             }
           ]
@@ -451,6 +503,10 @@
           "warnings": [
             {
               "code": "14",
+              "status": "発表"
+            },
+            {
+              "code": "16",
               "status": "発表"
             }
           ]

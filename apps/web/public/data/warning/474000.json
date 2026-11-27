@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-27T09:56:00+09:00",
-  "headlineText": "注意報を解除します。",
+  "reportDatetime": "2026-11-28T04:33:00+09:00",
+  "headlineText": "八重山地方では、高波に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -16,20 +16,20 @@
               "status": "解除"
             },
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -37,16 +37,12 @@
           "code": "474020",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         }
@@ -58,20 +54,20 @@
           "code": "4720700",
           "warnings": [
             {
-              "code": "15",
-              "status": "解除"
-            },
-            {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "16",
               "status": "解除"
             },
             {
               "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "16",
+              "status": "発表"
             }
           ]
         },
@@ -87,16 +83,16 @@
               "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
+            },
+            {
+              "code": "15",
+              "status": "発表"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         },
@@ -104,16 +100,12 @@
           "code": "4738200",
           "warnings": [
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
             },
             {
               "code": "16",
-              "status": "解除"
-            },
-            {
-              "code": "14",
-              "status": "解除"
+              "status": "発表"
             }
           ]
         }
