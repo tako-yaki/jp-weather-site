@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-28T16:02:00+09:00",
-  "headlineText": "東京都では、高波に注意してください。",
+  "reportDatetime": "2026-11-28T21:27:00+09:00",
+  "headlineText": "伊豆諸島南部では、高波に警戒してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,7 +9,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -42,10 +42,6 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
@@ -54,8 +50,12 @@
               "status": "発表"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -64,7 +64,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -77,7 +77,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         },
@@ -86,7 +86,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -99,7 +99,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -144,7 +144,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -157,7 +157,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -178,7 +178,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -279,7 +279,7 @@
           "warnings": [
             {
               "code": "15",
-              "status": "発表"
+              "status": "継続"
             },
             {
               "code": "16",
@@ -620,12 +620,12 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "29",
               "status": "発表"
+            },
+            {
+              "code": "15",
+              "status": "継続"
             },
             {
               "code": "16",
@@ -641,16 +641,16 @@
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "継続"
-            },
-            {
               "code": "10",
               "status": "解除"
             },
             {
-              "code": "16",
+              "code": "15",
               "status": "継続"
+            },
+            {
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -666,8 +666,8 @@
               "status": "継続"
             },
             {
-              "code": "16",
-              "status": "継続"
+              "code": "07",
+              "status": "発表"
             }
           ]
         },
@@ -676,7 +676,7 @@
           "warnings": [
             {
               "code": "16",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
