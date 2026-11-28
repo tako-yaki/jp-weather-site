@@ -1,5 +1,5 @@
 {
-  "reportDatetime": "2026-11-28T07:18:00+09:00",
+  "reportDatetime": "2026-11-28T09:57:00+09:00",
   "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
@@ -20,15 +20,15 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -41,15 +41,15 @@
           "code": "0121400",
           "warnings": [
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -62,11 +62,11 @@
               "status": "解除"
             },
             {
-              "code": "14",
-              "status": "発表"
+              "code": "15",
+              "status": "解除"
             },
             {
-              "code": "15",
+              "code": "14",
               "status": "解除"
             }
           ]
@@ -80,7 +80,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -93,7 +93,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -106,7 +106,7 @@
             },
             {
               "code": "14",
-              "status": "発表"
+              "status": "解除"
             }
           ]
         },
@@ -122,15 +122,15 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -139,15 +139,15 @@
           "code": "0151700",
           "warnings": [
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -156,15 +156,15 @@
           "code": "0151800",
           "warnings": [
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -173,15 +173,15 @@
           "code": "0151900",
           "warnings": [
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
@@ -194,15 +194,15 @@
               "status": "解除"
             },
             {
+              "code": "15",
+              "status": "解除"
+            },
+            {
               "code": "16",
-              "status": "発表"
+              "status": "解除"
             },
             {
               "code": "14",
-              "status": "発表"
-            },
-            {
-              "code": "15",
               "status": "解除"
             }
           ]
