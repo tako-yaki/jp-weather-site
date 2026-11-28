@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-28T10:01:00+09:00",
-  "headlineText": "沿岸では、強風に注意してください。",
+  "reportDatetime": "2026-11-28T15:13:00+09:00",
+  "headlineText": "沿岸では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -28,12 +28,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -82,12 +82,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
+              "code": "15",
               "status": "発表"
             },
             {
-              "code": "15",
-              "status": "発表"
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -229,12 +229,12 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "継続"
             }
           ]
         },
@@ -318,6 +318,10 @@
             },
             {
               "code": "15",
+              "status": "発表"
+            },
+            {
+              "code": "29",
               "status": "発表"
             }
           ]
