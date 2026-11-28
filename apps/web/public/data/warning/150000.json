@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-28T16:06:00+09:00",
-  "headlineText": "新潟県では、高波に注意してください。",
+  "reportDatetime": "2026-11-28T17:12:00+09:00",
+  "headlineText": "下越では、土砂災害に注意してください。",
   "areaTypes": [
     {
       "areas": [
@@ -9,10 +9,6 @@
           "warnings": [
             {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
@@ -26,6 +22,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
@@ -201,10 +201,6 @@
           "code": "1521200",
           "warnings": [
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "14",
               "status": "発表"
             },
@@ -215,6 +211,10 @@
             {
               "code": "16",
               "status": "継続"
+            },
+            {
+              "code": "29",
+              "status": "発表"
             }
           ]
         },
