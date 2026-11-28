@@ -1,6 +1,6 @@
 {
-  "reportDatetime": "2026-11-28T07:06:00+09:00",
-  "headlineText": "沖縄本島地方では、高波に注意してください。",
+  "reportDatetime": "2026-11-28T16:02:00+09:00",
+  "headlineText": "注意報を解除します。",
   "areaTypes": [
     {
       "areas": [
@@ -33,16 +33,16 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -134,16 +134,16 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -244,16 +244,16 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -269,16 +269,16 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -294,16 +294,16 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "継続"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
             {
               "code": "16",
               "status": "発表"
+            },
+            {
+              "code": "29",
+              "status": "解除"
             }
           ]
         },
@@ -361,10 +361,6 @@
               "status": "解除"
             },
             {
-              "code": "29",
-              "status": "解除"
-            },
-            {
               "code": "15",
               "status": "発表"
             },
@@ -404,10 +400,6 @@
             },
             {
               "code": "10",
-              "status": "解除"
-            },
-            {
-              "code": "29",
               "status": "解除"
             },
             {
